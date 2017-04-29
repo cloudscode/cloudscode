@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    
+    <entry>
+      <title><![CDATA[木兰花·春景]]></title>
+      <url>%2F2017%2F04%2F29%2F2017%2Fpoems%2F%E6%9C%A8%E5%85%B0%E8%8A%B1%C2%B7%E6%98%A5%E6%99%AF%2F</url>
+      <content type="text"><![CDATA[《木兰花·春景》作者：宋祁 东城渐觉风光好，縠皱波纹迎客棹。绿杨烟外晓寒轻，红杏枝头春意闹。浮生长恨欢娱少，肯爱千金轻一笑。为君持酒劝斜阳，且向花间留晚照。 一首宋词]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Install ansible]]></title>
+      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2FInstallansible%2F</url>
+      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[ssh 命令]]></title>
+      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2Fssh%2F</url>
+      <content type="text"><![CDATA[ssh-keygen的命令手册，通过”man ssh-keygen“命令查看 生成密钥1ssh-keygen -t rsa 生成之后会在用户的根目录生成一个 “.ssh”的文件夹 authorized_keys:存放远程免密登录的公钥,主要通过这个文件记录多台机器的公钥 id_rsa : 生成的私钥文件 id_rsa.pub ： 生成的公钥文件 know_hosts : 已知的主机公钥清单如果希望ssh公钥生效需满足至少下面两个条件： 1) .ssh目录的权限必须是7002) .ssh/authorized_keys文件权限必须是600 远程免密登录 通过ssh-copy-id的方式 1命令： ssh-copy-id -i ~/.ssh/id_rsa.put &lt;romte_ip&gt; 通过scp方式 1命令：scp -p ~/.ssh/id_rsa.pub root@&lt;remote_ip&gt;:/root/.ssh/authorized_keys 将内容追加到authorized_keys文件中， 不过要登录远程服务器来执行这条命令1cat ~/pub_key &gt;&gt;~/.ssh/authorized_keys]]></content>
+    </entry>
+
+    
+    <entry>
+      <title></title>
+      <url>%2F2017%2F04%2F29%2F2017%2Flisten%2F%E7%90%86%E6%80%A7%E6%83%85%E7%BB%AA%2F</url>
+      <content type="text"><![CDATA[1.人的一切精神上的痛苦和严重情绪紊乱，都是不必要的。 2.不管你的处境有多恶劣、遭遇有多严重，你实际上总是可以拥有控制和改变自己情绪的能力，减少并最终战胜你的不良情绪。 3.“心想事成”固然是个美好的愿望，但是在现实中，“心想”就能“事成”，这个概率其实是很低的，我们如果过分执着于这个愿望，总是用“应该”、“必须”、“一定要”来想问题，就会陷入到非理性的信念里，给自己的情绪带来麻烦。 4.建立一个有效的理性信念，我们需要做到三点：1.无条件地自我接纳；2.无条件地接纳他人；3.无条件地接纳我们的现实生活。 5.最终你需要明白的是，无论是你自身的缺陷，还是外界的不尽如人意，这都是人与世界的天性，是我们无法改变的客观存在。而我们可以做的是：我的情绪我做主。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title></title>
+      <url>%2F2017%2F04%2F29%2F2017%2Flisten%2F%E6%9D%83%E5%8A%9B%2F</url>
+      <content type="text"><![CDATA[title:权力date:2017-04-26 21:42:29category:”life” tags:[听书,金句] 1.等级结构在人类社会中无处不在，当我们进入一个组织之后，我们的性别、年龄、教育背景等，拿出来和别人一比较，就会决定我们的地位。同时，一个人的地位还会从一个背景带到另一个背景中，始终跟着你，躲都躲不开。 2.人们认为世界是公平的，源于“公正世界假设”的心理。这种假设会让人产生麻痹思想，忽视自己对权力的需求，而且误认为权力是可以等来的。但实际上，权力只能是争来的。 3.在争取权力的道路上，第一个关键就是要明白，业绩并不决定权力地位。我们必须关心和老板的关系，至少，这个关心程度要不亚于对业绩的关心。 4.我们要明白一个逻辑关系，当你招人喜欢的时候，并不一定会争取到权力，而当你有权力的时候，你一定会招人“喜欢”——虽然这个喜欢要打上个引号。 5.虽然让人们既害怕你又喜欢你，是一种很理想的状况，但当你必须二选一时，如果想获得和保持权力，就应该让人们害怕你。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[超级整理术]]></title>
+      <url>%2F2017%2F04%2F28%2F2017%2Flisten%2F%E8%B6%85%E7%BA%A7%E6%95%B4%E7%90%86%E6%9C%AF%2F</url>
+      <content type="text"><![CDATA[1.要弄清楚你携带的行李是助手还是累赘！ 2.勇敢的放弃那些曾经无数次被带着没有用的东西把！ 3.平衡工作和生活最好的办法就是采取实际的行动，才能远离压力。 4.旅行前问问此次旅行的目的是什么，这适用于所有事情的规划。 5.什么样的方法都不及你自己有一颗用心去生活的心，生活上用心，你会找到很多由你自己创造出来的小点子，会成为属于你的独一份的整理收纳术。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[房间里的大象]]></title>
+      <url>%2F2017%2F04%2F27%2F2017%2Flisten%2F%E6%88%BF%E9%97%B4%E9%87%8C%E7%9A%84%E5%A4%A7%E8%B1%A1%2F</url>
+      <content type="text"><![CDATA[1.事实上人们还常常使用声音去掩盖沉默。正如一句歌谣所说：“我们聊聊天气。我们聊聊工作。我们什么都聊——除了房间里的大象”。 2.我们周围“沉默的旁观者”越多，我们就越倾向于加入这支“沉默的大军”。 3.正如一位政治理论家奥尔福德所说：“最有效瓦解道德行为准则的方式，就是不讨论，而且不讨论这种不讨论。” 4.当一个人经历的集体沉默越多，就越容易感到孤独，与的人交往也会越疲惫不堪。最后可能任何想法，都不愿再同他人分享了。 5.对于那位“皇帝新装”里的小孩，一定要特别给予更多的包容、宽容和保护。只有这样，那些负面的集体沉默才会越来越少，最后在我们身边形成一种积极的良性循环。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[价格]]></title>
+      <url>%2F2017%2F04%2F26%2F2017%2Feconomics%2Fprice%2F</url>
+      <content type="text"><![CDATA[价格的三个作用 价格能够非常有效、非常节俭、目标非常明确地传递关于稀缺的信息； 价格能够指导人们进行生产，选择不同的生产方法； 价格能够解决奖惩的问题。 如何分饼决定饼做多大 第一，我们对价格最地道的理解，是要理解价格的形成机制，价格永远是由一宗一宗的具体交易、一个一个人的具体需求出发，来形成的一个综合指标。我们不能把这个逻辑顺序给搞混了。 第二，价格的三个作用：传递需求的信号，指导生产以及指导分配，这三个作用里面，指导分配这个作用，奖惩的作用最重要。也就是说，如何分饼会决定饼能做多大。 《拜杜法案》拜杜法案的意思是说，政府过去资助的所有这些科研项目，其知识产权仍然归政府所有，但是它的商业开发权，科学家或者科研机构可以选择拥有，他们可以去开发，开发完了以后，收益归这些机构。 这就是一个新的分饼游戏。一旦有了这个分饼游戏，科学家搞科研的积极性就不一样了，科学家搞科研的方向就不一样了。这个《拜杜法案》带来了今天美国科技的蓬勃发展。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[投资中最简单的事]]></title>
+      <url>%2F2017%2F04%2F25%2F2017%2Flisten%2F%E6%8A%95%E8%B5%84%E4%B8%AD%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E4%BA%8B%2F</url>
+      <content type="text"><![CDATA[1.所谓价值投资，简单地说就是“花四毛钱买值一块钱的东西”。 2.坚持只选择便宜的好公司，失败的概率会被缩小，成功的概率会被放大，总体的成功率就会进一步提升。 3.如果连买菜的大妈都在谈论股票，那么这个时候股票的估值肯定是被高估的。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[热点]]></title>
+      <url>%2F2017%2F04%2F24%2F2017%2Flisten%2F%E7%83%AD%E7%82%B9%2F</url>
+      <content type="text"><![CDATA[1.如果你想让一篇文章成为爆款，那么最关键的不是点击率、评论数、点赞数和打赏额，而是有多少人转发分享了。 2.内容营销看起来是关于内容的事情，但成为热点的关键其实来自于用户分享。 3.人们愿意不愿意转发一篇文章，和这篇文章所涉及的行业有密切关系。换句话说，选题本身就决定了文章的传播量。 4.作为内容创业者，一定要考虑自己创作的内容能不能成为分享者穿在身上的衣服，能不能给他们一个标签。 5.和粉丝建立信任是特别难的一件事，但是如果能利用好互惠原理，就能更快速地和用户建立信任。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[分布式事务]]></title>
+      <url>%2F2017%2F04%2F23%2F2017%2Fprogram%2Fdistributedtransaction%2F</url>
+      <content type="text"><![CDATA[分布式事务一些分布式事务知识 事务知识分布式事务之说说TCC事务JTA 深度历险 - 原理与实现关于分布式事务、两阶段提交协议、三阶提交协议分布式事务之说说TCC事务XA 分布式事务研究 java事务Java中的事务——JDBC事务和JTA事务 MQ基于MQ的分布式事务补偿机制 dubbodubbo 分布式事务 开源事务tcc-transactionByteTCC]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[如何阅读一本书]]></title>
+      <url>%2F2017%2F04%2F23%2F2017%2Flisten%2F%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6%2F</url>
+      <content type="text"><![CDATA[基础阅读 检视阅读 分析阅读 主题阅读 1.一个好的读者应该更多地去读那些锻炼心智的书。读者是否合格，首先必须主动，主动的读者会从阅读中获得更大的收益。 2.其实我们感兴趣的是现在和未来，而有一部分的未来是由现在决定的。所以说，我们读历史书，是为了从历史中学习到未来可能的发展方向。 3.请千万记住，如果你的阅读目的是想变成一个更好的人，那么你就不能摸到什么书都读。要知道读了一本烂书，是很让人沮丧和倒胃口的。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[JMeter 压力测试CSV参数化]]></title>
+      <url>%2F2017%2F04%2F23%2F2017%2Fprogram%2Fjmeterscript%2F</url>
+      <content type="text"><![CDATA[概述JMeter 的主要测试组件总结如下： 测试计划是使用 JMeter 进行测试的起点，它是其它 JMeter 测试元件的容器。 线程组代表一定数量的并发用户，它可以用来模拟并发用户发送请求。实际的请求内容在Sampler中定义，它被线程组包含。 监听器负责收集测试结果，同时也被告知了结果显示的方式。 逻辑控制器可以自定义JMeter发送请求的行为逻辑，它与Sampler结合使用可以模拟复杂的请求序列。 断言可以用来判断请求响应的结果是否如用户所期望的。它可以用来隔离问题域，即在确保功能正确的前提下执行压力测试。这个限制对于有效的测试是非常有用的。 配置元件维护Sampler需要的配置信息，并根据实际的需要会修改请求的内容。 前置处理器和后置处理器负责在生成请求之前和之后完成工作。前置处理器常常用来修改请求的设置，后置处理器则常常用来处理响应的数据。 定时器负责定义请求之间的延迟间隔。 常用测试最简单的Web测试计划只需要三个 JMeter 的测试元件，如下图： 其中： 在线程组中定义线程数、产生线程发生的时间和测试循环次数。 在http请求中定义服务器、端口、协议和方法、请求路径等。 表格监听器负责收集和显示结果。 添加一个测试计划添加线程组点击测试计划，右键选择添加菜单项，选择子菜单Threads(Users)，点击线程组，如下图： 配置线程组参数名称：测试接口名称 线程属性 线程数：模拟的用户数量 Ramp-up Period（in seconds）：达到指定线程数所需要的时间。举例：线程数设置为50，此处设置为5，那么每秒启动的线程数 = 线程数50/5 = 10 循环次数：选中“永远”，则一直循环下去。 添加HTTP信息头管理器点击线程组（产品列表），右键添加》配置元件 》 “HTTP信息头管理器”。如下图：在面板中“信息头存储在信息头管理器中”添加一组http头部信息名称：Content-Type值：application/json 添加HTTP请求点击线程组（产品列表），右键添加》Sampler 》 “HTTP请求”。如下图：在Basic面板中配置参数服务器名称或IP：应用ip地址端口号：应用端口号Http请求方法：选择相应的请求方式，如POST请求。路径：请求地址参数：在Parameters或者Body Data中添加请求参数。 结果分析Summary Report点击HTTP请求，右键添加》监听器》Summary Report。如下图：做性能测试时，Summary Report可用于分析请求吞吐量、平均响应时间、最长响应时间等信息。例如只有一个（产品列表）接口的请求，那么在Summary Report中，会显示一行数据，共有10个字段，含义分别如下。 Label：每个 JMeter 的 element（例如 HTTP Request）都有一个 Name 属性，这里显示的就是 Name 属性的值 #Samples：表示你这次测试中一共发出了多少个请求，如果模拟10个用户，每个用户迭代10次，那么这里显示100 Average：平均响应时间——默认情况下是单个 Request 的平均响应时间，当使用了 Transaction Controller 时，也可以以Transaction 为单位显示平均响应时间 Median：中位数，也就是 50％ 用户的响应时间 90% Line：90％ 用户的响应时间 Min：最小响应时间 Max：最大响应时间 Error%：本次测试中出现错误的请求的数量/请求的总数 Throughput：吞吐量——默认情况下表示每秒完成的请求数（Request per Second），当使用了 Transaction Controller 时，也可以表示类似 LoadRunner 的 Transaction per Second 数 KB/Sec：每秒从服务器端接收到的数据量，相当于LoadRunner中的Throughput/Sec Avg.Bytes：服务端返回给Request数据的平均值，可以理解为：服务端返回所有数据/请求数 察看结果树点击HTTP请求，右键添加》监听器》察看结果树。如下图： 用察看结果树，可以观察每个请求的请求、响应返回信息。 取样器结果：显示的是取样器相关参数（客户端参数与响应参数） 请求：发送请求的具体值 响应数据：服务端返回的相应参数图形结果点击HTTP请求，右键添加》监听器》察看结果树。如下图：统计结果： 样本数目：发出去的请求总数 最新样本：最近一个Request的响应时间 平均：所有Request响应时间的平均值 偏离：所有Request响应时间的标准差 吞吐量：单位时间内（一般是1分钟）处理Request的个数 中值：所有Request响应时间的中间值 使用CSV Data Set Config参数化方法点击产品列表，右键添加》配置元件》CSV Data Set Config。如下图： 面板说明 Filename：填写文件路径和文件名称。可以指保存信息的文件目录，可以相对或者绝对路径。如果文件放在jmeter的bin目录下，直接写文件名称就可以。 File Encoding:文件编码，默认为ANSI。 Variable names：参数名称(有几个参数，在这里面就写几个参数名称，每个名称中间用分隔符分割，分隔符使用下面的“memberId,pagerno”中定义的。 Delimitet：定义分隔符，用于分隔文件中的参数，及上述Variable Names中定义的参数名称。 Allow Quoated data: True –设置文件中的参数值都必须用引用引起来,False则不需要。 Recycle on EOF：到了文件尾处，是否循环读取参数。注：程序从CSV Data Set Config文件中，每次读取一行，每次读取的参数仅供一个线程使用（类似Loadrunner里面的参数唯一值功能），如果线程数超过文本的记录行数，那么可以选择 True (从头再次读取)。 Stop thread on EOF:到了文件尾处，是否停止线程。当Recycle on EOF 选择true时，Stop threadon EOF选择true和false无任何意义，通俗的讲，在前面控制了不停的循环读取，后面再来让stop或run没有任何意义当Recycle on EOF 选择false时，Stop threadon EOF选择true，线程4个，参数3个，那么只会请求3次当Recycle on EOF 选择false时，Stop thread on EOF选择false，线程4个，参数3个，那么会请求4次，但第4次没有参数可取，不让循环，所以第4次请求错误 Sharing Mode: 设置是否线程共享。新建csv文件 1、新建一个orderlist.csv文件，按需要将参数填写在一列中。（不需要写变量名称，直接写变量值）内容如下： 2、在Configure the CSV Data Source中配置Filename属性，即参数文件路径。参数化 格式：${argue_name} 的方式引用Variable name 回到HTTP请求面板，在Body Data配置请求参数(也可在路径中配置参数：&amp;memberId=${memberId})。修改参数配置如下：非常参数化：1&#123;&quot;memberId&quot;:&quot;3395&quot;,&quot;pagerno&quot;:1,&quot;pagerrows&quot;:15,&quot;channel&quot;:&quot;&quot;,&quot;ltitle&quot;:&quot;&quot;,&quot;ptype&quot;:&quot;&quot;,&quot;topic&quot;:&quot;&quot;,&quot;province&quot;:&quot;&quot;,&quot;city&quot;:&quot;&quot;&#125; 引用CSV Data Set Config，参数化参数：1&#123;&quot;memberId&quot;:&quot;$&#123;memberId&#125;&quot;,&quot;pagerno&quot;:$&#123;pagerno&#125;,&quot;pagerrows&quot;:15,&quot;channel&quot;:&quot;&quot;,&quot;ltitle&quot;:&quot;&quot;,&quot;ptype&quot;:&quot;&quot;,&quot;topic&quot;:&quot;&quot;,&quot;province&quot;:&quot;&quot;,&quot;city&quot;:&quot;&quot;&#125; 验证请求参数 1、选择产品列表，右键点击Start,启动测试脚本，如下图： 2、回到察看结果树面板，查询请求参数是否替换成csv脚本中参数。 基础知识 1、吞吐量：是指在没有帧丢失的情况下，设备能够接受的最大速率。 2、存储的最小单位是字节Byte，对于存储单位，有以下几个单位，GB、MB和KB，那么这三者之间的换算关系是：1GB＝1024MB，1MB＝1024KB，1KB＝1024Bytes。Bit ：“位”，称为bit，也就是比特，有的时候也称为位。一个字节为8位二进制表示。Byte：“字节”，一个字节就是8比特。 3、Mbps (million bits per second 兆位/秒) 代表每秒传输1，000，000比特。该缩写用来描述数据传输速度。例如：4Mbps=每秒钟传输4M比特。数据传输速率的单位，字母b（bit）是比特和字母 B （Byte）是字节。 4、吞吐量与带宽的区分：吞吐量和带宽是很容易搞混的一个词，两者的单位都是Mbps.先让我们来看两者对应的英语，吞吐量:throughput ; 带宽: Max net bitrate 。当我们讨论通信链路的带宽时，一般是指链路上每秒所能传送的比特数。我们可以说以太网的带宽是10Mbps。但是，我们需要区分链路上的可用带宽（带宽）与实际链路中每秒所能传送的比特数（吞吐量）。我们倾向于用“吞吐量”一次来表示一个系统的测试性能。这样，因为实现受各种低效率因素的影响，所以由一段带宽为10Mbps的链路连接的一对节点可能只达到2Mbps的吞吐量。这样就意味着，一个主机上的应用能够以2Mbps的速度向另外的一个主机发送数据。 5、方差和标准差都是用来描述一组数据的波动性的（集中还是分散），标准差的平方就是方差。方差越大，数据的波动越大。 参考使用 JMeter 完成常用的压力测试 JMeter 聚合报告之 90% Line 参数说明 Jmeter中的几个重要测试指标释义 Jmeter基础]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[拆除你的情绪地雷]]></title>
+      <url>%2F2017%2F04%2F22%2F2017%2Flisten%2F%E9%BB%84%E6%B6%8C%E8%A7%A3%E8%AF%BB%EF%BC%9A%E6%8B%86%E9%99%A4%E4%BD%A0%E7%9A%84%E6%83%85%E7%BB%AA%E5%9C%B0%E9%9B%B7%2F</url>
+      <content type="text"><![CDATA[1.你可以也需要承认自己做了错事、蠢事，但是不要就此认为自己就是一个蠢人。 2.如果你愿意，你可以去讨厌别人做的事，或者别人没能做到的事，但不要要求他们必须做的很好。 3.你要告诉自己，麻烦只是麻烦而已，没有那么糟糕。即使是非常大的麻烦，也只是大麻烦而已。 4.无论是对自己、对他人还是对现实世界，我们都不应当夸大阻力、以偏概全，不要随意贴标签。 5.太想得到你想要的东西，就容易忽略他人，受到别人的憎恨，也伤害了你所在的群体。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[我们都是食人族]]></title>
+      <url>%2F2017%2F04%2F22%2F2017%2Flisten%2F%E7%A7%A6%E7%9E%B3%E8%A7%A3%E8%AF%BB%EF%BC%9A%E6%88%91%E4%BB%AC%E9%83%BD%E6%98%AF%E9%A3%9F%E4%BA%BA%E6%97%8F%2F</url>
+      <content type="text"><![CDATA[1.被称为“复杂”的社会和被称为“原始且落后”的社会，这两者之间并不存在人们想象的那种鸿沟。就像古老的西方谚语所说，“远方照耀近处，近处也能照亮远方”。 2.外国传来的习俗并不会同化你的固有文化，它的角色比较类似催化剂。也就是说，它的出现不过是激发了原本潜在于我们社会里的类似习俗罢了。 3.具有讽刺意味的是，今天物理学家对我们传达的研究，在我们非专业人士听来，也更像是远古时代某个长老嘴里的神话故事。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[注意力商人]]></title>
+      <url>%2F2017%2F04%2F20%2F2017%2Flisten%2F%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%95%86%E4%BA%BA%2F</url>
+      <content type="text"><![CDATA[1.作为注意力商人，第一，你要用低俗去争夺注意力；第二，你还要用更低俗去保有注意力。 2.纵观注意力商人的历史，有一个非常明显的规律：技术进步推动文化变革。 3.在Instagram上，任何人都可以借助手机的正面摄像头和自拍杆，用个人形象参与注意力的争夺，普通人也可以做注意力商人。 4.所有注意力商人的工作模式都是收割观众的注意力，向观众投放广告。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[产品改变世界]]></title>
+      <url>%2F2017%2F04%2F19%2F2017%2Flisten%2F%E4%BA%A7%E5%93%81%E6%94%B9%E5%8F%98%E4%B8%96%E7%95%8C%2F</url>
+      <content type="text"><![CDATA[1.虐人可是一门手艺，其中的分寸至关重要。虐轻了激发不出员工的潜力，一帮很有才能的人可能水平发挥不出来，毕竟谁天生都是懒的，都会挑简单的工作做。虐狠了大家受不了就会纷纷离去，团队很容易散伙。所以只有虐得刚刚好，虐得恰到好处，虐得刚刚超过能力的极限值，让大家痛并快乐着，这样的CEO才是最有力量的。这样的团队也才能持续性地创造出奇迹。 2.一个好的风险投资公司比你还希望你的创业项目存活下来，他们会在各个方面给你最实用的帮助。所以一个成熟的创业者也不是谁的钱都会随便拿，他们也不是看谁会把公司的股权稀释得最少，他们更看重的是风险投资公司背后所能提供的资源。 3.创业的过程就像登珠峰，虽然千难万险，依然有人不断地向它挑战。值得注意的是，最早时候登珠峰的失败率是非常高的，有大量的人在这座山上丢掉了性命。但是随着人们的经验增加，随着装备越来越好，现在登珠峰的难度已经降了不少。这是珠峰变矮了吗？不是，是人们更加熟练了。我相信创业也是一样，随着市场机制的完善，人们积累的经验越来越多，创业的难度也会下降，创业的成功率也一定会越来越高。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[需求第三律]]></title>
+      <url>%2F2017%2F04%2F18%2F2017%2Feconomics%2Flawofdemand3%2F</url>
+      <content type="text"><![CDATA[每当消费者必须支付一笔附加费的时候，高品质的产品就相对低品质的产品变得便宜了，这笔附加费越高，高品质产品就变得越便宜。有时候我们把这个定律叫做”好东西运到远方去定律”。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[需求第二律]]></title>
+      <url>%2F2017%2F04%2F18%2F2017%2Feconomics%2Flawofdemand22%2F</url>
+      <content type="text"><![CDATA[随着时间的推移，需求弹性会变得越来越高，人们寻找替代品的空间会越来越大，对策越来越多。 税负的分摊 税负通常是由供需双方共同承担的，至于谁承担的多，谁承担的少，取决于他们之间的相对弹性，而与法律或者风俗的规定没有关系。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[思考致富]]></title>
+      <url>%2F2017%2F04%2F18%2F2017%2Flisten%2F%E6%80%9D%E8%80%83%E8%87%B4%E5%AF%8C%2F</url>
+      <content type="text"><![CDATA[1.无形的意念会带来财富，凡是你心里所想，并且相信的，最终必然能够实现。所有的成就，所有的辛苦，所得来的财富，其实都是意念的源泉。思考才能致富，这里的财富，不是狭隘的物质财富，而是我们精神的富足。 2.当受到性驱动的时候，这个驱动力是很厉害的，人们会因为性表达的欲望不惜牺牲生命和荣誉。性表达的欲望是天然天生的，我们不能想掩盖就掩盖，想隐藏就隐藏，我们必须要有途径来宣泄。这个途径可以是文学创作、艺术表现或者是其他能够聚集财富的方面。 3.积极的心态是希尔成功哲学的核心内容。这种心态能在潜意识中形成积极的影响，它会引导我们用积极开放的眼光分辨、吸收外界的有利信息，阻挡住消极思维、心态的不利影响，从而使自己向越来越好的方向发展。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[需求第二律]]></title>
+      <url>%2F2017%2F04%2F17%2F2017%2Feconomics%2Flawofdemand2%2F</url>
+      <content type="text"><![CDATA[弹性概念 需求对价格的弹性，各价格变化之后流逝的时间长度成正比。随意时间的推移，需求对价格的弹性会增加。 公式 需求的价格弹性=需求量的变化比例/价格的变化比例= 需求曲线的斜率=价格的变化量/需求量的变化量 小结 弹性跟斜率不一样，在一条需求曲线上面，斜率是处处相等的，但是在同样一条需求曲线上面，弹性却处处不等。在价格比较高的部分，弹性大于1，也就是说一种商品具有弹性，代表这种商品是一种奢侈品；在价格比较低的部分，弹性小于1，它代表的是，这种商品是一种必需品。同样一种商品，到底它是奢侈品还是必需品，取决于价格的不同。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[第五项修炼]]></title>
+      <url>%2F2017%2F04%2F17%2F2017%2Flisten%2F%E7%AC%AC%E4%BA%94%E9%A1%B9%E4%BF%AE%E7%82%BC%2F</url>
+      <content type="text"><![CDATA[核心内容 核心管理理念：一个组织能够拥有长期竞争力的关键在于，他们有比竞争对手更快更好的学习力。 学习型组织：组织中的每个人都充满了学习的热情和能力，并能在合作的过程中不断地互相启发，同时这个组织在创新和试错中又能够不断地自我成长和进化。 1.自我超越、心智模式、共同愿景、团队学习这四项能力都是建立在系统思考能力的基础上。 2.明确学习愿景、激发学习热情，对个人而言是自我超越的修炼，对团队而言是共同愿景的修炼。 3.不懂系统思考的人，往往会把组织当做一个机器来管理；而懂系统思考的人，则会把组织看作一个生命体来管理。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[无码：艺术大师的秘密生活2]]></title>
+      <url>%2F2017%2F04%2F16%2F2017%2Flisten%2F%E6%97%A0%E7%A0%81%EF%BC%9A%E8%89%BA%E6%9C%AF%E5%A4%A7%E5%B8%88%E7%9A%84%E7%A7%98%E5%AF%86%E7%94%9F%E6%B4%BB2%2F</url>
+      <content type="text"><![CDATA[1.日本人曾天价买走梵高的作品，原因在于梵高曾经模仿过日本的浮世绘，所以日本人觉得骄傲，应该把梵高的作品收入囊中。 2.“裸体”是不穿衣服，就像伊甸园中的亚当和夏娃。裸体的人不懂什么叫羞耻，因此他们不是泄欲的对象。但是“赤裸”意味着衣服是被故意脱下来的。 3.过去有人说，梵高后来疯了，主要是因为在阿尔勒的时候，天天喝苦艾酒。但是最近的研究发现，事情不能怪苦艾酒，而是要怪颜料。那些色彩鲜艳的颜料含有剧毒。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[书单]]></title>
+      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E4%B9%A6%E5%8D%952017%2F</url>
+      <content type="text"><![CDATA[联盟 作者：里德·霍夫曼 / 本·卡斯诺查 / 克里斯·叶 刻意练习 作者:[美国] 安德斯·艾利克森 / 罗伯特·普尔]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[刻意练习]]></title>
+      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0%2F</url>
+      <content type="text"><![CDATA[真正的”一万小时天才理论”是，普通人也可以通过刻意练习成为某个领域的专家。 用『三个F』创建有效的心理表征 专注focus，集中注意力 反馈feedback，及时反馈 纠正fix it，不断修正自己 练习的时间与质量反而在决定人们的技能变得多么熟练时，发挥着更大的作用。 从长远来看，占上风的是那些练习更勤奋的人，而不是那些一开始在智商或者其他才华方面稍有优势的人。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[联盟]]></title>
+      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E8%81%94%E7%9B%9F%2F</url>
+      <content type="text"><![CDATA[通过联盟重建信任与忠诚 如果我们不能回到终身雇佣的年代，就要学会重建雇主与员工的关系。这种新的忠诚观允许公司和员工对彼此做出承诺，把过去的商业交易转变为互惠关系的框架。雇佣关系可以转换为一个联盟：一份由双方独立达成的，有明确条款的互惠协议。 员工拥有创始人思维任期制将员工在你的公司度过的职业生涯重新规划为一系列连续的任期，可以更好地吸引和留住开创型员工。 培养开创性员工的利器诚实地谈论任期公司里的三类任期 轮转期 转变期 基础期 协调员工的目标和公司的目标如何执行转变期计划 开始对话，确定目标 定期检查以交流反馈 任期临近结束前，制定下一个任期计划 如何处理任务中的意外投资在员工的人脉上打造终身联盟：前同事联络网建立同事联络网的策略与技巧 决定同事联络网的成员。删除掉存在纠纷和法律道德风险的前员工。 明确定义与前员工关系的期望和收益。常见的方法有：员工推荐奖金、产品折扣和测试白名单、举办活动、为前员工颁发荣誉、向前员工通报最新消息等。 建立周详的离职机制。在离职面谈中与员工巩固终身关系，收集信息进入数据库。 建立现员工和前员工的联系。 首席执行官布拉德·史密斯（Brad Smith）告诉我们的：“领导者的任务不是培养能人，而是认识到人们已有的才华，并创造出让其产生和成长的环境。”]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[无码：艺术大师的秘密生活1]]></title>
+      <url>%2F2017%2F04%2F15%2F2017%2Flisten%2F%E6%97%A0%E7%A0%81%EF%BC%9A%E8%89%BA%E6%9C%AF%E5%A4%A7%E5%B8%88%E7%9A%84%E7%A7%98%E5%AF%86%E7%94%9F%E6%B4%BB1%2F</url>
+      <content type="text"><![CDATA[1.跳出艺术聊艺术，反倒是能聊出更多有意思的东西。 2.Artist这个词，我们习惯将其翻译成“艺术家”，其实这个词的英文原意没有“家”的意思，就是“做艺术的人”。重点在“人”，而非成为“家”。 3.很多事情是历史选择了你。当然，历史选择你的时候，可能会考虑如下三个条件，一个是你有故事可讲，一个是你的作品有故事可讲，第三个就是你要长寿。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[需求第一定律]]></title>
+      <url>%2F2017%2F04%2F15%2F2017%2Feconomics%2Flawofdemandtwo%2F</url>
+      <content type="text"><![CDATA[含义 需求和供给之间没有绝对的区别。当价格比较低的时候，人们是需求者，当价格高到一定程度，人们就会从需求者变成供给者。 剩余的概念 我们说最好我们称剩余为交易剩余，而不是消费者剩余或者生产者剩余。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[游戏改变世界]]></title>
+      <url>%2F2017%2F04%2F13%2F2017%2Flisten%2F%E6%B8%B8%E6%88%8F%E6%94%B9%E5%8F%98%E4%B8%96%E7%95%8C%2F</url>
+      <content type="text"><![CDATA[1.有趣的失败是延长游戏体验、扩展学习过程的一个好办法。与此同时，当我们能够享受自己的失败，就会有更多的时间停留在一种“无比乐观”的状态，也就是在成功化为真实之前的希望时刻，我们可以体会到竭尽所能的灵感。 2.我们怎样才能在生活中获得更多意义？其实很简单。哲学家、心理学家和精神领袖都赞同：为生活增加意义的最佳途径，就是把自己的日常行动与一件超出自身的事情联系起来，事情越大，效果越好。 3.与游戏相比，现实混乱而分裂。游戏帮我们做出更加协调一致的努力，随着时间的推移，它们还将赋予我们合作的超能力。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[需求第一定律]]></title>
+      <url>%2F2017%2F04%2F12%2F2017%2Feconomics%2Flawofdemandone%2F</url>
+      <content type="text"><![CDATA[基本含义 价格提高，商品的需求量减少；价格降低到一定程度，需求量就会增加。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[思考的技术]]></title>
+      <url>%2F2017%2F04%2F12%2F2017%2Flisten%2F%E6%80%9D%E8%80%83%E7%9A%84%E6%8A%80%E6%9C%AF%2F</url>
+      <content type="text"><![CDATA[1.很多人在思考问题的时候，以为自己抓住了本质，其实是被外界的干预、固有的经验或者别人的劝说所误导。 2.遗憾的是，大多数面临严重问题的企业，在找出解决之策以后，却没有坚决实行的执行力。 3.所谓科学的思考方法，就是为了印证假设而不辞劳作的行动力，也可以说是为了获得绝对正确的答案，彻底动脑的深层思考力。 4.证实假设到导出结论的过程中，最重要的就是弄清楚“发生问题的原因是什么”。但是大多数经营者和企业经理人只看到问题的现象，却看不到产生问题的原因。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[输赢心理学]]></title>
+      <url>%2F2017%2F04%2F12%2F2017%2Flisten%2F%E8%BE%93%E8%B5%A2%E5%BF%83%E7%90%86%E5%AD%A6%2F</url>
+      <content type="text"><![CDATA[对一些钢琴家的研究表明，是否能够在比赛中胜出，并不取决于平时排练得多好，而是取决于他们能否在比赛中，保持平时排练时的水平。很少有钢琴家能在比赛中表现得和平时排练一样好或更好。当人们越关注成功的几率，去尝试做某事的可能性就小；但当越关注成功的果实，尝试的可能性就大。 乐队的演出效果越好，其幕后的争斗、竞争、不和谐就会越发严重。他们只有在台上才会表现出初期的和谐效果。要让人们在合作中更努力，只需要告诉他们与实验室伙伴同一天生日即可，他们的工作会更加积极主动、持之以恒。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[刻意练习]]></title>
+      <url>%2F2017%2F04%2F11%2F2017%2Flisten%2F%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0%2F</url>
+      <content type="text"><![CDATA[1、只有在刻意练习下的一万小时才有用。 2、你可以掌握自己的潜力。 3、如果你没有进步，并不是因为你缺少天赋，而是因为你没有用正确的方法练习。 4、传统的方法一直是先找出关于正确方法的信息，然后让学生运用那些知识。刻意练习则只聚焦于绩效和表现，以及怎样提高绩效和表现。 5、在专业的或商业的背景中设计提高绩效和表现时，正确的问题是“我们怎样改进相关的技能”，而不是“我们怎样传授相关的知识” 6、杰出人物的进展只有局外人看来才是重大进展，因为那些人并没有见证过所有那些微小的进展，才积累成重大的飞跃。 7、我们只有努力去复制杰出人物的成就，失败了就停下来思考为什么会失败，才能创建有效的心理表征。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Mysql 优化]]></title>
+      <url>%2F2017%2F04%2F11%2F2017%2Fprogram%2Fmysqloptimization%2F</url>
+      <content type="text"><![CDATA[Mysql性能优化MySQL索引原理及慢查询优化]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jvisualvm]]></title>
+      <url>%2F2017%2F04%2F11%2F2017%2Fprogram%2Fjvisualvm%2F</url>
+      <content type="text"><![CDATA[使用 VisualVM 进行性能分析及调优]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jprofiler]]></title>
+      <url>%2F2017%2F04%2F11%2F2017%2Fprogram%2Fjprofiler%2F</url>
+      <content type="text"><![CDATA[start_jetty_jprofiler.sh123JAVA_OPTS=&quot;-agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849 $JAVA_OPTS&quot;export JAVA_OPTSjava $JAVA_OPTS -jar start.jar 业务启动123JAVA_OPTS=&quot;-agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849 $JAVA_OPTS&quot;export JAVA_OPTSjava $JAVA_OPTS -jar /usr/local/jetty9/start.jar jetty.base=/home/user/product &amp;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[灰犀牛]]></title>
+      <url>%2F2017%2F04%2F11%2F2017%2Flisten%2F%E7%81%B0%E7%8A%80%E7%89%9B%2F</url>
+      <content type="text"><![CDATA[所有灾难的发生，不是因为发生之前的征兆过于隐蔽，而是因为我们的疏忽大意和应对不力。这些事前征兆早就明白无误地呈现在绝大多数人的面前，但他们不仅视而不见，而且不愿采取应对措施加以防范。 新的视角和新的词汇能够帮助我们描绘未来图景。正如我们在摆脱群体思维桎梏的时候，需要一个开明的思想和新生的力量一样，在发现未来的危机与危险的时候，同样需要一个新的思考模式。 正确定义的危机类型。一个正在靠近的灰犀牛式危机对一些人来说是可怕的灾难，对于另外一些人来说，可能就是一次机遇。如果有能力改变的人迟迟不采取行动，那么就要重新定义面前的危机，让这个危机与他们休戚相关。把危机看成是一次机遇。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[需求定律]]></title>
+      <url>%2F2017%2F04%2F10%2F2017%2Feconomics%2Flawofdemand%2F</url>
+      <content type="text"><![CDATA[个人主义的主观价值论 需求有两个特点 你想要的东西，别人也想要； 需求有一个层层递进的规律。 个人估值的多层含义 “一个人对一件商品的个人估值，是他为了得到这件商品所愿意支付的其他商品的最高数量。”用英文说就是：A person’s personal worth of a good is the most of other goods the person would be willing to pay to get that good。 第一层，个人估值是个人的估值，不是集体的估值。 第二层，它是主观的，绝对主观的。 第三层，个人估值不是以个人的愿望为基础的，而是以他所愿意放弃的其他商品的数量来计算的。 微妙的个人估值论 由个人决定的，集体不能决定，一定是个人的； 完全主观的； 基于行动的，不是单纯的愿望。因为它基于行动，所以我们外人也可以观察，也可以记录下来，也可以刻画，也可以从中找到它的规律。 ###客观价值论和主观价值论区别 第一是客观价值论能解释的，主观价值论也能解释； 第二是客观价值论不能解释的，主观价值论，或者说个人估值这个概念也能解释； 第三是主观价值论能够更好地指导生产。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[你充满电了吗]]></title>
+      <url>%2F2017%2F04%2F10%2F2017%2Flisten%2F%E4%BD%A0%E5%85%85%E6%BB%A1%E7%94%B5%E4%BA%86%E5%90%97%2F</url>
+      <content type="text"><![CDATA[核心内容 要让自己精力充沛其实很简单，那就是要重视以下三大关键因素： 一、创造意义；二、积极互动；三、储备能量。 一个人如果越看重个人幸福，他在日常生活中就越容易有孤单和无力感。 金钱和意义，哪个是前提很重要。 负能量词汇的效果通常是正能量词汇的4倍。换句话说，前面80%的积极正面信息，刚好能让别人接受后面20%的消极信息还能心平气和。 能赚钱很棒，但我做事的动力来自创造伟大的产品而不是利润。——乔布斯 财富会导致人们花在喜欢的事情上时间变少，而花在带来压力的事情上的时间变多。——丹尼尔·卡尼曼]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Jconsole on Jetty]]></title>
+      <url>%2F2017%2F04%2F10%2F2017%2Fprogram%2Fjconsolejetty%2F</url>
+      <content type="text"><![CDATA[使用jconsole来连接jetty查看其运行状态。 修改jetty的配置start.ini文件123456--exec OPTIONS=Server,jsp,jmx,resources,websocket,ext,plus,annotations #jmx必须有 -Dcom.sun.management.jmxremote.port=8900 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false 参数说明12345678-Dcom.sun.management.jmxremote.port=8900 表示启动的端口为8900-Dcom.sun.management.jmxremote 启动jmx远程管理，默认为true-Dcom.sun.management.jmxremote.ssl=false 禁用ssl登录-Dcom.sun.management.jmxremote.authenticate=false禁用认证，无需输入用户名密码即可登录--exec 此参数必须有，若漏掉此参数，即使配置了以上参数，远程管理端口也不会启动。只有加上此选项，才会使其他参数生效。 设置完成后，需要重启jetty才能生效。 jconsole连接jconsole通过ip:port的方式就可连接，如果有防火墙的话请放开相关端口。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Jetty jvm]]></title>
+      <url>%2F2017%2F04%2F10%2F2017%2Fprogram%2Fjettyjvm%2F</url>
+      <content type="text"><![CDATA[修改start.ini文件中–exec -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Dcom.sun.management.jmxremote-Dorg.eclipse.jetty.util.log.IGNORED=true-Dorg.eclipse.jetty.util.log.stderr.DEBUG=true-Dorg.eclipse.jetty.util.log.stderr.SOURCE=true -Xmx2000m -Xmn512m -XX:PermSize=512m -XX:MaxPermSize=1024m -verbose:gc-XX:+PrintGCDateStamps-XX:+PrintGCTimeStamps-XX:+PrintGCDetails-XX:+PrintTenuringDistribution-XX:+PrintCommandLineFlags-XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:ParallelCMSThreads=2 -XX:+CMSClassUnloadingEnabled -XX:+UseCMSCompactAtFullCollection-XX:CMSInitiatingOccupancyFraction=80#———————————————————– 说明 -Dsun.rmi.dgc.client.gcInterval=3600000， -Dsun.rmi.dgc.server.gcInterval=3600000是设置客户端和服务端GC启动的时间。 -Xmx2000m最大缓存空间、 -Xmn512m新生代大小、 -XX:PermSize=512m内存永久区初始大小、 -XX:MaxPermSize=1024m最大永久区大小， -XX:MaxPermSize=1024m允许CMS清楚老年代， -XX:+CMSClassUnloadingEnabled， -XX:+CMSClassUnloadingEnabled 允许CMS清楚持久代。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[JMeter 压力测试CSV参数化]]></title>
+      <url>%2F2017%2F04%2F10%2F2017%2Fprogram%2Fjmeter%2F</url>
+      <content type="text"><![CDATA[Jmeter之使用CSV Data Set Config实现参数化登录JMeter带json数据的post请求测试JMeter 压力测试使用函数和 CSV 文件参数化 json 数据]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[永远幸福的科学]]></title>
+      <url>%2F2017%2F04%2F09%2F2017%2Flisten%2F%E6%B0%B8%E8%BF%9C%E5%B9%B8%E7%A6%8F%E7%9A%84%E7%A7%91%E5%AD%A6%2F</url>
+      <content type="text"><![CDATA[核心内容每个人有不同的特质，而这个特质是很难改变的。心理学家把人的依赖模式分为三种：安全型、回避型和焦虑型。对你的伴侣多考察一段时间，等对方的特质彻底表现出来之后，再去判断对方才会更加准确和可靠。一旦发现伴侣身上表现出的危险信号，应该立即做出科学应对；永远不要自欺欺人，让自己在错误的选择上越走越远 在一段感情上投入了大量时间和精力的人比较容易抓住对方不放。 激烈的情感只是昙花一现，如果把激情作为长久恋情的首要目标，那么我们大多只能得到一些美好的片段和悲情的结局。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[成本小结]]></title>
+      <url>%2F2017%2F04%2F09%2F2017%2Feconomics%2Fcost%2F</url>
+      <content type="text"><![CDATA[成本就是放弃了的最大代价–阿尔钦(Armen Alchian) 沉没成本不是成本 产品价格与成本无关最终商品的供求关系，决定了最终商品的价格，而最终商品的价格倒过来决定商品生产的原材料的成本。 所有的盈利都是横财，都是意外的收入；所有的亏损都是横祸，都是意外的损失。 寻租：企业在向政府争夺垄断性优惠政策的过程当中，也要付出巨大的成本。 社会成本问题引发科斯定律在交易费用为零的情况下，谁能把资产用得好，资产就会落到谁的手上。 交易费用永远为正 交易费用越低越好 制度费用与制度变迁成本的费用要为学校、教会、商会、家庭、企业、法庭、政府、军队等等这些组织付出费用，这叫制度费用。从一种制度变成另外一种制度的时候，所要付出的成本，称之为制度变迁的成本。 存在于想象中的体制成本看见那些看不见的东西，看见那些看不见的损失，从而优化我们的政策，改善我们的生活。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[查理芒格]]></title>
+      <url>%2F2017%2F04%2F09%2F2017%2Flisten%2F%E6%9F%A5%E7%90%86%E8%8A%92%E6%A0%BC%2F</url>
+      <content type="text"><![CDATA[要得到你想要的某样东西，最好的办法是让你自己配得上它。——查理芒格]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Nginx conf]]></title>
+      <url>%2F2017%2F04%2F09%2F2017%2Fprogram%2Fnginx.conf%2F</url>
+      <content type="text"><![CDATA[反向代理配置修改部署目录下conf子目录的nginx.conf文件（如nginx-1.5.13\conf\nginx.conf）内容，可调整相关配置。反向代理配置示例：12345678910111213141516location / &#123; #设置主机头和客户端真实地址，以便服务器获取客户端真实IP proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; #禁用缓存 proxy_buffering off; #设置反向代理的地址 proxy_pass http://192.168.1.1; &#125; 代理地址根据实际情况修改。 负载均衡配置nginx 的 upstream默认是以轮询的方式实现负载均衡，这种方式中，每个请求按时间顺序逐一分配到不同的后端服务器，如果后端服务器down掉，能自动剔除。 另外一种方式是ip_hash：每个请求按访问ip的hash结果分配，这样每个访客固定访问一个后端服务器，可以解决session的问题。 负载均衡配置示例：12345678910111213141516171819202122232425262728293031upstream backend &#123; #ip_hash; server 192.168.1.251; server 192.168.1.252; server 192.168.1.247; &#125;server &#123; listen 80; server_name trffweb; location / &#123; #反向代理的地址 proxy_pass http://backend; &#125;&#125; Upstream命名和服务器地址根据实际情况修改。 完整配置示例123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657nginx.conf：worker_processes 1;events &#123; worker_connections 1024;&#125; http &#123; include mime.types; default_type application/octet-stream; sendfile on; keepalive_timeout 65; upstream backend &#123; #ip_hash; server 192.168.1.251; server 192.168.1.252; server 192.168.1.247; &#125; server &#123; listen 80; server_name 2; location / &#123; #设置主机头和客户端真实地址，以便服务器获取客户端真实IP proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; #禁用缓存 proxy_buffering off; #反向代理的地址 proxy_pass http://backend; &#125; &#125;&#125;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[php 命令]]></title>
+      <url>%2F2017%2F04%2F09%2F2017%2Fprogram%2Fphp%2F</url>
+      <content type="text"><![CDATA[php 调式命令 echo json_encode($data);die; var_dump($info);die;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[控制焦虑]]></title>
+      <url>%2F2017%2F04%2F07%2F2017%2Flisten%2F%E6%8E%A7%E5%88%B6%E7%84%A6%E8%99%91%2F</url>
+      <content type="text"><![CDATA[要是一个人全无焦虑感，什么都不当一回事，那就意味着对生活全无目标，不会去努力提高自己，甚至有危险也不知道躲避，这不就是我们俗话说的“没心没肺”吗？ 对于焦虑这种情绪，我们需要的不是彻底清除，而是合理地控制，把它的负面影响降到最低。 健康的焦虑几乎都是因为现实或理性的恐惧而产生，而过分的焦虑，是来自于不切实际的想象。 幽默，是缓解压力的最佳办法，当一件事让你焦虑、紧张的时候，你可以尝试着，用幽默的态度来面对。 当你面对一件让你非常紧张，但又应该去做的事情时，你要拿出勇气去直面它，而不应该逃避。因为逃避意味着，对不确定事物的焦虑感战胜了你，你将无法主宰你自己。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[如何实现有效社交]]></title>
+      <url>%2F2017%2F04%2F06%2F2017%2Flisten%2F%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%9C%89%E6%95%88%E7%A4%BE%E4%BA%A4%2F</url>
+      <content type="text"><![CDATA[核心内容所谓的“有效社交”，具体来说就是与他人进行高效而顺畅的沟通，并且能灵活应对和解决随时发生的各种突发状况，顺利推进和落实你自己的要求和建议，从而为自己营造出更良好的社会关系。想要实现有效社交，必须从以下四个方面重点着手做起：一、彻底分析沟通对象；二、有效而科学地组织交流语言；三、让别人更好更快地记住你所传递的信息；四、迅速而妥善地应对处理沟通中可能出现的冲突。 实现有效社交的头号法则是：在开口交流前，一定要先琢磨透沟通对象，了解对方的真正需求或兴趣点，谈话才会事半功倍。 传达信息的方式，可能比传达信息的内容更为重要，它将决定大家是否能够记住你的信息，并采纳你的建议。 在社交活动中，大约超过90%的人都是全凭印象做出决定。重视“视觉化”，提升个人的表演技能，是实现有效社交的关键环节。 每当有人向你提出问题时，你要思考的重点并不是如何回答这个问题，而是这个问题到底会把你引到什么方向上去。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[好好学习]]></title>
+      <url>%2F2017%2F04%2F05%2F2017%2Flisten%2F%E5%A5%BD%E5%A5%BD%E5%AD%A6%E4%B9%A0%2F</url>
+      <content type="text"><![CDATA[我们读的书并不一定是知识，只有改变了我们生活的信息才是知识。 对于学习临界知识而言，首先要掌握的是底层思维和方法，其次才是具体的知识和技能。 每个人都应当有自己的框架来安排自己的临界知识，不过，确实有一些重要的临界知识是通用的，比如复利效应、概率论、系统思考等等。 你只有知道一个知识的局限性，才配得上真正拥有这个知识，如果你不知道一个知识的适用边界就每天用它解决问题，那这个知识对你而言就太危险了。 有时候，慢就是快。你只有把基本功打扎实，才能快起来，在最重要的地基上面花时间是必须做的。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[内向者沟通圣经]]></title>
+      <url>%2F2017%2F04%2F03%2F2017%2Flisten%2F%E5%86%85%E5%90%91%E8%80%85%E6%B2%9F%E9%80%9A%E5%9C%A3%E7%BB%8F%2F</url>
+      <content type="text"><![CDATA[内向者的不足四种挑战。1.身心压力 原因：内向者不懂得说不，超负荷工作；过度紧张引发身体不适；社交让内向者身心俱疲。 2.别人的低估和误解 原因：内向者不想说话，却被别人认为是愚蠢孤僻；他爱倾听，却被别人认为是优柔寡断；他想安静，却被别人认为是懦弱。 3.不懂经营关系 职业发展受阻的原因：不会自我营销，只能靠边站；没有人脉，永远只能是个小角色；回避办公室政治，错过关键信息；埋头苦干，没有效率和未来。 4.成为职场隐形人 原因：内向者过于低调，不愿意成为大家关注的焦点，容易被别人忽略，从而丧失很多职场机会。 不足转化为优势1.让内向者建立优势的4P法则 4P法则：其实是一个简单易记的指南，包括四个步骤，分别是准备、展示、推动、练习。因为这四个步骤，每个步骤对应的英文单词的首字母都是P，所以叫做4P法则。这四个步骤恰恰可以解决内向者面临的四大挑战。 2.4P法则之第一步：准备 内向者如果对要面临的情况和解决的方案并不熟练，没有充足的准备，那么就会慌乱有压力。内向者要缓解压力，第一步就是做足准备，制定一套作战方案，按步骤为人际交往做好准备。 3.4P法则之第二步：展示 内向者要赢得别人的关注和好感，就需要展示自己，需要专注在当下，专注于和你一起交流的人，勇敢真诚的沟通和分享。展示，就是让别人知道你的存在，可以从三方面入手： （1）专注倾听对方 （2）记住对方名字，也让对方记住你的名字 （3）自我介绍，告诉别人你是做什么的 4.4P法则之第三步：推动 鼓励自己走出舒适区，这一步其实是内向者给自己设立一个小挑战和目标。一旦突破了自己过去的舒适区，就有可能迎来全新的机会。比如：你不擅长演讲，就一定要给自己设置一个公共演讲的机会；你不擅长和客户沟通，你就一定要设置一次与客户的对话。 5.4P法则之第四步：练习 前三个步骤都不是一蹴而就的，需要不断地练习。持续不断的练习，将这些有效果的行为内化成自身能力的一部分。 金句 其实机会是给那些有准备的人，这和你是内向型还是外向型人没有什么关系。 内向者的性格是可以管理的，成功的领导者就能把内向者的弱点反而变成优势。 展示自己最大的技巧就是真诚和坦诚。和别人真诚地分享你的观点，才能让别人对你印象深刻。 你只有将自己推出舒适区，进入不舒适区的领域，你才能真正的进步。 去做你最害怕做的事。——罗夫·华多·爱默生 如果你对别人感兴趣，那么你在两个月内交到的朋友就比你试图让别人对你感兴趣花两年时间交的朋友还要多。——戴尔·卡耐基]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[我决定简单地生活]]></title>
+      <url>%2F2017%2F04%2F02%2F2017%2Flisten%2F%E6%88%91%E5%86%B3%E5%AE%9A%E7%AE%80%E5%8D%95%E5%9C%B0%E7%94%9F%E6%B4%BB%2F</url>
+      <content type="text"><![CDATA[本书思想核心是：所谓“极简主义生活”，就是要求我们尽量排除一切没必要存在的东西，舍弃不是自己真正需要的东西——包括身边的物品，做事的流程、沟通的环节等等，从而迅速找到应该去珍视的东西，让自己彻底实现“不为外物所累”。在这个过程中，你的时间会变得更充裕，精力更加充沛，内心更加安宁，身体更加健康，最终真正感受到久违的幸福。 极简主义不是更好打扫这些显而易见的改变，而是从更深层次的收获，思考自己该如何生活，重新定义每个人都渴望的“幸福”。 人们追求更大兴奋的时候，却错误地去追求了更多的数量，更大的尺寸和更大的价格。 物品只是手段。购买物品只能是因为我们需要。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[娱乐至死]]></title>
+      <url>%2F2017%2F04%2F01%2F2017%2Flisten%2F%E5%A8%B1%E4%B9%90%E8%87%B3%E6%AD%BB%2F</url>
+      <content type="text"><![CDATA[我们的语言即媒介，我们的媒介即隐喻，我们的隐喻创造了我们的文化的内容。 有两种方法可以让文化精神枯萎，一种是奥威尔式的——文化成为一个监狱，另一种是赫胥黎式的——文化成为一场滑稽戏。 如果一个民族分心于繁杂琐事，如果文化生活被重新定义为娱乐的周而复始，如果严肃的公众对话变成了幼稚的婴儿语言，总而言之，如果人民蜕化为被动的受众，而一切公共事务形同杂耍，那么这个民族就会发现自己危在旦夕，文化灭亡的命运就在劫难逃。在美国，奥威尔的预言似乎和我们无关，而赫胥黎的预言却正在实现。 不管媒介如何变化，我们能培养起一种媒介意识，认识到不同的媒介对人的影响是不同的是一件必要的事。以后的智能时代媒介会千变万化，不管怎么变，主动选择自己感兴趣的东西，不要沦为被动接受者，成为自己思想的主人都是最重要的事。抓住这一点，互联网的忧虑也就不存在了。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[枪炮、病菌与钢铁]]></title>
+      <url>%2F2017%2F03%2F31%2F2017%2Flisten%2F%E6%9E%AA%E7%82%AE%E3%80%81%E7%97%85%E8%8F%8C%E4%B8%8E%E9%92%A2%E9%93%81%2F</url>
+      <content type="text"><![CDATA[世界上只有几个地方发展了粮食生产，而且这些地区发展粮食生产的时间也差异甚大。在粮食生产上具有领先优势的族群，也在通向枪炮、病菌与钢铁的道路上取得了领先的优势，其结果就是贫富社会之间一系列的长期冲突。 可驯化的动物都是可以驯化的，不可驯化的动物各有各的不可驯化之处。 众多历史经验告诉我们：只有几百人的群体在完全与世隔绝的状态下是不可能无限期地生存下去的。一个有4000人的群体能够生存1万年，但在文化上要失去相当多的东西，同时也不会有什么发明创造，剩下的只是一种无比简单的文化。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[我的情绪为何总被他人左右]]></title>
+      <url>%2F2017%2F03%2F30%2F2017%2Flisten%2F%E6%88%91%E7%9A%84%E6%83%85%E7%BB%AA%E4%B8%BA%E4%BD%95%E6%80%BB%E8%A2%AB%E4%BB%96%E4%BA%BA%E5%B7%A6%E5%8F%B3%2F</url>
+      <content type="text"><![CDATA[我们锁定了情绪的真正敌人：三种类型的想法可以让我们在木偶操纵大师面前束手无策（把事情恐怖化、应该化和合理化）。现在我们该考虑如何踢开这些障碍，用别的什么来替代它们。 责任指的是你对自己的感觉和行为负责，因为你有引导和控制它们的能力。自责指的是你因表现不好而让自己无地自容。承担责任是健康的，自责则是自毁长城。 我们常常自然而然地对挫败我们的人或事反应过度——而我们考量它们的方式则是雪上加霜。 要想不受制于人和事的一条重要原则是，在A处发生的事是否真实不重要，你在B处的所思所想才会在很大程度上决定你在C处的感觉和行动。 事实上，我们倾向于在重大灾难面前临危不惧。人们在遭重创时往往显示出非凡的能力。洪水和地震受害者可以做出不可思议的事让自己在灾难中生存并振作起来，重建自己的生活和社区。而让我们六神无主的，却是一些日常的烦心事、无可奈何的感觉、担心、麻烦、决定和难相处的人。它们用车轮战来腐蚀我们。每一个能量都不大，但加起来肯定是致命的。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Mysql unsigned]]></title>
+      <url>%2F2017%2F03%2F30%2F2017%2Fprogram%2Fmysqlunsigned%2F</url>
+      <content type="text"><![CDATA[mysql中的unsigned unsigned 既为非负数，用此类型可以增加数据长度! unsigned 属性只针对整型，而binary属性只用于char 和varchar。 类型 类型 说明 tinyint 非常小的整数 smallint 较小整数 mediumint 中等大小整数 int 标准整数 bigint 较大整数 float 单精度浮点数 double 双精度浮点数 decimal 一个串的浮点数 每种数值类型的名称和取值范围 类型说明 取值范围 tinyint[(m)] 有符号值：-128 到127（- 27 到27 - 1）无符号值：0到255（0 到28 - 1） 1个字节 smallint[(m)] 有符号值：-32768 到32767（- 215 到215 - 1）无符号值：0到65535（0 到21 6 - 1） 2个字节 mediumint[(m)] 有符号值：-8388608 到8388607（- 22 3 到22 3 - 1 ）无符号值：0到16777215（0 到22 4 - 1） 3个字节 int[(m)] 有符号值：-2147683648 到2147683647（- 231 到231- 1）无符号值：0到4294967295（0 到232 - 1） 4个字节 bigint[(m)] 有符号值：-9223372036854775808 到9223373036854775807（- 263到263-1）无符号值：0到18446744073709551615（0到264 – 1） 8个字节 float[(m, d)] 最小非零值：±1.175494351e - 38 double[(m,d)] 最小非零值：±2.2250738585072014e - 308 decimal (m, d) 可变；其值的范围依赖于m 和d]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[颠覆式创新]]></title>
+      <url>%2F2017%2F03%2F29%2F2017%2Flisten%2F%E9%A2%A0%E8%A6%86%E5%BC%8F%E5%88%9B%E6%96%B0%2F</url>
+      <content type="text"><![CDATA[1.渐进式的创新仍然必不可少，因为它们带来持续的新收入来源。但那还不够，它们不能保证企业长期的成功。只有颠覆式创新才能让企业经受住时间的考验。 2.过去，颠覆只关注战略。企业和品牌愿景都是为今后若干年设计的，而今天，颠覆必须更加灵活，必须变得“快餐化”，具有流动性。 3.每当人们不按照逐步的、渐进式的、线性的方式思考问题时，每当他们实施跨越式战略时，就可以称之为颠覆。你可以颠覆产品、商业模式、营销计划以及宣传策略……]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[hibernate outside valid range for the datatype smallint]]></title>
+      <url>%2F2017%2F03%2F29%2F2017%2Fprogram%2Fhibernateoutsidevalidrange%2F</url>
+      <content type="text"><![CDATA[hibernate 使用sql查询时，smallint类型字段出现长度超过。因为smallint使用的是无符号类型unsigned，导致长度超过。 错误 hibernate ‘65535.0’ in column ‘12’ is outside valid range for the datatype SMALLINT. 解决使用函数将字段类型数据进行转化，如下： CAST(column AS signed)]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[MySQL CAST And CONVERT 函数]]></title>
+      <url>%2F2017%2F03%2F29%2F2017%2Fprogram%2Fmysqlcastandconvert%2F</url>
+      <content type="text"><![CDATA[MySQL 的CAST()和CONVERT()函数可用来获取一个类型的值，并产生另一个类型的值。两者具体的语法如下： 12CAST(value as type);CONVERT(value, type); 转换的类型是有限制的。 二进制，同带binary前缀的效果 : BINARY 字符型，可带参数 : CHAR() 日期 : DATE 时间: TIME 日期时间型 : DATETIME 浮点数 : DECIMAL 整数 : SIGNED 无符号整数 : UNSIGNED]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Git Stash]]></title>
+      <url>%2F2017%2F03%2F29%2F2017%2Fprogram%2Fgitstash%2F</url>
+      <content type="text"><![CDATA[Git Stash git stash: 备份当前的工作区的内容，从最近的一次提交中读取相关内容，让工作区保证和上次提交的内容一致。同时，将当前的工作区内容保存到Git栈中。 git stash pop: 从Git栈中读取最近一次保存的内容，恢复工作区的相关内容。由于可能存在多个Stash的内容，所以用栈来管理，pop会从最近的一个stash中读取内容并恢复。 git stash list: 显示Git栈内的所有备份，可以利用这个列表来决定从那个地方恢复。 git stash clear: 清空Git栈。此时使用gitg等图形化工具会发现，原来stash的哪些节点都消失了。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Centos6桥接网络配置]]></title>
+      <url>%2F2017%2F03%2F29%2F2017%2Fprogram%2Fcentos6-bridging-network%2F</url>
+      <content type="text"><![CDATA[Centos6 桥接网络配置编辑配置文件1vi /etc/sysconfig/network-scripts/ifcfg-eth0 添加修改以下内容DEVICE=eth0HWADDR=08:00:27:BC:56:DBTYPE=EthernetUUID=8247fb0d-ca65-4c4b-ab61-c21e1c8f5406ONBOOT=yes #开启自动启用网络连接NM_CONTROLLED=yesBOOTPROTO=static #启用静态IP地址IPADDR0=192.168.3.236 #设置IP地址NETMASK=255.255.255.0GATEWAY0=192.168.3.1 #设置网关PREFIXO0=24 #设置子网掩码DNS1=218.85.157.99 #设置主DNSDNS2=218.85.157.99 #设置备DNSPEERDNS=yesUSERCTL=noIPV6INIT=noPREFIX=24DEFROUTE=yes 保存退出1:wq! 重启网络1service network restart]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Linux ps 命令参数详解]]></title>
+      <url>%2F2017%2F03%2F29%2F2017%2Fprogram%2Flinuxps%2F</url>
+      <content type="text"><![CDATA[ps [-aAcdefHjlmNVwy][acefghLnrsSTuvxX][-C &lt;指令名称&gt;][-g &lt;群组名称&gt;][-G &lt;群组识别码&gt;][-p &lt;进程识别码&gt;][p &lt;进程识别码&gt;][-s &lt;阶段作业&gt;][-t &lt;终端机编号&gt;][t &lt;终端机编号&gt;][-u &lt;用户识别码&gt;][-U &lt;用户识别码&gt;][U &lt;用户名称&gt;][-&lt;进程识别码&gt;][–cols &lt;每列字符数&gt;][–columns &lt;每列字符数&gt;][–cumulative][–deselect][–forest][–headers][–help][– info][–lines &lt;显示列数&gt;][–no-headers][–group &lt;群组名称&gt;][-Group &lt;群组识别码&gt;][–pid &lt;进程识别码&gt;][–rows &lt;显示列数&gt;][–sid &lt;阶段作业&gt;][–tty &lt;终端机编号&gt;][–user &lt;用户名称&gt;][–User &lt;用户识别码&gt;][–version][–width &lt;每列字符数&gt;] 参数说明： -a 显示所有终端机下执行的进程，除了阶段作业领导者之外。 a 显示现行终端机下的所有进程，包括其他用户的进程。 -A 显示所有进程。 -c 显示CLS和PRI栏位。 c 列出进程时，显示每个进程真正的指令名称，而不包含路径，参数或常驻服务的标示。 -C&lt;指令名称&gt; 指定执行指令的名称，并列出该指令的进程的状况。 -d 显示所有进程，但不包括阶段作业领导者的进程。 -e 此参数的效果和指定”A”参数相同。 e 列出进程时，显示每个进程所使用的环境变量。 -f 显示UID,PPIP,C与STIME栏位。 f 用ASCII字符显示树状结构，表达进程间的相互关系。 -g&lt;群组名称&gt; 此参数的效果和指定”-G”参数相同，当亦能使用阶段作业领导者的名称来指定。 g 显示现行终端机下的所有进程，包括群组领导者的进程。 -G&lt;群组识别码&gt; 列出属于该群组的进程的状况，也可使用群组名称来指定。 h 不显示标题列。 -H 显示树状结构，表示进程间的相互关系。 -j或j 采用工作控制的格式显示进程状况。 -l或l 采用详细的格式来显示进程状况。 L 列出栏位的相关信息。 -m或m 显示所有的执行绪。 n 以数字来表示USER和WCHAN栏位。 -N 显示所有的进程，除了执行ps指令终端机下的进程之外。 -p&lt;进程识别码&gt; 指定进程识别码，并列出该进程的状况。 p&lt;进程识别码&gt; 此参数的效果和指定”-p”参数相同，只在列表格式方面稍有差异。 r 只列出现行终端机正在执行中的进程。 -s&lt;阶段作业&gt; 指定阶段作业的进程识别码，并列出隶属该阶段作业的进程的状况。 s 采用进程信号的格式显示进程状况。 S 列出进程时，包括已中断的子进程资料。 -t&lt;终端机编号&gt; 指定终端机编号，并列出属于该终端机的进程的状况。 t&lt;终端机编号&gt; 此参数的效果和指定”-t”参数相同，只在列表格式方面稍有差异。 -T 显示现行终端机下的所有进程。 -u&lt;用户识别码&gt; 此参数的效果和指定”-U”参数相同。 u 以用户为主的格式来显示进程状况。 -U&lt;用户识别码&gt; 列出属于该用户的进程的状况，也可使用用户名称来指定。 U&lt;用户名称&gt; 列出属于该用户的进程的状况。 v 采用虚拟内存的格式显示进程状况。 -V或V 显示版本信息。 -w或w 采用宽阔的格式来显示进程状况。 x 显示所有进程，不以终端机来区分。 X 采用旧式的Linux i386登陆格式显示进程状况。 -y 配合参数”-l”使用时，不显示F(flag)栏位，并以RSS栏位取代ADDR栏位 -&lt;进程识别码&gt; 此参数的效果和指定”p”参数相同。 –cols&lt;每列字符数&gt; 设置每列的最大字符数。 –columns&lt;每列字符数&gt; 此参数的效果和指定”–cols”参数相同。 –cumulative 此参数的效果和指定”S”参数相同。 –deselect 此参数的效果和指定”-N”参数相同。 –forest 此参数的效果和指定”f”参数相同。 –headers 重复显示标题列。 –help 在线帮助。 –info 显示排错信息。 –lines&lt;显示列数&gt; 设置显示画面的列数。 –no-headers 此参数的效果和指定”h”参数相同，只在列表格式方面稍有差异。 –group&lt;群组名称&gt; 此参数的效果和指定”-G”参数相同。 –Group&lt;群组识别码&gt; 此参数的效果和指定”-G”参数相同。 –pid&lt;进程识别码&gt; 此参数的效果和指定”-p”参数相同。 –rows&lt;显示列数&gt; 此参数的效果和指定”–lines”参数相同。 –sid&lt;阶段作业&gt; 此参数的效果和指定”-s”参数相同。 –tty&lt;终端机编号&gt; 此参数的效果和指定”-t”参数相同。 –user&lt;用户名称&gt; 此参数的效果和指定”-U”参数相同。 –User&lt;用户识别码&gt; 此参数的效果和指定”-U”参数相同。 –version 此参数的效果和指定”-V”参数相同。 –widty&lt;每列字符数&gt; 此参数的效果和指定”-cols”参数相同。 常用命令： ps -efps aux ps aux输出格式 USER PID %CPU %MEM VSZ RSS TTY STAT START TIME COMMAND USER: 进程拥有者PID:pid%CPU:占用的cpu使用率VSZ:占用的内存使用率RSS:占用的虚拟内存大小TTY:是否为登入者执行的程序，若为tty1-tty6，为本机登入者，若为pts/??,则为远程登入者。STAT:程序的状态，R:正在执行中，S：睡眠，T：正在检测或者停止，Z：死亡程序START:程序开始时间TIME:程序运行的时间COMMAND：所执行的指令。 例子 ps aux|grep java ps -ef|grep java ps aux 是用BSD的格式来显示 java这个进程显示的项目有：USER , PID , %CPU , %MEM , VSZ , RSS , TTY , STAT , START ,TIME , COMMANDps -ef 是用标准的格式显示java这个进程显示的项目有：UID , PID , PPID , C , STIME , TTY , TIME , CMD]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Linux tail]]></title>
+      <url>%2F2017%2F03%2F28%2F2017%2Fprogram%2Flinuxtail%2F</url>
+      <content type="text"><![CDATA[tail 命令tail 命令从指定点开始将文件写到标准输出.使用tail命令的-f选项可以方便的查阅正在改变的日志文件,tail -f filename会把filename里最尾部的内容显示在屏幕上,并且不但刷新,使你看到最新的文件内容. 1．命令格式;tail[必要参数][选择参数][文件] 2．命令功能：用于显示指定文件末尾内容，不指定文件时，作为输入信息进行处理。常用查看日志文件。 3．命令参数：-f 循环读取-q 不显示处理信息-v 显示详细的处理信息-c&lt;数目&gt; 显示的字节数-n&lt;行数&gt; 显示行数–pid=PID 与-f合用,表示在进程ID,PID死掉之后结束.-q, –quiet, –silent 从不输出给出文件名的首部-s, –sleep-interval=S 与-f合用,表示在每次反复的间隔休眠S秒]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[农村]]></title>
+      <url>%2F2017%2F03%2F28%2F2017%2Fpoems%2F%E5%86%9C%E6%9D%91%2F</url>
+      <content type="text"><![CDATA[农村作者：R.S.托马斯 谈不上街道，房子太少了，只有一条小道从唯一的酒店到唯一的铺子，再不前进，消失在山顶，山也不高，侵蚀着它的是多年积累的绿色波涛，草不断生长，越来越接近这过去时间的最后据点。很少发生什么；一条黑狗在阳光里咬跳蚤就算是历史大事。倒是有姑娘挨门走过，她那速度超过这平淡日子两重尺寸。 那么停住吧，村子，因为围绕着你慢慢转动着一整个世界，辽阔而富于意义，不亚于伟大的柏拉图孤寂心灵的任何构想。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[管理十诫]]></title>
+      <url>%2F2017%2F03%2F28%2F2017%2Flisten%2F%E7%AE%A1%E7%90%86%E5%8D%81%E8%AF%AB%2F</url>
+      <content type="text"><![CDATA[真正固执的人不是在规避风险，他们不仅不愿意冒险做出改变或创新，还对自己的方法坚持己见，坚信自己掌握了成功的密钥，觉得再也不用去探索其他的成功之道了。 灵活变通和适应能力是领导力的重要组成部分，是超越简单的管理能力、运作能力和技术能力之外的一种才能。 一个组织的进步来自通过努力解决问题，因此你首先要知道问题是什么，才能真正洞悉解决问题的办法。 所有公司最后的生命线都是信任问题：顾客要相信企业生产的产品正如它所许诺的那样好，投资者要相信公司的管理层是有能力的，员工要相信公司的管理者能够兑现承诺。 个性、个人的创造力、个人感触、个人的情感投入、个人的想象力，这些都是开展每项工作不可或缺的品质，在整个组织中我们必须提供这些品质成长所需的沃土。 用外包的策略来创造一个更加扁平化、结构更加简单的组织是运营公司更加有效、更加有创新性的方式。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[社会成本问题]]></title>
+      <url>%2F2017%2F03%2F27%2F2017%2Feconomics%2FTheProblemofSocialCost%2F</url>
+      <content type="text"><![CDATA[《社会成本问题》这篇文章是科斯在1960年发表的，开创了经济学的新流派——新制度经济学。新制度经济学派批判继承了新古典主义，强调对真实世界的解释，试图建立具有解释和预测双重能力的理论。科斯就是对老制度经济学特别是新古典经济学——远离真实世界的不满，提出了交易费用的命题，同时他对主流经济学研究方法提出深刻的批评。科斯一再强调要解释真实世界，真实世界离不开制度和交易费用，他认为经济学家应做的一件主要工作就是研究经济制度。我们每个人都生活在一种经济制度中，人类的福利依赖于整个社会所能提供的产品和劳务，后者的发展水平又取决于经济制度的运行效率。 在《社会成本问题》中，首先，科斯引入了现实中英国、美国的许多生活案件、法律案件进行分析：例如，走失的牛损坏邻居的谷物生长案；酿酒空气流通案；旧建筑物拆毁对邻近旅店影响案等，指出“在处理有害后果的行为时所面临的问题，并不是简单地限制哪些有责任者。”必须决定的是，“防止妨害的收益是否大于作为停止产生该损害行为的结果而在其他方面遭受的损失。”科斯的这一观点对传统经济学解决外部性的方法提出挑战，提出通过界定当事人之间的产权关系降低交易成本来解决外部性问题，同时指出产权制度对资源配置的效率将产生重大影响。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[海都物语]]></title>
+      <url>%2F2017%2F03%2F27%2F2017%2Flisten%2F%E6%B5%B7%E9%83%BD%E7%89%A9%E8%AF%AD%2F</url>
+      <content type="text"><![CDATA[流血之后，威尼斯人立即用智慧、想办法将昔日的敌人变成朋友。 单方面提出和平宣言，和平是不会到来的，这是一个永恒的难题。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[横向领导力]]></title>
+      <url>%2F2017%2F03%2F27%2F2017%2Flisten%2Flisten20170327%2F</url>
+      <content type="text"><![CDATA[核心内容横向领导力：不依靠行政权威，仅凭自身才能就能够与他人合作完成艰巨任务的能力。要培养自己的横向领导力需要做到三点：第一、培养技能；第二、明确目标；第三、影响别人。 有权威的领导可以做许多事情，但默契无间的合作绝不是命令出来的。 横向领导方法是请求同事与你共同解决问题的方法。你并不需要研究如何解决问题，关键在于改善解决问题的过程。 不管你做什么，只要你做出示范，就能向人们发出一个很强烈的信号，表明我们正在共同努力。 不管你想完成何种任务，都需要先把问题弄清楚。你的行动需要以事实为基础。 我们之所以不愿意提供反馈，是因为我们缺乏有效反馈的技能。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[直觉]]></title>
+      <url>%2F2017%2F03%2F26%2F2017%2Flisten%2Flisten20170326%2F</url>
+      <content type="text"><![CDATA[核心内容不论是择偶还是其他的决策、选择中，理性计算的结果会跟人的直觉相悖，如果遵循理性，结果往往会让人后悔。因为人面对复杂情况做出判断的时候，很多他们自以为掌握的常识、知识，其实并不完备。特别是这些知识没有经过有意识地梳理的情况下，这些信息反而会混淆自己的判断。反过来，在这种情况下积极运用已有的经验进行探索，却能显著增加选择正确的几率。 当别人笑的时候，即使你不知道他为什么笑，也要跟着一起笑，越快越好。 启蒙的阳光照射之下，逻辑和概率就是那一束束光线。然而，我们要探索的领地，却笼罩在不确定性的迷雾中。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[文明之光]]></title>
+      <url>%2F2017%2F03%2F25%2F2017%2Flisten%2F%E6%96%87%E6%98%8E%E4%B9%8B%E5%85%89%2F</url>
+      <content type="text"><![CDATA[瓷器，不仅仅是一种盛器、一种商品，它曾经在世界文化交流中起着重要地作用，现在依然如此。西方世界通过它了解到东方的文明，并与东方展开了大规模贸易。瓷器贸易带来的巨大利润，又刺激了西方化学和材料学的发展，因为过去瓷器利润丰厚，瓷器制造业也成为历史上第一个采用蒸汽机进行大规模生产的行业，这宣告了人类工业革命的开始。从促进文明发展的各个角度来讲，世界上很难找到第二种商品能和瓷器相比。 完成一项重要的发明，其实并不那么简单。从0到1固然重要，但从1到N更重要。这一点，是真正参与过重大发明全过程的人的共识。因为重大的发明不是靠有灵感、有技术就办得到的，而只要参与过一次这样的全过程，就能够体会到其中的艰辛漫长。 今天，在提倡创新的时代，中国最需要的恰恰是耐下心来，踏踏实实走完一项项重大发明创造无法跨越的相当漫长的全过程。既不能半途而废，也不可能从外界找到可供简单参考和抄袭的。把一项重大发明比作万里长征，那么从0到1的过程，不过是完成了长征的第一步而已，后面还有很多工作要做。 回顾美苏太空竞争，如果仅仅概括成科罗廖夫和冯·布劳恩两个人的竞争，多少有点以偏概全。但是这两个人在这次竞争中起到了关键性的作用。一方面他们是造势时的英雄；另一方面，是两个超级大国成就了他们的英名。 面对一个新生事物，大家常常会先看到它好的一面，而忽视它潜在的问题，人类对抗生素的认识便是如此。在科学上，不能证明有害和尚未证明有害，与已经证明无害完全是两回事，但是很多人却将两者混为一谈。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[寻租]]></title>
+      <url>%2F2017%2F03%2F23%2F2017%2Feconomics%2Frentseeking%2F</url>
+      <content type="text"><![CDATA[寻租 政府运用行政权力对企业和个人的经济活动进行干预和管制，妨碍了市场竞争的作用，从而创造了少数有特权者取得超额收入的机会。根据美国经济学家J.布坎南和A.克鲁格(Anne.Krueger)的论述，这种超额收入被称为“租金”（rent），谋求这种权力以获得租金的活动，被称作“寻租活动”，俗称“寻租”。 在经济学界，寻租一词特指这种向政府争取特殊优惠或权利的行为。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[控制愤怒]]></title>
+      <url>%2F2017%2F03%2F23%2F2017%2Flisten%2Flisten20170323%2F</url>
+      <content type="text"><![CDATA[当你对别人的行为感到愤怒时，往往将他们的行为和他们的人等同起来，然后全面否定他们，这是一种过度概括，起到误导作用，以非黑即白的思维来评价人肯定不正确。 焦虑，源自你对自己的非理性信念，而愤怒，源自你对他人的非理性信念。通常而言，产生愤怒的非理性信念，会责备他人，产生焦虑的非理性信念，会责备自己，而产生抑郁的非理性信念，有时会责备客观条件。 当你开始发怒时，重复你自己想出来的应付困难的理性话语，你可以将这些话语写下来、录下来，碰到糟糕情况时，你会用得上。 你要接受一个“有着愤怒情绪的自己”，尽管你要承认愤怒这种情绪本身是错误的，但不因此而认为自己不好，你没有必要因此自责，人都会犯错，你有犯错的权利，有让自己生气的权利。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Maven 常用命令]]></title>
+      <url>%2F2017%2F03%2F23%2F2017%2Fprogram%2Fmaven%2F</url>
+      <content type="text"><![CDATA[Maven 常用命令 mvn 编译 mvn install -Dmaven.test.skip=true 换成 eclipse 项目，执行下面的命令 mvn eclipse:eclipse]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Maven打包时跳过测试类]]></title>
+      <url>%2F2017%2F03%2F23%2F2017%2Fprogram%2Fmavensurefireplugin%2F</url>
+      <content type="text"><![CDATA[Maven打包时跳过测试类 方法pom.xml中添加如下配置。 1&lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt; &lt;version&gt;2.19.1&lt;/version&gt; &lt;configuration&gt; &lt;skip&gt;true&lt;/skip&gt; &lt;/configuration&gt; &lt;/plugin&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Maven 多个war依赖]]></title>
+      <url>%2F2017%2F03%2F23%2F2017%2Fprogram%2Fmavenwarplugin%2F</url>
+      <content type="text"><![CDATA[Maven 多个war依赖,发布打包项目。 方法子项目的pom.xml中添加如下配置。123456&lt;plugin&gt; &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt; &lt;configuration&gt; &lt;attachClasses&gt;true&lt;/attachClasses&gt; &lt;/configuration&gt; &lt;/plugin&gt; 父项目的pom.xml中添加如下配置。 123456789101112131415&lt;dependency&gt; &lt;groupId&gt;com.cloudcode&lt;/groupId&gt; &lt;artifactId&gt;cloudcode-server&lt;/artifactId&gt; &lt;version&gt;1.0.0&lt;/version&gt; &lt;type&gt;war&lt;/type&gt;&lt;/dependency&gt;&lt;dependency&gt; &lt;groupId&gt;com.cloudcode&lt;/groupId&gt; &lt;artifactId&gt;cloudcode-server&lt;/artifactId&gt; &lt;version&gt;1.0.0&lt;/version&gt; &lt;type&gt;jar&lt;/type&gt; &lt;classifier&gt;classes&lt;/classifier&gt; &lt;scope&gt;provided&lt;/scope&gt;&lt;/dependency&gt; Thx]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[租]]></title>
+      <url>%2F2017%2F03%2F22%2F2017%2Feconomics%2Frent%2F</url>
+      <content type="text"><![CDATA[有一种资产，不以收费的变化而变化，这种资产带来的收入就是租。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[鞋狗]]></title>
+      <url>%2F2017%2F03%2F22%2F2017%2Flisten%2Flisten20170322%2F</url>
+      <content type="text"><![CDATA[1.懦夫永不启程，弱者死于途中，只剩我们前行，永远都不要停。 2.我希望我自己的一生更有意义，自己能有目标、有创造力、有举足轻重的地位。最重要的是，我要与众不同——人生不一定会赢，而我就是不想输。 3.敢于冒险，别让你的才能掩埋在平庸的土地上。 4.别管别人怎么说你的想法很疯狂，前进，不停就好。不要停下来，甚至在你达到目标前都不要想是否停下来。不要过多的关注“目标”在哪里，无论面临什么，都不要停下来。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[微创新]]></title>
+      <url>%2F2017%2F03%2F21%2F2017%2Flisten%2Flisten20170321%2F</url>
+      <content type="text"><![CDATA[本书核心观点传统创新理论：认为创造力来自跳出框架，要尽可能得用发散思维，直到找到解决方法。微创新理论：创造力不是来自天马行空的发散思维，不是个别人与生俱来的某种天赋，相反，它是一种技能，任何人都能通过学习去掌握它。第一、为什么好的创新是来自于框架内？第二、系统性创新的关键是什么？第三、具体的创新方法 在寻找答案时，越接近问题的核心，就越有可能创新。 框架内思考催生的想法不一定是最好的，但一定是最有创意的。 创新能力不是个别人与生俱来的某种天赋，相反，它是一种技能，任何人都能通过学习去掌握它。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Docker常用命令]]></title>
+      <url>%2F2017%2F03%2F21%2F2017%2Fdocker%2Fdocker%2F</url>
+      <content type="text"><![CDATA[Docker常用命令docker build1docker build -t name . view docker images1docker images docker run12345docker run -it 交互 -itdocker run -d 后台 -ddocker run -P 随机分配端口号 -Pdocker run -p 绑定特定端口号 -pdocker run -d -p 22:22 --name base centos:7.1 docker help run1docker help run 网络管理 docker run -P：随机分配端口号docker run -p 6000:6000：绑定特定端口号（主机的所有网络接口的6000端口均绑定容器的6000端口）docker run -p 127.0.0.1:5000:5000：绑定主机的特定接口的端口号docker run -d -p 127.0.0.1:5000:5000/udp training/webapp python app.py：绑定udp端口号docker port 5000：查看容器的5000端口对应本地机器的IP和端口号 使用Docker Linking连接容器：Docker为源容器和接收容器创建一个安全的通道，容器之间不需要暴露端口，接收的容器可以访问源容器的数据docker run -d -P –name \ –link \:\]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[使用Jenkins打包多个Maven项目]]></title>
+      <url>%2F2017%2F03%2F20%2F2017%2Fprogram%2Fjenkinsmavendeploy%2F</url>
+      <content type="text"><![CDATA[一个Maven中包含多个项目，使用Jenkins打包时，不能直接使用Jenkins集成的打包方式。可以使用shell命令分别打包，在shell中分别使用以下命令。 Maven 目录结构1234cloudcode-parent cloudcode-common cloudcode-core cloudcode-framework 打包这几个项目123456789cd /var/lib/jenkins/workspace/cloudcode-parent/cloudcode-common/var/java/apache-maven-3.3.9/bin/mvn clean source:jar deploycd /var/lib/jenkins/workspace/cloudcode-parent/cloudcode-core/var/java/apache-maven-3.3.9/bin/mvn clean source:jar deploycd /var/lib/jenkins/workspace/cloudcode-parent/cloudcode-framework/var/java/apache-maven-3.3.9/bin/mvn clean source:jar deploy 打包命令1mvn clean source:jar deploy /var/lib/jenkins/workspace/ 是jenkins的工作目录/var/java/apache-maven-3.3.9/bin 是maven的安装路径]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[无价]]></title>
+      <url>%2F2017%2F03%2F20%2F2017%2Flisten%2Flisten20170320%2F</url>
+      <content type="text"><![CDATA[本书核心观点第一、价格究竟是如何产生的？第二、作为商家，如何利用定价策略来获利？第三、作为消费者，如何规避价格陷阱？ 先报出数字的人所确立的锚点是最有力的。 对比引发了情绪，情绪影响了行动。 哪怕是极为简单的经济决定，心理状态都是关键。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[桃花]]></title>
+      <url>%2F2017%2F03%2F20%2F2017%2Flife%2Fpeachblossom20170320%2F</url>
+      <content type="text"><![CDATA[午后，去公园小憩，随手拍了几张公园盛开的桃花。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[阿里云Dockerfile引用自己的镜像]]></title>
+      <url>%2F2017%2F03%2F19%2F2017%2Fdockerfileusealiyunimages%2F</url>
+      <content type="text"><![CDATA[Dockerfile阿里云中，使用Dockerfile引用自己构建的镜像。 格式FROM 阿里云/namespace/仓库名称:镜像版本 例子1FROM registry.cn-hangzhou.aliyuncs.com/java/jdk:1.8]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Linux curl post json]]></title>
+      <url>%2F2017%2F03%2F19%2F2017%2Fcurlpostjson%2F</url>
+      <content type="text"><![CDATA[Curl post json1curl -H &quot;Content-Type: application/json&quot; -X POST --data &apos;&#123;&quot;data&quot;:&quot;1&quot;&#125;&apos; http://127.0.0.1/]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Controlling zookeeper with supervisor]]></title>
+      <url>%2F2017%2F03%2F19%2F2017%2Fzookepeerwithsupervisor%2F</url>
+      <content type="text"><![CDATA[supervisorControlling zookeeper with supervisor12345678910111213[program:zookeeper]command=/opt/zookeeper/bin/zkServer.sh start-foregrounduser=zkuserautostart=trueautorestart=truestopsignal=KILLstartsecs=10startretries=999log_stdout=truelog_stderr=truelogfile=/var/log/zookeeper/zookeeper.outlogfile_maxbytes=20MBlogfile_backups=10d]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Controlling tomcat with supervisor]]></title>
+      <url>%2F2017%2F03%2F19%2F2017%2Ftomcatwithsupervisor%2F</url>
+      <content type="text"><![CDATA[supervisorControlling tomcat with supervisor12345678[program:tomcat]command=/path/to/tomcat/bin/catalina.sh runprocess_name=%(program_name)sstartsecs=5stopsignal=INTuser=tomcatredirect_stderr=truestdout_logfile=/var/log/tomcat.log ThxControlling tomcat with supervisor]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[maven打包jar包时跳过测试信息]]></title>
+      <url>%2F2017%2F03%2F19%2F2017%2Fmaveninstallskiptest%2F</url>
+      <content type="text"><![CDATA[命令行1$mvn install -Dmaven.test.skip = true 配置文件 pom.xml在pom.xml中增加以下配置信息。12345678910111213&lt;project&gt; &lt;build&gt; &lt;plugins&gt; &lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt; &lt;configuration&gt; &lt;skip&gt;true&lt;/skip&gt; &lt;/configuration&gt; &lt;/plugin&gt; &lt;/plugins&gt; &lt;/build&gt;&lt;/project&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[别只盯着钱]]></title>
+      <url>%2F2017%2F03%2F17%2F2017%2Fpoems%2Fbaidi%2F</url>
+      <content type="text"><![CDATA[每当我们做决定的时候，不应只看到钱，而也要看到钱以外的所有成本。 做决策时，要权衡全部成本，不仅仅是货币成本。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[明智行动的艺术]]></title>
+      <url>%2F2017%2F03%2F17%2F2017%2Flisten%2Flisten20170317%2F</url>
+      <content type="text"><![CDATA[语言表达是思想的镜子：清晰的思想会带来清楚的表达，糊涂的思想只会废话连篇。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[白帝]]></title>
+      <url>%2F2017%2F03%2F17%2F2017%2Fpoems%2Fchunxiao%2F</url>
+      <content type="text"><![CDATA[春宵作者：苏轼春宵一刻值千金，花有清香月有阴。歌管楼台声细细，秋千院落夜沉沉。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[茶]]></title>
+      <url>%2F2017%2F03%2F17%2F2017%2Fpoems%2Ftea%2F</url>
+      <content type="text"><![CDATA[茶 香叶，嫩芽。 慕诗客，爱僧家。 碾雕白玉，罗织红沙。 铫煎黄蕊色，碗转曲尘花。 夜后邀陪明月，晨前命对朝霞。 洗尽古今人不倦，将至醉后岂堪夸。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[金钱观]]></title>
+      <url>%2F2017%2F03%2F16%2F2017%2Flisten%2Fmoney%2F</url>
+      <content type="text"><![CDATA[钱只有花出去才是的你！ 钱是靠挣出来的，不是靠省出来的，而挣钱的效率取决于一个人的气度。 工作效率高，自然挣钱的效率也高。 如果我们想清楚了钱是对资源的量化度量，越是稀缺的资源自然越值钱，那么你有别人不会的技能，你就是稀缺资源。 –吴军~硅谷来信]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[金钱观]]></title>
+      <url>%2F2017%2F03%2F16%2F2017%2Feconomics%2Fdontjustshareatmoney%2F</url>
+      <content type="text"><![CDATA[钱只有花出去才是的你！ 钱是靠挣出来的，不是靠省出来的，而挣钱的效率取决于一个人的气度。 工作效率高，自然挣钱的效率也高。 如果我们想清楚了钱是对资源的量化度量，越是稀缺的资源自然越值钱，那么你有别人不会的技能，你就是稀缺资源。 –吴军~硅谷来信]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[超级思维]]></title>
+      <url>%2F2017%2F03%2F16%2F2017%2Flisten%2Flisten20170316%2F</url>
+      <content type="text"><![CDATA[对绝大多数人而言，为了节约时间而牺牲一点点精准度其实是一笔很划算的买卖，因为我们都有更重要的工作要做。不管怎么说，取近似值这种做法不仅可以为我们节约几秒钟的时间，它还是一个非常有价值的工具，可以帮助我们更好地理解数字。 因为我们各自有各自的偏好，因此，公正可能就是最最重要的一条规则了，尤其是有不确定因素牵涉其中的时候，你必须确保你的计算结果不受到你对事物“应有样子”的预判断影响，这是非常重要的。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[富爸爸投资指南]]></title>
+      <url>%2F2017%2F03%2F15%2F2017%2Flisten%2Flisten20170315%2F</url>
+      <content type="text"><![CDATA[1 . 大多数人不是投资者，而是投机者或赌徒。他们购买，持有，然后祈祷价格上涨。他们生活在牛市的希望之中，同时又因为市场崩溃的可能而感到惶惶不安。真正的投资者却不论市场是涨是跌，都能发家致富。”真正的投资者胜在能够根据市场的变化赚钱，而不是在市场顺应了自己的猜测的时候赚钱。“真正的投资者总是能为任何情况做好准备，而非投资者都是猜测将来会发生什么，什么时间发生。” 2．你可以一辈子都打高尔夫球，但橄榄球只能打几年，既然如此，为什么不在一开始，就选择与你相伴一生的游戏呢？”看清楚问题容易，做对选择艰难 3．你可以用一生的时间学习投资基础知识，投资一开始听起来很复杂，但之后会变得简单。投资越简单化，或者你学的基础知识越多，你就会越富有，同时风险会越小。”楼高万丈，就必须有万丈的地基，大树就必须有深根。学的越多，挣的越多。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[与乔布斯一起领导苹果]]></title>
+      <url>%2F2017%2F03%2F14%2F2017%2Flisten%2Flisten20170314%2F</url>
+      <content type="text"><![CDATA[领导力并非直觉使然，也并非与生俱来，而是如果你愿意保持开放的心态，就可以从生活中总结凝练出来。 当你能赋予团队一个与众不同的特殊身份，奇迹就会发生。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[OncePerRequestFilter流只能读取一次]]></title>
+      <url>%2F2017%2F03%2F13%2F2017%2FIllegalStateException%2F</url>
+      <content type="text"><![CDATA[OncePerRequestFilter调用问题 在Spring自定义过滤器中，调用HttpServletRequest的getReader方法，为了获取post上传的参数，得到参数后继续调用doFilter出现以下错误。 错误信息 Request processing failed; nested exception is java.lang.IllegalStateException: getReader() has already been called for this request 解决 HttpServletRequest的getInputStream()和getReader() 都只能读取一次，由于RequestBody是流的形式读取，那么流读了一次就没有了，所以只能被调用一次。先将RequestBody保存，然后通过Servlet自带的HttpServletRequestWrapper类覆盖getReader()和getInputStream()方法，使流从保存的body读取。然后再Filter中将ServletRequest替换为AuthenticationRequestWrapper 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071public class AuthenticationRequestWrapper extends HttpServletRequestWrapper &#123; private static final Logger logger = LoggerFactory.getLogger(AuthenticationRequestWrapper.class); //post请求参数 private final String payload; public AuthenticationRequestWrapper (HttpServletRequest request) throws AuthenticationException &#123; super(request); // read the original payload into the payload variable StringBuilder stringBuilder = new StringBuilder(); BufferedReader bufferedReader = null; try &#123; // read the payload into the StringBuilder InputStream inputStream = request.getInputStream(); if (inputStream != null) &#123; bufferedReader = new BufferedReader(new InputStreamReader(inputStream)); char[] charBuffer = new char[128]; int bytesRead = -1; while ((bytesRead = bufferedReader.read(charBuffer)) &gt; 0) &#123; stringBuilder.append(charBuffer, 0, bytesRead); &#125; &#125; else &#123; // make an empty string since there is no payload stringBuilder.append(""); &#125; &#125; catch (IOException ex) &#123; logger.error("Error reading the request payload", ex); throw new AuthenticationException("Error reading the request payload", ex); &#125; finally &#123; if (bufferedReader != null) &#123; try &#123; bufferedReader.close(); &#125; catch (IOException iox) &#123; // ignore &#125; &#125; &#125; payload = stringBuilder.toString(); &#125; @Override public ServletInputStream getInputStream () throws IOException &#123; final ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(payload.getBytes()); ServletInputStream inputStream = new ServletInputStream() &#123; public int read () throws IOException &#123; return byteArrayInputStream.read(); &#125; @Override public boolean isFinished() &#123; return false; &#125; @Override public boolean isReady() &#123; return false; &#125; @Override public void setReadListener(ReadListener readListener) &#123; &#125; &#125;; return inputStream; &#125; public String getPayload() &#123; return payload; &#125;&#125; 调用 1234567private void checkToken(HttpServletRequest req, HttpServletResponse resp, FilterChain filterChain) throws IOException, ServletException, AuthenticationException &#123; AuthenticationRequestWrapper request = new AuthenticationRequestWrapper((HttpServletRequest) req); HttpServletResponse response = (HttpServletResponse) resp; doFilter(request, response, filterChain);&#125; Thx]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[金句]]></title>
+      <url>%2F2017%2F03%2F12%2F2017%2Fgy20170312%2F</url>
+      <content type="text"><![CDATA[君子谋道不谋食,君子忧道不忧贫。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[约翰.洛克菲勒]]></title>
+      <url>%2F2017%2F03%2F12%2F2017%2FJohndRockefeller%2F</url>
+      <content type="text"><![CDATA[人际交往能力是可以买到的，就像糖或咖啡这样的普通商品一样。我愿意为这样一能力开个高于其他任何商品的价码。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[HIBERANTE TINYINT(1) 取值问题]]></title>
+      <url>%2F2017%2F03%2F12%2F2017%2Fhibernatetinyiny%2F</url>
+      <content type="text"><![CDATA[问题在使用Hiberante 获取Mysql中tinyint(1)类型数据时， 默认取值为 boolean，当tinyint中存储值为2时，取出的值为true。这样在业务上处理有问题。可以通过MySql数据链接中的属性设置，将值不转成boolean。 解决数据链接中添加tinyInt1isBit=false属性，即可解决。 详见：http://dev.mysql.com/doc/connector-j/5.1/en/connector-j-reference-configuration-properties.html PS tinyint(1)的取值范围并不是0和1 ，而是显示长度。tinyint(1)的取值范围是-128到127，如果我的值是58，但程序中返回true 就不是想取到的值。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Spring批量执行语句]]></title>
+      <url>%2F2017%2F03%2F12%2F2017%2FbatchExecutionStatement%2F</url>
+      <content type="text"><![CDATA[如何使用Spring执行多条sql语句 在Spring中可以使用ScriptUtils工具类，批量执行Sql语句，如批量执行update table1 set status=0, dprice=55 where id in (9600980);insert into table1 (dprice,status) values(46,0),(55,1);这两条语句。 方法1234567891011public void executeSqlScript(Connection connection,StringBuffer sql)throws SQLException&#123; try &#123; connection.setAutoCommit(false);//设置为手工提交模式 ScriptUtils.executeSqlScript(connection, new ByteArrayResource(sql.toString().getBytes())); connection.commit();//提交事务 &#125; catch (SQLException e) &#123; connection.rollback(); &#125;finally&#123; connection.close(); &#125; &#125;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[累累若丧家之狗]]></title>
+      <url>%2F2017%2F03%2F12%2F2017%2Fhomelessdogs%2F</url>
+      <content type="text"><![CDATA[孔子适郑，与弟子相失，孔子独立东郭门。郑人或谓子贡曰：‘东门有人，其颊似尧，其项类皋陶，其肩类子产，然自腰以下不及禹三寸，累累若丧家之狗。’子贡以实告孔子。孔子欣然笑曰：‘形状，末也。而谓似丧家之狗，然哉！然哉！]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[梅花]]></title>
+      <url>%2F2017%2F02%2F05%2F2017%2Fplumblossoms%2F</url>
+      <content type="text"><![CDATA[]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[樱花]]></title>
+      <url>%2F2017%2F02%2F05%2F2017%2Fcherryblossoms%2F</url>
+      <content type="text"><![CDATA[1&quot;樱花下落的速度，是每秒5厘米； 我要用怎样的速度，才能与你相遇。&quot;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[油菜花]]></title>
+      <url>%2F2017%2F02%2F05%2F2017%2Frapeflower%2F</url>
+      <content type="text"><![CDATA[]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Docker为什么刚运行就退出了]]></title>
+      <url>%2F2017%2F01%2F12%2F2017%2Fdocker-just-run-away%2F</url>
+      <content type="text"><![CDATA[原因Docker容器后台运行,就必须有一个前台进程.容器运行的命令如果不是那些一直挂起的命令（比如运行top，tail），就是会自动退出。 解决简单的解决方案可能是添加一个循环： 1while true; do sleep 1000; done 例子，在start.sh脚本增加以下： 1234567if [[ $1 == "-d" ]]; then while true; do sleep 1000; donefiif [[ $1 == "-bash" ]]; then /bin/bashfi Dockerfile文件中使用： 1CMD ["/etc/start.sh", "-d"] Why docker container exits immediately]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[骑行]]></title>
+      <url>%2F2017%2F01%2F08%2F2017%2Fqx20170107%2F</url>
+      <content type="text"><![CDATA[午后，从公司出发，经洪山桥骑行闽江公园，终于东街口。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[阿里yum无法使用]]></title>
+      <url>%2F2017%2F01%2F07%2F2017%2F%E9%98%BF%E9%87%8Cyum%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%2F</url>
+      <content type="text"><![CDATA[阿里yum无法使用错误信息1http://mirrors.aliyun.com/centos/7/os/x86_64/repodata/repomd.xml: [Errno 12] Timeout on http://mirrors.aliyun.com/centos/7/os/x86_64/repodata/repomd.xml: (28, &apos;Resolving timed out after 30399 milliseconds&apos;) 原因是防火墙INPUT和OUTPUT方向全部丢弃。 解决方法开启防火墙1chkconfig iptables on #需要重启 添加以下规则，并重启防火墙 -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT -A OUTPUT -p tcp -m tcp -m state --state NEW --dport 80 -j ACCEPT]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[2017年票付通年会]]></title>
+      <url>%2F2017%2F01%2F06%2F2017%2Fpft-2017nh%2F</url>
+      <content type="text"><![CDATA[]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Go环境配置]]></title>
+      <url>%2F2017%2F01%2F01%2F2017%2Fgo-environment%2F</url>
+      <content type="text"><![CDATA[配置Go环境下载go1.7.1.linux-amd64.tar.gz1wget http://golangtc.com/static/go/1.7.1/go1.7.1.linux-amd64.tar.gz 解压1tar zxvf go1.7.1.linux-amd64.tar.gz -C /var/gowork 新建GOPATH目录1mkdir -p /root/gofile 设置环境变量1vim /etc/profile 1234export GOROOT=/var/gowork/goexport GOBIN=$GOROOT/bin export PATH=$PATH:$GOBIN export GOPATH=$HOME/gofile 保存环境变量1:wq 使环境变量生效1source /etc/profile 查看是否配置成功1go version go version go1.7.1 linux/amd64 简单测试1234567cd /root/gofile vim hello.go package main import "fmt" func main() &#123; fmt.Println("Hello, 世界") &#125; go run1go run hello.go Hello, 世界]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[2016 总结]]></title>
+      <url>%2F2016%2F12%2F29%2F2016%2F2016-summary%2F</url>
+      <content type="text"><![CDATA[概况工作一年，有喜有忧，收获颇多，生活亦是如此。 工作项目上午半年主要还是项目上的事项，很多事不算完美，项目一直纠结在小细节上，导致整体项目上线不是很顺利。需求一方面不能确定，一方面客户也在调整，当然技术上也有缺陷，程序不够灵活。导致需求调整带来很大代价。 文档中询主要是书写平台文档，将平台现有产品文档化。主要涉及设计器、平台框架、技术开发API、常见问题等。其中接触了一套开源的问答系统(question2answer)，觉得用来做收集平台常见问题很适合，有点类似Stack Overflow技术问答，可以将一个平台常见问题录入系统，然后遇到类似问题的同事就可以直接参考问答系统，可避免总是问重复问题。 分水岭下半年可以说是一个分水岭，结束一份工作五年的工作，进入一个对我来说全新的行业。离职对双方都是一个损失。离职前得注释一些代码，其实感觉没有必要说这个。但是很多代码是前任留下来的，很多没有注释，觉得这个很糟糕。这也是下半年主要是工作内容，基本上把整个平台代码翻新了一遍。以后在开发中应该保持注释代码的习惯。说说新的工作，十一月份入职后，算是比较快适应新工作。从一个非互联网跨界到互联网，感觉知识储备还是不够的，补缺不漏的东西还是挺多的。 环境首先，系统部署环境上，以前接触比较多的都是window service ，现在要开始学习Linux。对它的了解还不是很全面，很多东西得去积累，工欲善其事，必先利其器。还有Shell脚本语言得深入浅出，不然不能很好地使用Linux。 开源 开始接触一些开源的应用，如容器引擎（Docker），让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。 Dubbo是Alibaba开源的分布式服务框架,它最大的特点是按照分层的方式来架构,使用这种方式可以使各个层之间解耦合(或者最大限度地松耦合)。 Netty是由JBOSS提供的一个java开源框架。Netty提供异步的、事件驱动的网络应用程序框架和工具，用以快速开发高性能、高可靠性的网络服务器和客户端程序。 持续集成工具Jenkins，用于监控持续重复的工作，功能包括：持续的软件版本发布/测试项目；监控外部调用执行的工作。 新工作总结进入新环境后，首先是熟悉公司平台，花了一周多时间整理业务逻辑及数据结构；接下来是搭建java开发平台，主要用于平台接口业务开发，采用主流开源框架搭建，其中用到Spring、Hibernate，数据连接池使用durid，封装通用数据操作工具及平台常用工具类；确定接口以restful api方式实现，比较简洁、方便调用；接口采用dubbox实现分布式；平台缓存功能实现，采用redis为缓存宿主；通用接口日志记录，实现业务接口调用记录功能；开发业务接口，接口性能测试、接口API文档、实现业务数据转化功能，接口部署方案及文档化；实现字典数据、token管理等通用功能。两个月的时间，收获颇多，平台从零到一，学到很多知识，当然要学的东西还有很多。新工作展望：持续完善平台，使用平台理健壮，接受业务检阅；跟进平台分布式功能，以适应后期业务扩展；接口开发工作；探索新的部署方案，平台与Docker结合，从而实现持续集成、自动化部署；日志分析、数据报表、消息队列；Java团队建设。 坑一由于前期没能考虑到接口的业务复杂度，开始数据查询没有统一查询，数据查询耗时过长，导致接口响应时间不理想。后面采用预处理方式，将用到的数据统一合并查询。中途数据计算使用Java8 Lambda表达式。 坑二数据库字段问题，数据设计的字段为tinyint,在使用Hiberante 获取Mysql中tinyint(1)类型数据时， 默认取值为 boolean，当tinyint中存储值为2时，取出的值为true。这样在业务上处理有问题。后面通过google找到解决方案，可在MySql数据链接中的属性设置，将值不转成boolean。数据链接中添加tinyInt1isBit=false属性，即可解决。生活生活处处是惊喜，敢于去发现。”所有美好的东西，都是既罕见又复杂的。——斯宾诺莎”很喜欢这句。骑行一天心血来潮，一个人骑着单车上旗山，路上一些骑车的老爷爷，感觉他们真的不服老，体力超级好。一路上反而是他们在鼓励我，就这样骑着骑着就到了山上的公园。深圳去了一趟深圳，记得2013年在广州出差时，想找个时间去逛逛，可惜没有机会。今年算是完成了，去莲花山公园缅怀邓爷爷，感受深圳特区。也去了香港拜金，大城市的生活节奏，和小城市完全没法比。站在大城市感觉时间流逝飞快，也许这就是Time is money。读物如果今年要我推荐读物 ，首推《社会心理学》。这书虽然厚重，却并不晦涩。尤其里面的案例不仅丰富，而且还有大量的科学数据。良师益友，《重新定义公司》虽不在管理岗位，但可以更好的管理自己。知晓一个公司是如何运作。塑造自己的意志力《自控力》。『你的视野一转向内心，发现在你心中就有一千个地方还没有发现。那你去那里旅游，就会成为家庭宇宙志的专家』《瓦尔登湖》。《光荣与梦想》完成第一部分应运而起。投资学《怎样选择成长股》西方经济学的圣经《国富论》。“我们不是我们所收集的、得到的、所读的东西，只要我们还活着，我们就是爱，我们所爱的事物，我们所爱的人。所有这些，我认为真的会存活下去。”《岛上书店 》同事推荐、借给我一本《乖，摸摸头》，不管是否是鸡汤，我干了。不过感觉这种现代游侠离我好远，没有他们那种勇气。总结在一家公司待久了，难免会有骚动，所以选择跳出来，世界那么大，我也要去看看……在全新的岗位上，暂未出成绩，要做的事情很多；新东家文化氛围很浓厚，入职不久便深深体会到。失去很多好同事，但友谊长青，融入一个新的大家庭；完成一次驾考。展望17年，还是那句话补缺补漏，还有一件灰常重要的事，你懂的^~^。TODO： Linux、Docker、Jenkins Dubbo、分布式 Java8、多线程编程 Hadoop 消息队列 多读书，多写字；]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>%2F2016%2F12%2F29%2F2016%2Fhello-world%2F</url>
+      <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Jconsole监视dubbo服务]]></title>
+      <url>%2F2016%2F12%2F27%2F2016%2Fspring-batch-execution-sql%2F</url>
+      <content type="text"><![CDATA[Spring ScriptUtils 使用Spring ScriptUtils 批量执行Sql语句，如批量执行update table1 set status=0, dprice=55 where id in (9600980);insert into table1 (dprice,status) values(46,0),(55,1);这两条语句。 方法1234567891011public void executeSqlScript(Connection connection,StringBuffer sql)throws SQLException&#123; try &#123; connection.setAutoCommit(false);//设置为手工提交模式 ScriptUtils.executeSqlScript(connection, new ByteArrayResource(sql.toString().getBytes())); connection.commit();//提交事务 &#125; catch (SQLException e) &#123; connection.rollback(); &#125;finally&#123; connection.close(); &#125; &#125;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Centos桥接网络配置]]></title>
+      <url>%2F2016%2F12%2F01%2F2016%2Fcentos-bridging-network%2F</url>
+      <content type="text"><![CDATA[Centos7 桥接网络配置编辑配置文件1vi /etc/sysconfig/network-scripts/ifcfg-eth0 添加修改以下内容HWADDR=08:00:27:d4:5e:11TYPE=EthernetBOOTPROTO=static #启用静态IP地址DEFROUTE=yesPEERDNS=yesPEERROUTES=yesIPV4_FAILURE_FATAL=noIPV6INIT=yesIPV6_AUTOCONF=yesIPV6_DEFROUTE=yesIPV6_PEERDNS=yesIPV6_PEERROUTES=yesIPV6_FAILURE_FATAL=noNAME=enp0s3UUID=3c092d5f-fda6-403b-1122-d9bbd7280da5ONBOOT=yes #开启自动启用网络连接IPADDR0=192.168.3.236 #设置IP地址PREFIXO0=24 #设置子网掩码GATEWAY0=192.168.3.1 #设置网关DNS1=218.85.157.99 #设置主DNSDNS2=218.85.157.99 #设置备DNS 保存退出1:wq! 重启网络1systemctl restart network.service]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Jconsole监视dubbo服务]]></title>
+      <url>%2F2016%2F12%2F01%2F2016%2FJconsole%E7%9B%91%E8%A7%86dubbo%2F</url>
+      <content type="text"><![CDATA[使用Jconsole监视dubbo服务 在需要监控的/bin/start.sh文件中添加下面语句：JAVA_OPTS=”$JAVA_OPTS -Djava.rmi.server.hostname=192.168..-Dcom.sun.management.jmxremote.port=8088-Dcom.sun.management.jmxremote.ssl=false-Dcom.sun.management.jmxremote.authenticate=false”-Djava.rmi.server.hostname该参数指定jconsole远程连接的IP地址-Dcom.sun.management.jmxremote.port该参数指定jconsole远程连接的端口号-Dcom.sun.management.jmxremote.authenticate设置参数值为false时，就不需要输入用户名和密码 也可用/bin/remotestart.sh启动监控，该命令已配置该信息。启动本地Jconsole在jdk安装目录下,如C:\Program Files\Java\jdk1.8.0_111\bin,选择jconsole.exe并双击。选择远程进程，输入地址及端口信息：192.168..：8088即可监控dubbo服务性能消耗。]]></content>
+    </entry>
+
+    
+  
+  
+</search>
