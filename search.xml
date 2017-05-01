@@ -10,9 +10,16 @@
 
     
     <entry>
+      <title><![CDATA[穷查理宝典]]></title>
+      <url>%2F2017%2F05%2F01%2F2017%2Flisten%2F%E7%A9%B7%E6%9F%A5%E7%90%86%E5%AE%9D%E5%85%B8%2F</url>
+      <content type="text"><![CDATA[核心内容《穷查理宝典》主要介绍查理·芒格成功背后的方法论。这个方法论概括起来为三步：第一步，迅速歼灭不该做的事情；第二步，对该做的事情发起熟练的、跨学科的攻击；第三步，在恰当的时机，且仅在恰当的时机果断采取行动。 金句： 各个学科、各种方法只要能解决问题，就可以拿来为我所用。 在失败里面找原因，更容易看到规律，并启发你怎么样才能把事情给做成功。 一方面要学习人类犯的错误，另一方面也要学习最牛的人是怎么做的。 理性地用各学科的规律综合研究问题，还要考虑感性和潜意识对我们的影响。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[使用Ansible发布Jetty服务]]></title>
       <url>%2F2017%2F05%2F01%2F2017%2Fprogram%2Fansibledeployjetty%2F</url>
-      <content type="text"><![CDATA[构建Jetty部署yml12345678910111213141516171819202122232425- name: install jetty admin hosts: jetty hosts #对应hostsz中主机内容 sudo: True vars: #定义变量区域 war_file: /home/jettyappweb.war #本地文件 jetty_root: /home/pft/pft-web-base/webapps/ROOT #部署的远程ROOT目录 tasks: - name: rm ROOT. file: state: absent dest: &quot;&#123;&#123; jetty_root &#125;&#125;&quot; - name: mkdir ROOT. file: state: directory dest: &quot;&#123;&#123; jetty_root &#125;&#125;&quot; owner: root group: root mode: 755 - name: unzip war. unarchive: src: &quot;&#123;&#123; war_file &#125;&#125;&quot; dest: &quot;&#123;&#123; jetty_root &#125;&#125;&quot; copy: yes - name: start jetty. action: shell &#123;&#123; jetty_root &#125;&#125;/../../bin/start.sh 说明 hosts #对应host中主机内容 vars #定义变量区域 删除ROOT文件夹 使用file: state:absent，好处防止错误删除文件。 使用unarchive命令，copy:yes直接拷贝本地文件到远程，并且解压缩后删除文件。 action: shell 启动jetty服务。 jetty 启动脚本start.sh12345678910111213141516171819202122#!/bin/bash# JAVA_HOMEexport JAVA_HOME=/var/java/jdk1.8.0_111export PATH=$JAVA_HOME/bin:$PATHJAVA_JMX_OPTS=&quot;&quot;if [ &quot;$1&quot; = &quot;jmx&quot; ]; then JAVA_JMX_OPTS=&quot; -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmx -Dcom.sun.management.jmxremote.authenticate=true -Dcom.sun.management.jmxremote.password.file=../conf/jmx/jmxremote.password -Dcom.sun.management.jmxremote.access.file=../conf/jmx/jmxremote.access&quot;fiJAVA_MEM_OPTS=&quot;&quot;BITS=`java -version 2&gt;&amp;1 | grep -i 64-bit`if [ -n &quot;$BITS&quot; ]; then JAVA_MEM_OPTS=&quot; -server -Xmx512m -Xms512m -Xmn128m -Xss256k -XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:LargePageSizeInBytes=128m -XX:+UseFastAccessorMethods -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=70 &quot;else JAVA_MEM_OPTS=&quot; -server -Xms512m -Xmx512m -XX:PermSize=128m -XX:SurvivorRatio=2 -XX:+UseParallelGC &quot;fiexport JAVA_OPTSnohup java $JAVA_OPTS $JAVA_JMX_OPTS $JAVA_MEM_OPTS -jar /usr/local/jetty9/start.jar jetty.base=/home/pft/pft-web-base &amp; 常见模块说明File模块功能：用于设置文件属性 name: 设置文件属性 action: file force # 需要在两种情况下强制创建软连接，一种是源文件不存在但之后会建立的情况下；另一种是目标连接已存在，需要先取消之前的软连接，有两个选项：yes|no group # 设置文件或目录的属组 mode # 设置文件或目录的权限 owner # 设置文件或目录的属主 path # 必选项，定义文件或目录的路径 recurse # 递归设置文件的属性，只对目录有效 src # 要被链接到的路径，只应用与state=link的情况 state # directory：如果目录不存在，创建目录；file：即使文件不存在，也不会被创建；link：创建软连接；hard：创建硬连接；touch：如果文件不存在，则会创建一个新的文件，如果文件或目录已存在，则更新其最后修改时间；absent：删除目录、文件或者取消链接文件 Command模块功能：命令模块，默认模块，用于在远程主机执行命令，缺点：运行的命令中无法使用变量，管道。 name: 在远程节点执行命令 action #command chdir #在执行命令之前，先切换到该目录 creates #一个文件名，当这个文件存在，则该命令不执行 executable #切换shell来执行命令，需要使用命令的绝对路径 free_form #要执行的Linux指令，一般使用Ansible的-a参数代替。 removes #一个文件名，这个文件不存在，则该命令不执行 unarchive模块功能：用于解压文件，模块包含如下选项： copy #在解压文件之前，是否先将文件复制到远程主机，默认为yes。若为no，则要求目标主机上压缩包必须存在。 creates #指定一个文件名，当该文件存在时，则解压指令不执行 dest #远程主机上的一个路径，即文件解压的路径 grop #解压后的目录或文件的属组 list_files #如果为yes，则会列出压缩包里的文件，默认为no，2.0版本新增的选项 mode #解决后文件的权限 src #如果copy为yes，则需要指定压缩文件的源路径 owner #解压后文件或目录的属主]]></content>
+      <content type="text"><![CDATA[构建Jetty部署yml新建一个ansibledeployjetty.yml文件，增加以下脚本：12345678910111213141516171819202122232425- name: install jetty admin hosts: jetty hosts #对应hostsz中主机内容 sudo: True vars: #定义变量区域 war_file: /home/jettyappweb.war #本地文件 jetty_root: /home/pft/pft-web-base/webapps/ROOT #部署的远程ROOT目录 tasks: - name: rm ROOT. file: state: absent dest: &quot;&#123;&#123; jetty_root &#125;&#125;&quot; - name: mkdir ROOT. file: state: directory dest: &quot;&#123;&#123; jetty_root &#125;&#125;&quot; owner: root group: root mode: 755 - name: unzip war. unarchive: src: &quot;&#123;&#123; war_file &#125;&#125;&quot; dest: &quot;&#123;&#123; jetty_root &#125;&#125;&quot; copy: yes - name: start jetty. action: shell &#123;&#123; jetty_root &#125;&#125;/../../bin/start.sh 说明 hosts #对应host中主机内容 vars #定义变量区域 删除ROOT文件夹 使用file: state:absent，好处防止错误删除文件。 使用unarchive命令，copy:yes直接拷贝本地文件到远程，并且解压缩后删除文件。 action: shell 启动jetty服务。 启动部署脚本1ansible-playbook ansibledeployjetty.yml -vvv jetty 启动脚本start.sh12345678910111213141516171819202122#!/bin/bash# JAVA_HOMEexport JAVA_HOME=/var/java/jdk1.8.0_111export PATH=$JAVA_HOME/bin:$PATHJAVA_JMX_OPTS=&quot;&quot;if [ &quot;$1&quot; = &quot;jmx&quot; ]; then JAVA_JMX_OPTS=&quot; -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmx -Dcom.sun.management.jmxremote.authenticate=true -Dcom.sun.management.jmxremote.password.file=../conf/jmx/jmxremote.password -Dcom.sun.management.jmxremote.access.file=../conf/jmx/jmxremote.access&quot;fiJAVA_MEM_OPTS=&quot;&quot;BITS=`java -version 2&gt;&amp;1 | grep -i 64-bit`if [ -n &quot;$BITS&quot; ]; then JAVA_MEM_OPTS=&quot; -server -Xmx512m -Xms512m -Xmn128m -Xss256k -XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:LargePageSizeInBytes=128m -XX:+UseFastAccessorMethods -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=70 &quot;else JAVA_MEM_OPTS=&quot; -server -Xms512m -Xmx512m -XX:PermSize=128m -XX:SurvivorRatio=2 -XX:+UseParallelGC &quot;fiexport JAVA_OPTSnohup java $JAVA_OPTS $JAVA_JMX_OPTS $JAVA_MEM_OPTS -jar /usr/local/jetty9/start.jar jetty.base=/home/pft/pft-web-base &amp; 常见模块说明File模块功能：用于设置文件属性 name: 设置文件属性 action: file force # 需要在两种情况下强制创建软连接，一种是源文件不存在但之后会建立的情况下；另一种是目标连接已存在，需要先取消之前的软连接，有两个选项：yes|no group # 设置文件或目录的属组 mode # 设置文件或目录的权限 owner # 设置文件或目录的属主 path # 必选项，定义文件或目录的路径 recurse # 递归设置文件的属性，只对目录有效 src # 要被链接到的路径，只应用与state=link的情况 state # directory：如果目录不存在，创建目录；file：即使文件不存在，也不会被创建；link：创建软连接；hard：创建硬连接；touch：如果文件不存在，则会创建一个新的文件，如果文件或目录已存在，则更新其最后修改时间；absent：删除目录、文件或者取消链接文件 Command模块功能：命令模块，默认模块，用于在远程主机执行命令，缺点：运行的命令中无法使用变量，管道。 name: 在远程节点执行命令 action #command chdir #在执行命令之前，先切换到该目录 creates #一个文件名，当这个文件存在，则该命令不执行 executable #切换shell来执行命令，需要使用命令的绝对路径 free_form #要执行的Linux指令，一般使用Ansible的-a参数代替。 removes #一个文件名，这个文件不存在，则该命令不执行 unarchive模块功能：用于解压文件，模块包含如下选项： copy #在解压文件之前，是否先将文件复制到远程主机，默认为yes。若为no，则要求目标主机上压缩包必须存在。 creates #指定一个文件名，当该文件存在时，则解压指令不执行 dest #远程主机上的一个路径，即文件解压的路径 grop #解压后的目录或文件的属组 list_files #如果为yes，则会列出压缩包里的文件，默认为no，2.0版本新增的选项 mode #解决后文件的权限 src #如果copy为yes，则需要指定压缩文件的源路径 owner #解压后文件或目录的属主]]></content>
     </entry>
 
     
@@ -31,6 +38,13 @@
 
     
     <entry>
+      <title><![CDATA[Install ansible]]></title>
+      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2FInstallansible%2F</url>
+      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[ssh 命令]]></title>
       <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2Fssh%2F</url>
       <content type="text"><![CDATA[ssh-keygen的命令手册，通过”man ssh-keygen“命令查看 生成密钥1ssh-keygen -t rsa 生成之后会在用户的根目录生成一个 “.ssh”的文件夹 authorized_keys:存放远程免密登录的公钥,主要通过这个文件记录多台机器的公钥 id_rsa : 生成的私钥文件 id_rsa.pub ： 生成的公钥文件 know_hosts : 已知的主机公钥清单如果希望ssh公钥生效需满足至少下面两个条件： 1) .ssh目录的权限必须是7002) .ssh/authorized_keys文件权限必须是600 远程免密登录 通过ssh-copy-id的方式 1命令： ssh-copy-id -i ~/.ssh/id_rsa.put &lt;romte_ip&gt; 通过scp方式 1命令：scp -p ~/.ssh/id_rsa.pub root@&lt;remote_ip&gt;:/root/.ssh/authorized_keys 将内容追加到authorized_keys文件中， 不过要登录远程服务器来执行这条命令1cat ~/pub_key &gt;&gt;~/.ssh/authorized_keys]]></content>
@@ -45,23 +59,9 @@
 
     
     <entry>
-      <title><![CDATA[Install ansible]]></title>
-      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2FInstallansible%2F</url>
-      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible]]></content>
-    </entry>
-
-    
-    <entry>
-      <title></title>
-      <url>%2F2017%2F04%2F29%2F2017%2Flisten%2F%E7%90%86%E6%80%A7%E6%83%85%E7%BB%AA%2F</url>
-      <content type="text"><![CDATA[1.人的一切精神上的痛苦和严重情绪紊乱，都是不必要的。 2.不管你的处境有多恶劣、遭遇有多严重，你实际上总是可以拥有控制和改变自己情绪的能力，减少并最终战胜你的不良情绪。 3.“心想事成”固然是个美好的愿望，但是在现实中，“心想”就能“事成”，这个概率其实是很低的，我们如果过分执着于这个愿望，总是用“应该”、“必须”、“一定要”来想问题，就会陷入到非理性的信念里，给自己的情绪带来麻烦。 4.建立一个有效的理性信念，我们需要做到三点：1.无条件地自我接纳；2.无条件地接纳他人；3.无条件地接纳我们的现实生活。 5.最终你需要明白的是，无论是你自身的缺陷，还是外界的不尽如人意，这都是人与世界的天性，是我们无法改变的客观存在。而我们可以做的是：我的情绪我做主。]]></content>
-    </entry>
-
-    
-    <entry>
-      <title></title>
-      <url>%2F2017%2F04%2F29%2F2017%2Flisten%2F%E6%9D%83%E5%8A%9B%2F</url>
-      <content type="text"><![CDATA[title:权力date:2017-04-26 21:42:29category:”life” tags:[听书,金句] 1.等级结构在人类社会中无处不在，当我们进入一个组织之后，我们的性别、年龄、教育背景等，拿出来和别人一比较，就会决定我们的地位。同时，一个人的地位还会从一个背景带到另一个背景中，始终跟着你，躲都躲不开。 2.人们认为世界是公平的，源于“公正世界假设”的心理。这种假设会让人产生麻痹思想，忽视自己对权力的需求，而且误认为权力是可以等来的。但实际上，权力只能是争来的。 3.在争取权力的道路上，第一个关键就是要明白，业绩并不决定权力地位。我们必须关心和老板的关系，至少，这个关心程度要不亚于对业绩的关心。 4.我们要明白一个逻辑关系，当你招人喜欢的时候，并不一定会争取到权力，而当你有权力的时候，你一定会招人“喜欢”——虽然这个喜欢要打上个引号。 5.虽然让人们既害怕你又喜欢你，是一种很理想的状况，但当你必须二选一时，如果想获得和保持权力，就应该让人们害怕你。]]></content>
+      <title><![CDATA[菩提树]]></title>
+      <url>%2F2017%2F04%2F28%2F2017%2Fpoems%2F%E8%8F%A9%E6%8F%90%E6%A0%91%2F</url>
+      <content type="text"><![CDATA[身是菩提树，心如明镜台，时时勤拂拭，勿使惹尘埃。&gt; 字面意思是：众生的身体就是一棵觉悟的智慧树，众生的心灵就象一座明亮的台镜，要时时不断地将它掸拂擦试，不让它被尘垢污染障蔽了光明的本性。菩提本无树，明镜亦非台，本来无一物，何处惹尘埃？ 字面意思是：菩提树原本就不是树，明亮的镜子也并不是镜子。本来就是虚无没有一物， 那里会染上什么尘埃? 其实，尘在外，心在内，常拂之，心净无尘；尘在内，心在外，常剥之，无尘无心；心中有尘，尘本是心，何畏心中尘?从这个意义上说，慧能的参悟自然高出神秀许多。神秀仍然停留在内，而慧能却早已走出了自我，来到了更广阔的天地。 山川草木，河流花林，皆有佛性。菩提不菩提，明镜不明镜，不在于树，不在于台，而在于你我有没有一颗菩提或明镜之心。若菩提明镜之心在，岂不树树皆菩提、台台皆明镜！反过来说，若无菩提和明镜之心，无论坐于何种树下，何种台前，也是徒劳的。所以，守住心灵吧，这，比什么都重要。]]></content>
     </entry>
 
     
@@ -199,16 +199,16 @@
 
     
     <entry>
-      <title><![CDATA[刻意练习]]></title>
-      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0%2F</url>
-      <content type="text"><![CDATA[真正的”一万小时天才理论”是，普通人也可以通过刻意练习成为某个领域的专家。 用『三个F』创建有效的心理表征 专注focus，集中注意力 反馈feedback，及时反馈 纠正fix it，不断修正自己 练习的时间与质量反而在决定人们的技能变得多么熟练时，发挥着更大的作用。 从长远来看，占上风的是那些练习更勤奋的人，而不是那些一开始在智商或者其他才华方面稍有优势的人。]]></content>
+      <title><![CDATA[联盟]]></title>
+      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E8%81%94%E7%9B%9F%2F</url>
+      <content type="text"><![CDATA[通过联盟重建信任与忠诚 如果我们不能回到终身雇佣的年代，就要学会重建雇主与员工的关系。这种新的忠诚观允许公司和员工对彼此做出承诺，把过去的商业交易转变为互惠关系的框架。雇佣关系可以转换为一个联盟：一份由双方独立达成的，有明确条款的互惠协议。 员工拥有创始人思维任期制将员工在你的公司度过的职业生涯重新规划为一系列连续的任期，可以更好地吸引和留住开创型员工。 培养开创性员工的利器诚实地谈论任期公司里的三类任期 轮转期 转变期 基础期 协调员工的目标和公司的目标如何执行转变期计划 开始对话，确定目标 定期检查以交流反馈 任期临近结束前，制定下一个任期计划 如何处理任务中的意外投资在员工的人脉上打造终身联盟：前同事联络网建立同事联络网的策略与技巧 决定同事联络网的成员。删除掉存在纠纷和法律道德风险的前员工。 明确定义与前员工关系的期望和收益。常见的方法有：员工推荐奖金、产品折扣和测试白名单、举办活动、为前员工颁发荣誉、向前员工通报最新消息等。 建立周详的离职机制。在离职面谈中与员工巩固终身关系，收集信息进入数据库。 建立现员工和前员工的联系。 首席执行官布拉德·史密斯（Brad Smith）告诉我们的：“领导者的任务不是培养能人，而是认识到人们已有的才华，并创造出让其产生和成长的环境。”]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[联盟]]></title>
-      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E8%81%94%E7%9B%9F%2F</url>
-      <content type="text"><![CDATA[通过联盟重建信任与忠诚 如果我们不能回到终身雇佣的年代，就要学会重建雇主与员工的关系。这种新的忠诚观允许公司和员工对彼此做出承诺，把过去的商业交易转变为互惠关系的框架。雇佣关系可以转换为一个联盟：一份由双方独立达成的，有明确条款的互惠协议。 员工拥有创始人思维任期制将员工在你的公司度过的职业生涯重新规划为一系列连续的任期，可以更好地吸引和留住开创型员工。 培养开创性员工的利器诚实地谈论任期公司里的三类任期 轮转期 转变期 基础期 协调员工的目标和公司的目标如何执行转变期计划 开始对话，确定目标 定期检查以交流反馈 任期临近结束前，制定下一个任期计划 如何处理任务中的意外投资在员工的人脉上打造终身联盟：前同事联络网建立同事联络网的策略与技巧 决定同事联络网的成员。删除掉存在纠纷和法律道德风险的前员工。 明确定义与前员工关系的期望和收益。常见的方法有：员工推荐奖金、产品折扣和测试白名单、举办活动、为前员工颁发荣誉、向前员工通报最新消息等。 建立周详的离职机制。在离职面谈中与员工巩固终身关系，收集信息进入数据库。 建立现员工和前员工的联系。 首席执行官布拉德·史密斯（Brad Smith）告诉我们的：“领导者的任务不是培养能人，而是认识到人们已有的才华，并创造出让其产生和成长的环境。”]]></content>
+      <title><![CDATA[刻意练习]]></title>
+      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0%2F</url>
+      <content type="text"><![CDATA[真正的”一万小时天才理论”是，普通人也可以通过刻意练习成为某个领域的专家。 用『三个F』创建有效的心理表征 专注focus，集中注意力 反馈feedback，及时反馈 纠正fix it，不断修正自己 练习的时间与质量反而在决定人们的技能变得多么熟练时，发挥着更大的作用。 从长远来看，占上风的是那些练习更勤奋的人，而不是那些一开始在智商或者其他才华方面稍有优势的人。]]></content>
     </entry>
 
     
@@ -241,16 +241,16 @@
 
     
     <entry>
-      <title><![CDATA[输赢心理学]]></title>
-      <url>%2F2017%2F04%2F12%2F2017%2Flisten%2F%E8%BE%93%E8%B5%A2%E5%BF%83%E7%90%86%E5%AD%A6%2F</url>
-      <content type="text"><![CDATA[对一些钢琴家的研究表明，是否能够在比赛中胜出，并不取决于平时排练得多好，而是取决于他们能否在比赛中，保持平时排练时的水平。很少有钢琴家能在比赛中表现得和平时排练一样好或更好。当人们越关注成功的几率，去尝试做某事的可能性就小；但当越关注成功的果实，尝试的可能性就大。 乐队的演出效果越好，其幕后的争斗、竞争、不和谐就会越发严重。他们只有在台上才会表现出初期的和谐效果。要让人们在合作中更努力，只需要告诉他们与实验室伙伴同一天生日即可，他们的工作会更加积极主动、持之以恒。]]></content>
+      <title><![CDATA[思考的技术]]></title>
+      <url>%2F2017%2F04%2F12%2F2017%2Flisten%2F%E6%80%9D%E8%80%83%E7%9A%84%E6%8A%80%E6%9C%AF%2F</url>
+      <content type="text"><![CDATA[1.很多人在思考问题的时候，以为自己抓住了本质，其实是被外界的干预、固有的经验或者别人的劝说所误导。 2.遗憾的是，大多数面临严重问题的企业，在找出解决之策以后，却没有坚决实行的执行力。 3.所谓科学的思考方法，就是为了印证假设而不辞劳作的行动力，也可以说是为了获得绝对正确的答案，彻底动脑的深层思考力。 4.证实假设到导出结论的过程中，最重要的就是弄清楚“发生问题的原因是什么”。但是大多数经营者和企业经理人只看到问题的现象，却看不到产生问题的原因。]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[思考的技术]]></title>
-      <url>%2F2017%2F04%2F12%2F2017%2Flisten%2F%E6%80%9D%E8%80%83%E7%9A%84%E6%8A%80%E6%9C%AF%2F</url>
-      <content type="text"><![CDATA[1.很多人在思考问题的时候，以为自己抓住了本质，其实是被外界的干预、固有的经验或者别人的劝说所误导。 2.遗憾的是，大多数面临严重问题的企业，在找出解决之策以后，却没有坚决实行的执行力。 3.所谓科学的思考方法，就是为了印证假设而不辞劳作的行动力，也可以说是为了获得绝对正确的答案，彻底动脑的深层思考力。 4.证实假设到导出结论的过程中，最重要的就是弄清楚“发生问题的原因是什么”。但是大多数经营者和企业经理人只看到问题的现象，却看不到产生问题的原因。]]></content>
+      <title><![CDATA[输赢心理学]]></title>
+      <url>%2F2017%2F04%2F12%2F2017%2Flisten%2F%E8%BE%93%E8%B5%A2%E5%BF%83%E7%90%86%E5%AD%A6%2F</url>
+      <content type="text"><![CDATA[对一些钢琴家的研究表明，是否能够在比赛中胜出，并不取决于平时排练得多好，而是取决于他们能否在比赛中，保持平时排练时的水平。很少有钢琴家能在比赛中表现得和平时排练一样好或更好。当人们越关注成功的几率，去尝试做某事的可能性就小；但当越关注成功的果实，尝试的可能性就大。 乐队的演出效果越好，其幕后的争斗、竞争、不和谐就会越发严重。他们只有在台上才会表现出初期的和谐效果。要让人们在合作中更努力，只需要告诉他们与实验室伙伴同一天生日即可，他们的工作会更加积极主动、持之以恒。]]></content>
     </entry>
 
     
@@ -269,16 +269,16 @@
 
     
     <entry>
-      <title><![CDATA[jprofiler]]></title>
-      <url>%2F2017%2F04%2F11%2F2017%2Fprogram%2Fjprofiler%2F</url>
-      <content type="text"><![CDATA[start_jetty_jprofiler.sh123JAVA_OPTS=&quot;-agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849 $JAVA_OPTS&quot;export JAVA_OPTSjava $JAVA_OPTS -jar start.jar 业务启动123JAVA_OPTS=&quot;-agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849 $JAVA_OPTS&quot;export JAVA_OPTSjava $JAVA_OPTS -jar /usr/local/jetty9/start.jar jetty.base=/home/user/product &amp;]]></content>
+      <title><![CDATA[jvisualvm]]></title>
+      <url>%2F2017%2F04%2F11%2F2017%2Fprogram%2Fjvisualvm%2F</url>
+      <content type="text"><![CDATA[使用 VisualVM 进行性能分析及调优]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[jvisualvm]]></title>
-      <url>%2F2017%2F04%2F11%2F2017%2Fprogram%2Fjvisualvm%2F</url>
-      <content type="text"><![CDATA[使用 VisualVM 进行性能分析及调优]]></content>
+      <title><![CDATA[jprofiler]]></title>
+      <url>%2F2017%2F04%2F11%2F2017%2Fprogram%2Fjprofiler%2F</url>
+      <content type="text"><![CDATA[start_jetty_jprofiler.sh123JAVA_OPTS=&quot;-agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849 $JAVA_OPTS&quot;export JAVA_OPTSjava $JAVA_OPTS -jar start.jar 业务启动123JAVA_OPTS=&quot;-agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849 $JAVA_OPTS&quot;export JAVA_OPTSjava $JAVA_OPTS -jar /usr/local/jetty9/start.jar jetty.base=/home/user/product &amp;]]></content>
     </entry>
 
     
@@ -773,6 +773,20 @@
 
     
     <entry>
+      <title></title>
+      <url>%2F2017%2F01%2F08%2F2017%2Flisten%2F%E6%9D%83%E5%8A%9B%2F</url>
+      <content type="text"><![CDATA[title:权力date:2017-04-26 21:42:29category:”life” tags:[听书,金句] 1.等级结构在人类社会中无处不在，当我们进入一个组织之后，我们的性别、年龄、教育背景等，拿出来和别人一比较，就会决定我们的地位。同时，一个人的地位还会从一个背景带到另一个背景中，始终跟着你，躲都躲不开。 2.人们认为世界是公平的，源于“公正世界假设”的心理。这种假设会让人产生麻痹思想，忽视自己对权力的需求，而且误认为权力是可以等来的。但实际上，权力只能是争来的。 3.在争取权力的道路上，第一个关键就是要明白，业绩并不决定权力地位。我们必须关心和老板的关系，至少，这个关心程度要不亚于对业绩的关心。 4.我们要明白一个逻辑关系，当你招人喜欢的时候，并不一定会争取到权力，而当你有权力的时候，你一定会招人“喜欢”——虽然这个喜欢要打上个引号。 5.虽然让人们既害怕你又喜欢你，是一种很理想的状况，但当你必须二选一时，如果想获得和保持权力，就应该让人们害怕你。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title></title>
+      <url>%2F2017%2F01%2F08%2F2017%2Flisten%2F%E7%90%86%E6%80%A7%E6%83%85%E7%BB%AA%2F</url>
+      <content type="text"><![CDATA[1.人的一切精神上的痛苦和严重情绪紊乱，都是不必要的。 2.不管你的处境有多恶劣、遭遇有多严重，你实际上总是可以拥有控制和改变自己情绪的能力，减少并最终战胜你的不良情绪。 3.“心想事成”固然是个美好的愿望，但是在现实中，“心想”就能“事成”，这个概率其实是很低的，我们如果过分执着于这个愿望，总是用“应该”、“必须”、“一定要”来想问题，就会陷入到非理性的信念里，给自己的情绪带来麻烦。 4.建立一个有效的理性信念，我们需要做到三点：1.无条件地自我接纳；2.无条件地接纳他人；3.无条件地接纳我们的现实生活。 5.最终你需要明白的是，无论是你自身的缺陷，还是外界的不尽如人意，这都是人与世界的天性，是我们无法改变的客观存在。而我们可以做的是：我的情绪我做主。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[骑行]]></title>
       <url>%2F2017%2F01%2F08%2F2017%2Fqx20170107%2F</url>
       <content type="text"><![CDATA[午后，从公司出发，经洪山桥骑行闽江公园，终于东街口。]]></content>
@@ -822,16 +836,16 @@
 
     
     <entry>
-      <title><![CDATA[Jconsole监视dubbo服务]]></title>
-      <url>%2F2016%2F12%2F01%2F2016%2FJconsole%E7%9B%91%E8%A7%86dubbo%2F</url>
-      <content type="text"><![CDATA[使用Jconsole监视dubbo服务 在需要监控的/bin/start.sh文件中添加下面语句：JAVA_OPTS=”$JAVA_OPTS -Djava.rmi.server.hostname=192.168..-Dcom.sun.management.jmxremote.port=8088-Dcom.sun.management.jmxremote.ssl=false-Dcom.sun.management.jmxremote.authenticate=false”-Djava.rmi.server.hostname该参数指定jconsole远程连接的IP地址-Dcom.sun.management.jmxremote.port该参数指定jconsole远程连接的端口号-Dcom.sun.management.jmxremote.authenticate设置参数值为false时，就不需要输入用户名和密码 也可用/bin/remotestart.sh启动监控，该命令已配置该信息。启动本地Jconsole在jdk安装目录下,如C:\Program Files\Java\jdk1.8.0_111\bin,选择jconsole.exe并双击。选择远程进程，输入地址及端口信息：192.168..：8088即可监控dubbo服务性能消耗。]]></content>
+      <title><![CDATA[Centos桥接网络配置]]></title>
+      <url>%2F2016%2F12%2F01%2F2016%2Fcentos-bridging-network%2F</url>
+      <content type="text"><![CDATA[Centos7 桥接网络配置编辑配置文件1vi /etc/sysconfig/network-scripts/ifcfg-eth0 添加修改以下内容HWADDR=08:00:27:d4:5e:11TYPE=EthernetBOOTPROTO=static #启用静态IP地址DEFROUTE=yesPEERDNS=yesPEERROUTES=yesIPV4_FAILURE_FATAL=noIPV6INIT=yesIPV6_AUTOCONF=yesIPV6_DEFROUTE=yesIPV6_PEERDNS=yesIPV6_PEERROUTES=yesIPV6_FAILURE_FATAL=noNAME=enp0s3UUID=3c092d5f-fda6-403b-1122-d9bbd7280da5ONBOOT=yes #开启自动启用网络连接IPADDR0=192.168.3.236 #设置IP地址PREFIXO0=24 #设置子网掩码GATEWAY0=192.168.3.1 #设置网关DNS1=218.85.157.99 #设置主DNSDNS2=218.85.157.99 #设置备DNS 保存退出1:wq! 重启网络1systemctl restart network.service]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[Centos桥接网络配置]]></title>
-      <url>%2F2016%2F12%2F01%2F2016%2Fcentos-bridging-network%2F</url>
-      <content type="text"><![CDATA[Centos7 桥接网络配置编辑配置文件1vi /etc/sysconfig/network-scripts/ifcfg-eth0 添加修改以下内容HWADDR=08:00:27:d4:5e:11TYPE=EthernetBOOTPROTO=static #启用静态IP地址DEFROUTE=yesPEERDNS=yesPEERROUTES=yesIPV4_FAILURE_FATAL=noIPV6INIT=yesIPV6_AUTOCONF=yesIPV6_DEFROUTE=yesIPV6_PEERDNS=yesIPV6_PEERROUTES=yesIPV6_FAILURE_FATAL=noNAME=enp0s3UUID=3c092d5f-fda6-403b-1122-d9bbd7280da5ONBOOT=yes #开启自动启用网络连接IPADDR0=192.168.3.236 #设置IP地址PREFIXO0=24 #设置子网掩码GATEWAY0=192.168.3.1 #设置网关DNS1=218.85.157.99 #设置主DNSDNS2=218.85.157.99 #设置备DNS 保存退出1:wq! 重启网络1systemctl restart network.service]]></content>
+      <title><![CDATA[Jconsole监视dubbo服务]]></title>
+      <url>%2F2016%2F12%2F01%2F2016%2FJconsole%E7%9B%91%E8%A7%86dubbo%2F</url>
+      <content type="text"><![CDATA[使用Jconsole监视dubbo服务 在需要监控的/bin/start.sh文件中添加下面语句：JAVA_OPTS=”$JAVA_OPTS -Djava.rmi.server.hostname=192.168..-Dcom.sun.management.jmxremote.port=8088-Dcom.sun.management.jmxremote.ssl=false-Dcom.sun.management.jmxremote.authenticate=false”-Djava.rmi.server.hostname该参数指定jconsole远程连接的IP地址-Dcom.sun.management.jmxremote.port该参数指定jconsole远程连接的端口号-Dcom.sun.management.jmxremote.authenticate设置参数值为false时，就不需要输入用户名和密码 也可用/bin/remotestart.sh启动监控，该命令已配置该信息。启动本地Jconsole在jdk安装目录下,如C:\Program Files\Java\jdk1.8.0_111\bin,选择jconsole.exe并双击。选择远程进程，输入地址及端口信息：192.168..：8088即可监控dubbo服务性能消耗。]]></content>
     </entry>
 
     

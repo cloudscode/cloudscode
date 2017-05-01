@@ -276,7 +276,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/04/11/2017/program/jvisualvm/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/04/11/2017/program/jprofiler/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -301,8 +301,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/11/2017/program/jvisualvm/" itemprop="url">
-                  jvisualvm
+                <a class="post-title-link" href="/2017/04/11/2017/program/jprofiler/" itemprop="url">
+                  jprofiler
                 </a>
               
             
@@ -372,7 +372,8 @@
       
         
           
-            <p><a href="https://www.ibm.com/developerworks/cn/java/j-lo-visualvm/" title="使用 VisualVM 进行性能分析及调优" target="_blank" rel="external">使用 VisualVM 进行性能分析及调优</a></p>
+            <h2 id="start-jetty-jprofiler-sh"><a href="#start-jetty-jprofiler-sh" class="headerlink" title="start_jetty_jprofiler.sh"></a>start_jetty_jprofiler.sh</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS=&quot;-agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849 $JAVA_OPTS&quot;</div><div class="line">export JAVA_OPTS</div><div class="line">java $JAVA_OPTS -jar start.jar</div></pre></td></tr></table></figure>
+<p>业务启动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS=&quot;-agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849 $JAVA_OPTS&quot;</div><div class="line">export JAVA_OPTS</div><div class="line">java $JAVA_OPTS -jar /usr/local/jetty9/start.jar jetty.base=/home/user/product &amp;</div></pre></td></tr></table></figure></p>
 
           
         
@@ -703,7 +704,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/13/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/40/">40</a><a class="extend next" rel="next" href="/page/15/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/13/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/41/">41</a><a class="extend next" rel="next" href="/page/15/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -744,7 +745,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">119</span>
+              <span class="site-state-item-count">121</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

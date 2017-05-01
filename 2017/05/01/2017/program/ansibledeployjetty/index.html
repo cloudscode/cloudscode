@@ -88,16 +88,16 @@
 
 
 
-<meta name="description" content="构建Jetty部署yml12345678910111213141516171819202122232425- name: install jetty admin  hosts: jetty hosts 				#对应hostsz中主机内容  sudo: True  vars: 							#定义变量区域    war_file: /home/jettyappweb.war #本地文件    je">
+<meta name="description" content="构建Jetty部署yml新建一个ansibledeployjetty.yml文件，增加以下脚本：12345678910111213141516171819202122232425- name: install jetty admin  hosts: jetty hosts 				#对应hostsz中主机内容  sudo: True  vars: 							#定义变量区域    war_fil">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Ansible发布Jetty服务">
 <meta property="og:url" content="http://viabugs.com/2017/05/01/2017/program/ansibledeployjetty/index.html">
 <meta property="og:site_name" content="OwlFocus">
-<meta property="og:description" content="构建Jetty部署yml12345678910111213141516171819202122232425- name: install jetty admin  hosts: jetty hosts 				#对应hostsz中主机内容  sudo: True  vars: 							#定义变量区域    war_file: /home/jettyappweb.war #本地文件    je">
-<meta property="og:updated_time" content="2017-05-01T07:47:03.014Z">
+<meta property="og:description" content="构建Jetty部署yml新建一个ansibledeployjetty.yml文件，增加以下脚本：12345678910111213141516171819202122232425- name: install jetty admin  hosts: jetty hosts 				#对应hostsz中主机内容  sudo: True  vars: 							#定义变量区域    war_fil">
+<meta property="og:updated_time" content="2017-05-01T11:01:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Ansible发布Jetty服务">
-<meta name="twitter:description" content="构建Jetty部署yml12345678910111213141516171819202122232425- name: install jetty admin  hosts: jetty hosts 				#对应hostsz中主机内容  sudo: True  vars: 							#定义变量区域    war_file: /home/jettyappweb.war #本地文件    je">
+<meta name="twitter:description" content="构建Jetty部署yml新建一个ansibledeployjetty.yml文件，增加以下脚本：12345678910111213141516171819202122232425- name: install jetty admin  hosts: jetty hosts 				#对应hostsz中主机内容  sudo: True  vars: 							#定义变量区域    war_fil">
 
 
 
@@ -366,7 +366,7 @@
       
 
       
-        <h1 id="构建Jetty部署yml"><a href="#构建Jetty部署yml" class="headerlink" title="构建Jetty部署yml"></a>构建Jetty部署yml</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">- name: install jetty admin</div><div class="line">  hosts: jetty hosts 				#对应hostsz中主机内容</div><div class="line">  sudo: True</div><div class="line">  vars: 							#定义变量区域</div><div class="line">    war_file: /home/jettyappweb.war #本地文件</div><div class="line">    jetty_root: /home/pft/pft-web-base/webapps/ROOT #部署的远程ROOT目录</div><div class="line">  tasks:</div><div class="line">    - name: rm ROOT.</div><div class="line">      file:</div><div class="line">        state: absent</div><div class="line">        dest: &quot;&#123;&#123; jetty_root &#125;&#125;&quot;</div><div class="line">    - name: mkdir ROOT.</div><div class="line">      file:</div><div class="line">        state: directory</div><div class="line">        dest: &quot;&#123;&#123; jetty_root &#125;&#125;&quot;</div><div class="line">        owner: root</div><div class="line">        group: root</div><div class="line">        mode: 755</div><div class="line">    - name: unzip war.</div><div class="line">      unarchive:</div><div class="line">        src: &quot;&#123;&#123; war_file &#125;&#125;&quot;</div><div class="line">        dest: &quot;&#123;&#123; jetty_root &#125;&#125;&quot;</div><div class="line">        copy: yes</div><div class="line">    - name: start jetty.</div><div class="line">      action: shell &#123;&#123; jetty_root &#125;&#125;/../../bin/start.sh</div></pre></td></tr></table></figure>
+        <h1 id="构建Jetty部署yml"><a href="#构建Jetty部署yml" class="headerlink" title="构建Jetty部署yml"></a>构建Jetty部署yml</h1><p>新建一个ansibledeployjetty.yml文件，增加以下脚本：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">- name: install jetty admin</div><div class="line">  hosts: jetty hosts 				#对应hostsz中主机内容</div><div class="line">  sudo: True</div><div class="line">  vars: 							#定义变量区域</div><div class="line">    war_file: /home/jettyappweb.war #本地文件</div><div class="line">    jetty_root: /home/pft/pft-web-base/webapps/ROOT #部署的远程ROOT目录</div><div class="line">  tasks:</div><div class="line">    - name: rm ROOT.</div><div class="line">      file:</div><div class="line">        state: absent</div><div class="line">        dest: &quot;&#123;&#123; jetty_root &#125;&#125;&quot;</div><div class="line">    - name: mkdir ROOT.</div><div class="line">      file:</div><div class="line">        state: directory</div><div class="line">        dest: &quot;&#123;&#123; jetty_root &#125;&#125;&quot;</div><div class="line">        owner: root</div><div class="line">        group: root</div><div class="line">        mode: 755</div><div class="line">    - name: unzip war.</div><div class="line">      unarchive:</div><div class="line">        src: &quot;&#123;&#123; war_file &#125;&#125;&quot;</div><div class="line">        dest: &quot;&#123;&#123; jetty_root &#125;&#125;&quot;</div><div class="line">        copy: yes</div><div class="line">    - name: start jetty.</div><div class="line">      action: shell &#123;&#123; jetty_root &#125;&#125;/../../bin/start.sh</div></pre></td></tr></table></figure></p>
 <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><ul>
 <li>hosts #对应host中主机内容</li>
 <li>vars  #定义变量区域</li>
@@ -374,6 +374,7 @@
 <li>使用unarchive命令，copy:yes直接拷贝本地文件到远程，并且解压缩后删除文件。</li>
 <li>action: shell 启动jetty服务。 </li>
 </ul>
+<h1 id="启动部署脚本"><a href="#启动部署脚本" class="headerlink" title="启动部署脚本"></a>启动部署脚本</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ansible-playbook ansibledeployjetty.yml -vvv</div></pre></td></tr></table></figure>
 <h1 id="jetty-启动脚本start-sh"><a href="#jetty-启动脚本start-sh" class="headerlink" title="jetty 启动脚本start.sh"></a>jetty 启动脚本start.sh</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line"></div><div class="line"># JAVA_HOME</div><div class="line">export JAVA_HOME=/var/java/jdk1.8.0_111</div><div class="line">export PATH=$JAVA_HOME/bin:$PATH</div><div class="line"></div><div class="line">JAVA_JMX_OPTS=&quot;&quot;</div><div class="line">if [ &quot;$1&quot; = &quot;jmx&quot; ]; then</div><div class="line">  JAVA_JMX_OPTS=&quot; -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmx -Dcom.sun.management.jmxremote.authenticate=true -Dcom.sun.management.jmxremote.password.file=../conf/jmx/jmxremote.password -Dcom.sun.management.jmxremote.access.file=../conf/jmx/jmxremote.access&quot;</div><div class="line">fi</div><div class="line"></div><div class="line">JAVA_MEM_OPTS=&quot;&quot;</div><div class="line">BITS=`java -version 2&gt;&amp;1 | grep -i 64-bit`</div><div class="line">if [ -n &quot;$BITS&quot; ]; then</div><div class="line">    JAVA_MEM_OPTS=&quot; -server -Xmx512m -Xms512m -Xmn128m -Xss256k -XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:LargePageSizeInBytes=128m -XX:+UseFastAccessorMethods -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=70 &quot;</div><div class="line">else</div><div class="line">    JAVA_MEM_OPTS=&quot; -server -Xms512m -Xmx512m -XX:PermSize=128m -XX:SurvivorRatio=2 -XX:+UseParallelGC &quot;</div><div class="line">fi</div><div class="line"></div><div class="line">export JAVA_OPTS</div><div class="line"></div><div class="line">nohup java $JAVA_OPTS $JAVA_JMX_OPTS $JAVA_MEM_OPTS -jar /usr/local/jetty9/start.jar jetty.base=/home/pft/pft-web-base &amp;</div></pre></td></tr></table></figure>
 <h1 id="常见模块说明"><a href="#常见模块说明" class="headerlink" title="常见模块说明"></a>常见模块说明</h1><h2 id="File模块"><a href="#File模块" class="headerlink" title="File模块"></a>File模块</h2><p>功能：用于设置文件属性</p>
 <ul>
@@ -428,8 +429,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/02/2017/program/startjettybyshell/" rel="prev" title="使用bash启动Jetty服务">
-                使用bash启动Jetty服务 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/01/2017/listen/穷查理宝典/" rel="prev" title="穷查理宝典">
+                穷查理宝典 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -498,7 +499,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">119</span>
+              <span class="site-state-item-count">121</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -550,7 +551,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#构建Jetty部署yml"><span class="nav-number">1.</span> <span class="nav-text">构建Jetty部署yml</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#说明"><span class="nav-number">2.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jetty-启动脚本start-sh"><span class="nav-number">3.</span> <span class="nav-text">jetty 启动脚本start.sh</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见模块说明"><span class="nav-number">4.</span> <span class="nav-text">常见模块说明</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#File模块"><span class="nav-number">4.1.</span> <span class="nav-text">File模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Command模块"><span class="nav-number">4.2.</span> <span class="nav-text">Command模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#unarchive模块"><span class="nav-number">4.3.</span> <span class="nav-text">unarchive模块</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#构建Jetty部署yml"><span class="nav-number">1.</span> <span class="nav-text">构建Jetty部署yml</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#说明"><span class="nav-number">2.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#启动部署脚本"><span class="nav-number">3.</span> <span class="nav-text">启动部署脚本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jetty-启动脚本start-sh"><span class="nav-number">4.</span> <span class="nav-text">jetty 启动脚本start.sh</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见模块说明"><span class="nav-number">5.</span> <span class="nav-text">常见模块说明</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#File模块"><span class="nav-number">5.1.</span> <span class="nav-text">File模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Command模块"><span class="nav-number">5.2.</span> <span class="nav-text">Command模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#unarchive模块"><span class="nav-number">5.3.</span> <span class="nav-text">unarchive模块</span></a></li></ol></li></ol></div>
             
 
           </div>
