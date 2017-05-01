@@ -276,7 +276,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/01/12/2017/docker-just-run-away/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/02/05/2017/cherryblossoms/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -301,8 +301,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/01/12/2017/docker-just-run-away/" itemprop="url">
-                  Docker为什么刚运行就退出了
+                <a class="post-title-link" href="/2017/02/05/2017/cherryblossoms/" itemprop="url">
+                  樱花
                 </a>
               
             
@@ -316,8 +316,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-12T22:54:33+08:00">
-                2017-01-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-05T20:57:23+08:00">
+                2017-02-05
               </time>
             
 
@@ -335,8 +335,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/program/" itemprop="url" rel="index">
-                    <span itemprop="name">program</span>
+                  <a href="/categories/life-摄影/" itemprop="url" rel="index">
+                    <span itemprop="name">life,摄影</span>
                   </a>
                 </span>
 
@@ -372,14 +372,13 @@
       
         
           
-            <h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>Docker容器后台运行,就必须有一个前台进程.容器运行的命令如果不是那些一直挂起的命令（比如运行top，tail），就是会自动退出。</p>
-<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>简单的解决方案可能是添加一个循环：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> <span class="literal">true</span>; <span class="keyword">do</span> sleep 1000; <span class="keyword">done</span></div></pre></td></tr></table></figure>
-<p>例子，在start.sh脚本增加以下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> [[ <span class="variable">$1</span> == <span class="string">"-d"</span> ]]; <span class="keyword">then</span></div><div class="line">  <span class="keyword">while</span> <span class="literal">true</span>; <span class="keyword">do</span> sleep 1000; <span class="keyword">done</span></div><div class="line"><span class="keyword">fi</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> [[ <span class="variable">$1</span> == <span class="string">"-bash"</span> ]]; <span class="keyword">then</span></div><div class="line">  /bin/bash</div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure>
-<p>Dockerfile文件中使用：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CMD [<span class="string">"/etc/start.sh"</span>, <span class="string">"-d"</span>]</div></pre></td></tr></table></figure>
-<p><a href="http://stackoverflow.com/questions/28212380/why-docker-container-exits-immediately" target="_blank" rel="external">Why docker container exits immediately</a></p>
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&quot;樱花下落的速度，是每秒5厘米； 我要用怎样的速度，才能与你相遇。&quot;</div></pre></td></tr></table></figure>
+<p><img src="http://okwjqoyrr.bkt.clouddn.com/image/2017/02/photography/DSC_0064.jpg?imageslim" alt=""></p>
+<p><img src="http://okwjqoyrr.bkt.clouddn.com/image/2017/02/photography/DSC_0078.jpg?imageslim" alt=""></p>
+<p><img src="http://okwjqoyrr.bkt.clouddn.com/image/2017/02/photography/DSC_0087.jpg?imageslim" alt=""></p>
+<p><img src="http://okwjqoyrr.bkt.clouddn.com/image/2017/02/photography/DSC_0090.jpg?imageslim" alt=""></p>
+<p><img src="http://okwjqoyrr.bkt.clouddn.com/image/2017/02/photography/DSC_0094.jpg?imageslim" alt=""></p>
+<p><img src="http://okwjqoyrr.bkt.clouddn.com/image/2017/02/photography/DSC_0124.jpg?imageslim" alt=""></p>
 
           
         
@@ -418,7 +417,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/01/08/2017/qx20170107/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/02/05/2017/plumblossoms/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -443,8 +442,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/01/08/2017/qx20170107/" itemprop="url">
-                  骑行
+                <a class="post-title-link" href="/2017/02/05/2017/plumblossoms/" itemprop="url">
+                  梅花
                 </a>
               
             
@@ -458,8 +457,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-08T15:36:48+08:00">
-                2017-01-08
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-05T20:57:23+08:00">
+                2017-02-05
               </time>
             
 
@@ -477,8 +476,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/life/" itemprop="url" rel="index">
-                    <span itemprop="name">life</span>
+                  <a href="/categories/life-摄影/" itemprop="url" rel="index">
+                    <span itemprop="name">life,摄影</span>
                   </a>
                 </span>
 
@@ -514,10 +513,10 @@
       
         
           
-            <p>午后，从公司出发，经洪山桥骑行闽江公园，终于东街口。</p>
-<p><img src="http://oixyw088s.bkt.clouddn.com/qx2017010703.jpeg" alt="大榕树" title="大榕树-闽江公园南园"></p>
-<p><img src="http://oixyw088s.bkt.clouddn.com/qx2017010702.jpeg" alt="九龙头" title="九龙头-闽江公园南园"></p>
-<p><img src="http://oixyw088s.bkt.clouddn.com/qx2017010701.jpeg" alt="桥" title="桥-江心公园"></p>
+            <p><img src="http://okwjqoyrr.bkt.clouddn.com/image/2017/02/photography/DSC_0108.jpg?imageslim" alt="" title="含苞待放"></p>
+<p><img src="http://okwjqoyrr.bkt.clouddn.com/image/2017/02/photography/DSC_0109.jpg?imageslim" alt="" title="争艳"></p>
+<p><img src="http://okwjqoyrr.bkt.clouddn.com/image/2017/02/photography/DSC_0148.jpg?imageslim" alt="" title="绽放"></p>
+<p><img src="http://okwjqoyrr.bkt.clouddn.com/image/2017/02/photography/DSC_0130.jpg?imageslim" alt="" title="花瓣"></p>
 
           
         
@@ -556,7 +555,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/01/07/2017/阿里yum无法使用/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/02/05/2017/rapeflower/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -581,8 +580,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/01/07/2017/阿里yum无法使用/" itemprop="url">
-                  阿里yum无法使用
+                <a class="post-title-link" href="/2017/02/05/2017/rapeflower/" itemprop="url">
+                  油菜花
                 </a>
               
             
@@ -596,8 +595,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-07T14:47:53+08:00">
-                2017-01-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-05T20:57:23+08:00">
+                2017-02-05
               </time>
             
 
@@ -615,8 +614,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
+                  <a href="/categories/life-摄影/" itemprop="url" rel="index">
+                    <span itemprop="name">life,摄影</span>
                   </a>
                 </span>
 
@@ -652,14 +651,10 @@
       
         
           
-            <h2 id="阿里yum无法使用"><a href="#阿里yum无法使用" class="headerlink" title="阿里yum无法使用"></a>阿里yum无法使用</h2><h3 id="错误信息"><a href="#错误信息" class="headerlink" title="错误信息"></a>错误信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://mirrors.aliyun.com/centos/7/os/x86_64/repodata/repomd.xml: [Errno 12] Timeout on http://mirrors.aliyun.com/centos/7/os/x86_64/repodata/repomd.xml: (28, &apos;Resolving timed out after 30399 milliseconds&apos;)</div></pre></td></tr></table></figure>
-<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>是防火墙INPUT和OUTPUT方向全部丢弃。</p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>开启防火墙<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chkconfig iptables on #需要重启</div></pre></td></tr></table></figure></p>
-<p>添加以下规则，并重启防火墙</p>
-<pre><code>-A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
--A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
--A OUTPUT -p tcp -m tcp -m state --state NEW --dport 80 -j ACCEPT
-</code></pre>
+            <p><img src="http://okwjqoyrr.bkt.clouddn.com/image/2017/02/photography/DSC_0183.jpg?imageslim" alt=""></p>
+<p><img src="http://okwjqoyrr.bkt.clouddn.com/image/2017/02/photography/DSC_0188.jpg?imageslim" alt=""></p>
+<p><img src="http://okwjqoyrr.bkt.clouddn.com/image/2017/02/photography/DSC_0170.jpg?imageslim" alt=""></p>
+
           
         
       
@@ -692,7 +687,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/35/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><span class="page-number current">36</span><a class="page-number" href="/page/37/">37</a><span class="space">&hellip;</span><a class="page-number" href="/page/39/">39</a><a class="extend next" rel="next" href="/page/37/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/35/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><span class="page-number current">36</span><a class="page-number" href="/page/37/">37</a><span class="space">&hellip;</span><a class="page-number" href="/page/40/">40</a><a class="extend next" rel="next" href="/page/37/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -733,7 +728,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">115</span>
+              <span class="site-state-item-count">118</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
