@@ -276,7 +276,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/04/10/2017/program/jmeter/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/04/10/2017/program/jettyjvm/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -301,8 +301,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/10/2017/program/jmeter/" itemprop="url">
-                  JMeter 压力测试CSV参数化
+                <a class="post-title-link" href="/2017/04/10/2017/program/jettyjvm/" itemprop="url">
+                  Jetty jvm
                 </a>
               
             
@@ -372,7 +372,13 @@
       
         
           
-            <h2 id="Jmeter之使用CSV-Data-Set-Config实现参数化登录"><a href="#Jmeter之使用CSV-Data-Set-Config实现参数化登录" class="headerlink" title="Jmeter之使用CSV Data Set Config实现参数化登录"></a><a href="http://lijingshou.iteye.com/blog/2047613" title="Jmeter之使用CSV Data Set Config实现参数化登录" target="_blank" rel="external">Jmeter之使用CSV Data Set Config实现参数化登录</a></h2><h2 id="JMeter带json数据的post请求测试"><a href="#JMeter带json数据的post请求测试" class="headerlink" title="JMeter带json数据的post请求测试"></a><a href="http://blog.csdn.net/chuntian_feng/article/details/51871481" title="JMeter带json数据的post请求测试" target="_blank" rel="external">JMeter带json数据的post请求测试</a></h2><h2 id="JMeter-压力测试使用函数和-CSV-文件参数化-json-数据"><a href="#JMeter-压力测试使用函数和-CSV-文件参数化-json-数据" class="headerlink" title="JMeter 压力测试使用函数和 CSV 文件参数化 json 数据"></a><a href="http://blog.csdn.net/defonds/article/details/40824011" title="JMeter 压力测试使用函数和 CSV 文件参数化 json 数据" target="_blank" rel="external">JMeter 压力测试使用函数和 CSV 文件参数化 json 数据</a></h2>
+            <h2 id="修改start-ini文件中"><a href="#修改start-ini文件中" class="headerlink" title="修改start.ini文件中"></a>修改start.ini文件中</h2><p>–exec<br> -Dsun.rmi.dgc.client.gcInterval=3600000<br> -Dsun.rmi.dgc.server.gcInterval=3600000</p>
+<h1 id="Dcom-sun-management-jmxremote"><a href="#Dcom-sun-management-jmxremote" class="headerlink" title="-Dcom.sun.management.jmxremote"></a>-Dcom.sun.management.jmxremote</h1><h1 id="Dorg-eclipse-jetty-util-log-IGNORED-true"><a href="#Dorg-eclipse-jetty-util-log-IGNORED-true" class="headerlink" title="-Dorg.eclipse.jetty.util.log.IGNORED=true"></a>-Dorg.eclipse.jetty.util.log.IGNORED=true</h1><h1 id="Dorg-eclipse-jetty-util-log-stderr-DEBUG-true"><a href="#Dorg-eclipse-jetty-util-log-stderr-DEBUG-true" class="headerlink" title="-Dorg.eclipse.jetty.util.log.stderr.DEBUG=true"></a>-Dorg.eclipse.jetty.util.log.stderr.DEBUG=true</h1><h1 id="Dorg-eclipse-jetty-util-log-stderr-SOURCE-true"><a href="#Dorg-eclipse-jetty-util-log-stderr-SOURCE-true" class="headerlink" title="-Dorg.eclipse.jetty.util.log.stderr.SOURCE=true"></a>-Dorg.eclipse.jetty.util.log.stderr.SOURCE=true</h1><p> -Xmx2000m<br> -Xmn512m<br> -XX:PermSize=512m<br> -XX:MaxPermSize=1024m</p>
+<h1 id="verbose-gc"><a href="#verbose-gc" class="headerlink" title="-verbose:gc"></a>-verbose:gc</h1><h1 id="XX-PrintGCDateStamps"><a href="#XX-PrintGCDateStamps" class="headerlink" title="-XX:+PrintGCDateStamps"></a>-XX:+PrintGCDateStamps</h1><h1 id="XX-PrintGCTimeStamps"><a href="#XX-PrintGCTimeStamps" class="headerlink" title="-XX:+PrintGCTimeStamps"></a>-XX:+PrintGCTimeStamps</h1><h1 id="XX-PrintGCDetails"><a href="#XX-PrintGCDetails" class="headerlink" title="-XX:+PrintGCDetails"></a>-XX:+PrintGCDetails</h1><h1 id="XX-PrintTenuringDistribution"><a href="#XX-PrintTenuringDistribution" class="headerlink" title="-XX:+PrintTenuringDistribution"></a>-XX:+PrintTenuringDistribution</h1><h1 id="XX-PrintCommandLineFlags"><a href="#XX-PrintCommandLineFlags" class="headerlink" title="-XX:+PrintCommandLineFlags"></a>-XX:+PrintCommandLineFlags</h1><h1 id="XX-DisableExplicitGC"><a href="#XX-DisableExplicitGC" class="headerlink" title="-XX:+DisableExplicitGC"></a>-XX:+DisableExplicitGC</h1><p> -XX:+UseConcMarkSweepGC</p>
+<h1 id="XX-ParallelCMSThreads-2"><a href="#XX-ParallelCMSThreads-2" class="headerlink" title="-XX:ParallelCMSThreads=2"></a>-XX:ParallelCMSThreads=2</h1><p> -XX:+CMSClassUnloadingEnabled  </p>
+<h1 id="XX-UseCMSCompactAtFullCollection"><a href="#XX-UseCMSCompactAtFullCollection" class="headerlink" title="-XX:+UseCMSCompactAtFullCollection"></a>-XX:+UseCMSCompactAtFullCollection</h1><h1 id="XX-CMSInitiatingOccupancyFraction-80"><a href="#XX-CMSInitiatingOccupancyFraction-80" class="headerlink" title="-XX:CMSInitiatingOccupancyFraction=80"></a>-XX:CMSInitiatingOccupancyFraction=80</h1><p>#———————————————————–</p>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p> -Dsun.rmi.dgc.client.gcInterval=3600000，<br> -Dsun.rmi.dgc.server.gcInterval=3600000是设置客户端和服务端GC启动的时间。<br> -Xmx2000m最大缓存空间、<br> -Xmn512m新生代大小、<br> -XX:PermSize=512m内存永久区初始大小、<br> -XX:MaxPermSize=1024m最大永久区大小，<br> -XX:MaxPermSize=1024m允许CMS清楚老年代，<br> -XX:+CMSClassUnloadingEnabled，<br> -XX:+CMSClassUnloadingEnabled 允许CMS清楚持久代。</p>
+
           
         
       

@@ -39,8 +39,8 @@
     
     <entry>
       <title><![CDATA[Install ansible]]></title>
-      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2FInstallansible%2F</url>
-      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible]]></content>
+      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2Fansible%2F</url>
+      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible 自动化部署 Jenkins+Ansible+Gitlab自动化部署三剑客 jenkins基于ansible持续集成]]></content>
     </entry>
 
     
@@ -53,8 +53,8 @@
     
     <entry>
       <title><![CDATA[Install ansible]]></title>
-      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2Fansible%2F</url>
-      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible 自动化部署 Jenkins+Ansible+Gitlab自动化部署三剑客 jenkins基于ansible持续集成]]></content>
+      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2FInstallansible%2F</url>
+      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible]]></content>
     </entry>
 
     
@@ -150,16 +150,16 @@
 
     
     <entry>
-      <title><![CDATA[需求第三律]]></title>
-      <url>%2F2017%2F04%2F18%2F2017%2Feconomics%2Flawofdemand3%2F</url>
-      <content type="text"><![CDATA[每当消费者必须支付一笔附加费的时候，高品质的产品就相对低品质的产品变得便宜了，这笔附加费越高，高品质产品就变得越便宜。有时候我们把这个定律叫做”好东西运到远方去定律”。]]></content>
+      <title><![CDATA[需求第二律]]></title>
+      <url>%2F2017%2F04%2F18%2F2017%2Feconomics%2Flawofdemand22%2F</url>
+      <content type="text"><![CDATA[随着时间的推移，需求弹性会变得越来越高，人们寻找替代品的空间会越来越大，对策越来越多。 税负的分摊 税负通常是由供需双方共同承担的，至于谁承担的多，谁承担的少，取决于他们之间的相对弹性，而与法律或者风俗的规定没有关系。]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[需求第二律]]></title>
-      <url>%2F2017%2F04%2F18%2F2017%2Feconomics%2Flawofdemand22%2F</url>
-      <content type="text"><![CDATA[随着时间的推移，需求弹性会变得越来越高，人们寻找替代品的空间会越来越大，对策越来越多。 税负的分摊 税负通常是由供需双方共同承担的，至于谁承担的多，谁承担的少，取决于他们之间的相对弹性，而与法律或者风俗的规定没有关系。]]></content>
+      <title><![CDATA[需求第三律]]></title>
+      <url>%2F2017%2F04%2F18%2F2017%2Feconomics%2Flawofdemand3%2F</url>
+      <content type="text"><![CDATA[每当消费者必须支付一笔附加费的时候，高品质的产品就相对低品质的产品变得便宜了，这笔附加费越高，高品质产品就变得越便宜。有时候我们把这个定律叫做”好东西运到远方去定律”。]]></content>
     </entry>
 
     
@@ -199,16 +199,16 @@
 
     
     <entry>
-      <title><![CDATA[联盟]]></title>
-      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E8%81%94%E7%9B%9F%2F</url>
-      <content type="text"><![CDATA[通过联盟重建信任与忠诚 如果我们不能回到终身雇佣的年代，就要学会重建雇主与员工的关系。这种新的忠诚观允许公司和员工对彼此做出承诺，把过去的商业交易转变为互惠关系的框架。雇佣关系可以转换为一个联盟：一份由双方独立达成的，有明确条款的互惠协议。 员工拥有创始人思维任期制将员工在你的公司度过的职业生涯重新规划为一系列连续的任期，可以更好地吸引和留住开创型员工。 培养开创性员工的利器诚实地谈论任期公司里的三类任期 轮转期 转变期 基础期 协调员工的目标和公司的目标如何执行转变期计划 开始对话，确定目标 定期检查以交流反馈 任期临近结束前，制定下一个任期计划 如何处理任务中的意外投资在员工的人脉上打造终身联盟：前同事联络网建立同事联络网的策略与技巧 决定同事联络网的成员。删除掉存在纠纷和法律道德风险的前员工。 明确定义与前员工关系的期望和收益。常见的方法有：员工推荐奖金、产品折扣和测试白名单、举办活动、为前员工颁发荣誉、向前员工通报最新消息等。 建立周详的离职机制。在离职面谈中与员工巩固终身关系，收集信息进入数据库。 建立现员工和前员工的联系。 首席执行官布拉德·史密斯（Brad Smith）告诉我们的：“领导者的任务不是培养能人，而是认识到人们已有的才华，并创造出让其产生和成长的环境。”]]></content>
+      <title><![CDATA[刻意练习]]></title>
+      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0%2F</url>
+      <content type="text"><![CDATA[真正的”一万小时天才理论”是，普通人也可以通过刻意练习成为某个领域的专家。 用『三个F』创建有效的心理表征 专注focus，集中注意力 反馈feedback，及时反馈 纠正fix it，不断修正自己 练习的时间与质量反而在决定人们的技能变得多么熟练时，发挥着更大的作用。 从长远来看，占上风的是那些练习更勤奋的人，而不是那些一开始在智商或者其他才华方面稍有优势的人。]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[刻意练习]]></title>
-      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0%2F</url>
-      <content type="text"><![CDATA[真正的”一万小时天才理论”是，普通人也可以通过刻意练习成为某个领域的专家。 用『三个F』创建有效的心理表征 专注focus，集中注意力 反馈feedback，及时反馈 纠正fix it，不断修正自己 练习的时间与质量反而在决定人们的技能变得多么熟练时，发挥着更大的作用。 从长远来看，占上风的是那些练习更勤奋的人，而不是那些一开始在智商或者其他才华方面稍有优势的人。]]></content>
+      <title><![CDATA[联盟]]></title>
+      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E8%81%94%E7%9B%9F%2F</url>
+      <content type="text"><![CDATA[通过联盟重建信任与忠诚 如果我们不能回到终身雇佣的年代，就要学会重建雇主与员工的关系。这种新的忠诚观允许公司和员工对彼此做出承诺，把过去的商业交易转变为互惠关系的框架。雇佣关系可以转换为一个联盟：一份由双方独立达成的，有明确条款的互惠协议。 员工拥有创始人思维任期制将员工在你的公司度过的职业生涯重新规划为一系列连续的任期，可以更好地吸引和留住开创型员工。 培养开创性员工的利器诚实地谈论任期公司里的三类任期 轮转期 转变期 基础期 协调员工的目标和公司的目标如何执行转变期计划 开始对话，确定目标 定期检查以交流反馈 任期临近结束前，制定下一个任期计划 如何处理任务中的意外投资在员工的人脉上打造终身联盟：前同事联络网建立同事联络网的策略与技巧 决定同事联络网的成员。删除掉存在纠纷和法律道德风险的前员工。 明确定义与前员工关系的期望和收益。常见的方法有：员工推荐奖金、产品折扣和测试白名单、举办活动、为前员工颁发荣誉、向前员工通报最新消息等。 建立周详的离职机制。在离职面谈中与员工巩固终身关系，收集信息进入数据库。 建立现员工和前员工的联系。 首席执行官布拉德·史密斯（Brad Smith）告诉我们的：“领导者的任务不是培养能人，而是认识到人们已有的才华，并创造出让其产生和成长的环境。”]]></content>
     </entry>
 
     
@@ -241,16 +241,16 @@
 
     
     <entry>
-      <title><![CDATA[思考的技术]]></title>
-      <url>%2F2017%2F04%2F12%2F2017%2Flisten%2F%E6%80%9D%E8%80%83%E7%9A%84%E6%8A%80%E6%9C%AF%2F</url>
-      <content type="text"><![CDATA[1.很多人在思考问题的时候，以为自己抓住了本质，其实是被外界的干预、固有的经验或者别人的劝说所误导。 2.遗憾的是，大多数面临严重问题的企业，在找出解决之策以后，却没有坚决实行的执行力。 3.所谓科学的思考方法，就是为了印证假设而不辞劳作的行动力，也可以说是为了获得绝对正确的答案，彻底动脑的深层思考力。 4.证实假设到导出结论的过程中，最重要的就是弄清楚“发生问题的原因是什么”。但是大多数经营者和企业经理人只看到问题的现象，却看不到产生问题的原因。]]></content>
+      <title><![CDATA[输赢心理学]]></title>
+      <url>%2F2017%2F04%2F12%2F2017%2Flisten%2F%E8%BE%93%E8%B5%A2%E5%BF%83%E7%90%86%E5%AD%A6%2F</url>
+      <content type="text"><![CDATA[对一些钢琴家的研究表明，是否能够在比赛中胜出，并不取决于平时排练得多好，而是取决于他们能否在比赛中，保持平时排练时的水平。很少有钢琴家能在比赛中表现得和平时排练一样好或更好。当人们越关注成功的几率，去尝试做某事的可能性就小；但当越关注成功的果实，尝试的可能性就大。 乐队的演出效果越好，其幕后的争斗、竞争、不和谐就会越发严重。他们只有在台上才会表现出初期的和谐效果。要让人们在合作中更努力，只需要告诉他们与实验室伙伴同一天生日即可，他们的工作会更加积极主动、持之以恒。]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[输赢心理学]]></title>
-      <url>%2F2017%2F04%2F12%2F2017%2Flisten%2F%E8%BE%93%E8%B5%A2%E5%BF%83%E7%90%86%E5%AD%A6%2F</url>
-      <content type="text"><![CDATA[对一些钢琴家的研究表明，是否能够在比赛中胜出，并不取决于平时排练得多好，而是取决于他们能否在比赛中，保持平时排练时的水平。很少有钢琴家能在比赛中表现得和平时排练一样好或更好。当人们越关注成功的几率，去尝试做某事的可能性就小；但当越关注成功的果实，尝试的可能性就大。 乐队的演出效果越好，其幕后的争斗、竞争、不和谐就会越发严重。他们只有在台上才会表现出初期的和谐效果。要让人们在合作中更努力，只需要告诉他们与实验室伙伴同一天生日即可，他们的工作会更加积极主动、持之以恒。]]></content>
+      <title><![CDATA[思考的技术]]></title>
+      <url>%2F2017%2F04%2F12%2F2017%2Flisten%2F%E6%80%9D%E8%80%83%E7%9A%84%E6%8A%80%E6%9C%AF%2F</url>
+      <content type="text"><![CDATA[1.很多人在思考问题的时候，以为自己抓住了本质，其实是被外界的干预、固有的经验或者别人的劝说所误导。 2.遗憾的是，大多数面临严重问题的企业，在找出解决之策以后，却没有坚决实行的执行力。 3.所谓科学的思考方法，就是为了印证假设而不辞劳作的行动力，也可以说是为了获得绝对正确的答案，彻底动脑的深层思考力。 4.证实假设到导出结论的过程中，最重要的就是弄清楚“发生问题的原因是什么”。但是大多数经营者和企业经理人只看到问题的现象，却看不到产生问题的原因。]]></content>
     </entry>
 
     
@@ -269,16 +269,16 @@
 
     
     <entry>
-      <title><![CDATA[jvisualvm]]></title>
-      <url>%2F2017%2F04%2F11%2F2017%2Fprogram%2Fjvisualvm%2F</url>
-      <content type="text"><![CDATA[使用 VisualVM 进行性能分析及调优]]></content>
+      <title><![CDATA[jprofiler]]></title>
+      <url>%2F2017%2F04%2F11%2F2017%2Fprogram%2Fjprofiler%2F</url>
+      <content type="text"><![CDATA[start_jetty_jprofiler.sh123JAVA_OPTS=&quot;-agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849 $JAVA_OPTS&quot;export JAVA_OPTSjava $JAVA_OPTS -jar start.jar 业务启动123JAVA_OPTS=&quot;-agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849 $JAVA_OPTS&quot;export JAVA_OPTSjava $JAVA_OPTS -jar /usr/local/jetty9/start.jar jetty.base=/home/user/product &amp;]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[jprofiler]]></title>
-      <url>%2F2017%2F04%2F11%2F2017%2Fprogram%2Fjprofiler%2F</url>
-      <content type="text"><![CDATA[start_jetty_jprofiler.sh123JAVA_OPTS=&quot;-agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849 $JAVA_OPTS&quot;export JAVA_OPTSjava $JAVA_OPTS -jar start.jar 业务启动123JAVA_OPTS=&quot;-agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849 $JAVA_OPTS&quot;export JAVA_OPTSjava $JAVA_OPTS -jar /usr/local/jetty9/start.jar jetty.base=/home/user/product &amp;]]></content>
+      <title><![CDATA[jvisualvm]]></title>
+      <url>%2F2017%2F04%2F11%2F2017%2Fprogram%2Fjvisualvm%2F</url>
+      <content type="text"><![CDATA[使用 VisualVM 进行性能分析及调优]]></content>
     </entry>
 
     
@@ -311,16 +311,16 @@
 
     
     <entry>
-      <title><![CDATA[Jetty jvm]]></title>
-      <url>%2F2017%2F04%2F10%2F2017%2Fprogram%2Fjettyjvm%2F</url>
-      <content type="text"><![CDATA[修改start.ini文件中–exec -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Dcom.sun.management.jmxremote-Dorg.eclipse.jetty.util.log.IGNORED=true-Dorg.eclipse.jetty.util.log.stderr.DEBUG=true-Dorg.eclipse.jetty.util.log.stderr.SOURCE=true -Xmx2000m -Xmn512m -XX:PermSize=512m -XX:MaxPermSize=1024m -verbose:gc-XX:+PrintGCDateStamps-XX:+PrintGCTimeStamps-XX:+PrintGCDetails-XX:+PrintTenuringDistribution-XX:+PrintCommandLineFlags-XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:ParallelCMSThreads=2 -XX:+CMSClassUnloadingEnabled -XX:+UseCMSCompactAtFullCollection-XX:CMSInitiatingOccupancyFraction=80#———————————————————– 说明 -Dsun.rmi.dgc.client.gcInterval=3600000， -Dsun.rmi.dgc.server.gcInterval=3600000是设置客户端和服务端GC启动的时间。 -Xmx2000m最大缓存空间、 -Xmn512m新生代大小、 -XX:PermSize=512m内存永久区初始大小、 -XX:MaxPermSize=1024m最大永久区大小， -XX:MaxPermSize=1024m允许CMS清楚老年代， -XX:+CMSClassUnloadingEnabled， -XX:+CMSClassUnloadingEnabled 允许CMS清楚持久代。]]></content>
+      <title><![CDATA[JMeter 压力测试CSV参数化]]></title>
+      <url>%2F2017%2F04%2F10%2F2017%2Fprogram%2Fjmeter%2F</url>
+      <content type="text"><![CDATA[Jmeter之使用CSV Data Set Config实现参数化登录JMeter带json数据的post请求测试JMeter 压力测试使用函数和 CSV 文件参数化 json 数据]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[JMeter 压力测试CSV参数化]]></title>
-      <url>%2F2017%2F04%2F10%2F2017%2Fprogram%2Fjmeter%2F</url>
-      <content type="text"><![CDATA[Jmeter之使用CSV Data Set Config实现参数化登录JMeter带json数据的post请求测试JMeter 压力测试使用函数和 CSV 文件参数化 json 数据]]></content>
+      <title><![CDATA[Jetty jvm]]></title>
+      <url>%2F2017%2F04%2F10%2F2017%2Fprogram%2Fjettyjvm%2F</url>
+      <content type="text"><![CDATA[修改start.ini文件中–exec -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Dcom.sun.management.jmxremote-Dorg.eclipse.jetty.util.log.IGNORED=true-Dorg.eclipse.jetty.util.log.stderr.DEBUG=true-Dorg.eclipse.jetty.util.log.stderr.SOURCE=true -Xmx2000m -Xmn512m -XX:PermSize=512m -XX:MaxPermSize=1024m -verbose:gc-XX:+PrintGCDateStamps-XX:+PrintGCTimeStamps-XX:+PrintGCDetails-XX:+PrintTenuringDistribution-XX:+PrintCommandLineFlags-XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:ParallelCMSThreads=2 -XX:+CMSClassUnloadingEnabled -XX:+UseCMSCompactAtFullCollection-XX:CMSInitiatingOccupancyFraction=80#———————————————————– 说明 -Dsun.rmi.dgc.client.gcInterval=3600000， -Dsun.rmi.dgc.server.gcInterval=3600000是设置客户端和服务端GC启动的时间。 -Xmx2000m最大缓存空间、 -Xmn512m新生代大小、 -XX:PermSize=512m内存永久区初始大小、 -XX:MaxPermSize=1024m最大永久区大小， -XX:MaxPermSize=1024m允许CMS清楚老年代， -XX:+CMSClassUnloadingEnabled， -XX:+CMSClassUnloadingEnabled 允许CMS清楚持久代。]]></content>
     </entry>
 
     
@@ -745,6 +745,13 @@
 
     
     <entry>
+      <title><![CDATA[油菜花]]></title>
+      <url>%2F2017%2F02%2F05%2F2017%2Frapeflower%2F</url>
+      <content type="text"><![CDATA[]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[梅花]]></title>
       <url>%2F2017%2F02%2F05%2F2017%2Fplumblossoms%2F</url>
       <content type="text"><![CDATA[]]></content>
@@ -755,13 +762,6 @@
       <title><![CDATA[樱花]]></title>
       <url>%2F2017%2F02%2F05%2F2017%2Fcherryblossoms%2F</url>
       <content type="text"><![CDATA[1&quot;樱花下落的速度，是每秒5厘米； 我要用怎样的速度，才能与你相遇。&quot;]]></content>
-    </entry>
-
-    
-    <entry>
-      <title><![CDATA[油菜花]]></title>
-      <url>%2F2017%2F02%2F05%2F2017%2Frapeflower%2F</url>
-      <content type="text"><![CDATA[]]></content>
     </entry>
 
     
@@ -836,16 +836,16 @@
 
     
     <entry>
-      <title><![CDATA[Centos桥接网络配置]]></title>
-      <url>%2F2016%2F12%2F01%2F2016%2Fcentos-bridging-network%2F</url>
-      <content type="text"><![CDATA[Centos7 桥接网络配置编辑配置文件1vi /etc/sysconfig/network-scripts/ifcfg-eth0 添加修改以下内容HWADDR=08:00:27:d4:5e:11TYPE=EthernetBOOTPROTO=static #启用静态IP地址DEFROUTE=yesPEERDNS=yesPEERROUTES=yesIPV4_FAILURE_FATAL=noIPV6INIT=yesIPV6_AUTOCONF=yesIPV6_DEFROUTE=yesIPV6_PEERDNS=yesIPV6_PEERROUTES=yesIPV6_FAILURE_FATAL=noNAME=enp0s3UUID=3c092d5f-fda6-403b-1122-d9bbd7280da5ONBOOT=yes #开启自动启用网络连接IPADDR0=192.168.3.236 #设置IP地址PREFIXO0=24 #设置子网掩码GATEWAY0=192.168.3.1 #设置网关DNS1=218.85.157.99 #设置主DNSDNS2=218.85.157.99 #设置备DNS 保存退出1:wq! 重启网络1systemctl restart network.service]]></content>
+      <title><![CDATA[Jconsole监视dubbo服务]]></title>
+      <url>%2F2016%2F12%2F01%2F2016%2FJconsole%E7%9B%91%E8%A7%86dubbo%2F</url>
+      <content type="text"><![CDATA[使用Jconsole监视dubbo服务 在需要监控的/bin/start.sh文件中添加下面语句：JAVA_OPTS=”$JAVA_OPTS -Djava.rmi.server.hostname=192.168..-Dcom.sun.management.jmxremote.port=8088-Dcom.sun.management.jmxremote.ssl=false-Dcom.sun.management.jmxremote.authenticate=false”-Djava.rmi.server.hostname该参数指定jconsole远程连接的IP地址-Dcom.sun.management.jmxremote.port该参数指定jconsole远程连接的端口号-Dcom.sun.management.jmxremote.authenticate设置参数值为false时，就不需要输入用户名和密码 也可用/bin/remotestart.sh启动监控，该命令已配置该信息。启动本地Jconsole在jdk安装目录下,如C:\Program Files\Java\jdk1.8.0_111\bin,选择jconsole.exe并双击。选择远程进程，输入地址及端口信息：192.168..：8088即可监控dubbo服务性能消耗。]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[Jconsole监视dubbo服务]]></title>
-      <url>%2F2016%2F12%2F01%2F2016%2FJconsole%E7%9B%91%E8%A7%86dubbo%2F</url>
-      <content type="text"><![CDATA[使用Jconsole监视dubbo服务 在需要监控的/bin/start.sh文件中添加下面语句：JAVA_OPTS=”$JAVA_OPTS -Djava.rmi.server.hostname=192.168..-Dcom.sun.management.jmxremote.port=8088-Dcom.sun.management.jmxremote.ssl=false-Dcom.sun.management.jmxremote.authenticate=false”-Djava.rmi.server.hostname该参数指定jconsole远程连接的IP地址-Dcom.sun.management.jmxremote.port该参数指定jconsole远程连接的端口号-Dcom.sun.management.jmxremote.authenticate设置参数值为false时，就不需要输入用户名和密码 也可用/bin/remotestart.sh启动监控，该命令已配置该信息。启动本地Jconsole在jdk安装目录下,如C:\Program Files\Java\jdk1.8.0_111\bin,选择jconsole.exe并双击。选择远程进程，输入地址及端口信息：192.168..：8088即可监控dubbo服务性能消耗。]]></content>
+      <title><![CDATA[Centos桥接网络配置]]></title>
+      <url>%2F2016%2F12%2F01%2F2016%2Fcentos-bridging-network%2F</url>
+      <content type="text"><![CDATA[Centos7 桥接网络配置编辑配置文件1vi /etc/sysconfig/network-scripts/ifcfg-eth0 添加修改以下内容HWADDR=08:00:27:d4:5e:11TYPE=EthernetBOOTPROTO=static #启用静态IP地址DEFROUTE=yesPEERDNS=yesPEERROUTES=yesIPV4_FAILURE_FATAL=noIPV6INIT=yesIPV6_AUTOCONF=yesIPV6_DEFROUTE=yesIPV6_PEERDNS=yesIPV6_PEERROUTES=yesIPV6_FAILURE_FATAL=noNAME=enp0s3UUID=3c092d5f-fda6-403b-1122-d9bbd7280da5ONBOOT=yes #开启自动启用网络连接IPADDR0=192.168.3.236 #设置IP地址PREFIXO0=24 #设置子网掩码GATEWAY0=192.168.3.1 #设置网关DNS1=218.85.157.99 #设置主DNSDNS2=218.85.157.99 #设置备DNS 保存退出1:wq! 重启网络1systemctl restart network.service]]></content>
     </entry>
 
     
