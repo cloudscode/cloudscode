@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://viabugs.com/2017/05/02/2017/program/startjettybyshell/</loc>
+    
+    <lastmod>2017-05-01T09:07:39.457Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://viabugs.com/2017/05/01/2017/program/ansibledeployjetty/</loc>
     
     <lastmod>2017-05-01T07:47:03.014Z</lastmod>
@@ -79,7 +86,7 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/03/19/2017/tomcatwithsupervisor/</loc>
+    <loc>http://viabugs.com/2017/01/08/2017/qx20170107/</loc>
     
     <lastmod>2017-04-29T00:55:51.338Z</lastmod>
     
@@ -93,16 +100,9 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/01/08/2017/qx20170107/</loc>
+    <loc>http://viabugs.com/2017/03/19/2017/tomcatwithsupervisor/</loc>
     
     <lastmod>2017-04-29T00:55:51.338Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://viabugs.com/2017/04/09/2017/program/php/</loc>
-    
-    <lastmod>2017-04-29T00:55:51.337Z</lastmod>
     
   </url>
   
@@ -114,14 +114,21 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/03/30/2017/program/mysqlunsigned/</loc>
+    <loc>http://viabugs.com/2017/04/09/2017/program/php/</loc>
+    
+    <lastmod>2017-04-29T00:55:51.337Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/04/11/2017/program/mysqloptimization/</loc>
     
     <lastmod>2017-04-29T00:55:51.336Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/04/11/2017/program/mysqloptimization/</loc>
+    <loc>http://viabugs.com/2017/03/30/2017/program/mysqlunsigned/</loc>
     
     <lastmod>2017-04-29T00:55:51.336Z</lastmod>
     
@@ -135,14 +142,14 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/03/23/2017/program/mavensurefireplugin/</loc>
+    <loc>http://viabugs.com/2017/03/23/2017/program/mavenwarplugin/</loc>
     
     <lastmod>2017-04-29T00:55:51.335Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/03/23/2017/program/mavenwarplugin/</loc>
+    <loc>http://viabugs.com/2017/03/23/2017/program/mavensurefireplugin/</loc>
     
     <lastmod>2017-04-29T00:55:51.335Z</lastmod>
     
@@ -163,13 +170,6 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/04/11/2017/program/jprofiler/</loc>
-    
-    <lastmod>2017-04-29T00:55:51.333Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://viabugs.com/2017/03/29/2017/program/linuxps/</loc>
     
     <lastmod>2017-04-29T00:55:51.333Z</lastmod>
@@ -184,14 +184,21 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/04/23/2017/program/jmeterscript/</loc>
+    <loc>http://viabugs.com/2017/04/11/2017/program/jprofiler/</loc>
+    
+    <lastmod>2017-04-29T00:55:51.333Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/04/10/2017/program/jmeter/</loc>
     
     <lastmod>2017-04-29T00:55:51.332Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/04/10/2017/program/jmeter/</loc>
+    <loc>http://viabugs.com/2017/04/23/2017/program/jmeterscript/</loc>
     
     <lastmod>2017-04-29T00:55:51.332Z</lastmod>
     
@@ -212,13 +219,6 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/03/29/2017/program/hibernateoutsidevalidrange/</loc>
-    
-    <lastmod>2017-04-29T00:55:51.330Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://viabugs.com/2017/04/10/2017/program/jconsolejetty/</loc>
     
     <lastmod>2017-04-29T00:55:51.330Z</lastmod>
@@ -227,6 +227,13 @@
   
   <url>
     <loc>http://viabugs.com/2017/03/29/2017/program/gitstash/</loc>
+    
+    <lastmod>2017-04-29T00:55:51.330Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/03/29/2017/program/hibernateoutsidevalidrange/</loc>
     
     <lastmod>2017-04-29T00:55:51.330Z</lastmod>
     
@@ -261,13 +268,6 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/03/17/2017/poems/baidi/</loc>
-    
-    <lastmod>2017-04-29T00:55:51.327Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://viabugs.com/2017/03/17/2017/poems/chunxiao/</loc>
     
     <lastmod>2017-04-29T00:55:51.327Z</lastmod>
@@ -275,14 +275,21 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/01/06/2017/pft-2017nh/</loc>
+    <loc>http://viabugs.com/2017/03/17/2017/poems/baidi/</loc>
+    
+    <lastmod>2017-04-29T00:55:51.327Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/02/05/2017/plumblossoms/</loc>
     
     <lastmod>2017-04-29T00:55:51.325Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/02/05/2017/plumblossoms/</loc>
+    <loc>http://viabugs.com/2017/01/06/2017/pft-2017nh/</loc>
     
     <lastmod>2017-04-29T00:55:51.325Z</lastmod>
     
@@ -331,6 +338,13 @@
   </url>
   
   <url>
+    <loc>http://viabugs.com/2017/04/29/2017/listen/%E7%90%86%E6%80%A7%E6%83%85%E7%BB%AA/</loc>
+    
+    <lastmod>2017-04-29T00:55:51.321Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://viabugs.com/2017/04/17/2017/listen/%E7%AC%AC%E4%BA%94%E9%A1%B9%E4%BF%AE%E7%82%BC/</loc>
     
     <lastmod>2017-04-29T00:55:51.321Z</lastmod>
@@ -339,13 +353,6 @@
   
   <url>
     <loc>http://viabugs.com/2017/04/22/2017/listen/%E7%A7%A6%E7%9E%B3%E8%A7%A3%E8%AF%BB%EF%BC%9A%E6%88%91%E4%BB%AC%E9%83%BD%E6%98%AF%E9%A3%9F%E4%BA%BA%E6%97%8F/</loc>
-    
-    <lastmod>2017-04-29T00:55:51.321Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://viabugs.com/2017/04/29/2017/listen/%E7%90%86%E6%80%A7%E6%83%85%E7%BB%AA/</loc>
     
     <lastmod>2017-04-29T00:55:51.321Z</lastmod>
     
@@ -373,14 +380,14 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/04/20/2017/listen/%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%95%86%E4%BA%BA/</loc>
+    <loc>http://viabugs.com/2017/03/27/2017/listen/%E6%B5%B7%E9%83%BD%E7%89%A9%E8%AF%AD/</loc>
     
     <lastmod>2017-04-29T00:55:51.319Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/03/27/2017/listen/%E6%B5%B7%E9%83%BD%E7%89%A9%E8%AF%AD/</loc>
+    <loc>http://viabugs.com/2017/04/20/2017/listen/%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%95%86%E4%BA%BA/</loc>
     
     <lastmod>2017-04-29T00:55:51.319Z</lastmod>
     
@@ -401,13 +408,6 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/03/31/2017/listen/%E6%9E%AA%E7%82%AE%E3%80%81%E7%97%85%E8%8F%8C%E4%B8%8E%E9%92%A2%E9%93%81/</loc>
-    
-    <lastmod>2017-04-29T00:55:51.317Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://viabugs.com/2017/04/29/2017/listen/%E6%9D%83%E5%8A%9B/</loc>
     
     <lastmod>2017-04-29T00:55:51.317Z</lastmod>
@@ -415,9 +415,9 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/04/15/2017/listen/%E6%97%A0%E7%A0%81%EF%BC%9A%E8%89%BA%E6%9C%AF%E5%A4%A7%E5%B8%88%E7%9A%84%E7%A7%98%E5%AF%86%E7%94%9F%E6%B4%BB1/</loc>
+    <loc>http://viabugs.com/2017/03/31/2017/listen/%E6%9E%AA%E7%82%AE%E3%80%81%E7%97%85%E8%8F%8C%E4%B8%8E%E9%92%A2%E9%93%81/</loc>
     
-    <lastmod>2017-04-29T00:55:51.316Z</lastmod>
+    <lastmod>2017-04-29T00:55:51.317Z</lastmod>
     
   </url>
   
@@ -429,9 +429,9 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/04/25/2017/listen/%E6%8A%95%E8%B5%84%E4%B8%AD%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E4%BA%8B/</loc>
+    <loc>http://viabugs.com/2017/04/15/2017/listen/%E6%97%A0%E7%A0%81%EF%BC%9A%E8%89%BA%E6%9C%AF%E5%A4%A7%E5%B8%88%E7%9A%84%E7%A7%98%E5%AF%86%E7%94%9F%E6%B4%BB1/</loc>
     
-    <lastmod>2017-04-29T00:55:51.315Z</lastmod>
+    <lastmod>2017-04-29T00:55:51.316Z</lastmod>
     
   </url>
   
@@ -450,9 +450,9 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/03/30/2017/listen/%E6%88%91%E7%9A%84%E6%83%85%E7%BB%AA%E4%B8%BA%E4%BD%95%E6%80%BB%E8%A2%AB%E4%BB%96%E4%BA%BA%E5%B7%A6%E5%8F%B3/</loc>
+    <loc>http://viabugs.com/2017/04/25/2017/listen/%E6%8A%95%E8%B5%84%E4%B8%AD%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E4%BA%8B/</loc>
     
-    <lastmod>2017-04-29T00:55:51.314Z</lastmod>
+    <lastmod>2017-04-29T00:55:51.315Z</lastmod>
     
   </url>
   
@@ -464,14 +464,21 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/04/02/2017/listen/%E6%88%91%E5%86%B3%E5%AE%9A%E7%AE%80%E5%8D%95%E5%9C%B0%E7%94%9F%E6%B4%BB/</loc>
+    <loc>http://viabugs.com/2017/03/30/2017/listen/%E6%88%91%E7%9A%84%E6%83%85%E7%BB%AA%E4%B8%BA%E4%BD%95%E6%80%BB%E8%A2%AB%E4%BB%96%E4%BA%BA%E5%B7%A6%E5%8F%B3/</loc>
+    
+    <lastmod>2017-04-29T00:55:51.314Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/04/18/2017/listen/%E6%80%9D%E8%80%83%E8%87%B4%E5%AF%8C/</loc>
     
     <lastmod>2017-04-29T00:55:51.313Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/04/18/2017/listen/%E6%80%9D%E8%80%83%E8%87%B4%E5%AF%8C/</loc>
+    <loc>http://viabugs.com/2017/04/02/2017/listen/%E6%88%91%E5%86%B3%E5%AE%9A%E7%AE%80%E5%8D%95%E5%9C%B0%E7%94%9F%E6%B4%BB/</loc>
     
     <lastmod>2017-04-29T00:55:51.313Z</lastmod>
     
@@ -492,13 +499,6 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/04/23/2017/listen/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6/</loc>
-    
-    <lastmod>2017-04-29T00:55:51.311Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://viabugs.com/2017/04/06/2017/listen/%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E6%9C%89%E6%95%88%E7%A4%BE%E4%BA%A4/</loc>
     
     <lastmod>2017-04-29T00:55:51.311Z</lastmod>
@@ -506,14 +506,21 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/04/11/2017/listen/%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0/</loc>
+    <loc>http://viabugs.com/2017/04/23/2017/listen/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6/</loc>
+    
+    <lastmod>2017-04-29T00:55:51.311Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/04/05/2017/listen/%E5%A5%BD%E5%A5%BD%E5%AD%A6%E4%B9%A0/</loc>
     
     <lastmod>2017-04-29T00:55:51.310Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/04/05/2017/listen/%E5%A5%BD%E5%A5%BD%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://viabugs.com/2017/04/11/2017/listen/%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0/</loc>
     
     <lastmod>2017-04-29T00:55:51.310Z</lastmod>
     
@@ -548,7 +555,7 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/03/23/2017/listen/listen20170323/</loc>
+    <loc>http://viabugs.com/2017/03/27/2017/listen/listen20170327/</loc>
     
     <lastmod>2017-04-29T00:55:51.307Z</lastmod>
     
@@ -562,16 +569,9 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/03/27/2017/listen/listen20170327/</loc>
+    <loc>http://viabugs.com/2017/03/23/2017/listen/listen20170323/</loc>
     
     <lastmod>2017-04-29T00:55:51.307Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://viabugs.com/2017/03/21/2017/listen/listen20170321/</loc>
-    
-    <lastmod>2017-04-29T00:55:51.306Z</lastmod>
     
   </url>
   
@@ -583,14 +583,21 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/03/17/2017/listen/listen20170317/</loc>
+    <loc>http://viabugs.com/2017/03/21/2017/listen/listen20170321/</loc>
+    
+    <lastmod>2017-04-29T00:55:51.306Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/03/20/2017/listen/listen20170320/</loc>
     
     <lastmod>2017-04-29T00:55:51.305Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/03/20/2017/listen/listen20170320/</loc>
+    <loc>http://viabugs.com/2017/03/17/2017/listen/listen20170317/</loc>
     
     <lastmod>2017-04-29T00:55:51.305Z</lastmod>
     
@@ -625,7 +632,7 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/03/12/2017/gy20170312/</loc>
+    <loc>http://viabugs.com/2017/03/12/2017/hibernatetinyiny/</loc>
     
     <lastmod>2017-04-29T00:55:51.302Z</lastmod>
     
@@ -639,7 +646,7 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/03/12/2017/hibernatetinyiny/</loc>
+    <loc>http://viabugs.com/2017/03/12/2017/gy20170312/</loc>
     
     <lastmod>2017-04-29T00:55:51.302Z</lastmod>
     
@@ -667,14 +674,14 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/04/15/2017/economics/lawofdemandtwo/</loc>
+    <loc>http://viabugs.com/2017/03/22/2017/economics/rent/</loc>
     
     <lastmod>2017-04-29T00:55:51.300Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/03/22/2017/economics/rent/</loc>
+    <loc>http://viabugs.com/2017/04/15/2017/economics/lawofdemandtwo/</loc>
     
     <lastmod>2017-04-29T00:55:51.300Z</lastmod>
     
@@ -695,7 +702,7 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/04/18/2017/economics/lawofdemand22/</loc>
+    <loc>http://viabugs.com/2017/04/17/2017/economics/lawofdemand2/</loc>
     
     <lastmod>2017-04-29T00:55:51.298Z</lastmod>
     
@@ -709,7 +716,7 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/04/17/2017/economics/lawofdemand2/</loc>
+    <loc>http://viabugs.com/2017/04/18/2017/economics/lawofdemand22/</loc>
     
     <lastmod>2017-04-29T00:55:51.298Z</lastmod>
     
@@ -800,14 +807,14 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/03/13/2017/IllegalStateException/</loc>
+    <loc>http://viabugs.com/2017/03/12/2017/JohndRockefeller/</loc>
     
     <lastmod>2017-04-29T00:55:51.291Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/03/12/2017/JohndRockefeller/</loc>
+    <loc>http://viabugs.com/2017/03/13/2017/IllegalStateException/</loc>
     
     <lastmod>2017-04-29T00:55:51.291Z</lastmod>
     
