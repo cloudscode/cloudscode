@@ -2,37 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://viabugs.com/2017/04/30/2017/listen/%E5%B9%B8%E7%A6%8F%E7%9A%84%E5%A9%9A%E5%A7%BB/</loc>
+    
+    <lastmod>2017-05-01T12:19:30.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://viabugs.com/2017/05/01/2017/listen/%E7%A9%B7%E6%9F%A5%E7%90%86%E5%AE%9D%E5%85%B8/</loc>
     
     <lastmod>2017-05-01T11:08:48.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://viabugs.com/2017/05/02/2017/program/startjettybyshell/</loc>
-    
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://viabugs.com/2017/04/29/2017/program/Installansible/</loc>
-    
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://viabugs.com/2017/04/29/2017/program/ansible/</loc>
-    
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://viabugs.com/2017/05/01/2017/program/ansibledeployjetty/</loc>
-    
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
     
   </url>
   
@@ -51,7 +30,35 @@
   </url>
   
   <url>
+    <loc>http://viabugs.com/2017/04/29/2017/program/Installansible/</loc>
+    
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://viabugs.com/2017/04/29/2017/program/ansiblessherror/</loc>
+    
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/05/02/2017/program/startjettybyshell/</loc>
+    
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/05/01/2017/program/ansibledeployjetty/</loc>
+    
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/04/29/2017/program/ansible/</loc>
     
     <lastmod>2017-05-01T11:01:02.000Z</lastmod>
     
@@ -681,14 +688,14 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/03/16/2017/economics/dontjustshareatmoney/</loc>
+    <loc>http://viabugs.com/2017/03/16/2017/listen/money/</loc>
     
     <lastmod>2017-03-16T13:50:07.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/03/16/2017/listen/money/</loc>
+    <loc>http://viabugs.com/2017/03/16/2017/economics/dontjustshareatmoney/</loc>
     
     <lastmod>2017-03-16T13:50:07.000Z</lastmod>
     
@@ -849,14 +856,14 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/categories/index.html</loc>
+    <loc>http://viabugs.com/tags/index.html</loc>
     
     <lastmod>2017-01-07T15:00:21.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://viabugs.com/tags/index.html</loc>
+    <loc>http://viabugs.com/categories/index.html</loc>
     
     <lastmod>2017-01-07T15:00:21.000Z</lastmod>
     

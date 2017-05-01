@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/05/01/2017/listen/%E7%A9%B7%E6%9F%A5%E7%90%86%E5%AE%9D%E5%85%B8/</loc>
-    <lastmod>2017-05-01T11:08:48.000Z</lastmod>
+    <loc>http://viabugs.com/2017/04/30/2017/listen/%E5%B9%B8%E7%A6%8F%E7%9A%84%E5%A9%9A%E5%A7%BB/</loc>
+    <lastmod>2017-05-01T12:19:30.000Z</lastmod>
     <data>
         <display>
-        <title>穷查理宝典</title>
-        <pubTime>2017-05-01T14:00:00.000Z</pubTime>
+        <title>幸福的婚姻</title>
+        <pubTime>2017-04-30T14:10:00.000Z</pubTime>
         
         <tag>金句</tag>
          
@@ -24,83 +24,19 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/05/02/2017/program/startjettybyshell/</loc>
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    <loc>http://viabugs.com/2017/05/01/2017/listen/%E7%A9%B7%E6%9F%A5%E7%90%86%E5%AE%9D%E5%85%B8/</loc>
+    <lastmod>2017-05-01T11:08:48.000Z</lastmod>
     <data>
         <display>
-        <title>使用bash启动Jetty服务</title>
-        <pubTime>2017-05-02T12:45:43.000Z</pubTime>
+        <title>穷查理宝典</title>
+        <pubTime>2017-05-01T14:00:00.000Z</pubTime>
         
-        <tag>jetty</tag>
-         
-        <tag>bash</tag>
+        <tag>金句</tag>
          
          
            
              
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/04/29/2017/program/Installansible/</loc>
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>Install ansible</title>
-        <pubTime>2017-04-29T12:22:23.000Z</pubTime>
-        
-        <tag>ansible</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/04/29/2017/program/ansible/</loc>
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>Install ansible</title>
-        <pubTime>2017-04-29T12:22:23.000Z</pubTime>
-        
-        <tag>ansible</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/05/01/2017/program/ansibledeployjetty/</loc>
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>使用Ansible发布Jetty服务</title>
-        <pubTime>2017-05-01T06:05:03.000Z</pubTime>
-        
-        <tag>ansible</tag>
-         
-        <tag>jetty</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
+              <breadCrumb title="life" url="http://viabugs.com/categories/life/"/>
           
         </display>
     </data>
@@ -148,12 +84,96 @@
 
     
   <url>
+    <loc>http://viabugs.com/2017/04/29/2017/program/Installansible/</loc>
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>Install ansible</title>
+        <pubTime>2017-04-29T12:22:23.000Z</pubTime>
+        
+        <tag>ansible</tag>
+         
+         
+           
+             
+              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://viabugs.com/2017/04/29/2017/program/ansiblessherror/</loc>
     <lastmod>2017-05-01T11:01:02.000Z</lastmod>
     <data>
         <display>
         <title>ansible ssh  error</title>
         <pubTime>2017-04-29T13:12:23.000Z</pubTime>
+        
+        <tag>ansible</tag>
+         
+         
+           
+             
+              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://viabugs.com/2017/05/02/2017/program/startjettybyshell/</loc>
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用bash启动Jetty服务</title>
+        <pubTime>2017-05-02T12:45:43.000Z</pubTime>
+        
+        <tag>jetty</tag>
+         
+        <tag>bash</tag>
+         
+         
+           
+             
+              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://viabugs.com/2017/05/01/2017/program/ansibledeployjetty/</loc>
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用Ansible发布Jetty服务</title>
+        <pubTime>2017-05-01T06:05:03.000Z</pubTime>
+        
+        <tag>ansible</tag>
+         
+        <tag>jetty</tag>
+         
+         
+           
+             
+              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://viabugs.com/2017/04/29/2017/program/ansible/</loc>
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>Install ansible</title>
+        <pubTime>2017-04-29T12:22:23.000Z</pubTime>
         
         <tag>ansible</tag>
          
@@ -2064,7 +2084,7 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/03/16/2017/economics/dontjustshareatmoney/</loc>
+    <loc>http://viabugs.com/2017/03/16/2017/listen/money/</loc>
     <lastmod>2017-03-16T13:50:07.000Z</lastmod>
     <data>
         <display>
@@ -2086,7 +2106,7 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/03/16/2017/listen/money/</loc>
+    <loc>http://viabugs.com/2017/03/16/2017/economics/dontjustshareatmoney/</loc>
     <lastmod>2017-03-16T13:50:07.000Z</lastmod>
     <data>
         <display>
