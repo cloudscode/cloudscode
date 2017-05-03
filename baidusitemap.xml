@@ -4,6 +4,94 @@
 
     
   <url>
+    <loc>http://viabugs.com/2017/05/03/2017/economics/shortageandsurplus/</loc>
+    <lastmod>2017-05-03T14:00:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>短缺与过剩</title>
+        <pubTime>2017-05-03T14:22:13.000Z</pubTime>
+        
+        <tag>金句</tag>
+         
+        <tag>听书</tag>
+         
+        <tag>经济学</tag>
+         
+         
+           
+             
+              <breadCrumb title="life" url="http://viabugs.com/categories/life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://viabugs.com/2017/05/03/2017/economics/ruleofcompetition/</loc>
+    <lastmod>2017-05-03T13:55:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>竞争规则</title>
+        <pubTime>2017-05-03T14:12:13.000Z</pubTime>
+        
+        <tag>金句</tag>
+         
+        <tag>听书</tag>
+         
+        <tag>经济学</tag>
+         
+         
+           
+             
+              <breadCrumb title="life" url="http://viabugs.com/categories/life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://viabugs.com/2017/05/03/2017/listen/%E4%B8%AD%E5%9B%BD%E5%9B%BD%E6%B0%91%E6%80%A7%E6%BC%94%E5%8F%98%E5%8E%86%E7%A8%8B/</loc>
+    <lastmod>2017-05-03T12:07:50.000Z</lastmod>
+    <data>
+        <display>
+        <title>中国国民性演变历程</title>
+        <pubTime>2017-05-03T12:00:00.000Z</pubTime>
+        
+        <tag>金句</tag>
+         
+         
+           
+             
+              <breadCrumb title="life" url="http://viabugs.com/categories/life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://viabugs.com/2017/05/02/2017/listen/%E7%A9%B7%E6%9F%A5%E7%90%86%E5%AE%9D%E5%85%B82/</loc>
+    <lastmod>2017-05-02T13:45:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>穷查理宝典2</title>
+        <pubTime>2017-05-02T14:00:00.000Z</pubTime>
+        
+        <tag>金句</tag>
+         
+         
+           
+             
+              <breadCrumb title="life" url="http://viabugs.com/categories/life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://viabugs.com/2017/04/30/2017/listen/%E5%B9%B8%E7%A6%8F%E7%9A%84%E5%A9%9A%E5%A7%BB/</loc>
     <lastmod>2017-05-01T12:19:30.000Z</lastmod>
     <data>
@@ -64,6 +152,26 @@
 
     
   <url>
+    <loc>http://viabugs.com/2017/04/29/2017/program/ansible/</loc>
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>Install ansible</title>
+        <pubTime>2017-04-29T12:22:23.000Z</pubTime>
+        
+        <tag>ansible</tag>
+         
+         
+           
+             
+              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://viabugs.com/2017/04/29/2017/program/ssh/</loc>
     <lastmod>2017-05-01T11:01:02.000Z</lastmod>
     <data>
@@ -90,26 +198,6 @@
         <display>
         <title>Install ansible</title>
         <pubTime>2017-04-29T12:22:23.000Z</pubTime>
-        
-        <tag>ansible</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/04/29/2017/program/ansiblessherror/</loc>
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>ansible ssh  error</title>
-        <pubTime>2017-04-29T13:12:23.000Z</pubTime>
         
         <tag>ansible</tag>
          
@@ -168,12 +256,12 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/04/29/2017/program/ansible/</loc>
+    <loc>http://viabugs.com/2017/04/29/2017/program/ansiblessherror/</loc>
     <lastmod>2017-05-01T11:01:02.000Z</lastmod>
     <data>
         <display>
-        <title>Install ansible</title>
-        <pubTime>2017-04-29T12:22:23.000Z</pubTime>
+        <title>ansible ssh  error</title>
+        <pubTime>2017-04-29T13:12:23.000Z</pubTime>
         
         <tag>ansible</tag>
          
@@ -2084,7 +2172,7 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/03/16/2017/listen/money/</loc>
+    <loc>http://viabugs.com/2017/03/16/2017/economics/dontjustshareatmoney/</loc>
     <lastmod>2017-03-16T13:50:07.000Z</lastmod>
     <data>
         <display>
@@ -2106,7 +2194,7 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/03/16/2017/economics/dontjustshareatmoney/</loc>
+    <loc>http://viabugs.com/2017/03/16/2017/listen/money/</loc>
     <lastmod>2017-03-16T13:50:07.000Z</lastmod>
     <data>
         <display>
