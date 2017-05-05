@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://viabugs.com/2017/05/05/2017/listen/%E4%B9%8C%E5%90%88%E4%B9%8B%E4%BC%97/</loc>
+    <lastmod>2017-05-05T12:34:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>乌合之众</title>
+        <pubTime>2017-05-05T12:33:00.000Z</pubTime>
+        
+        <tag>金句</tag>
+         
+         
+           
+             
+              <breadCrumb title="life" url="http://viabugs.com/categories/life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://viabugs.com/2017/05/03/2017/economics/ruleofcompetition/</loc>
     <lastmod>2017-05-03T14:08:54.000Z</lastmod>
     <data>
@@ -132,6 +152,88 @@
 
     
   <url>
+    <loc>http://viabugs.com/2017/04/29/2017/program/ssh/</loc>
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>ssh 命令</title>
+        <pubTime>2017-04-29T12:22:23.000Z</pubTime>
+        
+        <tag>ssh</tag>
+         
+         
+           
+             
+              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://viabugs.com/2017/04/29/2017/program/ansiblessherror/</loc>
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>ansible ssh  error</title>
+        <pubTime>2017-04-29T13:12:23.000Z</pubTime>
+        
+        <tag>ansible</tag>
+         
+         
+           
+             
+              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://viabugs.com/2017/04/29/2017/poems/%E6%9C%A8%E5%85%B0%E8%8A%B1%C2%B7%E6%98%A5%E6%99%AF/</loc>
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>木兰花·春景</title>
+        <pubTime>2017-04-29T13:03:11.000Z</pubTime>
+        
+        <tag>诗</tag>
+         
+         
+           
+             
+              <breadCrumb title="life" url="http://viabugs.com/categories/life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://viabugs.com/2017/05/01/2017/program/ansibledeployjetty/</loc>
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用Ansible发布Jetty服务</title>
+        <pubTime>2017-05-01T06:05:03.000Z</pubTime>
+        
+        <tag>ansible</tag>
+         
+        <tag>jetty</tag>
+         
+         
+           
+             
+              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://viabugs.com/2017/04/29/2017/program/ansible/</loc>
     <lastmod>2017-05-01T11:01:02.000Z</lastmod>
     <data>
@@ -174,48 +276,6 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/05/01/2017/program/ansibledeployjetty/</loc>
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>使用Ansible发布Jetty服务</title>
-        <pubTime>2017-05-01T06:05:03.000Z</pubTime>
-        
-        <tag>ansible</tag>
-         
-        <tag>jetty</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/04/29/2017/program/ansiblessherror/</loc>
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>ansible ssh  error</title>
-        <pubTime>2017-04-29T13:12:23.000Z</pubTime>
-        
-        <tag>ansible</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://viabugs.com/2017/04/29/2017/program/Installansible/</loc>
     <lastmod>2017-05-01T11:01:02.000Z</lastmod>
     <data>
@@ -224,46 +284,6 @@
         <pubTime>2017-04-29T12:22:23.000Z</pubTime>
         
         <tag>ansible</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/04/29/2017/poems/%E6%9C%A8%E5%85%B0%E8%8A%B1%C2%B7%E6%98%A5%E6%99%AF/</loc>
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>木兰花·春景</title>
-        <pubTime>2017-04-29T13:03:11.000Z</pubTime>
-        
-        <tag>诗</tag>
-         
-         
-           
-             
-              <breadCrumb title="life" url="http://viabugs.com/categories/life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/04/29/2017/program/ssh/</loc>
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>ssh 命令</title>
-        <pubTime>2017-04-29T12:22:23.000Z</pubTime>
-        
-        <tag>ssh</tag>
          
          
            

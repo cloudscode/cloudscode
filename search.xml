@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[乌合之众]]></title>
+      <url>%2F2017%2F05%2F05%2F2017%2Flisten%2F%E4%B9%8C%E5%90%88%E4%B9%8B%E4%BC%97%2F</url>
+      <content type="text"><![CDATA[一千个偶然聚集在公共场所的人，没有任何明确的目标，从心理学意义上说，根本不能算作一个群体。 法国大革命中的群众推翻了路易王朝，要求民主自由。可是没过多久，还是这些群众，又兴高采烈拥护拿破仑当皇帝进行独裁。 群体因为会夸大自己的感情，因此它只会被极端感情所打动。希望感动群体的演说家，必须信誓旦旦、夸大其词、言之凿凿、不断重复，绝不以说理的方式证明任何事情——这些都是公众集会上，演说家惯用的论说技巧。 影响民众想象力的，并不是事实本身，而是它们发生和引起注意的方式。 领袖的影响力，很小程度上是因为他们提出的论据，事实上，很大程度上是来自他们的名望。对于这一点最好的证明是，一旦这些领袖不知因为什么威信扫地时，他们的影响力也会随之消失。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[短缺与过剩]]></title>
       <url>%2F2017%2F05%2F03%2F2017%2Feconomics%2Fshortageandsurplus%2F</url>
       <content type="text"><![CDATA[稀缺是永恒的，而短缺和过剩都是价格受到人为干预的结果。当价格过低的时候，人们不得不展开价格以外的竞争方式，来争夺他们需要的商品，这时候就会出现短缺。而当价格被人为拔高以后，卖家就不得不采用价格以外的方式，才能把东西卖出去，这时候就会出现所谓的过剩现象。 –薛兆丰的北大经济学课]]></content>
@@ -81,15 +88,15 @@
     
     <entry>
       <title><![CDATA[Install ansible]]></title>
-      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2FInstallansible%2F</url>
-      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible]]></content>
+      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2Fansible%2F</url>
+      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible 自动化部署 Jenkins+Ansible+Gitlab自动化部署三剑客 jenkins基于ansible持续集成]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[Install ansible]]></title>
-      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2Fansible%2F</url>
-      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible 自动化部署 Jenkins+Ansible+Gitlab自动化部署三剑客 jenkins基于ansible持续集成]]></content>
+      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2FInstallansible%2F</url>
+      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible]]></content>
     </entry>
 
     
@@ -276,16 +283,16 @@
 
     
     <entry>
-      <title><![CDATA[输赢心理学]]></title>
-      <url>%2F2017%2F04%2F12%2F2017%2Flisten%2F%E8%BE%93%E8%B5%A2%E5%BF%83%E7%90%86%E5%AD%A6%2F</url>
-      <content type="text"><![CDATA[对一些钢琴家的研究表明，是否能够在比赛中胜出，并不取决于平时排练得多好，而是取决于他们能否在比赛中，保持平时排练时的水平。很少有钢琴家能在比赛中表现得和平时排练一样好或更好。当人们越关注成功的几率，去尝试做某事的可能性就小；但当越关注成功的果实，尝试的可能性就大。 乐队的演出效果越好，其幕后的争斗、竞争、不和谐就会越发严重。他们只有在台上才会表现出初期的和谐效果。要让人们在合作中更努力，只需要告诉他们与实验室伙伴同一天生日即可，他们的工作会更加积极主动、持之以恒。]]></content>
+      <title><![CDATA[思考的技术]]></title>
+      <url>%2F2017%2F04%2F12%2F2017%2Flisten%2F%E6%80%9D%E8%80%83%E7%9A%84%E6%8A%80%E6%9C%AF%2F</url>
+      <content type="text"><![CDATA[1.很多人在思考问题的时候，以为自己抓住了本质，其实是被外界的干预、固有的经验或者别人的劝说所误导。 2.遗憾的是，大多数面临严重问题的企业，在找出解决之策以后，却没有坚决实行的执行力。 3.所谓科学的思考方法，就是为了印证假设而不辞劳作的行动力，也可以说是为了获得绝对正确的答案，彻底动脑的深层思考力。 4.证实假设到导出结论的过程中，最重要的就是弄清楚“发生问题的原因是什么”。但是大多数经营者和企业经理人只看到问题的现象，却看不到产生问题的原因。]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[思考的技术]]></title>
-      <url>%2F2017%2F04%2F12%2F2017%2Flisten%2F%E6%80%9D%E8%80%83%E7%9A%84%E6%8A%80%E6%9C%AF%2F</url>
-      <content type="text"><![CDATA[1.很多人在思考问题的时候，以为自己抓住了本质，其实是被外界的干预、固有的经验或者别人的劝说所误导。 2.遗憾的是，大多数面临严重问题的企业，在找出解决之策以后，却没有坚决实行的执行力。 3.所谓科学的思考方法，就是为了印证假设而不辞劳作的行动力，也可以说是为了获得绝对正确的答案，彻底动脑的深层思考力。 4.证实假设到导出结论的过程中，最重要的就是弄清楚“发生问题的原因是什么”。但是大多数经营者和企业经理人只看到问题的现象，却看不到产生问题的原因。]]></content>
+      <title><![CDATA[输赢心理学]]></title>
+      <url>%2F2017%2F04%2F12%2F2017%2Flisten%2F%E8%BE%93%E8%B5%A2%E5%BF%83%E7%90%86%E5%AD%A6%2F</url>
+      <content type="text"><![CDATA[对一些钢琴家的研究表明，是否能够在比赛中胜出，并不取决于平时排练得多好，而是取决于他们能否在比赛中，保持平时排练时的水平。很少有钢琴家能在比赛中表现得和平时排练一样好或更好。当人们越关注成功的几率，去尝试做某事的可能性就小；但当越关注成功的果实，尝试的可能性就大。 乐队的演出效果越好，其幕后的争斗、竞争、不和谐就会越发严重。他们只有在台上才会表现出初期的和谐效果。要让人们在合作中更努力，只需要告诉他们与实验室伙伴同一天生日即可，他们的工作会更加积极主动、持之以恒。]]></content>
     </entry>
 
     
@@ -704,14 +711,14 @@
     
     <entry>
       <title><![CDATA[金钱观]]></title>
-      <url>%2F2017%2F03%2F16%2F2017%2Flisten%2Fmoney%2F</url>
+      <url>%2F2017%2F03%2F16%2F2017%2Feconomics%2Fdontjustshareatmoney%2F</url>
       <content type="text"><![CDATA[钱只有花出去才是的你！ 钱是靠挣出来的，不是靠省出来的，而挣钱的效率取决于一个人的气度。 工作效率高，自然挣钱的效率也高。 如果我们想清楚了钱是对资源的量化度量，越是稀缺的资源自然越值钱，那么你有别人不会的技能，你就是稀缺资源。 –吴军~硅谷来信]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[金钱观]]></title>
-      <url>%2F2017%2F03%2F16%2F2017%2Feconomics%2Fdontjustshareatmoney%2F</url>
+      <url>%2F2017%2F03%2F16%2F2017%2Flisten%2Fmoney%2F</url>
       <content type="text"><![CDATA[钱只有花出去才是的你！ 钱是靠挣出来的，不是靠省出来的，而挣钱的效率取决于一个人的气度。 工作效率高，自然挣钱的效率也高。 如果我们想清楚了钱是对资源的量化度量，越是稀缺的资源自然越值钱，那么你有别人不会的技能，你就是稀缺资源。 –吴军~硅谷来信]]></content>
     </entry>
 
@@ -787,16 +794,16 @@
 
     
     <entry>
-      <title><![CDATA[樱花]]></title>
-      <url>%2F2017%2F02%2F05%2F2017%2Fcherryblossoms%2F</url>
-      <content type="text"><![CDATA[1&quot;樱花下落的速度，是每秒5厘米； 我要用怎样的速度，才能与你相遇。&quot;]]></content>
+      <title><![CDATA[油菜花]]></title>
+      <url>%2F2017%2F02%2F05%2F2017%2Frapeflower%2F</url>
+      <content type="text"><![CDATA[]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[油菜花]]></title>
-      <url>%2F2017%2F02%2F05%2F2017%2Frapeflower%2F</url>
-      <content type="text"><![CDATA[]]></content>
+      <title><![CDATA[樱花]]></title>
+      <url>%2F2017%2F02%2F05%2F2017%2Fcherryblossoms%2F</url>
+      <content type="text"><![CDATA[1&quot;樱花下落的速度，是每秒5厘米； 我要用怎样的速度，才能与你相遇。&quot;]]></content>
     </entry>
 
     
@@ -808,9 +815,9 @@
 
     
     <entry>
-      <title></title>
-      <url>%2F2017%2F01%2F08%2F2017%2Flisten%2F%E7%90%86%E6%80%A7%E6%83%85%E7%BB%AA%2F</url>
-      <content type="text"><![CDATA[1.人的一切精神上的痛苦和严重情绪紊乱，都是不必要的。 2.不管你的处境有多恶劣、遭遇有多严重，你实际上总是可以拥有控制和改变自己情绪的能力，减少并最终战胜你的不良情绪。 3.“心想事成”固然是个美好的愿望，但是在现实中，“心想”就能“事成”，这个概率其实是很低的，我们如果过分执着于这个愿望，总是用“应该”、“必须”、“一定要”来想问题，就会陷入到非理性的信念里，给自己的情绪带来麻烦。 4.建立一个有效的理性信念，我们需要做到三点：1.无条件地自我接纳；2.无条件地接纳他人；3.无条件地接纳我们的现实生活。 5.最终你需要明白的是，无论是你自身的缺陷，还是外界的不尽如人意，这都是人与世界的天性，是我们无法改变的客观存在。而我们可以做的是：我的情绪我做主。]]></content>
+      <title><![CDATA[骑行]]></title>
+      <url>%2F2017%2F01%2F08%2F2017%2Fqx20170107%2F</url>
+      <content type="text"><![CDATA[午后，从公司出发，经洪山桥骑行闽江公园，终于东街口。]]></content>
     </entry>
 
     
@@ -822,9 +829,9 @@
 
     
     <entry>
-      <title><![CDATA[骑行]]></title>
-      <url>%2F2017%2F01%2F08%2F2017%2Fqx20170107%2F</url>
-      <content type="text"><![CDATA[午后，从公司出发，经洪山桥骑行闽江公园，终于东街口。]]></content>
+      <title></title>
+      <url>%2F2017%2F01%2F08%2F2017%2Flisten%2F%E7%90%86%E6%80%A7%E6%83%85%E7%BB%AA%2F</url>
+      <content type="text"><![CDATA[1.人的一切精神上的痛苦和严重情绪紊乱，都是不必要的。 2.不管你的处境有多恶劣、遭遇有多严重，你实际上总是可以拥有控制和改变自己情绪的能力，减少并最终战胜你的不良情绪。 3.“心想事成”固然是个美好的愿望，但是在现实中，“心想”就能“事成”，这个概率其实是很低的，我们如果过分执着于这个愿望，总是用“应该”、“必须”、“一定要”来想问题，就会陷入到非理性的信念里，给自己的情绪带来麻烦。 4.建立一个有效的理性信念，我们需要做到三点：1.无条件地自我接纳；2.无条件地接纳他人；3.无条件地接纳我们的现实生活。 5.最终你需要明白的是，无论是你自身的缺陷，还是外界的不尽如人意，这都是人与世界的天性，是我们无法改变的客观存在。而我们可以做的是：我的情绪我做主。]]></content>
     </entry>
 
     
