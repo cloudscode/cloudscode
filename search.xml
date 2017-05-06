@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title><![CDATA[Convert JSON Object to Java bean]]></title>
+      <url>%2F2017%2F05%2F06%2F2017%2Fprogram%2Fjsonobjecttobean%2F</url>
+      <content type="text"><![CDATA[Convert JSON Object to Java beanUse BeanUtilsBean2 (org.apache.commons.beanutils.BeanUtilsBean2). 1234com.alibaba.fastjson.JSONObject updateObj=new com.alibaba.fastjson.JSONObject();Entity entity=new Entity();//将JSONObject属性复制到实体中BeanUtilsBean2.getInstance().copyProperties(entity, updateObj);]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hibernate验证实体字段信息]]></title>
+      <url>%2F2017%2F05%2F06%2F2017%2Fprogram%2Fhibernatevalidation%2F</url>
+      <content type="text"><![CDATA[Domain123456789101112131415public class User &#123; private int id; private String name; @Id @GeneratedValue(generator="mytable",strategy=GenerationType.TABLE) public int getId() &#123; return id; &#125; @NotNull(message="姓名不能为空！") public String getName() &#123; return name; &#125; Validation1234User user = new User(); ValidatorFactory factory = Validation.buildDefaultValidatorFactory(); Validator validator = factory.getValidator(); Set&lt;ConstraintViolation&lt;Order&gt;&gt; violations = validator.validate(user); annotationBean Validation 中的 constraint Constraint 详细信息 @Null 被注释的元素必须为 null @NotNull 被注释的元素必须不为 null @AssertTrue 被注释的元素必须为 true @AssertFalse 被注释的元素必须为 false @Min(value) 被注释的元素必须是一个数字，其值必须大于等于指定的最小值 @Max(value) 被注释的元素必须是一个数字，其值必须小于等于指定的最大值 @DecimalMin(value) 被注释的元素必须是一个数字，其值必须大于等于指定的最小值 @DecimalMax(value) 被注释的元素必须是一个数字，其值必须小于等于指定的最大值 @Size(max, min) 被注释的元素的大小必须在指定的范围内 @Digits (integer, fraction) 被注释的元素必须是一个数字，其值必须在可接受的范围内 @Past 被注释的元素必须是一个过去的日期 @Future 被注释的元素必须是一个将来的日期 @Pattern(value) 被注释的元素必须符合指定的正则表达式 Hibernate Validator 附加的 constraint Constraint 详细信息 @Email 被注释的元素必须是电子邮箱地址 @Length 被注释的字符串的大小必须在指定的范围内 @NotEmpty 被注释的字符串的必须非空 @Range 被注释的元素必须在合适的范围内]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[beanutils 日期格式化问题]]></title>
+      <url>%2F2017%2F05%2F06%2F2017%2Fprogram%2Fbeanutilsconversionexception%2F</url>
+      <content type="text"><![CDATA[Error1org.apache.commons.beanutils.ConversionException: DateConverter does not support default String to &apos;Date&apos; conversion. 原因beanutils工具类不支持将日期转化成java.util.Date，但支持java.sql.Date。 解决如果要将日期转化成java.util.Date,可实现一个日期转化器（org.apache.commons.beanutils.Converter），然后使用ConvertUtils类注册转化器（org.apache.commons.beanutils.ConvertUtils）。 转化器1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768package com.pft.common.beanutils.converters;import java.text.ParseException;import java.text.SimpleDateFormat;import java.util.HashSet;import java.util.Iterator;import java.util.Set;import org.apache.commons.beanutils.Converter;/** * ClassName:DateConverter &lt;br/&gt; * Reason: 日期转换对象，使用该转换器，在ConvertUtils当中做一下注册，系统自动地帮助字符的日期表示转换为java.util.Date对象. * Date: 2017年5月6日 下午1:03:25 &lt;br/&gt; * @author lijian@12301.cc * @version V0.1 * @since JDK 1.8 * @see */public class StringToDateConverter implements Converter &#123; /** * 日期格式化对象. */ private static SimpleDateFormat df = new SimpleDateFormat(); /** * 模式集合. */ private static Set&lt;String&gt; patterns = new HashSet&lt;String&gt;(4); // 注册一下日期的转换格式 static &#123; StringToDateConverter.patterns.add("yyyy-MM-dd"); StringToDateConverter.patterns.add("yyyy-MM-dd HH:mm"); StringToDateConverter.patterns.add("yyyy-MM-dd HH:mm:ss"); StringToDateConverter.patterns.add("yyyy/MM/dd HH:mm:ss"); &#125; /** * 日期转换器. * * @param type * Class * @param value * Object return Date Object. */ @SuppressWarnings("rawtypes") public Object convert(Class type, Object value) &#123; if (value == null) &#123; return null; &#125; if (value instanceof String) &#123; Object dateObj = null; Iterator it = patterns.iterator(); while (it.hasNext()) &#123; try &#123; String pattern = (String) it.next(); df.applyPattern(pattern); dateObj = df.parse((String) value); break; &#125; catch (ParseException ex) &#123; // do iterator continue &#125; &#125; return dateObj; &#125; return null; &#125;&#125; 注册使用12ConvertUtils.register(new StringToDateConverter(), java.util.Date.class);BeanUtilsBean2.getInstance().copyProperties(dest, orig);]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[乌合之众]]></title>
       <url>%2F2017%2F05%2F05%2F2017%2Flisten%2F%E4%B9%8C%E5%90%88%E4%B9%8B%E4%BC%97%2F</url>
       <content type="text"><![CDATA[一千个偶然聚集在公共场所的人，没有任何明确的目标，从心理学意义上说，根本不能算作一个群体。 法国大革命中的群众推翻了路易王朝，要求民主自由。可是没过多久，还是这些群众，又兴高采烈拥护拿破仑当皇帝进行独裁。 群体因为会夸大自己的感情，因此它只会被极端感情所打动。希望感动群体的演说家，必须信誓旦旦、夸大其词、言之凿凿、不断重复，绝不以说理的方式证明任何事情——这些都是公众集会上，演说家惯用的论说技巧。 影响民众想象力的，并不是事实本身，而是它们发生和引起注意的方式。 领袖的影响力，很小程度上是因为他们提出的论据，事实上，很大程度上是来自他们的名望。对于这一点最好的证明是，一旦这些领袖不知因为什么威信扫地时，他们的影响力也会随之消失。]]></content>
@@ -80,6 +101,13 @@
 
     
     <entry>
+      <title><![CDATA[Install ansible]]></title>
+      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2FInstallansible%2F</url>
+      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[ssh 命令]]></title>
       <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2Fssh%2F</url>
       <content type="text"><![CDATA[ssh-keygen的命令手册，通过”man ssh-keygen“命令查看 生成密钥1ssh-keygen -t rsa 生成之后会在用户的根目录生成一个 “.ssh”的文件夹 authorized_keys:存放远程免密登录的公钥,主要通过这个文件记录多台机器的公钥 id_rsa : 生成的私钥文件 id_rsa.pub ： 生成的公钥文件 know_hosts : 已知的主机公钥清单如果希望ssh公钥生效需满足至少下面两个条件： 1) .ssh目录的权限必须是7002) .ssh/authorized_keys文件权限必须是600 远程免密登录 通过ssh-copy-id的方式 1命令： ssh-copy-id -i ~/.ssh/id_rsa.put &lt;romte_ip&gt; 通过scp方式 1命令：scp -p ~/.ssh/id_rsa.pub root@&lt;remote_ip&gt;:/root/.ssh/authorized_keys 将内容追加到authorized_keys文件中， 不过要登录远程服务器来执行这条命令1cat ~/pub_key &gt;&gt;~/.ssh/authorized_keys]]></content>
@@ -94,9 +122,16 @@
 
     
     <entry>
-      <title><![CDATA[Install ansible]]></title>
-      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2FInstallansible%2F</url>
-      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible]]></content>
+      <title></title>
+      <url>%2F2017%2F04%2F29%2F2017%2Flisten%2F%E7%90%86%E6%80%A7%E6%83%85%E7%BB%AA%2F</url>
+      <content type="text"><![CDATA[1.人的一切精神上的痛苦和严重情绪紊乱，都是不必要的。 2.不管你的处境有多恶劣、遭遇有多严重，你实际上总是可以拥有控制和改变自己情绪的能力，减少并最终战胜你的不良情绪。 3.“心想事成”固然是个美好的愿望，但是在现实中，“心想”就能“事成”，这个概率其实是很低的，我们如果过分执着于这个愿望，总是用“应该”、“必须”、“一定要”来想问题，就会陷入到非理性的信念里，给自己的情绪带来麻烦。 4.建立一个有效的理性信念，我们需要做到三点：1.无条件地自我接纳；2.无条件地接纳他人；3.无条件地接纳我们的现实生活。 5.最终你需要明白的是，无论是你自身的缺陷，还是外界的不尽如人意，这都是人与世界的天性，是我们无法改变的客观存在。而我们可以做的是：我的情绪我做主。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title></title>
+      <url>%2F2017%2F04%2F29%2F2017%2Flisten%2F%E6%9D%83%E5%8A%9B%2F</url>
+      <content type="text"><![CDATA[title:权力date:2017-04-26 21:42:29category:”life” tags:[听书,金句] 1.等级结构在人类社会中无处不在，当我们进入一个组织之后，我们的性别、年龄、教育背景等，拿出来和别人一比较，就会决定我们的地位。同时，一个人的地位还会从一个背景带到另一个背景中，始终跟着你，躲都躲不开。 2.人们认为世界是公平的，源于“公正世界假设”的心理。这种假设会让人产生麻痹思想，忽视自己对权力的需求，而且误认为权力是可以等来的。但实际上，权力只能是争来的。 3.在争取权力的道路上，第一个关键就是要明白，业绩并不决定权力地位。我们必须关心和老板的关系，至少，这个关心程度要不亚于对业绩的关心。 4.我们要明白一个逻辑关系，当你招人喜欢的时候，并不一定会争取到权力，而当你有权力的时候，你一定会招人“喜欢”——虽然这个喜欢要打上个引号。 5.虽然让人们既害怕你又喜欢你，是一种很理想的状况，但当你必须二选一时，如果想获得和保持权力，就应该让人们害怕你。]]></content>
     </entry>
 
     
@@ -192,16 +227,16 @@
 
     
     <entry>
-      <title><![CDATA[需求第二律]]></title>
-      <url>%2F2017%2F04%2F18%2F2017%2Feconomics%2Flawofdemand22%2F</url>
-      <content type="text"><![CDATA[随着时间的推移，需求弹性会变得越来越高，人们寻找替代品的空间会越来越大，对策越来越多。 税负的分摊 税负通常是由供需双方共同承担的，至于谁承担的多，谁承担的少，取决于他们之间的相对弹性，而与法律或者风俗的规定没有关系。]]></content>
+      <title><![CDATA[需求第三律]]></title>
+      <url>%2F2017%2F04%2F18%2F2017%2Feconomics%2Flawofdemand3%2F</url>
+      <content type="text"><![CDATA[每当消费者必须支付一笔附加费的时候，高品质的产品就相对低品质的产品变得便宜了，这笔附加费越高，高品质产品就变得越便宜。有时候我们把这个定律叫做”好东西运到远方去定律”。]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[需求第三律]]></title>
-      <url>%2F2017%2F04%2F18%2F2017%2Feconomics%2Flawofdemand3%2F</url>
-      <content type="text"><![CDATA[每当消费者必须支付一笔附加费的时候，高品质的产品就相对低品质的产品变得便宜了，这笔附加费越高，高品质产品就变得越便宜。有时候我们把这个定律叫做”好东西运到远方去定律”。]]></content>
+      <title><![CDATA[需求第二律]]></title>
+      <url>%2F2017%2F04%2F18%2F2017%2Feconomics%2Flawofdemand22%2F</url>
+      <content type="text"><![CDATA[随着时间的推移，需求弹性会变得越来越高，人们寻找替代品的空间会越来越大，对策越来越多。 税负的分摊 税负通常是由供需双方共同承担的，至于谁承担的多，谁承担的少，取决于他们之间的相对弹性，而与法律或者风俗的规定没有关系。]]></content>
     </entry>
 
     
@@ -353,16 +388,16 @@
 
     
     <entry>
-      <title><![CDATA[JMeter 压力测试CSV参数化]]></title>
-      <url>%2F2017%2F04%2F10%2F2017%2Fprogram%2Fjmeter%2F</url>
-      <content type="text"><![CDATA[Jmeter之使用CSV Data Set Config实现参数化登录JMeter带json数据的post请求测试JMeter 压力测试使用函数和 CSV 文件参数化 json 数据]]></content>
+      <title><![CDATA[Jetty jvm]]></title>
+      <url>%2F2017%2F04%2F10%2F2017%2Fprogram%2Fjettyjvm%2F</url>
+      <content type="text"><![CDATA[修改start.ini文件中–exec -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Dcom.sun.management.jmxremote-Dorg.eclipse.jetty.util.log.IGNORED=true-Dorg.eclipse.jetty.util.log.stderr.DEBUG=true-Dorg.eclipse.jetty.util.log.stderr.SOURCE=true -Xmx2000m -Xmn512m -XX:PermSize=512m -XX:MaxPermSize=1024m -verbose:gc-XX:+PrintGCDateStamps-XX:+PrintGCTimeStamps-XX:+PrintGCDetails-XX:+PrintTenuringDistribution-XX:+PrintCommandLineFlags-XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:ParallelCMSThreads=2 -XX:+CMSClassUnloadingEnabled -XX:+UseCMSCompactAtFullCollection-XX:CMSInitiatingOccupancyFraction=80#———————————————————– 说明 -Dsun.rmi.dgc.client.gcInterval=3600000， -Dsun.rmi.dgc.server.gcInterval=3600000是设置客户端和服务端GC启动的时间。 -Xmx2000m最大缓存空间、 -Xmn512m新生代大小、 -XX:PermSize=512m内存永久区初始大小、 -XX:MaxPermSize=1024m最大永久区大小， -XX:MaxPermSize=1024m允许CMS清楚老年代， -XX:+CMSClassUnloadingEnabled， -XX:+CMSClassUnloadingEnabled 允许CMS清楚持久代。]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[Jetty jvm]]></title>
-      <url>%2F2017%2F04%2F10%2F2017%2Fprogram%2Fjettyjvm%2F</url>
-      <content type="text"><![CDATA[修改start.ini文件中–exec -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Dcom.sun.management.jmxremote-Dorg.eclipse.jetty.util.log.IGNORED=true-Dorg.eclipse.jetty.util.log.stderr.DEBUG=true-Dorg.eclipse.jetty.util.log.stderr.SOURCE=true -Xmx2000m -Xmn512m -XX:PermSize=512m -XX:MaxPermSize=1024m -verbose:gc-XX:+PrintGCDateStamps-XX:+PrintGCTimeStamps-XX:+PrintGCDetails-XX:+PrintTenuringDistribution-XX:+PrintCommandLineFlags-XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:ParallelCMSThreads=2 -XX:+CMSClassUnloadingEnabled -XX:+UseCMSCompactAtFullCollection-XX:CMSInitiatingOccupancyFraction=80#———————————————————– 说明 -Dsun.rmi.dgc.client.gcInterval=3600000， -Dsun.rmi.dgc.server.gcInterval=3600000是设置客户端和服务端GC启动的时间。 -Xmx2000m最大缓存空间、 -Xmn512m新生代大小、 -XX:PermSize=512m内存永久区初始大小、 -XX:MaxPermSize=1024m最大永久区大小， -XX:MaxPermSize=1024m允许CMS清楚老年代， -XX:+CMSClassUnloadingEnabled， -XX:+CMSClassUnloadingEnabled 允许CMS清楚持久代。]]></content>
+      <title><![CDATA[JMeter 压力测试CSV参数化]]></title>
+      <url>%2F2017%2F04%2F10%2F2017%2Fprogram%2Fjmeter%2F</url>
+      <content type="text"><![CDATA[Jmeter之使用CSV Data Set Config实现参数化登录JMeter带json数据的post请求测试JMeter 压力测试使用函数和 CSV 文件参数化 json 数据]]></content>
     </entry>
 
     
@@ -787,9 +822,9 @@
 
     
     <entry>
-      <title><![CDATA[梅花]]></title>
-      <url>%2F2017%2F02%2F05%2F2017%2Fplumblossoms%2F</url>
-      <content type="text"><![CDATA[]]></content>
+      <title><![CDATA[樱花]]></title>
+      <url>%2F2017%2F02%2F05%2F2017%2Fcherryblossoms%2F</url>
+      <content type="text"><![CDATA[1&quot;樱花下落的速度，是每秒5厘米； 我要用怎样的速度，才能与你相遇。&quot;]]></content>
     </entry>
 
     
@@ -801,9 +836,9 @@
 
     
     <entry>
-      <title><![CDATA[樱花]]></title>
-      <url>%2F2017%2F02%2F05%2F2017%2Fcherryblossoms%2F</url>
-      <content type="text"><![CDATA[1&quot;樱花下落的速度，是每秒5厘米； 我要用怎样的速度，才能与你相遇。&quot;]]></content>
+      <title><![CDATA[梅花]]></title>
+      <url>%2F2017%2F02%2F05%2F2017%2Fplumblossoms%2F</url>
+      <content type="text"><![CDATA[]]></content>
     </entry>
 
     
@@ -818,20 +853,6 @@
       <title><![CDATA[骑行]]></title>
       <url>%2F2017%2F01%2F08%2F2017%2Fqx20170107%2F</url>
       <content type="text"><![CDATA[午后，从公司出发，经洪山桥骑行闽江公园，终于东街口。]]></content>
-    </entry>
-
-    
-    <entry>
-      <title></title>
-      <url>%2F2017%2F01%2F08%2F2017%2Flisten%2F%E6%9D%83%E5%8A%9B%2F</url>
-      <content type="text"><![CDATA[title:权力date:2017-04-26 21:42:29category:”life” tags:[听书,金句] 1.等级结构在人类社会中无处不在，当我们进入一个组织之后，我们的性别、年龄、教育背景等，拿出来和别人一比较，就会决定我们的地位。同时，一个人的地位还会从一个背景带到另一个背景中，始终跟着你，躲都躲不开。 2.人们认为世界是公平的，源于“公正世界假设”的心理。这种假设会让人产生麻痹思想，忽视自己对权力的需求，而且误认为权力是可以等来的。但实际上，权力只能是争来的。 3.在争取权力的道路上，第一个关键就是要明白，业绩并不决定权力地位。我们必须关心和老板的关系，至少，这个关心程度要不亚于对业绩的关心。 4.我们要明白一个逻辑关系，当你招人喜欢的时候，并不一定会争取到权力，而当你有权力的时候，你一定会招人“喜欢”——虽然这个喜欢要打上个引号。 5.虽然让人们既害怕你又喜欢你，是一种很理想的状况，但当你必须二选一时，如果想获得和保持权力，就应该让人们害怕你。]]></content>
-    </entry>
-
-    
-    <entry>
-      <title></title>
-      <url>%2F2017%2F01%2F08%2F2017%2Flisten%2F%E7%90%86%E6%80%A7%E6%83%85%E7%BB%AA%2F</url>
-      <content type="text"><![CDATA[1.人的一切精神上的痛苦和严重情绪紊乱，都是不必要的。 2.不管你的处境有多恶劣、遭遇有多严重，你实际上总是可以拥有控制和改变自己情绪的能力，减少并最终战胜你的不良情绪。 3.“心想事成”固然是个美好的愿望，但是在现实中，“心想”就能“事成”，这个概率其实是很低的，我们如果过分执着于这个愿望，总是用“应该”、“必须”、“一定要”来想问题，就会陷入到非理性的信念里，给自己的情绪带来麻烦。 4.建立一个有效的理性信念，我们需要做到三点：1.无条件地自我接纳；2.无条件地接纳他人；3.无条件地接纳我们的现实生活。 5.最终你需要明白的是，无论是你自身的缺陷，还是外界的不尽如人意，这都是人与世界的天性，是我们无法改变的客观存在。而我们可以做的是：我的情绪我做主。]]></content>
     </entry>
 
     
@@ -878,16 +899,16 @@
 
     
     <entry>
-      <title><![CDATA[Jconsole监视dubbo服务]]></title>
-      <url>%2F2016%2F12%2F01%2F2016%2FJconsole%E7%9B%91%E8%A7%86dubbo%2F</url>
-      <content type="text"><![CDATA[使用Jconsole监视dubbo服务 在需要监控的/bin/start.sh文件中添加下面语句：JAVA_OPTS=”$JAVA_OPTS -Djava.rmi.server.hostname=192.168..-Dcom.sun.management.jmxremote.port=8088-Dcom.sun.management.jmxremote.ssl=false-Dcom.sun.management.jmxremote.authenticate=false”-Djava.rmi.server.hostname该参数指定jconsole远程连接的IP地址-Dcom.sun.management.jmxremote.port该参数指定jconsole远程连接的端口号-Dcom.sun.management.jmxremote.authenticate设置参数值为false时，就不需要输入用户名和密码 也可用/bin/remotestart.sh启动监控，该命令已配置该信息。启动本地Jconsole在jdk安装目录下,如C:\Program Files\Java\jdk1.8.0_111\bin,选择jconsole.exe并双击。选择远程进程，输入地址及端口信息：192.168..：8088即可监控dubbo服务性能消耗。]]></content>
+      <title><![CDATA[Centos桥接网络配置]]></title>
+      <url>%2F2016%2F12%2F01%2F2016%2Fcentos-bridging-network%2F</url>
+      <content type="text"><![CDATA[Centos7 桥接网络配置编辑配置文件1vi /etc/sysconfig/network-scripts/ifcfg-eth0 添加修改以下内容HWADDR=08:00:27:d4:5e:11TYPE=EthernetBOOTPROTO=static #启用静态IP地址DEFROUTE=yesPEERDNS=yesPEERROUTES=yesIPV4_FAILURE_FATAL=noIPV6INIT=yesIPV6_AUTOCONF=yesIPV6_DEFROUTE=yesIPV6_PEERDNS=yesIPV6_PEERROUTES=yesIPV6_FAILURE_FATAL=noNAME=enp0s3UUID=3c092d5f-fda6-403b-1122-d9bbd7280da5ONBOOT=yes #开启自动启用网络连接IPADDR0=192.168.3.236 #设置IP地址PREFIXO0=24 #设置子网掩码GATEWAY0=192.168.3.1 #设置网关DNS1=218.85.157.99 #设置主DNSDNS2=218.85.157.99 #设置备DNS 保存退出1:wq! 重启网络1systemctl restart network.service]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[Centos桥接网络配置]]></title>
-      <url>%2F2016%2F12%2F01%2F2016%2Fcentos-bridging-network%2F</url>
-      <content type="text"><![CDATA[Centos7 桥接网络配置编辑配置文件1vi /etc/sysconfig/network-scripts/ifcfg-eth0 添加修改以下内容HWADDR=08:00:27:d4:5e:11TYPE=EthernetBOOTPROTO=static #启用静态IP地址DEFROUTE=yesPEERDNS=yesPEERROUTES=yesIPV4_FAILURE_FATAL=noIPV6INIT=yesIPV6_AUTOCONF=yesIPV6_DEFROUTE=yesIPV6_PEERDNS=yesIPV6_PEERROUTES=yesIPV6_FAILURE_FATAL=noNAME=enp0s3UUID=3c092d5f-fda6-403b-1122-d9bbd7280da5ONBOOT=yes #开启自动启用网络连接IPADDR0=192.168.3.236 #设置IP地址PREFIXO0=24 #设置子网掩码GATEWAY0=192.168.3.1 #设置网关DNS1=218.85.157.99 #设置主DNSDNS2=218.85.157.99 #设置备DNS 保存退出1:wq! 重启网络1systemctl restart network.service]]></content>
+      <title><![CDATA[Jconsole监视dubbo服务]]></title>
+      <url>%2F2016%2F12%2F01%2F2016%2FJconsole%E7%9B%91%E8%A7%86dubbo%2F</url>
+      <content type="text"><![CDATA[使用Jconsole监视dubbo服务 在需要监控的/bin/start.sh文件中添加下面语句：JAVA_OPTS=”$JAVA_OPTS -Djava.rmi.server.hostname=192.168..-Dcom.sun.management.jmxremote.port=8088-Dcom.sun.management.jmxremote.ssl=false-Dcom.sun.management.jmxremote.authenticate=false”-Djava.rmi.server.hostname该参数指定jconsole远程连接的IP地址-Dcom.sun.management.jmxremote.port该参数指定jconsole远程连接的端口号-Dcom.sun.management.jmxremote.authenticate设置参数值为false时，就不需要输入用户名和密码 也可用/bin/remotestart.sh启动监控，该命令已配置该信息。启动本地Jconsole在jdk安装目录下,如C:\Program Files\Java\jdk1.8.0_111\bin,选择jconsole.exe并双击。选择远程进程，输入地址及端口信息：192.168..：8088即可监控dubbo服务性能消耗。]]></content>
     </entry>
 
     
