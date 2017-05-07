@@ -276,6 +276,147 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/01/07/2017/阿里yum无法使用/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="ljzhuanjiao@gmail.com">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="OwlFocus">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="OwlFocus" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/01/07/2017/阿里yum无法使用/" itemprop="url">
+                  阿里yum无法使用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-07T14:47:53+08:00">
+                2017-01-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="阿里yum无法使用"><a href="#阿里yum无法使用" class="headerlink" title="阿里yum无法使用"></a>阿里yum无法使用</h2><h3 id="错误信息"><a href="#错误信息" class="headerlink" title="错误信息"></a>错误信息</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://mirrors.aliyun.com/centos/7/os/x86_64/repodata/repomd.xml: [Errno 12] Timeout on http://mirrors.aliyun.com/centos/7/os/x86_64/repodata/repomd.xml: (28, &apos;Resolving timed out after 30399 milliseconds&apos;)</div></pre></td></tr></table></figure>
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>是防火墙INPUT和OUTPUT方向全部丢弃。</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>开启防火墙<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chkconfig iptables on #需要重启</div></pre></td></tr></table></figure></p>
+<p>添加以下规则，并重启防火墙</p>
+<pre><code>-A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+-A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+-A OUTPUT -p tcp -m tcp -m state --state NEW --dport 80 -j ACCEPT
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/01/06/2017/pft-2017nh/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -556,167 +697,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2016/12/29/2016/2016-summary/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="ljzhuanjiao@gmail.com">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="OwlFocus">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="OwlFocus" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/29/2016/2016-summary/" itemprop="url">
-                  2016 总结
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-29T22:17:25+08:00">
-                2016-12-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/life/" itemprop="url" rel="index">
-                    <span itemprop="name">life</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="概况"><a href="#概况" class="headerlink" title="概况"></a>概况</h2><p>工作一年，有喜有忧，收获颇多，生活亦是如此。</p>
-<h2 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h2><h3 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h3><p>上午半年主要还是项目上的事项，很多事不算完美，项目一直纠结在小细节上，导致整体项目上线不是很顺利。需求一方面不能确定，一方面客户也在调整，当然技术上也有缺陷，程序不够灵活。导致需求调整带来很大代价。</p>
-<h3 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h3><p>中询主要是书写平台文档，将平台现有产品文档化。主要涉及设计器、平台框架、技术开发API、常见问题等。其中接触了一套开源的问答系统(<a href="http://www.question2answer.org/" target="_blank" rel="external">question2answer</a>)，觉得用来做收集平台常见问题很适合，有点类似Stack Overflow技术问答，可以将一个平台常见问题录入系统，然后遇到类似问题的同事就可以直接参考问答系统，可避免总是问重复问题。</p>
-<h3 id="分水岭"><a href="#分水岭" class="headerlink" title="分水岭"></a>分水岭</h3><p>下半年可以说是一个分水岭，结束一份工作五年的工作，进入一个对我来说全新的行业。离职对双方都是一个损失。离职前得注释一些代码，其实感觉没有必要说这个。但是很多代码是前任留下来的，很多没有注释，觉得这个很糟糕。这也是下半年主要是工作内容，基本上把整个平台代码翻新了一遍。以后在开发中应该保持注释代码的习惯。说说新的工作，十一月份入职后，算是比较快适应新工作。从一个非互联网跨界到互联网，感觉知识储备还是不够的，补缺不漏的东西还是挺多的。</p>
-<h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><p>首先，系统部署环境上，以前接触比较多的都是window service ，现在要开始学习Linux。对它的了解还不是很全面，很多东西得去积累，工欲善其事，必先利其器。还有Shell脚本语言得深入浅出，不然不能很好地使用Linux。</p>
-<h3 id="开源"><a href="#开源" class="headerlink" title="开源"></a>开源</h3><ul>
-<li><p>开始接触一些开源的应用，如容器引擎（Docker），让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。 </p>
-</li>
-<li><p>Dubbo是Alibaba开源的分布式服务框架,它最大的特点是按照分层的方式来架构,使用这种方式可以使各个层之间解耦合(或者最大限度地松耦合)。</p>
-</li>
-<li><p>Netty是由JBOSS提供的一个java开源框架。Netty提供异步的、事件驱动的网络应用程序框架和工具，用以快速开发高性能、高可靠性的网络服务器和客户端程序。</p>
-</li>
-<li><p>持续集成工具Jenkins，用于监控持续重复的工作，功能包括：持续的软件版本发布/测试项目；监控外部调用执行的工作。</p>
-<h3 id="新工作总结"><a href="#新工作总结" class="headerlink" title="新工作总结"></a>新工作总结</h3><p>进入新环境后，首先是熟悉公司平台，花了一周多时间整理业务逻辑及数据结构；接下来是搭建java开发平台，主要用于平台接口业务开发，采用主流开源框架搭建，其中用到Spring、Hibernate，数据连接池使用durid，封装通用数据操作工具及平台常用工具类；确定接口以restful api方式实现，比较简洁、方便调用；接口采用dubbox实现分布式；平台缓存功能实现，采用redis为缓存宿主；通用接口日志记录，实现业务接口调用记录功能；开发业务接口，接口性能测试、接口API文档、实现业务数据转化功能，接口部署方案及文档化；实现字典数据、token管理等通用功能。两个月的时间，收获颇多，平台从零到一，学到很多知识，当然要学的东西还有很多。新工作展望：持续完善平台，使用平台理健壮，接受业务检阅；跟进平台分布式功能，以适应后期业务扩展；接口开发工作；探索新的部署方案，平台与Docker结合，从而实现持续集成、自动化部署；日志分析、数据报表、消息队列；Java团队建设。</p>
-</li>
-<li><p>坑一<br>由于前期没能考虑到接口的业务复杂度，开始数据查询没有统一查询，数据查询耗时过长，导致接口响应时间不理想。后面采用预处理方式，将用到的数据统一合并查询。中途数据计算使用Java8 Lambda表达式。</p>
-</li>
-<li>坑二<br>数据库字段问题，数据设计的字段为tinyint,在使用Hiberante 获取Mysql中tinyint(1)类型数据时， 默认取值为 boolean，当tinyint中存储值为2时，取出的值为true。这样在业务上处理有问题。后面通过google找到解决方案，可在MySql数据链接中的属性设置，将值不转成boolean。数据链接中添加tinyInt1isBit=false属性，即可解决。<h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2>生活处处是惊喜，敢于去发现。”所有美好的东西，都是既罕见又复杂的。——斯宾诺莎”很喜欢这句。<h3 id="骑行"><a href="#骑行" class="headerlink" title="骑行"></a>骑行</h3>一天心血来潮，一个人骑着单车上旗山，路上一些骑车的老爷爷，感觉他们真的不服老，体力超级好。一路上反而是他们在鼓励我，就这样骑着骑着就到了山上的公园。<h3 id="深圳"><a href="#深圳" class="headerlink" title="深圳"></a>深圳</h3>去了一趟深圳，记得2013年在广州出差时，想找个时间去逛逛，可惜没有机会。今年算是完成了，去莲花山公园缅怀邓爷爷，感受深圳特区。也去了香港拜金，大城市的生活节奏，和小城市完全没法比。站在大城市感觉时间流逝飞快，也许这就是Time is money。<h3 id="读物"><a href="#读物" class="headerlink" title="读物"></a>读物</h3>如果今年要我推荐读物 ，首推《社会心理学》。这书虽然厚重，却并不晦涩。尤其里面的案例不仅丰富，而且还有大量的科学数据。<br>良师益友，《重新定义公司》虽不在管理岗位，但可以更好的管理自己。知晓一个公司是如何运作。<br>塑造自己的意志力《自控力》。<br>『你的视野一转向内心，发现在你心中就有一千个地方还没有发现。那你去那里旅游，就会成为家庭宇宙志的专家』《瓦尔登湖》。<br>《光荣与梦想》完成第一部分应运而起。<br>投资学《怎样选择成长股》<br>西方经济学的圣经《国富论》。<br>“我们不是我们所收集的、得到的、所读的东西，只要我们还活着，我们就是爱，我们所爱的事物，我们所爱的人。所有这些，我认为真的会存活下去。”《岛上书店 》<br>同事推荐、借给我一本《乖，摸摸头》，不管是否是鸡汤，我干了。不过感觉这种现代游侠离我好远，没有他们那种勇气。<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>在一家公司待久了，难免会有骚动，所以选择跳出来，世界那么大，我也要去看看……<br>在全新的岗位上，暂未出成绩，要做的事情很多；新东家文化氛围很浓厚，入职不久便深深体会到。<br>失去很多好同事，但友谊长青，融入一个新的大家庭；完成一次驾考。<h2 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h2>17年，还是那句话补缺补漏，还有一件灰常重要的事，你懂的^~^。<br>TODO：</li>
-</ul>
-<ol>
-<li>Linux、Docker、Jenkins</li>
-<li>Dubbo、分布式</li>
-<li>Java8、多线程编程</li>
-<li>Hadoop</li>
-<li>消息队列</li>
-<li>多读书，多写字；</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -762,7 +742,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">130</span>
+              <span class="site-state-item-count">131</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
