@@ -276,6 +276,156 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/01/01/2017/go-environment/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="ljzhuanjiao@gmail.com">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="OwlFocus">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="OwlFocus" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/01/01/2017/go-environment/" itemprop="url">
+                  Go环境配置
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-01T09:47:53+08:00">
+                2017-01-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/program/" itemprop="url" rel="index">
+                    <span itemprop="name">program</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="配置Go环境"><a href="#配置Go环境" class="headerlink" title="配置Go环境"></a>配置Go环境</h2><h3 id="下载go1-7-1-linux-amd64-tar-gz"><a href="#下载go1-7-1-linux-amd64-tar-gz" class="headerlink" title="下载go1.7.1.linux-amd64.tar.gz"></a>下载go1.7.1.linux-amd64.tar.gz</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget http://golangtc.com/static/go/1.7.1/go1.7.1.linux-amd64.tar.gz</div></pre></td></tr></table></figure>
+<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar zxvf go1.7.1.linux-amd64.tar.gz -C /var/gowork</div></pre></td></tr></table></figure>
+<h3 id="新建GOPATH目录"><a href="#新建GOPATH目录" class="headerlink" title="新建GOPATH目录"></a>新建GOPATH目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mkdir -p /root/gofile</div></pre></td></tr></table></figure>
+<h3 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim /etc/profile</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> GOROOT=/var/gowork/go</div><div class="line"><span class="built_in">export</span> GOBIN=<span class="variable">$GOROOT</span>/bin  </div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$GOBIN</span>  </div><div class="line"><span class="built_in">export</span> GOPATH=<span class="variable">$HOME</span>/gofile</div></pre></td></tr></table></figure>
+<h3 id="保存环境变量"><a href="#保存环境变量" class="headerlink" title="保存环境变量"></a>保存环境变量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">:wq</div></pre></td></tr></table></figure>
+<h3 id="使环境变量生效"><a href="#使环境变量生效" class="headerlink" title="使环境变量生效"></a>使环境变量生效</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> /etc/profile</div></pre></td></tr></table></figure>
+<h3 id="查看是否配置成功"><a href="#查看是否配置成功" class="headerlink" title="查看是否配置成功"></a>查看是否配置成功</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">go version</div></pre></td></tr></table></figure>
+<blockquote>
+<p>go version go1.7.1 linux/amd64  </p>
+</blockquote>
+<h3 id="简单测试"><a href="#简单测试" class="headerlink" title="简单测试"></a>简单测试</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> /root/gofile  </div><div class="line">vim hello.go  </div><div class="line">package main  </div><div class="line">import <span class="string">"fmt"</span>  </div><div class="line">func <span class="function"><span class="title">main</span></span>() &#123;  </div><div class="line">    fmt.Println(<span class="string">"Hello, 世界"</span>)  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="go-run"><a href="#go-run" class="headerlink" title="go run"></a>go run</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">go run hello.go</div></pre></td></tr></table></figure>
+<blockquote>
+<p>Hello, 世界      </p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://viabugs.com/2016/12/29/2016/2016-summary/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -553,142 +703,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2016/12/27/2016/spring-batch-execution-sql/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="ljzhuanjiao@gmail.com">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="OwlFocus">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="OwlFocus" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/27/2016/spring-batch-execution-sql/" itemprop="url">
-                  Jconsole监视dubbo服务
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-27T20:47:00+08:00">
-                2016-12-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/program/" itemprop="url" rel="index">
-                    <span itemprop="name">program</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Spring-ScriptUtils"><a href="#Spring-ScriptUtils" class="headerlink" title="Spring ScriptUtils"></a>Spring ScriptUtils</h2><p>  使用Spring ScriptUtils 批量执行Sql语句，如批量执行update table1 set status=0, dprice=55 where id in (9600980);insert into table1 (dprice,status) values(46,0),(55,1);这两条语句。</p>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">executeSqlScript</span><span class="params">(Connection connection,StringBuffer sql)</span><span class="keyword">throws</span> SQLException</span>&#123; </div><div class="line">	<span class="keyword">try</span> &#123;</div><div class="line">		 connection.setAutoCommit(<span class="keyword">false</span>);<span class="comment">//设置为手工提交模式 </span></div><div class="line">		 ScriptUtils.executeSqlScript(connection, <span class="keyword">new</span> ByteArrayResource(sql.toString().getBytes()));</div><div class="line">		 connection.commit();<span class="comment">//提交事务  </span></div><div class="line">	&#125; <span class="keyword">catch</span> (SQLException e) &#123;</div><div class="line">		connection.rollback();</div><div class="line">	&#125;<span class="keyword">finally</span>&#123;</div><div class="line">		connection.close();</div><div class="line">	&#125;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -734,7 +748,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">134</span>
+              <span class="site-state-item-count">135</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
