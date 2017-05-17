@@ -4,6 +4,126 @@
 
     
   <url>
+    <loc>http://viabugs.com/2017/05/17/2017/listen/05/%E6%B4%9B%E5%85%8B%E8%8F%B2%E5%8B%92/</loc>
+    <lastmod>2017-05-17T13:17:22.000Z</lastmod>
+    <data>
+        <display>
+        <title>洛克菲勒</title>
+        <pubTime>2017-05-17T14:35:00.000Z</pubTime>
+        
+        <tag>金句</tag>
+         
+         
+           
+             
+              <breadCrumb title="life" url="http://viabugs.com/categories/life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://viabugs.com/2017/05/16/2017/listen/05/%E8%87%AA%E4%B8%8B%E8%80%8C%E4%B8%8A/</loc>
+    <lastmod>2017-05-17T13:16:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>自下而上</title>
+        <pubTime>2017-05-16T14:25:00.000Z</pubTime>
+        
+        <tag>金句</tag>
+         
+         
+           
+             
+              <breadCrumb title="life" url="http://viabugs.com/categories/life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://viabugs.com/2017/05/15/2017/listen/05/%E4%B8%80%E4%B8%AA%E5%B9%BF%E5%91%8A%E4%BA%BA%E7%9A%84%E8%87%AA%E7%99%BD/</loc>
+    <lastmod>2017-05-17T13:15:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>一个广告人的自白</title>
+        <pubTime>2017-05-15T14:21:00.000Z</pubTime>
+        
+        <tag>金句</tag>
+         
+         
+           
+             
+              <breadCrumb title="life" url="http://viabugs.com/categories/life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://viabugs.com/2017/05/14/2017/listen/05/%E6%83%85%E6%84%9F%E4%BE%9D%E9%99%84/</loc>
+    <lastmod>2017-05-17T13:14:04.000Z</lastmod>
+    <data>
+        <display>
+        <title>情感依附</title>
+        <pubTime>2017-05-14T13:51:00.000Z</pubTime>
+        
+        <tag>金句</tag>
+         
+         
+           
+             
+              <breadCrumb title="life" url="http://viabugs.com/categories/life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://viabugs.com/2017/05/13/2017/listen/05/%E5%8F%96%E6%82%A6%E7%97%87/</loc>
+    <lastmod>2017-05-17T13:13:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>取悦症</title>
+        <pubTime>2017-05-13T13:49:00.000Z</pubTime>
+        
+        <tag>金句</tag>
+         
+         
+           
+             
+              <breadCrumb title="life" url="http://viabugs.com/categories/life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://viabugs.com/2017/05/12/2017/listen/05/%E5%A4%A7%E5%8D%AB%C2%B7%E5%A5%A5%E6%A0%BC%E5%A8%81%E8%87%AA%E4%BC%A0/</loc>
+    <lastmod>2017-05-17T13:11:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>大卫·奥格威自传</title>
+        <pubTime>2017-05-12T13:45:00.000Z</pubTime>
+        
+        <tag>金句</tag>
+         
+         
+           
+             
+              <breadCrumb title="life" url="http://viabugs.com/categories/life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://viabugs.com/2017/05/11/2017/listen/05/%E8%B5%B0%E8%BF%912050/</loc>
     <lastmod>2017-05-11T13:07:50.000Z</lastmod>
     <data>
@@ -132,28 +252,6 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/05/06/2017/program/hibernatevalidation/</loc>
-    <lastmod>2017-05-07T13:20:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hibernate验证实体字段信息</title>
-        <pubTime>2017-05-06T12:15:13.000Z</pubTime>
-        
-        <tag>hibernate</tag>
-         
-        <tag>java</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://viabugs.com/2017/05/06/2017/program/jsonobjecttobean/</loc>
     <lastmod>2017-05-07T13:20:19.000Z</lastmod>
     <data>
@@ -190,6 +288,28 @@
         <tag>beanutils</tag>
          
         <tag>date</tag>
+         
+         
+           
+             
+              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://viabugs.com/2017/05/06/2017/program/hibernatevalidation/</loc>
+    <lastmod>2017-05-07T13:20:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hibernate验证实体字段信息</title>
+        <pubTime>2017-05-06T12:15:13.000Z</pubTime>
+        
+        <tag>hibernate</tag>
+         
+        <tag>java</tag>
          
          
            
@@ -370,28 +490,6 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/05/02/2017/program/startjettybyshell/</loc>
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>使用bash启动Jetty服务</title>
-        <pubTime>2017-05-02T12:45:43.000Z</pubTime>
-        
-        <tag>jetty</tag>
-         
-        <tag>bash</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://viabugs.com/2017/04/29/2017/program/Installansible/</loc>
     <lastmod>2017-05-01T11:01:02.000Z</lastmod>
     <data>
@@ -432,16 +530,34 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/05/01/2017/program/ansibledeployjetty/</loc>
+    <loc>http://viabugs.com/2017/04/29/2017/poems/%E6%9C%A8%E5%85%B0%E8%8A%B1%C2%B7%E6%98%A5%E6%99%AF/</loc>
     <lastmod>2017-05-01T11:01:02.000Z</lastmod>
     <data>
         <display>
-        <title>使用Ansible发布Jetty服务</title>
-        <pubTime>2017-05-01T06:05:03.000Z</pubTime>
+        <title>木兰花·春景</title>
+        <pubTime>2017-04-29T13:03:11.000Z</pubTime>
         
-        <tag>ansible</tag>
+        <tag>诗</tag>
          
-        <tag>jetty</tag>
+         
+           
+             
+              <breadCrumb title="life" url="http://viabugs.com/categories/life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://viabugs.com/2017/04/29/2017/program/ssh/</loc>
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>ssh 命令</title>
+        <pubTime>2017-04-29T12:22:23.000Z</pubTime>
+        
+        <tag>ssh</tag>
          
          
            
@@ -474,14 +590,16 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/04/29/2017/program/ssh/</loc>
+    <loc>http://viabugs.com/2017/05/02/2017/program/startjettybyshell/</loc>
     <lastmod>2017-05-01T11:01:02.000Z</lastmod>
     <data>
         <display>
-        <title>ssh 命令</title>
-        <pubTime>2017-04-29T12:22:23.000Z</pubTime>
+        <title>使用bash启动Jetty服务</title>
+        <pubTime>2017-05-02T12:45:43.000Z</pubTime>
         
-        <tag>ssh</tag>
+        <tag>jetty</tag>
+         
+        <tag>bash</tag>
          
          
            
@@ -494,19 +612,21 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/04/29/2017/poems/%E6%9C%A8%E5%85%B0%E8%8A%B1%C2%B7%E6%98%A5%E6%99%AF/</loc>
+    <loc>http://viabugs.com/2017/05/01/2017/program/ansibledeployjetty/</loc>
     <lastmod>2017-05-01T11:01:02.000Z</lastmod>
     <data>
         <display>
-        <title>木兰花·春景</title>
-        <pubTime>2017-04-29T13:03:11.000Z</pubTime>
+        <title>使用Ansible发布Jetty服务</title>
+        <pubTime>2017-05-01T06:05:03.000Z</pubTime>
         
-        <tag>诗</tag>
+        <tag>ansible</tag>
+         
+        <tag>jetty</tag>
          
          
            
              
-              <breadCrumb title="life" url="http://viabugs.com/categories/life/"/>
+              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
           
         </display>
     </data>
