@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[ehcache 持久化]]></title>
+      <url>%2F2017%2F05%2F24%2F2017%2Fprogram%2Fehcacheshutdownlistener%2F</url>
+      <content type="text"><![CDATA[持久化将diskPersistent属性设置成true,可将缓存内容缓存到磁盘中。1234567891011&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;ehcache&gt;&lt;diskStore path=&quot;java.io.tmpdir/ehcache&quot;/&gt;&lt;cache name=&quot;clusterCache&quot; maxElementsInMemory=&quot;1&quot; maxElementsOnDisk=&quot;50&quot; eternal=&quot;true&quot; overflowToDisk=&quot;true&quot; diskPersistent=&quot;true&quot; memoryStoreEvictionPolicy=&quot;LFU&quot;/&gt;&lt;/ehcache&gt; 系统配置在jvm重新启动时，需要重新加载磁盘中的缓存，可以在web.xml中配置如下：123&lt;listener&gt; &lt;listener-class&gt;net.sf.ehcache.constructs.web.ShutdownListener&lt;/listener-class&gt;&lt;/listener&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[个人理财]]></title>
+      <url>%2F2017%2F05%2F23%2F2017%2Flisten%2F05%2F%E4%B8%AA%E4%BA%BA%E7%90%86%E8%B4%A2%2F</url>
+      <content type="text"><![CDATA[有时候，不冒风险要比敢于冒风险的决策更有风险。 理财知识是最好的保障，这其实也是保护你自己的唯一途径。 复利周期越短，你赚钱的速度就会越快。 储蓄不是自发事件：你必须提前计划。遗憾的是，计划也不是自发的。 债务本身并不是一件坏事，甚至在很多时候某些债务明显具有积极的作用。但是随随便便超过个人的消费能力去过度负债，却是件很危险的事。注意，最危险的债务可能就在你的口袋里：信用卡。 赚多赚少没关系，成功理财的关键在于控制风险。 如果你的投资期限足够长，那么只要你选择了风险较高但收益也高的资产，最终必然能够获得令人满意的投资回报。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[权力]]></title>
       <url>%2F2017%2F05%2F22%2F2017%2Feconomics%2Fauthority%2F</url>
       <content type="text"><![CDATA[权力包括：定义、兴起、保护、治理。 权利和能力之间的区别。能力取决于自己能够占有多少，而权利取决于别人、社会的其他人愿意给你多少。]]></content>
@@ -235,15 +249,15 @@
     
     <entry>
       <title><![CDATA[Install ansible]]></title>
-      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2Fansible%2F</url>
-      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible 自动化部署 Jenkins+Ansible+Gitlab自动化部署三剑客 jenkins基于ansible持续集成]]></content>
+      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2FInstallansible%2F</url>
+      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[Install ansible]]></title>
-      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2FInstallansible%2F</url>
-      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible]]></content>
+      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2Fansible%2F</url>
+      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible 自动化部署 Jenkins+Ansible+Gitlab自动化部署三剑客 jenkins基于ansible持续集成]]></content>
     </entry>
 
     
@@ -388,16 +402,16 @@
 
     
     <entry>
-      <title><![CDATA[刻意练习]]></title>
-      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0%2F</url>
-      <content type="text"><![CDATA[真正的”一万小时天才理论”是，普通人也可以通过刻意练习成为某个领域的专家。 用『三个F』创建有效的心理表征 专注focus，集中注意力 反馈feedback，及时反馈 纠正fix it，不断修正自己 练习的时间与质量反而在决定人们的技能变得多么熟练时，发挥着更大的作用。 从长远来看，占上风的是那些练习更勤奋的人，而不是那些一开始在智商或者其他才华方面稍有优势的人。]]></content>
+      <title><![CDATA[联盟]]></title>
+      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E8%81%94%E7%9B%9F%2F</url>
+      <content type="text"><![CDATA[通过联盟重建信任与忠诚 如果我们不能回到终身雇佣的年代，就要学会重建雇主与员工的关系。这种新的忠诚观允许公司和员工对彼此做出承诺，把过去的商业交易转变为互惠关系的框架。雇佣关系可以转换为一个联盟：一份由双方独立达成的，有明确条款的互惠协议。 员工拥有创始人思维任期制将员工在你的公司度过的职业生涯重新规划为一系列连续的任期，可以更好地吸引和留住开创型员工。 培养开创性员工的利器诚实地谈论任期公司里的三类任期 轮转期 转变期 基础期 协调员工的目标和公司的目标如何执行转变期计划 开始对话，确定目标 定期检查以交流反馈 任期临近结束前，制定下一个任期计划 如何处理任务中的意外投资在员工的人脉上打造终身联盟：前同事联络网建立同事联络网的策略与技巧 决定同事联络网的成员。删除掉存在纠纷和法律道德风险的前员工。 明确定义与前员工关系的期望和收益。常见的方法有：员工推荐奖金、产品折扣和测试白名单、举办活动、为前员工颁发荣誉、向前员工通报最新消息等。 建立周详的离职机制。在离职面谈中与员工巩固终身关系，收集信息进入数据库。 建立现员工和前员工的联系。 首席执行官布拉德·史密斯（Brad Smith）告诉我们的：“领导者的任务不是培养能人，而是认识到人们已有的才华，并创造出让其产生和成长的环境。”]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[联盟]]></title>
-      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E8%81%94%E7%9B%9F%2F</url>
-      <content type="text"><![CDATA[通过联盟重建信任与忠诚 如果我们不能回到终身雇佣的年代，就要学会重建雇主与员工的关系。这种新的忠诚观允许公司和员工对彼此做出承诺，把过去的商业交易转变为互惠关系的框架。雇佣关系可以转换为一个联盟：一份由双方独立达成的，有明确条款的互惠协议。 员工拥有创始人思维任期制将员工在你的公司度过的职业生涯重新规划为一系列连续的任期，可以更好地吸引和留住开创型员工。 培养开创性员工的利器诚实地谈论任期公司里的三类任期 轮转期 转变期 基础期 协调员工的目标和公司的目标如何执行转变期计划 开始对话，确定目标 定期检查以交流反馈 任期临近结束前，制定下一个任期计划 如何处理任务中的意外投资在员工的人脉上打造终身联盟：前同事联络网建立同事联络网的策略与技巧 决定同事联络网的成员。删除掉存在纠纷和法律道德风险的前员工。 明确定义与前员工关系的期望和收益。常见的方法有：员工推荐奖金、产品折扣和测试白名单、举办活动、为前员工颁发荣誉、向前员工通报最新消息等。 建立周详的离职机制。在离职面谈中与员工巩固终身关系，收集信息进入数据库。 建立现员工和前员工的联系。 首席执行官布拉德·史密斯（Brad Smith）告诉我们的：“领导者的任务不是培养能人，而是认识到人们已有的才华，并创造出让其产生和成长的环境。”]]></content>
+      <title><![CDATA[刻意练习]]></title>
+      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0%2F</url>
+      <content type="text"><![CDATA[真正的”一万小时天才理论”是，普通人也可以通过刻意练习成为某个领域的专家。 用『三个F』创建有效的心理表征 专注focus，集中注意力 反馈feedback，及时反馈 纠正fix it，不断修正自己 练习的时间与质量反而在决定人们的技能变得多么熟练时，发挥着更大的作用。 从长远来看，占上风的是那些练习更勤奋的人，而不是那些一开始在智商或者其他才华方面稍有优势的人。]]></content>
     </entry>
 
     
@@ -430,16 +444,16 @@
 
     
     <entry>
-      <title><![CDATA[输赢心理学]]></title>
-      <url>%2F2017%2F04%2F12%2F2017%2Flisten%2F%E8%BE%93%E8%B5%A2%E5%BF%83%E7%90%86%E5%AD%A6%2F</url>
-      <content type="text"><![CDATA[对一些钢琴家的研究表明，是否能够在比赛中胜出，并不取决于平时排练得多好，而是取决于他们能否在比赛中，保持平时排练时的水平。很少有钢琴家能在比赛中表现得和平时排练一样好或更好。当人们越关注成功的几率，去尝试做某事的可能性就小；但当越关注成功的果实，尝试的可能性就大。 乐队的演出效果越好，其幕后的争斗、竞争、不和谐就会越发严重。他们只有在台上才会表现出初期的和谐效果。要让人们在合作中更努力，只需要告诉他们与实验室伙伴同一天生日即可，他们的工作会更加积极主动、持之以恒。]]></content>
+      <title><![CDATA[思考的技术]]></title>
+      <url>%2F2017%2F04%2F12%2F2017%2Flisten%2F%E6%80%9D%E8%80%83%E7%9A%84%E6%8A%80%E6%9C%AF%2F</url>
+      <content type="text"><![CDATA[1.很多人在思考问题的时候，以为自己抓住了本质，其实是被外界的干预、固有的经验或者别人的劝说所误导。 2.遗憾的是，大多数面临严重问题的企业，在找出解决之策以后，却没有坚决实行的执行力。 3.所谓科学的思考方法，就是为了印证假设而不辞劳作的行动力，也可以说是为了获得绝对正确的答案，彻底动脑的深层思考力。 4.证实假设到导出结论的过程中，最重要的就是弄清楚“发生问题的原因是什么”。但是大多数经营者和企业经理人只看到问题的现象，却看不到产生问题的原因。]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[思考的技术]]></title>
-      <url>%2F2017%2F04%2F12%2F2017%2Flisten%2F%E6%80%9D%E8%80%83%E7%9A%84%E6%8A%80%E6%9C%AF%2F</url>
-      <content type="text"><![CDATA[1.很多人在思考问题的时候，以为自己抓住了本质，其实是被外界的干预、固有的经验或者别人的劝说所误导。 2.遗憾的是，大多数面临严重问题的企业，在找出解决之策以后，却没有坚决实行的执行力。 3.所谓科学的思考方法，就是为了印证假设而不辞劳作的行动力，也可以说是为了获得绝对正确的答案，彻底动脑的深层思考力。 4.证实假设到导出结论的过程中，最重要的就是弄清楚“发生问题的原因是什么”。但是大多数经营者和企业经理人只看到问题的现象，却看不到产生问题的原因。]]></content>
+      <title><![CDATA[输赢心理学]]></title>
+      <url>%2F2017%2F04%2F12%2F2017%2Flisten%2F%E8%BE%93%E8%B5%A2%E5%BF%83%E7%90%86%E5%AD%A6%2F</url>
+      <content type="text"><![CDATA[对一些钢琴家的研究表明，是否能够在比赛中胜出，并不取决于平时排练得多好，而是取决于他们能否在比赛中，保持平时排练时的水平。很少有钢琴家能在比赛中表现得和平时排练一样好或更好。当人们越关注成功的几率，去尝试做某事的可能性就小；但当越关注成功的果实，尝试的可能性就大。 乐队的演出效果越好，其幕后的争斗、竞争、不和谐就会越发严重。他们只有在台上才会表现出初期的和谐效果。要让人们在合作中更努力，只需要告诉他们与实验室伙伴同一天生日即可，他们的工作会更加积极主动、持之以恒。]]></content>
     </entry>
 
     
@@ -500,16 +514,16 @@
 
     
     <entry>
-      <title><![CDATA[Jetty jvm]]></title>
-      <url>%2F2017%2F04%2F10%2F2017%2Fprogram%2Fjettyjvm%2F</url>
-      <content type="text"><![CDATA[修改start.ini文件中–exec -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Dcom.sun.management.jmxremote-Dorg.eclipse.jetty.util.log.IGNORED=true-Dorg.eclipse.jetty.util.log.stderr.DEBUG=true-Dorg.eclipse.jetty.util.log.stderr.SOURCE=true -Xmx2000m -Xmn512m -XX:PermSize=512m -XX:MaxPermSize=1024m -verbose:gc-XX:+PrintGCDateStamps-XX:+PrintGCTimeStamps-XX:+PrintGCDetails-XX:+PrintTenuringDistribution-XX:+PrintCommandLineFlags-XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:ParallelCMSThreads=2 -XX:+CMSClassUnloadingEnabled -XX:+UseCMSCompactAtFullCollection-XX:CMSInitiatingOccupancyFraction=80#———————————————————– 说明 -Dsun.rmi.dgc.client.gcInterval=3600000， -Dsun.rmi.dgc.server.gcInterval=3600000是设置客户端和服务端GC启动的时间。 -Xmx2000m最大缓存空间、 -Xmn512m新生代大小、 -XX:PermSize=512m内存永久区初始大小、 -XX:MaxPermSize=1024m最大永久区大小， -XX:MaxPermSize=1024m允许CMS清楚老年代， -XX:+CMSClassUnloadingEnabled， -XX:+CMSClassUnloadingEnabled 允许CMS清楚持久代。]]></content>
+      <title><![CDATA[JMeter 压力测试CSV参数化]]></title>
+      <url>%2F2017%2F04%2F10%2F2017%2Fprogram%2Fjmeter%2F</url>
+      <content type="text"><![CDATA[Jmeter之使用CSV Data Set Config实现参数化登录JMeter带json数据的post请求测试JMeter 压力测试使用函数和 CSV 文件参数化 json 数据]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[JMeter 压力测试CSV参数化]]></title>
-      <url>%2F2017%2F04%2F10%2F2017%2Fprogram%2Fjmeter%2F</url>
-      <content type="text"><![CDATA[Jmeter之使用CSV Data Set Config实现参数化登录JMeter带json数据的post请求测试JMeter 压力测试使用函数和 CSV 文件参数化 json 数据]]></content>
+      <title><![CDATA[Jetty jvm]]></title>
+      <url>%2F2017%2F04%2F10%2F2017%2Fprogram%2Fjettyjvm%2F</url>
+      <content type="text"><![CDATA[修改start.ini文件中–exec -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Dcom.sun.management.jmxremote-Dorg.eclipse.jetty.util.log.IGNORED=true-Dorg.eclipse.jetty.util.log.stderr.DEBUG=true-Dorg.eclipse.jetty.util.log.stderr.SOURCE=true -Xmx2000m -Xmn512m -XX:PermSize=512m -XX:MaxPermSize=1024m -verbose:gc-XX:+PrintGCDateStamps-XX:+PrintGCTimeStamps-XX:+PrintGCDetails-XX:+PrintTenuringDistribution-XX:+PrintCommandLineFlags-XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:ParallelCMSThreads=2 -XX:+CMSClassUnloadingEnabled -XX:+UseCMSCompactAtFullCollection-XX:CMSInitiatingOccupancyFraction=80#———————————————————– 说明 -Dsun.rmi.dgc.client.gcInterval=3600000， -Dsun.rmi.dgc.server.gcInterval=3600000是设置客户端和服务端GC启动的时间。 -Xmx2000m最大缓存空间、 -Xmn512m新生代大小、 -XX:PermSize=512m内存永久区初始大小、 -XX:MaxPermSize=1024m最大永久区大小， -XX:MaxPermSize=1024m允许CMS清楚老年代， -XX:+CMSClassUnloadingEnabled， -XX:+CMSClassUnloadingEnabled 允许CMS清楚持久代。]]></content>
     </entry>
 
     
@@ -858,14 +872,14 @@
     
     <entry>
       <title><![CDATA[金钱观]]></title>
-      <url>%2F2017%2F03%2F16%2F2017%2Feconomics%2Fdontjustshareatmoney%2F</url>
+      <url>%2F2017%2F03%2F16%2F2017%2Flisten%2Fmoney%2F</url>
       <content type="text"><![CDATA[钱只有花出去才是的你！ 钱是靠挣出来的，不是靠省出来的，而挣钱的效率取决于一个人的气度。 工作效率高，自然挣钱的效率也高。 如果我们想清楚了钱是对资源的量化度量，越是稀缺的资源自然越值钱，那么你有别人不会的技能，你就是稀缺资源。 –吴军~硅谷来信]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[金钱观]]></title>
-      <url>%2F2017%2F03%2F16%2F2017%2Flisten%2Fmoney%2F</url>
+      <url>%2F2017%2F03%2F16%2F2017%2Feconomics%2Fdontjustshareatmoney%2F</url>
       <content type="text"><![CDATA[钱只有花出去才是的你！ 钱是靠挣出来的，不是靠省出来的，而挣钱的效率取决于一个人的气度。 工作效率高，自然挣钱的效率也高。 如果我们想清楚了钱是对资源的量化度量，越是稀缺的资源自然越值钱，那么你有别人不会的技能，你就是稀缺资源。 –吴军~硅谷来信]]></content>
     </entry>
 
@@ -934,16 +948,16 @@
 
     
     <entry>
-      <title><![CDATA[樱花]]></title>
-      <url>%2F2017%2F02%2F05%2F2017%2Fcherryblossoms%2F</url>
-      <content type="text"><![CDATA[1&quot;樱花下落的速度，是每秒5厘米； 我要用怎样的速度，才能与你相遇。&quot;]]></content>
+      <title><![CDATA[油菜花]]></title>
+      <url>%2F2017%2F02%2F05%2F2017%2Frapeflower%2F</url>
+      <content type="text"><![CDATA[]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[油菜花]]></title>
-      <url>%2F2017%2F02%2F05%2F2017%2Frapeflower%2F</url>
-      <content type="text"><![CDATA[]]></content>
+      <title><![CDATA[樱花]]></title>
+      <url>%2F2017%2F02%2F05%2F2017%2Fcherryblossoms%2F</url>
+      <content type="text"><![CDATA[1&quot;樱花下落的速度，是每秒5厘米； 我要用怎样的速度，才能与你相遇。&quot;]]></content>
     </entry>
 
     
@@ -970,15 +984,15 @@
     
     <entry>
       <title></title>
-      <url>%2F2017%2F01%2F08%2F2017%2Flisten%2F%E6%9D%83%E5%8A%9B%2F</url>
-      <content type="text"><![CDATA[title:权力date:2017-04-26 21:42:29category:”life” tags:[听书,金句] 1.等级结构在人类社会中无处不在，当我们进入一个组织之后，我们的性别、年龄、教育背景等，拿出来和别人一比较，就会决定我们的地位。同时，一个人的地位还会从一个背景带到另一个背景中，始终跟着你，躲都躲不开。 2.人们认为世界是公平的，源于“公正世界假设”的心理。这种假设会让人产生麻痹思想，忽视自己对权力的需求，而且误认为权力是可以等来的。但实际上，权力只能是争来的。 3.在争取权力的道路上，第一个关键就是要明白，业绩并不决定权力地位。我们必须关心和老板的关系，至少，这个关心程度要不亚于对业绩的关心。 4.我们要明白一个逻辑关系，当你招人喜欢的时候，并不一定会争取到权力，而当你有权力的时候，你一定会招人“喜欢”——虽然这个喜欢要打上个引号。 5.虽然让人们既害怕你又喜欢你，是一种很理想的状况，但当你必须二选一时，如果想获得和保持权力，就应该让人们害怕你。]]></content>
+      <url>%2F2017%2F01%2F08%2F2017%2Flisten%2F%E7%90%86%E6%80%A7%E6%83%85%E7%BB%AA%2F</url>
+      <content type="text"><![CDATA[1.人的一切精神上的痛苦和严重情绪紊乱，都是不必要的。 2.不管你的处境有多恶劣、遭遇有多严重，你实际上总是可以拥有控制和改变自己情绪的能力，减少并最终战胜你的不良情绪。 3.“心想事成”固然是个美好的愿望，但是在现实中，“心想”就能“事成”，这个概率其实是很低的，我们如果过分执着于这个愿望，总是用“应该”、“必须”、“一定要”来想问题，就会陷入到非理性的信念里，给自己的情绪带来麻烦。 4.建立一个有效的理性信念，我们需要做到三点：1.无条件地自我接纳；2.无条件地接纳他人；3.无条件地接纳我们的现实生活。 5.最终你需要明白的是，无论是你自身的缺陷，还是外界的不尽如人意，这都是人与世界的天性，是我们无法改变的客观存在。而我们可以做的是：我的情绪我做主。]]></content>
     </entry>
 
     
     <entry>
       <title></title>
-      <url>%2F2017%2F01%2F08%2F2017%2Flisten%2F%E7%90%86%E6%80%A7%E6%83%85%E7%BB%AA%2F</url>
-      <content type="text"><![CDATA[1.人的一切精神上的痛苦和严重情绪紊乱，都是不必要的。 2.不管你的处境有多恶劣、遭遇有多严重，你实际上总是可以拥有控制和改变自己情绪的能力，减少并最终战胜你的不良情绪。 3.“心想事成”固然是个美好的愿望，但是在现实中，“心想”就能“事成”，这个概率其实是很低的，我们如果过分执着于这个愿望，总是用“应该”、“必须”、“一定要”来想问题，就会陷入到非理性的信念里，给自己的情绪带来麻烦。 4.建立一个有效的理性信念，我们需要做到三点：1.无条件地自我接纳；2.无条件地接纳他人；3.无条件地接纳我们的现实生活。 5.最终你需要明白的是，无论是你自身的缺陷，还是外界的不尽如人意，这都是人与世界的天性，是我们无法改变的客观存在。而我们可以做的是：我的情绪我做主。]]></content>
+      <url>%2F2017%2F01%2F08%2F2017%2Flisten%2F%E6%9D%83%E5%8A%9B%2F</url>
+      <content type="text"><![CDATA[title:权力date:2017-04-26 21:42:29category:”life” tags:[听书,金句] 1.等级结构在人类社会中无处不在，当我们进入一个组织之后，我们的性别、年龄、教育背景等，拿出来和别人一比较，就会决定我们的地位。同时，一个人的地位还会从一个背景带到另一个背景中，始终跟着你，躲都躲不开。 2.人们认为世界是公平的，源于“公正世界假设”的心理。这种假设会让人产生麻痹思想，忽视自己对权力的需求，而且误认为权力是可以等来的。但实际上，权力只能是争来的。 3.在争取权力的道路上，第一个关键就是要明白，业绩并不决定权力地位。我们必须关心和老板的关系，至少，这个关心程度要不亚于对业绩的关心。 4.我们要明白一个逻辑关系，当你招人喜欢的时候，并不一定会争取到权力，而当你有权力的时候，你一定会招人“喜欢”——虽然这个喜欢要打上个引号。 5.虽然让人们既害怕你又喜欢你，是一种很理想的状况，但当你必须二选一时，如果想获得和保持权力，就应该让人们害怕你。]]></content>
     </entry>
 
     
