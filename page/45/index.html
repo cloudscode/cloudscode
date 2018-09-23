@@ -276,7 +276,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/17/2017/poems/tea/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/29/2018/program/hibernateoutsidevalidrange/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -301,8 +301,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/17/2017/poems/tea/" itemprop="url">
-                  茶
+                <a class="post-title-link" href="/2017/03/29/2018/program/hibernateoutsidevalidrange/" itemprop="url">
+                  hibernate outside valid range for the datatype smallint
                 </a>
               
             
@@ -316,8 +316,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-17T20:31:31+08:00">
-                2017-03-17
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-29T21:57:55+08:00">
+                2017-03-29
               </time>
             
 
@@ -335,8 +335,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/life/" itemprop="url" rel="index">
-                    <span itemprop="name">life</span>
+                  <a href="/categories/program/" itemprop="url" rel="index">
+                    <span itemprop="name">program</span>
                   </a>
                 </span>
 
@@ -372,13 +372,14 @@
       
         
           
-            <center>                  茶<br>              香叶，嫩芽。<br>            慕诗客，爱僧家。<br>          碾雕白玉，罗织红沙。<br>        铫煎黄蕊色，碗转曲尘花。<br>      夜后邀陪明月，晨前命对朝霞。<br>    洗尽古今人不倦，将至醉后岂堪夸。<br>    </center>
-
-
-
-
-
-
+            <p>hibernate 使用sql查询时，smallint类型字段出现长度超过。因为smallint使用的是无符号类型unsigned，导致长度超过。</p>
+<h1 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h1><blockquote>
+<p>hibernate ‘65535.0’ in column ‘12’ is outside valid range for the datatype SMALLINT.</p>
+</blockquote>
+<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>使用函数将字段类型数据进行转化，如下：</p>
+<blockquote>
+<p>CAST(column AS signed)</p>
+</blockquote>
 
           
         
@@ -417,7 +418,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/16/2017/economics/dontjustshareatmoney/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/29/2017/program/mysqlcastandconvert/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -442,8 +443,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/16/2017/economics/dontjustshareatmoney/" itemprop="url">
-                  金钱观
+                <a class="post-title-link" href="/2017/03/29/2017/program/mysqlcastandconvert/" itemprop="url">
+                  MySQL CAST And CONVERT 函数
                 </a>
               
             
@@ -457,8 +458,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-16T21:39:33+08:00">
-                2017-03-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-29T21:56:35+08:00">
+                2017-03-29
               </time>
             
 
@@ -476,8 +477,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/life/" itemprop="url" rel="index">
-                    <span itemprop="name">life</span>
+                  <a href="/categories/program/" itemprop="url" rel="index">
+                    <span itemprop="name">program</span>
                   </a>
                 </span>
 
@@ -514,12 +515,20 @@
         
           
             <blockquote>
-<p> 钱只有花出去才是的你！</p>
-<p> 钱是靠挣出来的，不是靠省出来的，而挣钱的效率取决于一个人的气度。</p>
-<p> 工作效率高，自然挣钱的效率也高。</p>
-<p> 如果我们想清楚了钱是对资源的量化度量，越是稀缺的资源自然越值钱，那么你有别人不会的技能，你就是稀缺资源。</p>
+<p>MySQL 的CAST()和CONVERT()函数可用来获取一个类型的值，并产生另一个类型的值。两者具体的语法如下：</p>
 </blockquote>
-<p>–吴军~硅谷来信</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">CAST(value as type);</div><div class="line">CONVERT(value, type);</div></pre></td></tr></table></figure>
+<p>转换的类型是有限制的。</p>
+<ul>
+<li>二进制，同带binary前缀的效果 : BINARY    </li>
+<li>字符型，可带参数 : CHAR()     </li>
+<li>日期 : DATE     </li>
+<li>时间: TIME     </li>
+<li>日期时间型 : DATETIME     </li>
+<li>浮点数 : DECIMAL      </li>
+<li>整数 : SIGNED     </li>
+<li>无符号整数 : UNSIGNED </li>
+</ul>
 
           
         
@@ -558,7 +567,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/16/2017/listen/money/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/29/2018/program/mysqlcastandconvert/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -583,8 +592,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/16/2017/listen/money/" itemprop="url">
-                  金钱观
+                <a class="post-title-link" href="/2017/03/29/2018/program/mysqlcastandconvert/" itemprop="url">
+                  MySQL CAST And CONVERT 函数
                 </a>
               
             
@@ -598,8 +607,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-16T21:39:33+08:00">
-                2017-03-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-29T21:56:35+08:00">
+                2017-03-29
               </time>
             
 
@@ -617,8 +626,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/life/" itemprop="url" rel="index">
-                    <span itemprop="name">life</span>
+                  <a href="/categories/program/" itemprop="url" rel="index">
+                    <span itemprop="name">program</span>
                   </a>
                 </span>
 
@@ -655,12 +664,20 @@
         
           
             <blockquote>
-<p> 钱只有花出去才是的你！</p>
-<p> 钱是靠挣出来的，不是靠省出来的，而挣钱的效率取决于一个人的气度。</p>
-<p> 工作效率高，自然挣钱的效率也高。</p>
-<p> 如果我们想清楚了钱是对资源的量化度量，越是稀缺的资源自然越值钱，那么你有别人不会的技能，你就是稀缺资源。</p>
+<p>MySQL 的CAST()和CONVERT()函数可用来获取一个类型的值，并产生另一个类型的值。两者具体的语法如下：</p>
 </blockquote>
-<p>–吴军~硅谷来信</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">CAST(value as type);</div><div class="line">CONVERT(value, type);</div></pre></td></tr></table></figure>
+<p>转换的类型是有限制的。</p>
+<ul>
+<li>二进制，同带binary前缀的效果 : BINARY    </li>
+<li>字符型，可带参数 : CHAR()     </li>
+<li>日期 : DATE     </li>
+<li>时间: TIME     </li>
+<li>日期时间型 : DATETIME     </li>
+<li>浮点数 : DECIMAL      </li>
+<li>整数 : SIGNED     </li>
+<li>无符号整数 : UNSIGNED </li>
+</ul>
 
           
         
@@ -694,7 +711,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/44/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/">44</a><span class="page-number current">45</span><a class="page-number" href="/page/46/">46</a><span class="space">&hellip;</span><a class="page-number" href="/page/54/">54</a><a class="extend next" rel="next" href="/page/46/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/44/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/44/">44</a><span class="page-number current">45</span><a class="page-number" href="/page/46/">46</a><span class="space">&hellip;</span><a class="page-number" href="/page/68/">68</a><a class="extend next" rel="next" href="/page/46/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -735,7 +752,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">160</span>
+              <span class="site-state-item-count">202</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

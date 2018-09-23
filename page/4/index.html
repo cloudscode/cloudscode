@@ -276,7 +276,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/05/24/2017/program/ehcacheshutdownlistener/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/09/18/2018/program/Spring NamedParameterJdbcTemplate Tutorial/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -301,8 +301,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/05/24/2017/program/ehcacheshutdownlistener/" itemprop="url">
-                  ehcache 持久化
+                <a class="post-title-link" href="/2017/09/18/2018/program/Spring NamedParameterJdbcTemplate Tutorial/" itemprop="url">
+                  Spring NamedParameterJdbcTemplate
                 </a>
               
             
@@ -316,8 +316,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-24T21:02:23+08:00">
-                2017-05-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-18T22:24:55+08:00">
+                2017-09-18
               </time>
             
 
@@ -372,8 +372,17 @@
       
         
           
-            <h1 id="持久化"><a href="#持久化" class="headerlink" title="持久化"></a>持久化</h1><p>将diskPersistent属性设置成true,可将缓存内容缓存到磁盘中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">&lt;ehcache&gt;</div><div class="line">&lt;diskStore path=&quot;java.io.tmpdir/ehcache&quot;/&gt;</div><div class="line">&lt;cache name=&quot;clusterCache&quot;</div><div class="line">  maxElementsInMemory=&quot;1&quot;</div><div class="line">  maxElementsOnDisk=&quot;50&quot;</div><div class="line">  eternal=&quot;true&quot;</div><div class="line">  overflowToDisk=&quot;true&quot;</div><div class="line">  diskPersistent=&quot;true&quot; </div><div class="line">  memoryStoreEvictionPolicy=&quot;LFU&quot;/&gt;</div><div class="line">&lt;/ehcache&gt;</div></pre></td></tr></table></figure></p>
-<h1 id="系统配置"><a href="#系统配置" class="headerlink" title="系统配置"></a>系统配置</h1><p>在jvm重新启动时，需要重新加载磁盘中的缓存，可以在web.xml中配置如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;listener&gt;</div><div class="line">      &lt;listener-class&gt;net.sf.ehcache.constructs.web.ShutdownListener&lt;/listener-class&gt;</div><div class="line">&lt;/listener&gt;</div></pre></td></tr></table></figure></p>
+            <p>使用NamedParameterJdbcTemplate查询sql语句，并按实体返回数据。</p>
+<h1 id="配置NamedParameterJdbcTemplate"><a href="#配置NamedParameterJdbcTemplate" class="headerlink" title="配置NamedParameterJdbcTemplate"></a>配置NamedParameterJdbcTemplate</h1><ul>
+<li>在xml配置文件中，配置模板数据源信息。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;bean id=&quot;namedParameterJdbcTemplate&quot; class=&quot;org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate&quot;&gt;	</div><div class="line">	&lt;constructor-arg ref=&quot;dataSource&quot; /&gt;&lt;/bean&gt;</div></pre></td></tr></table></figure>
+<h1 id="注入NamedParameterJdbcTemplate"><a href="#注入NamedParameterJdbcTemplate" class="headerlink" title="注入NamedParameterJdbcTemplate"></a>注入NamedParameterJdbcTemplate</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@Autowiredprivate NamedParameterJdbcTemplate namedParameterJdbcTemplate;</div></pre></td></tr></table></figure>
+<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><ul>
+<li>sql语句中使用分号加参数名标识参数，如：:ids</li>
+<li>通过MapSqlParameterSource设置查询参数。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">public List&lt;TicketDO&gt; loadTicketProductIdByIds(Collection&lt;Integer&gt; ids) &#123;		</div><div class="line">		String sql=&quot;SELECT id,pid as product_id from ticket where id in(:ids)&quot;;		</div><div class="line">		//参数		</div><div class="line">		MapSqlParameterSource parameters = new MapSqlParameterSource();		</div><div class="line">		parameters.addValue(&quot;ids&quot;, ids);				</div><div class="line">		List&lt;TicketDO&gt; result=namedParameterJdbcTemplate.query(sql, parameters,new BeanPropertyRowMapper&lt;TicketDO&gt;(TicketDO.class));		</div><div class="line">		return result;	</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
 
           
         
@@ -412,7 +421,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/05/23/2017/listen/05/个人理财/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/09/18/2017/program/Spring NamedParameterJdbcTemplate Tutorial/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -437,8 +446,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/05/23/2017/listen/05/个人理财/" itemprop="url">
-                  个人理财
+                <a class="post-title-link" href="/2017/09/18/2017/program/Spring NamedParameterJdbcTemplate Tutorial/" itemprop="url">
+                  Spring NamedParameterJdbcTemplate
                 </a>
               
             
@@ -452,8 +461,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-23T21:48:10+08:00">
-                2017-05-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-18T22:24:55+08:00">
+                2017-09-18
               </time>
             
 
@@ -471,8 +480,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/life/" itemprop="url" rel="index">
-                    <span itemprop="name">life</span>
+                  <a href="/categories/program/" itemprop="url" rel="index">
+                    <span itemprop="name">program</span>
                   </a>
                 </span>
 
@@ -508,24 +517,17 @@
       
         
           
-            <blockquote>
-<ol>
-<li><p>有时候，不冒风险要比敢于冒风险的决策更有风险。</p>
-</li>
-<li><p>理财知识是最好的保障，这其实也是保护你自己的唯一途径。</p>
-</li>
-<li><p>复利周期越短，你赚钱的速度就会越快。</p>
-</li>
-<li><p>储蓄不是自发事件：你必须提前计划。遗憾的是，计划也不是自发的。</p>
-</li>
-<li><p>债务本身并不是一件坏事，甚至在很多时候某些债务明显具有积极的作用。但是随随便便超过个人的消费能力去过度负债，却是件很危险的事。注意，最危险的债务可能就在你的口袋里：信用卡。</p>
-</li>
-<li><p>赚多赚少没关系，成功理财的关键在于控制风险。</p>
-</li>
-<li><p>如果你的投资期限足够长，那么只要你选择了风险较高但收益也高的资产，最终必然能够获得令人满意的投资回报。</p>
-</li>
-</ol>
-</blockquote>
+            <p>使用NamedParameterJdbcTemplate查询sql语句，并按实体返回数据。</p>
+<h1 id="配置NamedParameterJdbcTemplate"><a href="#配置NamedParameterJdbcTemplate" class="headerlink" title="配置NamedParameterJdbcTemplate"></a>配置NamedParameterJdbcTemplate</h1><ul>
+<li>在xml配置文件中，配置模板数据源信息。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;bean id=&quot;namedParameterJdbcTemplate&quot; class=&quot;org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate&quot;&gt;	</div><div class="line">	&lt;constructor-arg ref=&quot;dataSource&quot; /&gt;&lt;/bean&gt;</div></pre></td></tr></table></figure>
+<h1 id="注入NamedParameterJdbcTemplate"><a href="#注入NamedParameterJdbcTemplate" class="headerlink" title="注入NamedParameterJdbcTemplate"></a>注入NamedParameterJdbcTemplate</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@Autowiredprivate NamedParameterJdbcTemplate namedParameterJdbcTemplate;</div></pre></td></tr></table></figure>
+<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><ul>
+<li>sql语句中使用分号加参数名标识参数，如：:ids</li>
+<li>通过MapSqlParameterSource设置查询参数。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">public List&lt;TicketDO&gt; loadTicketProductIdByIds(Collection&lt;Integer&gt; ids) &#123;		</div><div class="line">		String sql=&quot;SELECT id,pid as product_id from ticket where id in(:ids)&quot;;		</div><div class="line">		//参数		</div><div class="line">		MapSqlParameterSource parameters = new MapSqlParameterSource();		</div><div class="line">		parameters.addValue(&quot;ids&quot;, ids);				</div><div class="line">		List&lt;TicketDO&gt; result=namedParameterJdbcTemplate.query(sql, parameters,new BeanPropertyRowMapper&lt;TicketDO&gt;(TicketDO.class));		</div><div class="line">		return result;	</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
 
           
         
@@ -564,7 +566,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/05/22/2017/economics/authority/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/09/18/2018/program/HibernateStackOverflowError/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -589,8 +591,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/05/22/2017/economics/authority/" itemprop="url">
-                  权力
+                <a class="post-title-link" href="/2017/09/18/2018/program/HibernateStackOverflowError/" itemprop="url">
+                  Hibernate StackOverflowError
                 </a>
               
             
@@ -604,8 +606,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-22T22:12:13+08:00">
-                2017-05-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-18T22:14:55+08:00">
+                2017-09-18
               </time>
             
 
@@ -623,8 +625,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/life/" itemprop="url" rel="index">
-                    <span itemprop="name">life</span>
+                  <a href="/categories/program/" itemprop="url" rel="index">
+                    <span itemprop="name">program</span>
                   </a>
                 </span>
 
@@ -660,10 +662,9 @@
       
         
           
-            <blockquote>
-<p>权力包括：定义、兴起、保护、治理。</p>
-<p>权利和能力之间的区别。能力取决于自己能够占有多少，而权利取决于别人、社会的其他人愿意给你多少。</p>
-</blockquote>
+            <p>使用hibernate 查询数据时，出现内存溢出问题.主要是in查询时，查询内容过多，导致溢出问题。</p>
+<h1 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">java.lang.StackOverflowError：</div><div class="line"></div><div class="line">at org.hibernate.hql.ast.util.NodeTraverser.visitDepthFirst(NodeTraverser.java:42)</div><div class="line"></div><div class="line">         at org.hibernate.hql.ast.util.NodeTraverser.visitDepthFirst(NodeTraverser.java:41)</div><div class="line"></div><div class="line">         at org.hibernate.hql.ast.util.NodeTraverser.visitDepthFirst(NodeTraverser.java:41)</div><div class="line"></div><div class="line">         at org.hibernate.hql.ast.util.NodeTraverser.visitDepthFirst(NodeTraverser.java:41)</div><div class="line"></div><div class="line">         at org.hibernate.hql.ast.util.NodeTraverser.visitDepthFirst(NodeTraverser.java:41)</div><div class="line"></div><div class="line">         at org.hibernate.hql.ast.util.NodeTraverser.visitDepthFirst(NodeTraverser.java:42)</div></pre></td></tr></table></figure>
+<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>拆分in中的条件，按一定的大小切分查询条件。</p>
 
           
         
@@ -697,7 +698,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/54/">54</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/68/">68</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -738,7 +739,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">160</span>
+              <span class="site-state-item-count">202</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

@@ -276,7 +276,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/05/22/2017/listen/05/从“为什么”开始/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/09/18/2017/program/HibernateStackOverflowError/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -301,8 +301,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/05/22/2017/listen/05/从“为什么”开始/" itemprop="url">
-                  从“为什么”开始
+                <a class="post-title-link" href="/2017/09/18/2017/program/HibernateStackOverflowError/" itemprop="url">
+                  Hibernate StackOverflowError
                 </a>
               
             
@@ -316,8 +316,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-22T22:06:10+08:00">
-                2017-05-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-18T22:14:55+08:00">
+                2017-09-18
               </time>
             
 
@@ -335,8 +335,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/life/" itemprop="url" rel="index">
-                    <span itemprop="name">life</span>
+                  <a href="/categories/program/" itemprop="url" rel="index">
+                    <span itemprop="name">program</span>
                   </a>
                 </span>
 
@@ -372,20 +372,9 @@
       
         
           
-            <blockquote>
-<ol>
-<li><p>影响别人可以利用一系列的操纵手段来实现，可是却无法因此赢得忠诚和信任。</p>
-</li>
-<li><p>人们买的不是你的产品，而是你的信念。</p>
-</li>
-<li><p>黄金圈法则对思考的顺序是有要求的，需要我们“从内向外”思考：先想 Why，再到 How，最后是 What。</p>
-</li>
-<li><p>伟大的公司和有影响力的人，都不是先招有能力的人，再激发他们的动力，相反，他们都是招那些已经认同自己并非常有动力的人，然后启发、鼓舞并唤醒他们的能力。</p>
-</li>
-<li><p>平庸的公司是给员工分配任务，而有创新有影响力的公司，都是给员工指明方向、承担责任。</p>
-</li>
-</ol>
-</blockquote>
+            <p>使用hibernate 查询数据时，出现内存溢出问题.主要是in查询时，查询内容过多，导致溢出问题。</p>
+<h1 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">java.lang.StackOverflowError：</div><div class="line"></div><div class="line">at org.hibernate.hql.ast.util.NodeTraverser.visitDepthFirst(NodeTraverser.java:42)</div><div class="line"></div><div class="line">         at org.hibernate.hql.ast.util.NodeTraverser.visitDepthFirst(NodeTraverser.java:41)</div><div class="line"></div><div class="line">         at org.hibernate.hql.ast.util.NodeTraverser.visitDepthFirst(NodeTraverser.java:41)</div><div class="line"></div><div class="line">         at org.hibernate.hql.ast.util.NodeTraverser.visitDepthFirst(NodeTraverser.java:41)</div><div class="line"></div><div class="line">         at org.hibernate.hql.ast.util.NodeTraverser.visitDepthFirst(NodeTraverser.java:41)</div><div class="line"></div><div class="line">         at org.hibernate.hql.ast.util.NodeTraverser.visitDepthFirst(NodeTraverser.java:42)</div></pre></td></tr></table></figure>
+<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>拆分in中的条件，按一定的大小切分查询条件。</p>
 
           
         
@@ -424,7 +413,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/05/21/2017/listen/05/这不是你的错/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/06/28/2017/poems/和董传留别/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -449,8 +438,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/05/21/2017/listen/05/这不是你的错/" itemprop="url">
-                  这不是你的错
+                <a class="post-title-link" href="/2017/06/28/2017/poems/和董传留别/" itemprop="url">
+                  和董传留别
                 </a>
               
             
@@ -464,8 +453,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-21T22:35:00+08:00">
-                2017-05-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-28T22:14:31+08:00">
+                2017-06-28
               </time>
             
 
@@ -520,16 +509,9 @@
       
         
           
-            <blockquote>
-<ol>
-<li><p>作为人类，我们的潜意识希望一切都能在掌控中，所以一旦受到伤害且无力自保的时候，屈辱感和羞耻感便会产生。</p>
-</li>
-<li><p>世界上的每个人都渴望被接纳，而大部分的人终其一生都是在寻求别人的验证和支持。由此，我们便会永远生活在被排斥的担忧和恐惧中，过着支离破碎的生活。只有全盘接纳自己的特质和经历，我们的生活才能更加完整、踏实。</p>
-</li>
-<li><p>自我接纳并不是在为自己的行为找借口，也不是在不良的冒险道路上越走越远，它是指敞开心扉接纳自身的缺点和过错，对自己说：我承认我不完美，但我接受这样的自己。</p>
-</li>
-</ol>
-</blockquote>
+            <center><br>和董传留别<br><br>宋代：苏轼<br><br>粗缯大布裹生涯，腹有诗书气自华。<br>厌伴老儒烹瓠叶，强随举子踏槐花。<br>囊空不办寻春马，眼乱行看择婿车。<br>得意犹堪夸世俗，诏黄新湿字如鸦。<br></center>
+
+
 
           
         
@@ -568,7 +550,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/05/20/2017/listen/05/苏格拉底的申辩/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/06/04/2017/life/20170604/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -593,8 +575,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/05/20/2017/listen/05/苏格拉底的申辩/" itemprop="url">
-                  苏格拉底的申辩
+                <a class="post-title-link" href="/2017/06/04/2017/life/20170604/" itemprop="url">
+                  荷花
                 </a>
               
             
@@ -608,8 +590,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-20T21:15:10+08:00">
-                2017-05-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-04T20:57:58+08:00">
+                2017-06-04
               </time>
             
 
@@ -664,17 +646,15 @@
       
         
           
-            <blockquote>
-<ol>
-<li><p>所谓的怕死，不过就是并不智慧而自以为智慧，自以为知道自己并不知道的死亡这件事。</p>
-</li>
-<li><p>这城邦就如同一匹高头大马，因为大就很懒，需要一只马虻来警醒，神就派我到这个城邦来当这样一个马虻，警醒、劝说、责备你们每一个人。</p>
-</li>
-<li><p>如果我说，对我来讲不可能保持沉默，因为那就意味着违背神，你们不会相信，还会认为我是在装蒜；如果我说，每天谈论德性，谈论别的你们听我讨论的事情，听我检审自己和别人，这对人来讲是最大的好——因为对人来讲，未经检审的人生是不值得过的——你们更不会相信。</p>
-</li>
-</ol>
-</blockquote>
-
+            <p><img src="http://okwjqoyrr.bkt.clouddn.com/image/2017/06/photography/DSC_0091.jpg?imageslim&quot; 茶庭公园&quot;" alt=""></p>
+<p><img src="http://okwjqoyrr.bkt.clouddn.com/image/2017/06/photography/DSC_0213.jpg?imageslim&quot; 茶庭公园&quot;" alt=""></p>
+<p><img src="http://okwjqoyrr.bkt.clouddn.com/image/2017/06/photography/DSC_0092.jpg?imageslim&quot; 茶庭公园&quot;" alt=""></p>
+<p><img src="http://okwjqoyrr.bkt.clouddn.com/image/2017/06/photography/DSC_0093.jpg?imageslim&quot; 茶庭公园&quot;" alt=""></p>
+<p><img src="http://okwjqoyrr.bkt.clouddn.com/image/2017/06/photography/DSC_0219.jpg?imageslim&quot; 茶庭公园&quot;" alt=""></p>
+<p><img src="http://okwjqoyrr.bkt.clouddn.com/image/2017/06/photography/DSC_0170.jpg?imageslim&quot; 茶庭公园&quot;" alt=""></p>
+<pre><code>             李健
+2017年6月4日于福州
+</code></pre>
           
         
       
@@ -707,7 +687,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/54/">54</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/68/">68</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -748,7 +728,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">160</span>
+              <span class="site-state-item-count">202</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

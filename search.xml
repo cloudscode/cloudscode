@@ -3,9 +3,30 @@
   
     
     <entry>
+      <title><![CDATA[CentOS命令行使用shadowsocks代理的方法]]></title>
+      <url>%2F2018%2F09%2F23%2F2018%2Fcentos%2Fcentos-shadowsocks-privoxy%2F</url>
+      <content type="text"><![CDATA[CentOS命令行使用shadowsocks代理的方法 安装ShadowSocks12345yum -y install python-setuptools easy_install pip pip install shadowsocks 创建配置文件/etc/shadowsocks.json1vim /etc/shadowsocks.json 123456789&#123; &quot;server&quot;:&quot;127.0.0.1&quot;, &quot;server_port&quot;:8838, &quot;local_address&quot;: &quot;127.0.0.1&quot;, &quot;local_port&quot;:1080, &quot;password&quot;:&quot;password12345&quot;, &quot;timeout&quot;:600, &quot;method&quot;:&quot;rc4-md5&quot;&#125; 说明备注：加密方式官方默认使用aes-256-cfb，推荐使用rc4-md5，因为 RC4比AES速度快。字段说明：123456server:服务器IPserver_port:服务器端口local_port:本地端端口password:用来加密的密码timeout:超时时间（秒）method:加密方法，可选择 “bf-cfb”, “aes-256-cfb”, “des-cfb”, “rc4″等 运行1nohup sslocal -c /etc/shadowsocks.json /dev/null 2&gt;&amp;1 &amp; 安装Privoxy下载安装包 privoxy-3.0.24-stable-src.tar.gz 12345autoheader &amp;&amp; autoconf./configuremake &amp;&amp; make install 修改配置文件并启动服务1vim /usr/local/etc/privoxy/config 添加 listen-address 1listen-address 127.0.0.1:8118 添加forward-socks5t 1forward-socks5t / 127.0.0.1:1080 . 启动1privoxy --user privoxy /usr/local/etc/privoxy/config 或者 1sudo service privoxy start 配置/etc/profile1vim /etc/profile 添加代理 123export http_proxy=http://127.0.0.1:8118export https_proxy=http://127.0.0.1:8118export ftp_proxy=http://127.0.0.1:8118 验证执行curl命令验证是否成功 12curl www.google.comwget www.google.com]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[log4j additivity 属性]]></title>
+      <url>%2F2017%2F12%2F08%2F2018%2Fprogram%2Flog4j%2F</url>
+      <content type="text"><![CDATA[log4j additivity属性 它是子Logger 是否继承父Logger的输出源（appender）的标志位具体说，默认情况下子Logger会继承父Logger的appender，也就是说子Logger会在父Logger的appender里输出。若是additivity设为false，则子Logger只会在自己的appender里输出，而不会在父Logger的appender里输出。 12345678910111213141516171819202122232425262728293031323334353637383940414243&lt;Properties&gt; &lt;Property name=&quot;logDir&quot;&gt;$&#123;log4j:configParentLocation&#125;/../logs/&lt;/Property&gt; &lt;Property name=&quot;debugFileName&quot;&gt;debug&lt;/Property&gt; &lt;Property name=&quot;infoFileName&quot;&gt;info&lt;/Property&gt; &lt;Property name=&quot;warnFileName&quot;&gt;warn&lt;/Property&gt; &lt;Property name=&quot;errorFileName&quot;&gt;error&lt;/Property&gt; &lt;Property name=&quot;businessFileName&quot;&gt;business&lt;/Property&gt;&lt;/Properties&gt;&lt;Appenders&gt; &lt;RollingFile name=&quot;info-out&quot; fileName=&quot;$&#123;log4j:configParentLocation&#125;/../logs/info.log&quot; filePattern=&quot;$&#123;log4j:configParentLocation&#125;/../logs/info-%d&#123;yyyy-MM-dd&#125;-%i.log&quot;&gt; &lt;PatternLayout pattern=&quot;%d&#123;yyyy.MM.dd HH:mm:ss&#125; %c %L - %m%n&quot; /&gt; &lt;SizeBasedTriggeringPolicy size=&quot;10240KB&quot; /&gt; &lt;DefaultRolloverStrategy max=&quot;99&quot; /&gt; &lt;Filters&gt; &lt;ThresholdFilter level=&quot;ERROR&quot; onMatch=&quot;DENY&quot; onMismatch=&quot;NEUTRAL&quot; /&gt; &lt;ThresholdFilter level=&quot;WARN&quot; onMatch=&quot;DENY&quot; onMismatch=&quot;NEUTRAL&quot; /&gt; &lt;ThresholdFilter level=&quot;INFO&quot; onMatch=&quot;ACCEPT&quot; onMismatch=&quot;DENY&quot; /&gt; &lt;/Filters&gt; &lt;/RollingFile&gt; &lt;RollingFile name=&quot;business-out&quot; fileName=&quot;$&#123;logDir&#125;/$&#123;businessFileName&#125;.log&quot; filePattern=&quot;$&#123;logDir&#125;/backups/business/$$&#123;date:yyyy-MM&#125;/$&#123;businessFileName&#125;-%d&#123;yyyy-MM-dd&#125;-%i.log&quot;&gt; &lt;PatternLayout pattern=&quot;%d&#123;yyyy.MM.dd HH:mm:ss&#125; %c %L - %m%n&quot; /&gt; &lt;SizeBasedTriggeringPolicy size=&quot;10240KB&quot; /&gt; &lt;DefaultRolloverStrategy max=&quot;200&quot; /&gt; &lt;Filters&gt; &lt;ThresholdFilter level=&quot;INFO&quot; onMatch=&quot;ACCEPT&quot; onMismatch=&quot;DENY&quot; /&gt; &lt;/Filters&gt; &lt;/RollingFile&gt; &lt;/Appenders&gt;&lt;Loggers&gt; &lt;Root level=&quot;INFO&quot;&gt; &lt;AppenderRef ref=&quot;info-out&quot; /&gt; &lt;/Root&gt; &lt;Logger name=&quot;business-info&quot; additivity=&quot;false&quot; level=&quot;INFO&quot;&gt; &lt;AppenderRef ref=&quot;business-out&quot; level=&quot;INFO&quot; /&gt; &lt;/Logger &lt;/Loggers&gt; 将business-info的Logger中additivity=”false”配置成false,再输出日志时，business-info日志就不会在info-out中重复输出。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[log4j additivity 属性]]></title>
       <url>%2F2017%2F12%2F08%2F2017%2Fprogram%2Flog4j%2F</url>
       <content type="text"><![CDATA[log4j additivity属性 它是子Logger 是否继承父Logger的输出源（appender）的标志位具体说，默认情况下子Logger会继承父Logger的appender，也就是说子Logger会在父Logger的appender里输出。若是additivity设为false，则子Logger只会在自己的appender里输出，而不会在父Logger的appender里输出。 12345678910111213141516171819202122232425262728293031323334353637383940414243&lt;Properties&gt; &lt;Property name=&quot;logDir&quot;&gt;$&#123;log4j:configParentLocation&#125;/../logs/&lt;/Property&gt; &lt;Property name=&quot;debugFileName&quot;&gt;debug&lt;/Property&gt; &lt;Property name=&quot;infoFileName&quot;&gt;info&lt;/Property&gt; &lt;Property name=&quot;warnFileName&quot;&gt;warn&lt;/Property&gt; &lt;Property name=&quot;errorFileName&quot;&gt;error&lt;/Property&gt; &lt;Property name=&quot;businessFileName&quot;&gt;business&lt;/Property&gt;&lt;/Properties&gt;&lt;Appenders&gt; &lt;RollingFile name=&quot;info-out&quot; fileName=&quot;$&#123;log4j:configParentLocation&#125;/../logs/info.log&quot; filePattern=&quot;$&#123;log4j:configParentLocation&#125;/../logs/info-%d&#123;yyyy-MM-dd&#125;-%i.log&quot;&gt; &lt;PatternLayout pattern=&quot;%d&#123;yyyy.MM.dd HH:mm:ss&#125; %c %L - %m%n&quot; /&gt; &lt;SizeBasedTriggeringPolicy size=&quot;10240KB&quot; /&gt; &lt;DefaultRolloverStrategy max=&quot;99&quot; /&gt; &lt;Filters&gt; &lt;ThresholdFilter level=&quot;ERROR&quot; onMatch=&quot;DENY&quot; onMismatch=&quot;NEUTRAL&quot; /&gt; &lt;ThresholdFilter level=&quot;WARN&quot; onMatch=&quot;DENY&quot; onMismatch=&quot;NEUTRAL&quot; /&gt; &lt;ThresholdFilter level=&quot;INFO&quot; onMatch=&quot;ACCEPT&quot; onMismatch=&quot;DENY&quot; /&gt; &lt;/Filters&gt; &lt;/RollingFile&gt; &lt;RollingFile name=&quot;business-out&quot; fileName=&quot;$&#123;logDir&#125;/$&#123;businessFileName&#125;.log&quot; filePattern=&quot;$&#123;logDir&#125;/backups/business/$$&#123;date:yyyy-MM&#125;/$&#123;businessFileName&#125;-%d&#123;yyyy-MM-dd&#125;-%i.log&quot;&gt; &lt;PatternLayout pattern=&quot;%d&#123;yyyy.MM.dd HH:mm:ss&#125; %c %L - %m%n&quot; /&gt; &lt;SizeBasedTriggeringPolicy size=&quot;10240KB&quot; /&gt; &lt;DefaultRolloverStrategy max=&quot;200&quot; /&gt; &lt;Filters&gt; &lt;ThresholdFilter level=&quot;INFO&quot; onMatch=&quot;ACCEPT&quot; onMismatch=&quot;DENY&quot; /&gt; &lt;/Filters&gt; &lt;/RollingFile&gt; &lt;/Appenders&gt;&lt;Loggers&gt; &lt;Root level=&quot;INFO&quot;&gt; &lt;AppenderRef ref=&quot;info-out&quot; /&gt; &lt;/Root&gt; &lt;Logger name=&quot;business-info&quot; additivity=&quot;false&quot; level=&quot;INFO&quot;&gt; &lt;AppenderRef ref=&quot;business-out&quot; level=&quot;INFO&quot; /&gt; &lt;/Logger &lt;/Loggers&gt; 将business-info的Logger中additivity=”false”配置成false,再输出日志时，business-info日志就不会在info-out中重复输出。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Maven 将两个项目打包合并成一个jar]]></title>
+      <url>%2F2017%2F12%2F08%2F2018%2Fprogram%2Fmaven-shade-plugin%2F</url>
+      <content type="text"><![CDATA[Maven将两个项目打包合并成一个jar 增加插件在pom.xml中增加maven-shade-plugin插件 1234567891011121314151617&lt;build&gt; &lt;plugins&gt; &lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-shade-plugin&lt;/artifactId&gt; &lt;version&gt;3.1.0&lt;/version&gt; &lt;executions&gt; &lt;execution&gt; &lt;phase&gt;package&lt;/phase&gt; &lt;goals&gt; &lt;goal&gt;shade&lt;/goal&gt; &lt;/goals&gt; &lt;/execution&gt; &lt;/executions&gt; &lt;/plugin&gt; &lt;/plugins&gt; &lt;/build&gt; 打包jdk版本问题两个项目打包成一个jar后，程序调用时，出现jdk版本不一致问题。增加maven-compiler-plugin插件，指定编译时jdk版本信息。 1234567891011121314&lt;build&gt; &lt;plugins&gt; &lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt; &lt;version&gt;3.1&lt;/version&gt; &lt;configuration&gt; &lt;source&gt;1.7&lt;/source&gt; &lt;target&gt;1.7&lt;/target&gt; &lt;encoding&gt;UTF-8&lt;/encoding&gt; &lt;/configuration&gt; &lt;/plugin&gt; &lt;/plugins&gt; &lt;/build&gt;]]></content>
     </entry>
 
     
@@ -24,6 +45,20 @@
 
     
     <entry>
+      <title><![CDATA[jetty web with pinpoint agent]]></title>
+      <url>%2F2017%2F10%2F04%2F2018%2Fprogram%2Fpinpoint%2FJettyWithPinpointAgent%2F</url>
+      <content type="text"><![CDATA[jetty容器中使用pinpoint监控应用程序。 配置在jetty的start.init配置文件加入以下配置信息。 1234--exec-javaagent:/home/pinpoint-agent-1.6.2/pinpoint-bootstrap-1.6.2.jar-Dpinpoint.agentId=pft-rest-Dpinpoint.applicationName=pft-rest Pinpoint AgentPinpoint Agent 需要两个命令行参数来在分布式系统中标记自身: Dpinpoint.agentId - 唯一标记agent运行所在的应用 Dpinpoint.applicationName - 将许多的同样的应用实例分组为单一服务 注意： pinpoint.agentId须全局唯一来标识应用实例 pinpoint.applicationName应用被当成单个服务的多个实例]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[pinpoint java.net.PortUnreachableException ICMP Port Unreachable]]></title>
+      <url>%2F2017%2F10%2F04%2F2018%2Fprogram%2Fpinpoint%2Fpinpoint%2F</url>
+      <content type="text"><![CDATA[pinpoint java.net.PortUnreachableException: ICMP Port Unreachable错误使用pinpoint代理监控应用程序时，出现错误 java.net.PortUnreachableException: ICMP Port Unreachable 123456789102017-10-04 16:06:37 [INFO ](c.n.p.p.s.UdpDataSender ) packet send error. size:339, TSpan(agentId:pft-rest, applicationName:pft-rest, agentStartTime:1507104270410, transactionId:00 01 CA D0 A8 B3 EE 2B 10, spanId:7542318718835916861, startTime:1507104397297, elapsed:95, rpc:/rest/v1/pft.ticket/update, serviceType:1030, endPoint:192.168.20.144:80, remoteAddr:192.168.20.144, flag:0, spanEventList:[TSpanEvent(sequence:3, startElapsed:10, endElapsed:83, serviceType:9110, endPoint:192.168.20.144:18902, annotations:[TAnnotation(key:90, value:&lt;TAnnotationValue stringValue:[Ljava.lang.Object;@19fffe8c&gt;), TAnnotation(key:91, value:&lt;TAnnotationValue stringValue:RpcResult [result=true, exception=null]&gt;)], depth:4, nextSpanId:-4375591379758469409, destinationId:192.168.20.144:18902, apiId:-41), TSpanEvent(sequence:2, startElapsed:9, endElapsed:84, serviceType:5071, depth:3, apiId:31), TSpanEvent(sequence:1, startElapsed:1, endElapsed:94, serviceType:5051, depth:2, apiId:2), TSpanEvent(sequence:0, startElapsed:0, endElapsed:95, serviceType:1031, depth:1, apiId:-1)], apiId:1, applicationServiceType:1030)java.net.PortUnreachableException: ICMP Port Unreachable at java.net.PlainDatagramSocketImpl.send(Native Method) at java.net.DatagramSocket.send(DatagramSocket.java:693) at com.navercorp.pinpoint.profiler.sender.UdpDataSender.sendPacket(UdpDataSender.java:134) at com.navercorp.pinpoint.profiler.sender.AbstractDataSender$1.execute(AbstractDataSender.java:68) at com.navercorp.pinpoint.profiler.sender.AsyncQueueingExecutor.doExecute(AsyncQueueingExecutor.java:172) at com.navercorp.pinpoint.profiler.sender.AsyncQueueingExecutor.doExecute(AsyncQueueingExecutor.java:96) at com.navercorp.pinpoint.profiler.sender.AsyncQueueingExecutor.run(AsyncQueueingExecutor.java:79) at java.lang.Thread.run(Thread.java:745) 解决pinpoint收集程序跑在docker容器中，在暴露pinpoint收集器端口时，没有区分通信协议，导致数据不能被收集器收集。pinpoint收集器端口，其中profiler.collector.span.port=29996和profiler.collector.stat.port=29995需要走upd协议；profiler.collector.tcp.port=29994走tcp协议。 12345678profiler.collector.span.ip=$&#123;profiler.collector.ip&#125;profiler.collector.span.port=29996profiler.collector.stat.ip=$&#123;profiler.collector.ip&#125;profiler.collector.stat.port=29995profiler.collector.tcp.ip=$&#123;profiler.collector.ip&#125;profiler.collector.tcp.port=29994 修改前 1docker run -i -t -p 9380:28080/tcp -p 29994:29994/tcp -p 29995:29995/udp -p 29996:29996/udp pft/pinpoint:latest bash 修改后 1docker run -i -t -p 9380:28080/tcp -p 29994:29994/tcp -p 29995:29995/udp -p 29996:29996/udp pft/pinpoint:latest bash]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[pinpoint java.net.PortUnreachableException ICMP Port Unreachable]]></title>
       <url>%2F2017%2F10%2F04%2F2017%2Fprogram%2Fpinpoint%2Fpinpoint%2F</url>
       <content type="text"><![CDATA[pinpoint java.net.PortUnreachableException: ICMP Port Unreachable错误使用pinpoint代理监控应用程序时，出现错误 java.net.PortUnreachableException: ICMP Port Unreachable 123456789102017-10-04 16:06:37 [INFO ](c.n.p.p.s.UdpDataSender ) packet send error. size:339, TSpan(agentId:pft-rest, applicationName:pft-rest, agentStartTime:1507104270410, transactionId:00 01 CA D0 A8 B3 EE 2B 10, spanId:7542318718835916861, startTime:1507104397297, elapsed:95, rpc:/rest/v1/pft.ticket/update, serviceType:1030, endPoint:192.168.20.144:80, remoteAddr:192.168.20.144, flag:0, spanEventList:[TSpanEvent(sequence:3, startElapsed:10, endElapsed:83, serviceType:9110, endPoint:192.168.20.144:18902, annotations:[TAnnotation(key:90, value:&lt;TAnnotationValue stringValue:[Ljava.lang.Object;@19fffe8c&gt;), TAnnotation(key:91, value:&lt;TAnnotationValue stringValue:RpcResult [result=true, exception=null]&gt;)], depth:4, nextSpanId:-4375591379758469409, destinationId:192.168.20.144:18902, apiId:-41), TSpanEvent(sequence:2, startElapsed:9, endElapsed:84, serviceType:5071, depth:3, apiId:31), TSpanEvent(sequence:1, startElapsed:1, endElapsed:94, serviceType:5051, depth:2, apiId:2), TSpanEvent(sequence:0, startElapsed:0, endElapsed:95, serviceType:1031, depth:1, apiId:-1)], apiId:1, applicationServiceType:1030)java.net.PortUnreachableException: ICMP Port Unreachable at java.net.PlainDatagramSocketImpl.send(Native Method) at java.net.DatagramSocket.send(DatagramSocket.java:693) at com.navercorp.pinpoint.profiler.sender.UdpDataSender.sendPacket(UdpDataSender.java:134) at com.navercorp.pinpoint.profiler.sender.AbstractDataSender$1.execute(AbstractDataSender.java:68) at com.navercorp.pinpoint.profiler.sender.AsyncQueueingExecutor.doExecute(AsyncQueueingExecutor.java:172) at com.navercorp.pinpoint.profiler.sender.AsyncQueueingExecutor.doExecute(AsyncQueueingExecutor.java:96) at com.navercorp.pinpoint.profiler.sender.AsyncQueueingExecutor.run(AsyncQueueingExecutor.java:79) at java.lang.Thread.run(Thread.java:745) 解决pinpoint收集程序跑在docker容器中，在暴露pinpoint收集器端口时，没有区分通信协议，导致数据不能被收集器收集。pinpoint收集器端口，其中profiler.collector.span.port=29996和profiler.collector.stat.port=29995需要走upd协议；profiler.collector.tcp.port=29994走tcp协议。 12345678profiler.collector.span.ip=$&#123;profiler.collector.ip&#125;profiler.collector.span.port=29996profiler.collector.stat.ip=$&#123;profiler.collector.ip&#125;profiler.collector.stat.port=29995profiler.collector.tcp.ip=$&#123;profiler.collector.ip&#125;profiler.collector.tcp.port=29994 修改前 1docker run -i -t -p 9380:28080/tcp -p 29994:29994/tcp -p 29995:29995/udp -p 29996:29996/udp pft/pinpoint:latest bash 修改后 1docker run -i -t -p 9380:28080/tcp -p 29994:29994/tcp -p 29995:29995/udp -p 29996:29996/udp pft/pinpoint:latest bash]]></content>
@@ -32,8 +67,22 @@
     
     <entry>
       <title><![CDATA[Spring NamedParameterJdbcTemplate]]></title>
+      <url>%2F2017%2F09%2F18%2F2018%2Fprogram%2FSpring%20NamedParameterJdbcTemplate%20Tutorial%2F</url>
+      <content type="text"><![CDATA[使用NamedParameterJdbcTemplate查询sql语句，并按实体返回数据。 配置NamedParameterJdbcTemplate 在xml配置文件中，配置模板数据源信息。 12&lt;bean id=&quot;namedParameterJdbcTemplate&quot; class=&quot;org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate&quot;&gt; &lt;constructor-arg ref=&quot;dataSource&quot; /&gt; &lt;/bean&gt; 注入NamedParameterJdbcTemplate1@Autowired private NamedParameterJdbcTemplate namedParameterJdbcTemplate; 例子 sql语句中使用分号加参数名标识参数，如：:ids 通过MapSqlParameterSource设置查询参数。 12345678public List&lt;TicketDO&gt; loadTicketProductIdByIds(Collection&lt;Integer&gt; ids) &#123; String sql=&quot;SELECT id,pid as product_id from ticket where id in(:ids)&quot;; //参数 MapSqlParameterSource parameters = new MapSqlParameterSource(); parameters.addValue(&quot;ids&quot;, ids); List&lt;TicketDO&gt; result=namedParameterJdbcTemplate.query(sql, parameters,new BeanPropertyRowMapper&lt;TicketDO&gt;(TicketDO.class)); return result; &#125;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Spring NamedParameterJdbcTemplate]]></title>
       <url>%2F2017%2F09%2F18%2F2017%2Fprogram%2FSpring%20NamedParameterJdbcTemplate%20Tutorial%2F</url>
       <content type="text"><![CDATA[使用NamedParameterJdbcTemplate查询sql语句，并按实体返回数据。 配置NamedParameterJdbcTemplate 在xml配置文件中，配置模板数据源信息。 12&lt;bean id=&quot;namedParameterJdbcTemplate&quot; class=&quot;org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate&quot;&gt; &lt;constructor-arg ref=&quot;dataSource&quot; /&gt; &lt;/bean&gt; 注入NamedParameterJdbcTemplate1@Autowired private NamedParameterJdbcTemplate namedParameterJdbcTemplate; 例子 sql语句中使用分号加参数名标识参数，如：:ids 通过MapSqlParameterSource设置查询参数。 12345678public List&lt;TicketDO&gt; loadTicketProductIdByIds(Collection&lt;Integer&gt; ids) &#123; String sql=&quot;SELECT id,pid as product_id from ticket where id in(:ids)&quot;; //参数 MapSqlParameterSource parameters = new MapSqlParameterSource(); parameters.addValue(&quot;ids&quot;, ids); List&lt;TicketDO&gt; result=namedParameterJdbcTemplate.query(sql, parameters,new BeanPropertyRowMapper&lt;TicketDO&gt;(TicketDO.class)); return result; &#125;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hibernate StackOverflowError]]></title>
+      <url>%2F2017%2F09%2F18%2F2018%2Fprogram%2FHibernateStackOverflowError%2F</url>
+      <content type="text"><![CDATA[使用hibernate 查询数据时，出现内存溢出问题.主要是in查询时，查询内容过多，导致溢出问题。 错误12345678910111213java.lang.StackOverflowError：at org.hibernate.hql.ast.util.NodeTraverser.visitDepthFirst(NodeTraverser.java:42) at org.hibernate.hql.ast.util.NodeTraverser.visitDepthFirst(NodeTraverser.java:41) at org.hibernate.hql.ast.util.NodeTraverser.visitDepthFirst(NodeTraverser.java:41) at org.hibernate.hql.ast.util.NodeTraverser.visitDepthFirst(NodeTraverser.java:41) at org.hibernate.hql.ast.util.NodeTraverser.visitDepthFirst(NodeTraverser.java:41) at org.hibernate.hql.ast.util.NodeTraverser.visitDepthFirst(NodeTraverser.java:42) 解决拆分in中的条件，按一定的大小切分查询条件。]]></content>
     </entry>
 
     
@@ -66,8 +115,22 @@
 
     
     <entry>
+      <title><![CDATA[Jetty start and stop]]></title>
+      <url>%2F2017%2F05%2F25%2F2018%2Fprogram%2Fjettystartandstopbash%2F</url>
+      <content type="text"><![CDATA[start jetty1java -jar start.jar STOP.PORT=18081 STOP.KEY=secret stop jetty1java -jar start.jar STOP.PORT=18081 STOP.KEY=secret --stop noteSTOP.PORT != jetty.http.port]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[ehcache 持久化]]></title>
       <url>%2F2017%2F05%2F24%2F2017%2Fprogram%2Fehcacheshutdownlistener%2F</url>
+      <content type="text"><![CDATA[持久化将diskPersistent属性设置成true,可将缓存内容缓存到磁盘中。1234567891011&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;ehcache&gt;&lt;diskStore path=&quot;java.io.tmpdir/ehcache&quot;/&gt;&lt;cache name=&quot;clusterCache&quot; maxElementsInMemory=&quot;1&quot; maxElementsOnDisk=&quot;50&quot; eternal=&quot;true&quot; overflowToDisk=&quot;true&quot; diskPersistent=&quot;true&quot; memoryStoreEvictionPolicy=&quot;LFU&quot;/&gt;&lt;/ehcache&gt; 系统配置在jvm重新启动时，需要重新加载磁盘中的缓存，可以在web.xml中配置如下：123&lt;listener&gt; &lt;listener-class&gt;net.sf.ehcache.constructs.web.ShutdownListener&lt;/listener-class&gt;&lt;/listener&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[ehcache 持久化]]></title>
+      <url>%2F2017%2F05%2F24%2F2018%2Fprogram%2Fehcacheshutdownlistener%2F</url>
       <content type="text"><![CDATA[持久化将diskPersistent属性设置成true,可将缓存内容缓存到磁盘中。1234567891011&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;ehcache&gt;&lt;diskStore path=&quot;java.io.tmpdir/ehcache&quot;/&gt;&lt;cache name=&quot;clusterCache&quot; maxElementsInMemory=&quot;1&quot; maxElementsOnDisk=&quot;50&quot; eternal=&quot;true&quot; overflowToDisk=&quot;true&quot; diskPersistent=&quot;true&quot; memoryStoreEvictionPolicy=&quot;LFU&quot;/&gt;&lt;/ehcache&gt; 系统配置在jvm重新启动时，需要重新加载磁盘中的缓存，可以在web.xml中配置如下：123&lt;listener&gt; &lt;listener-class&gt;net.sf.ehcache.constructs.web.ShutdownListener&lt;/listener-class&gt;&lt;/listener&gt;]]></content>
     </entry>
 
@@ -150,6 +213,13 @@
 
     
     <entry>
+      <title><![CDATA[Centos 7 firewall]]></title>
+      <url>%2F2017%2F05%2F13%2F2018%2Fprogram%2Fcentos7firewall%2F</url>
+      <content type="text"><![CDATA[centos 7 开启端口重启防火墙 开启端口 firewall-cmd –zone=public –add-port=80/tcp –permanent 命令含义： –zone #作用域 –add-port=80/tcp #添加端口，格式为：端口/通讯协议 –permanent #永久生效，没有此参数重启后失效 重启防火墙 firewall-cmd –reload firewalld的基本使用启动： systemctl start firewalld查看状态： systemctl status firewalld停止： systemctl disable firewalld禁用： systemctl stop firewalld systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。启动一个服务：systemctl start firewalld.service关闭一个服务：systemctl stop firewalld.service重启一个服务：systemctl restart firewalld.service显示一个服务的状态：systemctl status firewalld.service在开机时启用一个服务：systemctl enable firewalld.service在开机时禁用一个服务：systemctl disable firewalld.service查看服务是否开机启动：systemctl is-enabled firewalld.service查看已启动的服务列表：systemctl list-unit-files|grep enabled查看启动失败的服务列表：systemctl –failed 配置firewalld-cmd查看版本： firewall-cmd –version查看帮助： firewall-cmd –help显示状态： firewall-cmd –state查看所有打开的端口： firewall-cmd –zone=public –list-ports更新防火墙规则： firewall-cmd –reload查看区域信息: firewall-cmd –get-active-zones查看指定接口所属区域： firewall-cmd –get-zone-of-interface=eth0拒绝所有包：firewall-cmd –panic-on取消拒绝状态： firewall-cmd –panic-off查看是否拒绝： firewall-cmd –query-panic 开启一个端口 添加firewall-cmd –zone=public –add-port=80/tcp –permanent （–permanent永久生效，没有此参数重启后失效） 重新载入firewall-cmd –reload 查看firewall-cmd –zone= public –query-port=80/tcp 删除firewall-cmd –zone= public –remove-port=80/tcp –permanent]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[大卫·奥格威自传]]></title>
       <url>%2F2017%2F05%2F12%2F2017%2Flisten%2F05%2F%E5%A4%A7%E5%8D%AB%C2%B7%E5%A5%A5%E6%A0%BC%E5%A8%81%E8%87%AA%E4%BC%A0%2F</url>
       <content type="text"><![CDATA[广告的目的是为了推销，而不是为了“炫技”去使用一些读者看不明白的修辞，而且一定要有吸引力，让人愿意接受你的广告信息。 想要拥有更多客户，首先你要先让自己成为行业内的意见领袖，树立起自己的品牌，掌握话语权，去吸引客户的注意；其次，你还要有智慧去判断什么客户是目前我可以伺候得好的，什么客户目前是不能碰的；最后，你要让你的客户知道：我正在使用你的产品，而且是我用过觉得好之后，才会真心去推荐这些产品并为它做广告，而不只是为了拿订单。 把每一步都走好，让自己像滚雪球一样不断强大，那么即使在39岁——看似人生已经走到了一多半的时候——依然是可能迎来人生巅峰的，关键在于你是否有耐心和底气等到那一刻。]]></content>
@@ -199,6 +269,13 @@
 
     
     <entry>
+      <title><![CDATA[Mysql sql-mode problem]]></title>
+      <url>%2F2017%2F05%2F08%2F2018%2Fprogram%2Fmysql-connector-java-sql-mode%2F</url>
+      <content type="text"><![CDATA[数据库中开启非严格模式，插入数据时，不插入非空字段，在navicat中执行语句没有问题;在java中执行相同的语句却出现如下错误。 errorjava.sql.SQLException:Field ‘status’ does not have a default value 数据库设置 status在数据库存中设置not null,并且没有默认值。 sql_mode=’’; 设置 sql_mode查看当前连接会话的sql模式：mysql&gt; select @@session.sql_mode;或者从环境变量里取mysql&gt; show variables like “sql_mode”;查看全局sql_mode设置：mysql&gt; select @@global.sql_mode;只设置global，需要重新连接进来才会生效 Set sessionVariables尝试设置sessionVariables，修改sql-mode属性，结果还是相同的问题。 1jdbc:mysql://localhost:3306/db?sessionVariables=sql_mode= mysql-connector-java-.jar经排查，驱动包会默认加上STRICT_TRANS_TABLES，导致java中无法开启非严格模式。类：com.mysql.jdbc.ConnectionImpl.java以下是设置方法：12345678910111213141516171819202122232425262728private void setupServerForTruncationChecks() throws SQLException &#123; if (getJdbcCompliantTruncation()) &#123; if (versionMeetsMinimum(5, 0, 2)) &#123; String currentSqlMode = this.serverVariables.get("sql_mode"); boolean strictTransTablesIsSet = StringUtils.indexOfIgnoreCase(currentSqlMode, "STRICT_TRANS_TABLES") != -1; if (currentSqlMode == null || currentSqlMode.length() == 0 || !strictTransTablesIsSet) &#123; StringBuilder commandBuf = new StringBuilder("SET sql_mode='"); if (currentSqlMode != null &amp;&amp; currentSqlMode.length() &gt; 0) &#123; commandBuf.append(currentSqlMode); commandBuf.append(","); &#125; commandBuf.append("STRICT_TRANS_TABLES'"); execSQL(null, commandBuf.toString(), -1, null, DEFAULT_RESULT_SET_TYPE, DEFAULT_RESULT_SET_CONCURRENCY, false, this.database, null, false); setJdbcCompliantTruncation(false); // server's handling this for us now &#125; else if (strictTransTablesIsSet) &#123; // We didn't set it, but someone did, so we piggy back on it setJdbcCompliantTruncation(false); // server's handling this for us now &#125; &#125; &#125; &#125; 解决后面妥协了，给数据库字段加默认值。 其它sql_mode=STRICT_TRANS_TABLES设置它，表示启用严格模式。 MySQL sql_mode 说明 How to set MySQL ANSI_QUOTES mode via MySQL Java Connector?]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[如何阅读一本小说]]></title>
       <url>%2F2017%2F05%2F07%2F2017%2Flisten%2F%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E5%B0%8F%E8%AF%B4%2F</url>
       <content type="text"><![CDATA[小说总在死去，总是会耗尽它的动力，也总能得到更新，被重新创造。 或许对小说家来说，最难的就是决定由谁来讲故事。 想象的花园里，有真实的蛤蟆。 如果小说本身很糟糕，它的哲思再好也没用。 海明威的句子表面上说得很少，但是，意义却很丰富。你说这有些自相矛盾？那好，他要表现的就是自相矛盾。他的意思并不在那些词语里，而在词语周围的沉默中。 每部小说都是场激烈的表演，是与它自己时代的历史社会力量的角力。有时候，小说赢了；有时候，历史赢了。 现在所有的、过去曾有的、将来会有的，都只是一个故事，而且一个故事就够了。]]></content>
@@ -213,9 +290,30 @@
 
     
     <entry>
+      <title><![CDATA[Convert JSON Object to Java bean]]></title>
+      <url>%2F2017%2F05%2F06%2F2018%2Fprogram%2Fjsonobjecttobean%2F</url>
+      <content type="text"><![CDATA[Convert JSON Object to Java beanUse BeanUtilsBean2 (org.apache.commons.beanutils.BeanUtilsBean2). 1234com.alibaba.fastjson.JSONObject updateObj=new com.alibaba.fastjson.JSONObject();Entity entity=new Entity();//将JSONObject属性复制到实体中BeanUtilsBean2.getInstance().copyProperties(entity, updateObj);]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Hibernate验证实体字段信息]]></title>
       <url>%2F2017%2F05%2F06%2F2017%2Fprogram%2Fhibernatevalidation%2F</url>
       <content type="text"><![CDATA[Domain123456789101112131415public class User &#123; private int id; private String name; @Id @GeneratedValue(generator="mytable",strategy=GenerationType.TABLE) public int getId() &#123; return id; &#125; @NotNull(message="姓名不能为空！") public String getName() &#123; return name; &#125; Validation1234User user = new User(); ValidatorFactory factory = Validation.buildDefaultValidatorFactory(); Validator validator = factory.getValidator(); Set&lt;ConstraintViolation&lt;Order&gt;&gt; violations = validator.validate(user); annotationBean Validation 中的 constraint Constraint 详细信息 @Null 被注释的元素必须为 null @NotNull 被注释的元素必须不为 null @AssertTrue 被注释的元素必须为 true @AssertFalse 被注释的元素必须为 false @Min(value) 被注释的元素必须是一个数字，其值必须大于等于指定的最小值 @Max(value) 被注释的元素必须是一个数字，其值必须小于等于指定的最大值 @DecimalMin(value) 被注释的元素必须是一个数字，其值必须大于等于指定的最小值 @DecimalMax(value) 被注释的元素必须是一个数字，其值必须小于等于指定的最大值 @Size(max, min) 被注释的元素的大小必须在指定的范围内 @Digits (integer, fraction) 被注释的元素必须是一个数字，其值必须在可接受的范围内 @Past 被注释的元素必须是一个过去的日期 @Future 被注释的元素必须是一个将来的日期 @Pattern(value) 被注释的元素必须符合指定的正则表达式 Hibernate Validator 附加的 constraint Constraint 详细信息 @Email 被注释的元素必须是电子邮箱地址 @Length 被注释的字符串的大小必须在指定的范围内 @NotEmpty 被注释的字符串的必须非空 @Range 被注释的元素必须在合适的范围内]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Hibernate验证实体字段信息]]></title>
+      <url>%2F2017%2F05%2F06%2F2018%2Fprogram%2Fhibernatevalidation%2F</url>
+      <content type="text"><![CDATA[Domain123456789101112131415public class User &#123; private int id; private String name; @Id @GeneratedValue(generator="mytable",strategy=GenerationType.TABLE) public int getId() &#123; return id; &#125; @NotNull(message="姓名不能为空！") public String getName() &#123; return name; &#125; Validation1234User user = new User(); ValidatorFactory factory = Validation.buildDefaultValidatorFactory(); Validator validator = factory.getValidator(); Set&lt;ConstraintViolation&lt;Order&gt;&gt; violations = validator.validate(user); annotationBean Validation 中的 constraint Constraint 详细信息 @Null 被注释的元素必须为 null @NotNull 被注释的元素必须不为 null @AssertTrue 被注释的元素必须为 true @AssertFalse 被注释的元素必须为 false @Min(value) 被注释的元素必须是一个数字，其值必须大于等于指定的最小值 @Max(value) 被注释的元素必须是一个数字，其值必须小于等于指定的最大值 @DecimalMin(value) 被注释的元素必须是一个数字，其值必须大于等于指定的最小值 @DecimalMax(value) 被注释的元素必须是一个数字，其值必须小于等于指定的最大值 @Size(max, min) 被注释的元素的大小必须在指定的范围内 @Digits (integer, fraction) 被注释的元素必须是一个数字，其值必须在可接受的范围内 @Past 被注释的元素必须是一个过去的日期 @Future 被注释的元素必须是一个将来的日期 @Pattern(value) 被注释的元素必须符合指定的正则表达式 Hibernate Validator 附加的 constraint Constraint 详细信息 @Email 被注释的元素必须是电子邮箱地址 @Length 被注释的字符串的大小必须在指定的范围内 @NotEmpty 被注释的字符串的必须非空 @Range 被注释的元素必须在合适的范围内]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[beanutils 日期格式化问题]]></title>
+      <url>%2F2017%2F05%2F06%2F2018%2Fprogram%2Fbeanutilsconversionexception%2F</url>
+      <content type="text"><![CDATA[Error1org.apache.commons.beanutils.ConversionException: DateConverter does not support default String to &apos;Date&apos; conversion. 原因beanutils工具类不支持将日期转化成java.util.Date，但支持java.sql.Date。 解决如果要将日期转化成java.util.Date,可实现一个日期转化器（org.apache.commons.beanutils.Converter），然后使用ConvertUtils类注册转化器（org.apache.commons.beanutils.ConvertUtils）。 转化器1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768package com.pft.common.beanutils.converters;import java.text.ParseException;import java.text.SimpleDateFormat;import java.util.HashSet;import java.util.Iterator;import java.util.Set;import org.apache.commons.beanutils.Converter;/** * ClassName:DateConverter &lt;br/&gt; * Reason: 日期转换对象，使用该转换器，在ConvertUtils当中做一下注册，系统自动地帮助字符的日期表示转换为java.util.Date对象. * Date: 2017年5月6日 下午1:03:25 &lt;br/&gt; * @author lijian@12301.cc * @version V0.1 * @since JDK 1.8 * @see */public class StringToDateConverter implements Converter &#123; /** * 日期格式化对象. */ private static SimpleDateFormat df = new SimpleDateFormat(); /** * 模式集合. */ private static Set&lt;String&gt; patterns = new HashSet&lt;String&gt;(4); // 注册一下日期的转换格式 static &#123; StringToDateConverter.patterns.add("yyyy-MM-dd"); StringToDateConverter.patterns.add("yyyy-MM-dd HH:mm"); StringToDateConverter.patterns.add("yyyy-MM-dd HH:mm:ss"); StringToDateConverter.patterns.add("yyyy/MM/dd HH:mm:ss"); &#125; /** * 日期转换器. * * @param type * Class * @param value * Object return Date Object. */ @SuppressWarnings("rawtypes") public Object convert(Class type, Object value) &#123; if (value == null) &#123; return null; &#125; if (value instanceof String) &#123; Object dateObj = null; Iterator it = patterns.iterator(); while (it.hasNext()) &#123; try &#123; String pattern = (String) it.next(); df.applyPattern(pattern); dateObj = df.parse((String) value); break; &#125; catch (ParseException ex) &#123; // do iterator continue &#125; &#125; return dateObj; &#125; return null; &#125;&#125; 注册使用12ConvertUtils.register(new StringToDateConverter(), java.util.Date.class);BeanUtilsBean2.getInstance().copyProperties(dest, orig);]]></content>
     </entry>
 
     
@@ -263,6 +361,13 @@
     
     <entry>
       <title><![CDATA[使用bash启动Jetty服务]]></title>
+      <url>%2F2017%2F05%2F02%2F2018%2Fprogram%2Fstartjettybyshell%2F</url>
+      <content type="text"><![CDATA[使用bash启动Jetty服务start.sh12345678910111213141516171819202122232425262728293031323334#!/bin/bashcd `dirname $0`BIN_DIR=`pwd`cd ..DEPLOY_DIR=`pwd`LOGS_DIR=$DEPLOY_DIR/logsSTDOUT_FILE=$LOGS_DIR/stdout.logSERVER_NAME=`basename &quot;$PWD&quot;`if [ &quot;$1&quot; = &quot;jprofiler&quot; ]; then JAVA_OPTS=&quot;-Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849 $JAVA_OPTS&quot;fiJAVA_JMX_OPTS=&quot;&quot;if [ &quot;$1&quot; = &quot;jmx&quot; ]; then JAVA_JMX_OPTS=&quot; -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmx -Dcom.sun.management.jmxremote.authenticate=true -Dcom.sun.management.jmxremote.password.file=../conf/jmx/jmxremote.password -Dcom.sun.management.jmxremote.access.file=../conf/jmx/jmxremote.access&quot;fiJAVA_MEM_OPTS=&quot;&quot;BITS=`java -version 2&gt;&amp;1 | grep -i 64-bit`if [ -n &quot;$BITS&quot; ]; then JAVA_MEM_OPTS=&quot; -server -Xmx512m -Xms512m -Xmn128m -Xss256k -XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:LargePageSizeInBytes=128m -XX:+UseFastAccessorMethods -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=70 &quot;else JAVA_MEM_OPTS=&quot; -server -Xms512m -Xmx512m -XX:PermSize=128m -XX:SurvivorRatio=2 -XX:+UseParallelGC &quot;fiexport JAVA_OPTSnohup java $JAVA_OPTS $JAVA_JMX_OPTS $JAVA_MEM_OPTS -jar /usr/local/jetty9/start.jar jetty.base=$DEPLOY_DIR &gt; $STDOUT_FILE 2&gt;&amp;1 &amp;echo &quot;OK!&quot;PIDS=`ps -f | grep java | grep &quot;$DEPLOY_DIR&quot; | awk &apos;&#123;print $2&#125;&apos;`echo &quot;PID: $PIDS&quot;echo &quot;STDOUT: $STDOUT_FILE&quot; stop.sh12345678910111213141516171819202122232425262728293031323334353637383940#!/bin/bashcd `dirname $0`BIN_DIR=`pwd`cd ..DEPLOY_DIR=`pwd`SERVER_NAME=`basename &quot;$PWD&quot;`if [ -z &quot;$SERVER_NAME&quot; ]; then SERVER_NAME=`hostname`fiPIDS=`ps -ef | grep jetty | grep $DEPLOY_DIR |awk &apos;&#123;print $2&#125;&apos;`if [ -z &quot;$PIDS&quot; ]; then echo &quot;ERROR: The $SERVER_NAME does not started!&quot; exit 1fiecho &quot;PID: $PIDS&quot;echo -e &quot;Stopping the $SERVER_NAME ...\c&quot;for PID in $PIDS ; do kill $PID &gt; /dev/null 2&gt;&amp;1doneCOUNT=0while [ $COUNT -lt 1 ]; do echo -e &quot;.\c&quot; sleep 1 COUNT=1 for PID in $PIDS ; do PID_EXIST=`ps -f -p $PID | grep java` if [ -n &quot;$PID_EXIST&quot; ]; then COUNT=0 break fi donedoneecho &quot;OK!&quot;echo &quot;PID: $PIDS&quot; 使用Start jetty service1234[root@bogon logs]# ../bin/start.sh OK!PID: 11137STDOUT: /home/pft/pft-web-base/logs/stdout.log Stop jetty service1234[root@bogon logs]# ../bin/stop.sh PID: 11046Stopping the pft-web-base ....OK!PID: 11046 Demo一个简单例子pft-web-base Linux nohup命令详解12345678用途：不挂断地运行命令。语法：nohup Command [ Arg ... ] [ &amp; ]描述：nohup 命令运行由 Command 参数和任何相关的 Arg 参数指定的命令，忽略所有挂断（SIGHUP）信号。在注销后使用 nohup 命令运行后台中的程序。要运行后台中的 nohup 命令，添加 &amp; （ 表示“and”的符号）到命令的尾部。操作系统中有三个常用的流： 0：标准输入流 stdin 1：标准输出流 stdout 2：标准错误流 stderr]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[使用bash启动Jetty服务]]></title>
       <url>%2F2017%2F05%2F02%2F2017%2Fprogram%2Fstartjettybyshell%2F</url>
       <content type="text"><![CDATA[使用bash启动Jetty服务start.sh12345678910111213141516171819202122232425262728293031323334#!/bin/bashcd `dirname $0`BIN_DIR=`pwd`cd ..DEPLOY_DIR=`pwd`LOGS_DIR=$DEPLOY_DIR/logsSTDOUT_FILE=$LOGS_DIR/stdout.logSERVER_NAME=`basename &quot;$PWD&quot;`if [ &quot;$1&quot; = &quot;jprofiler&quot; ]; then JAVA_OPTS=&quot;-Djava.awt.headless=true -Djava.net.preferIPv4Stack=true -agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849 $JAVA_OPTS&quot;fiJAVA_JMX_OPTS=&quot;&quot;if [ &quot;$1&quot; = &quot;jmx&quot; ]; then JAVA_JMX_OPTS=&quot; -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmx -Dcom.sun.management.jmxremote.authenticate=true -Dcom.sun.management.jmxremote.password.file=../conf/jmx/jmxremote.password -Dcom.sun.management.jmxremote.access.file=../conf/jmx/jmxremote.access&quot;fiJAVA_MEM_OPTS=&quot;&quot;BITS=`java -version 2&gt;&amp;1 | grep -i 64-bit`if [ -n &quot;$BITS&quot; ]; then JAVA_MEM_OPTS=&quot; -server -Xmx512m -Xms512m -Xmn128m -Xss256k -XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:LargePageSizeInBytes=128m -XX:+UseFastAccessorMethods -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=70 &quot;else JAVA_MEM_OPTS=&quot; -server -Xms512m -Xmx512m -XX:PermSize=128m -XX:SurvivorRatio=2 -XX:+UseParallelGC &quot;fiexport JAVA_OPTSnohup java $JAVA_OPTS $JAVA_JMX_OPTS $JAVA_MEM_OPTS -jar /usr/local/jetty9/start.jar jetty.base=$DEPLOY_DIR &gt; $STDOUT_FILE 2&gt;&amp;1 &amp;echo &quot;OK!&quot;PIDS=`ps -f | grep java | grep &quot;$DEPLOY_DIR&quot; | awk &apos;&#123;print $2&#125;&apos;`echo &quot;PID: $PIDS&quot;echo &quot;STDOUT: $STDOUT_FILE&quot; stop.sh12345678910111213141516171819202122232425262728293031323334353637383940#!/bin/bashcd `dirname $0`BIN_DIR=`pwd`cd ..DEPLOY_DIR=`pwd`SERVER_NAME=`basename &quot;$PWD&quot;`if [ -z &quot;$SERVER_NAME&quot; ]; then SERVER_NAME=`hostname`fiPIDS=`ps -ef | grep jetty | grep $DEPLOY_DIR |awk &apos;&#123;print $2&#125;&apos;`if [ -z &quot;$PIDS&quot; ]; then echo &quot;ERROR: The $SERVER_NAME does not started!&quot; exit 1fiecho &quot;PID: $PIDS&quot;echo -e &quot;Stopping the $SERVER_NAME ...\c&quot;for PID in $PIDS ; do kill $PID &gt; /dev/null 2&gt;&amp;1doneCOUNT=0while [ $COUNT -lt 1 ]; do echo -e &quot;.\c&quot; sleep 1 COUNT=1 for PID in $PIDS ; do PID_EXIST=`ps -f -p $PID | grep java` if [ -n &quot;$PID_EXIST&quot; ]; then COUNT=0 break fi donedoneecho &quot;OK!&quot;echo &quot;PID: $PIDS&quot; 使用Start jetty service1234[root@bogon logs]# ../bin/start.sh OK!PID: 11137STDOUT: /home/pft/pft-web-base/logs/stdout.log Stop jetty service1234[root@bogon logs]# ../bin/stop.sh PID: 11046Stopping the pft-web-base ....OK!PID: 11046 Demo一个简单例子pft-web-base Linux nohup命令详解12345678用途：不挂断地运行命令。语法：nohup Command [ Arg ... ] [ &amp; ]描述：nohup 命令运行由 Command 参数和任何相关的 Arg 参数指定的命令，忽略所有挂断（SIGHUP）信号。在注销后使用 nohup 命令运行后台中的程序。要运行后台中的 nohup 命令，添加 &amp; （ 表示“and”的符号）到命令的尾部。操作系统中有三个常用的流： 0：标准输入流 stdin 1：标准输出流 stdout 2：标准错误流 stderr]]></content>
     </entry>
@@ -283,6 +388,13 @@
 
     
     <entry>
+      <title><![CDATA[使用Ansible发布Jetty服务]]></title>
+      <url>%2F2017%2F05%2F01%2F2018%2Fprogram%2Fansibledeployjetty%2F</url>
+      <content type="text"><![CDATA[构建Jetty部署yml新建一个ansibledeployjetty.yml文件，增加以下脚本：12345678910111213141516171819202122232425- name: install jetty admin hosts: jetty hosts #对应hostsz中主机内容 sudo: True vars: #定义变量区域 war_file: /home/jettyappweb.war #本地文件 jetty_root: /home/pft/pft-web-base/webapps/ROOT #部署的远程ROOT目录 tasks: - name: rm ROOT. file: state: absent dest: &quot;&#123;&#123; jetty_root &#125;&#125;&quot; - name: mkdir ROOT. file: state: directory dest: &quot;&#123;&#123; jetty_root &#125;&#125;&quot; owner: root group: root mode: 755 - name: unzip war. unarchive: src: &quot;&#123;&#123; war_file &#125;&#125;&quot; dest: &quot;&#123;&#123; jetty_root &#125;&#125;&quot; copy: yes - name: start jetty. action: shell &#123;&#123; jetty_root &#125;&#125;/../../bin/start.sh 说明 hosts #对应host中主机内容 vars #定义变量区域 删除ROOT文件夹 使用file: state:absent，好处防止错误删除文件。 使用unarchive命令，copy:yes直接拷贝本地文件到远程，并且解压缩后删除文件。 action: shell 启动jetty服务。 启动部署脚本1ansible-playbook ansibledeployjetty.yml -vvv jetty 启动脚本start.sh12345678910111213141516171819202122#!/bin/bash# JAVA_HOMEexport JAVA_HOME=/var/java/jdk1.8.0_111export PATH=$JAVA_HOME/bin:$PATHJAVA_JMX_OPTS=&quot;&quot;if [ &quot;$1&quot; = &quot;jmx&quot; ]; then JAVA_JMX_OPTS=&quot; -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmx -Dcom.sun.management.jmxremote.authenticate=true -Dcom.sun.management.jmxremote.password.file=../conf/jmx/jmxremote.password -Dcom.sun.management.jmxremote.access.file=../conf/jmx/jmxremote.access&quot;fiJAVA_MEM_OPTS=&quot;&quot;BITS=`java -version 2&gt;&amp;1 | grep -i 64-bit`if [ -n &quot;$BITS&quot; ]; then JAVA_MEM_OPTS=&quot; -server -Xmx512m -Xms512m -Xmn128m -Xss256k -XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:LargePageSizeInBytes=128m -XX:+UseFastAccessorMethods -XX:+UseCMSInitiatingOccupancyOnly -XX:CMSInitiatingOccupancyFraction=70 &quot;else JAVA_MEM_OPTS=&quot; -server -Xms512m -Xmx512m -XX:PermSize=128m -XX:SurvivorRatio=2 -XX:+UseParallelGC &quot;fiexport JAVA_OPTSnohup java $JAVA_OPTS $JAVA_JMX_OPTS $JAVA_MEM_OPTS -jar /usr/local/jetty9/start.jar jetty.base=/home/pft/pft-web-base &amp; 常见模块说明File模块功能：用于设置文件属性 name: 设置文件属性 action: file force # 需要在两种情况下强制创建软连接，一种是源文件不存在但之后会建立的情况下；另一种是目标连接已存在，需要先取消之前的软连接，有两个选项：yes|no group # 设置文件或目录的属组 mode # 设置文件或目录的权限 owner # 设置文件或目录的属主 path # 必选项，定义文件或目录的路径 recurse # 递归设置文件的属性，只对目录有效 src # 要被链接到的路径，只应用与state=link的情况 state # directory：如果目录不存在，创建目录；file：即使文件不存在，也不会被创建；link：创建软连接；hard：创建硬连接；touch：如果文件不存在，则会创建一个新的文件，如果文件或目录已存在，则更新其最后修改时间；absent：删除目录、文件或者取消链接文件 Command模块功能：命令模块，默认模块，用于在远程主机执行命令，缺点：运行的命令中无法使用变量，管道。 name: 在远程节点执行命令 action #command chdir #在执行命令之前，先切换到该目录 creates #一个文件名，当这个文件存在，则该命令不执行 executable #切换shell来执行命令，需要使用命令的绝对路径 free_form #要执行的Linux指令，一般使用Ansible的-a参数代替。 removes #一个文件名，这个文件不存在，则该命令不执行 unarchive模块功能：用于解压文件，模块包含如下选项： copy #在解压文件之前，是否先将文件复制到远程主机，默认为yes。若为no，则要求目标主机上压缩包必须存在。 creates #指定一个文件名，当该文件存在时，则解压指令不执行 dest #远程主机上的一个路径，即文件解压的路径 grop #解压后的目录或文件的属组 list_files #如果为yes，则会列出压缩包里的文件，默认为no，2.0版本新增的选项 mode #解决后文件的权限 src #如果copy为yes，则需要指定压缩文件的源路径 owner #解压后文件或目录的属主]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[幸福的婚姻]]></title>
       <url>%2F2017%2F04%2F30%2F2017%2Flisten%2F%E5%B9%B8%E7%A6%8F%E7%9A%84%E5%A9%9A%E5%A7%BB%2F</url>
       <content type="text"><![CDATA[不是男人天生比女人更容易有婚外情，这个概率更多取决于机会。 聪明的丈夫一定要明白这一点：妻子希望听到的不是建议，相反，她想听到的是丈夫对自己遭遇的理解与同情。只要你表现出善解人意和体贴，让她释放出烦恼和压力，她就会回报你更多的感激和爱。 和出去度假相比，夫妻间互相交流，会让婚姻更稳定、更有激情。 冲突的解决不在于改变一个人，而在于协商寻找共同点，找到双方都能适应的方法，要学会把对方的缺点和怪癖看作是他性格中一个有趣的部分。]]></content>
@@ -297,9 +409,23 @@
 
     
     <entry>
+      <title><![CDATA[ansible ssh error]]></title>
+      <url>%2F2017%2F04%2F29%2F2018%2Fprogram%2Fansiblessherror%2F</url>
+      <content type="text"><![CDATA[ansible 使用ssh连接其他主机时，遇到了ssh 权限错误： 执行命令1ansible bogon -m command -a &apos;uptime&apos; 错误信息12345192.168.20.240 | UNREACHABLE! =&gt; &#123; &quot;changed&quot;: false, &quot;msg&quot;: &quot;Failed to connect to the host via ssh: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).\r\n&quot;, &quot;unreachable&quot;: true&#125; 查看详细的帮助信息使用-vvvv重新运行命令,这将使SSH调试输出来帮助诊断问题 1ansible bogon -m command -a &apos;uptime&apos; –vvvv 解决解决两个主机ssh免密码登录即可。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[木兰花·春景]]></title>
       <url>%2F2017%2F04%2F29%2F2017%2Fpoems%2F%E6%9C%A8%E5%85%B0%E8%8A%B1%C2%B7%E6%98%A5%E6%99%AF%2F</url>
       <content type="text"><![CDATA[《木兰花·春景》作者：宋祁 东城渐觉风光好，縠皱波纹迎客棹。绿杨烟外晓寒轻，红杏枝头春意闹。浮生长恨欢娱少，肯爱千金轻一笑。为君持酒劝斜阳，且向花间留晚照。 一首宋词]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Install ansible]]></title>
+      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2FInstallansible%2F</url>
+      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible]]></content>
     </entry>
 
     
@@ -311,16 +437,37 @@
 
     
     <entry>
+      <title><![CDATA[ssh 命令]]></title>
+      <url>%2F2017%2F04%2F29%2F2018%2Fprogram%2Fssh%E7%9A%84%E5%89%AF%E6%9C%AC%2F</url>
+      <content type="text"><![CDATA[ssh-keygen的命令手册，通过”man ssh-keygen“命令查看 生成密钥1ssh-keygen -t rsa 生成之后会在用户的根目录生成一个 “.ssh”的文件夹 authorized_keys:存放远程免密登录的公钥,主要通过这个文件记录多台机器的公钥 id_rsa : 生成的私钥文件 id_rsa.pub ： 生成的公钥文件 know_hosts : 已知的主机公钥清单如果希望ssh公钥生效需满足至少下面两个条件： 1) .ssh目录的权限必须是7002) .ssh/authorized_keys文件权限必须是600 远程免密登录 通过ssh-copy-id的方式 1命令： ssh-copy-id -i ~/.ssh/id_rsa.put &lt;romte_ip&gt; 通过scp方式 1命令：scp -p ~/.ssh/id_rsa.pub root@&lt;remote_ip&gt;:/root/.ssh/authorized_keys 将内容追加到authorized_keys文件中， 不过要登录远程服务器来执行这条命令1cat ~/pub_key &gt;&gt;~/.ssh/authorized_keys]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[ssh 命令]]></title>
+      <url>%2F2017%2F04%2F29%2F2018%2Fprogram%2Fssh%2F</url>
+      <content type="text"><![CDATA[ssh-keygen的命令手册，通过”man ssh-keygen“命令查看 生成密钥1ssh-keygen -t rsa 生成之后会在用户的根目录生成一个 “.ssh”的文件夹 authorized_keys:存放远程免密登录的公钥,主要通过这个文件记录多台机器的公钥 id_rsa : 生成的私钥文件 id_rsa.pub ： 生成的公钥文件 know_hosts : 已知的主机公钥清单如果希望ssh公钥生效需满足至少下面两个条件： 1) .ssh目录的权限必须是7002) .ssh/authorized_keys文件权限必须是600 远程免密登录 通过ssh-copy-id的方式 1命令： ssh-copy-id -i ~/.ssh/id_rsa.put &lt;romte_ip&gt; 通过scp方式 1命令：scp -p ~/.ssh/id_rsa.pub root@&lt;remote_ip&gt;:/root/.ssh/authorized_keys 将内容追加到authorized_keys文件中， 不过要登录远程服务器来执行这条命令1cat ~/pub_key &gt;&gt;~/.ssh/authorized_keys]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Install ansible]]></title>
-      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2Fansible%2F</url>
+      <url>%2F2017%2F04%2F29%2F2018%2Fprogram%2FInstallansible%2F</url>
+      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Install ansible]]></title>
+      <url>%2F2017%2F04%2F29%2F2018%2Fprogram%2Fansible%2F</url>
       <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible 自动化部署 Jenkins+Ansible+Gitlab自动化部署三剑客 jenkins基于ansible持续集成]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[Install ansible]]></title>
-      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2FInstallansible%2F</url>
-      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible]]></content>
+      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2Fansible%2F</url>
+      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible 自动化部署 Jenkins+Ansible+Gitlab自动化部署三剑客 jenkins基于ansible持续集成]]></content>
     </entry>
 
     
@@ -368,6 +515,13 @@
     
     <entry>
       <title><![CDATA[分布式事务]]></title>
+      <url>%2F2017%2F04%2F23%2F2018%2Fprogram%2Fdistributedtransaction%2F</url>
+      <content type="text"><![CDATA[分布式事务一些分布式事务知识 事务知识分布式事务之说说TCC事务JTA 深度历险 - 原理与实现关于分布式事务、两阶段提交协议、三阶提交协议分布式事务之说说TCC事务XA 分布式事务研究 java事务Java中的事务——JDBC事务和JTA事务 MQ基于MQ的分布式事务补偿机制 dubbodubbo 分布式事务 开源事务tcc-transactionByteTCC]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[分布式事务]]></title>
       <url>%2F2017%2F04%2F23%2F2017%2Fprogram%2Fdistributedtransaction%2F</url>
       <content type="text"><![CDATA[分布式事务一些分布式事务知识 事务知识分布式事务之说说TCC事务JTA 深度历险 - 原理与实现关于分布式事务、两阶段提交协议、三阶提交协议分布式事务之说说TCC事务XA 分布式事务研究 java事务Java中的事务——JDBC事务和JTA事务 MQ基于MQ的分布式事务补偿机制 dubbodubbo 分布式事务 开源事务tcc-transactionByteTCC]]></content>
     </entry>
@@ -383,6 +537,13 @@
     <entry>
       <title><![CDATA[JMeter 压力测试CSV参数化]]></title>
       <url>%2F2017%2F04%2F23%2F2017%2Fprogram%2Fjmeterscript%2F</url>
+      <content type="text"><![CDATA[概述JMeter 的主要测试组件总结如下： 测试计划是使用 JMeter 进行测试的起点，它是其它 JMeter 测试元件的容器。 线程组代表一定数量的并发用户，它可以用来模拟并发用户发送请求。实际的请求内容在Sampler中定义，它被线程组包含。 监听器负责收集测试结果，同时也被告知了结果显示的方式。 逻辑控制器可以自定义JMeter发送请求的行为逻辑，它与Sampler结合使用可以模拟复杂的请求序列。 断言可以用来判断请求响应的结果是否如用户所期望的。它可以用来隔离问题域，即在确保功能正确的前提下执行压力测试。这个限制对于有效的测试是非常有用的。 配置元件维护Sampler需要的配置信息，并根据实际的需要会修改请求的内容。 前置处理器和后置处理器负责在生成请求之前和之后完成工作。前置处理器常常用来修改请求的设置，后置处理器则常常用来处理响应的数据。 定时器负责定义请求之间的延迟间隔。 常用测试最简单的Web测试计划只需要三个 JMeter 的测试元件，如下图： 其中： 在线程组中定义线程数、产生线程发生的时间和测试循环次数。 在http请求中定义服务器、端口、协议和方法、请求路径等。 表格监听器负责收集和显示结果。 添加一个测试计划添加线程组点击测试计划，右键选择添加菜单项，选择子菜单Threads(Users)，点击线程组，如下图： 配置线程组参数名称：测试接口名称 线程属性 线程数：模拟的用户数量 Ramp-up Period（in seconds）：达到指定线程数所需要的时间。举例：线程数设置为50，此处设置为5，那么每秒启动的线程数 = 线程数50/5 = 10 循环次数：选中“永远”，则一直循环下去。 添加HTTP信息头管理器点击线程组（产品列表），右键添加》配置元件 》 “HTTP信息头管理器”。如下图：在面板中“信息头存储在信息头管理器中”添加一组http头部信息名称：Content-Type值：application/json 添加HTTP请求点击线程组（产品列表），右键添加》Sampler 》 “HTTP请求”。如下图：在Basic面板中配置参数服务器名称或IP：应用ip地址端口号：应用端口号Http请求方法：选择相应的请求方式，如POST请求。路径：请求地址参数：在Parameters或者Body Data中添加请求参数。 结果分析Summary Report点击HTTP请求，右键添加》监听器》Summary Report。如下图：做性能测试时，Summary Report可用于分析请求吞吐量、平均响应时间、最长响应时间等信息。例如只有一个（产品列表）接口的请求，那么在Summary Report中，会显示一行数据，共有10个字段，含义分别如下。 Label：每个 JMeter 的 element（例如 HTTP Request）都有一个 Name 属性，这里显示的就是 Name 属性的值 #Samples：表示你这次测试中一共发出了多少个请求，如果模拟10个用户，每个用户迭代10次，那么这里显示100 Average：平均响应时间——默认情况下是单个 Request 的平均响应时间，当使用了 Transaction Controller 时，也可以以Transaction 为单位显示平均响应时间 Median：中位数，也就是 50％ 用户的响应时间 90% Line：90％ 用户的响应时间 Min：最小响应时间 Max：最大响应时间 Error%：本次测试中出现错误的请求的数量/请求的总数 Throughput：吞吐量——默认情况下表示每秒完成的请求数（Request per Second），当使用了 Transaction Controller 时，也可以表示类似 LoadRunner 的 Transaction per Second 数 KB/Sec：每秒从服务器端接收到的数据量，相当于LoadRunner中的Throughput/Sec Avg.Bytes：服务端返回给Request数据的平均值，可以理解为：服务端返回所有数据/请求数 察看结果树点击HTTP请求，右键添加》监听器》察看结果树。如下图： 用察看结果树，可以观察每个请求的请求、响应返回信息。 取样器结果：显示的是取样器相关参数（客户端参数与响应参数） 请求：发送请求的具体值 响应数据：服务端返回的相应参数图形结果点击HTTP请求，右键添加》监听器》察看结果树。如下图：统计结果： 样本数目：发出去的请求总数 最新样本：最近一个Request的响应时间 平均：所有Request响应时间的平均值 偏离：所有Request响应时间的标准差 吞吐量：单位时间内（一般是1分钟）处理Request的个数 中值：所有Request响应时间的中间值 使用CSV Data Set Config参数化方法点击产品列表，右键添加》配置元件》CSV Data Set Config。如下图： 面板说明 Filename：填写文件路径和文件名称。可以指保存信息的文件目录，可以相对或者绝对路径。如果文件放在jmeter的bin目录下，直接写文件名称就可以。 File Encoding:文件编码，默认为ANSI。 Variable names：参数名称(有几个参数，在这里面就写几个参数名称，每个名称中间用分隔符分割，分隔符使用下面的“memberId,pagerno”中定义的。 Delimitet：定义分隔符，用于分隔文件中的参数，及上述Variable Names中定义的参数名称。 Allow Quoated data: True –设置文件中的参数值都必须用引用引起来,False则不需要。 Recycle on EOF：到了文件尾处，是否循环读取参数。注：程序从CSV Data Set Config文件中，每次读取一行，每次读取的参数仅供一个线程使用（类似Loadrunner里面的参数唯一值功能），如果线程数超过文本的记录行数，那么可以选择 True (从头再次读取)。 Stop thread on EOF:到了文件尾处，是否停止线程。当Recycle on EOF 选择true时，Stop threadon EOF选择true和false无任何意义，通俗的讲，在前面控制了不停的循环读取，后面再来让stop或run没有任何意义当Recycle on EOF 选择false时，Stop threadon EOF选择true，线程4个，参数3个，那么只会请求3次当Recycle on EOF 选择false时，Stop thread on EOF选择false，线程4个，参数3个，那么会请求4次，但第4次没有参数可取，不让循环，所以第4次请求错误 Sharing Mode: 设置是否线程共享。新建csv文件 1、新建一个orderlist.csv文件，按需要将参数填写在一列中。（不需要写变量名称，直接写变量值）内容如下： 2、在Configure the CSV Data Source中配置Filename属性，即参数文件路径。参数化 格式：${argue_name} 的方式引用Variable name 回到HTTP请求面板，在Body Data配置请求参数(也可在路径中配置参数：&amp;memberId=${memberId})。修改参数配置如下：非常参数化：1&#123;&quot;memberId&quot;:&quot;3395&quot;,&quot;pagerno&quot;:1,&quot;pagerrows&quot;:15,&quot;channel&quot;:&quot;&quot;,&quot;ltitle&quot;:&quot;&quot;,&quot;ptype&quot;:&quot;&quot;,&quot;topic&quot;:&quot;&quot;,&quot;province&quot;:&quot;&quot;,&quot;city&quot;:&quot;&quot;&#125; 引用CSV Data Set Config，参数化参数：1&#123;&quot;memberId&quot;:&quot;$&#123;memberId&#125;&quot;,&quot;pagerno&quot;:$&#123;pagerno&#125;,&quot;pagerrows&quot;:15,&quot;channel&quot;:&quot;&quot;,&quot;ltitle&quot;:&quot;&quot;,&quot;ptype&quot;:&quot;&quot;,&quot;topic&quot;:&quot;&quot;,&quot;province&quot;:&quot;&quot;,&quot;city&quot;:&quot;&quot;&#125; 验证请求参数 1、选择产品列表，右键点击Start,启动测试脚本，如下图： 2、回到察看结果树面板，查询请求参数是否替换成csv脚本中参数。 基础知识 1、吞吐量：是指在没有帧丢失的情况下，设备能够接受的最大速率。 2、存储的最小单位是字节Byte，对于存储单位，有以下几个单位，GB、MB和KB，那么这三者之间的换算关系是：1GB＝1024MB，1MB＝1024KB，1KB＝1024Bytes。Bit ：“位”，称为bit，也就是比特，有的时候也称为位。一个字节为8位二进制表示。Byte：“字节”，一个字节就是8比特。 3、Mbps (million bits per second 兆位/秒) 代表每秒传输1，000，000比特。该缩写用来描述数据传输速度。例如：4Mbps=每秒钟传输4M比特。数据传输速率的单位，字母b（bit）是比特和字母 B （Byte）是字节。 4、吞吐量与带宽的区分：吞吐量和带宽是很容易搞混的一个词，两者的单位都是Mbps.先让我们来看两者对应的英语，吞吐量:throughput ; 带宽: Max net bitrate 。当我们讨论通信链路的带宽时，一般是指链路上每秒所能传送的比特数。我们可以说以太网的带宽是10Mbps。但是，我们需要区分链路上的可用带宽（带宽）与实际链路中每秒所能传送的比特数（吞吐量）。我们倾向于用“吞吐量”一次来表示一个系统的测试性能。这样，因为实现受各种低效率因素的影响，所以由一段带宽为10Mbps的链路连接的一对节点可能只达到2Mbps的吞吐量。这样就意味着，一个主机上的应用能够以2Mbps的速度向另外的一个主机发送数据。 5、方差和标准差都是用来描述一组数据的波动性的（集中还是分散），标准差的平方就是方差。方差越大，数据的波动越大。 参考使用 JMeter 完成常用的压力测试 JMeter 聚合报告之 90% Line 参数说明 Jmeter中的几个重要测试指标释义 Jmeter基础]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[JMeter 压力测试CSV参数化]]></title>
+      <url>%2F2017%2F04%2F23%2F2018%2Fprogram%2Fjmeterscript%2F</url>
       <content type="text"><![CDATA[概述JMeter 的主要测试组件总结如下： 测试计划是使用 JMeter 进行测试的起点，它是其它 JMeter 测试元件的容器。 线程组代表一定数量的并发用户，它可以用来模拟并发用户发送请求。实际的请求内容在Sampler中定义，它被线程组包含。 监听器负责收集测试结果，同时也被告知了结果显示的方式。 逻辑控制器可以自定义JMeter发送请求的行为逻辑，它与Sampler结合使用可以模拟复杂的请求序列。 断言可以用来判断请求响应的结果是否如用户所期望的。它可以用来隔离问题域，即在确保功能正确的前提下执行压力测试。这个限制对于有效的测试是非常有用的。 配置元件维护Sampler需要的配置信息，并根据实际的需要会修改请求的内容。 前置处理器和后置处理器负责在生成请求之前和之后完成工作。前置处理器常常用来修改请求的设置，后置处理器则常常用来处理响应的数据。 定时器负责定义请求之间的延迟间隔。 常用测试最简单的Web测试计划只需要三个 JMeter 的测试元件，如下图： 其中： 在线程组中定义线程数、产生线程发生的时间和测试循环次数。 在http请求中定义服务器、端口、协议和方法、请求路径等。 表格监听器负责收集和显示结果。 添加一个测试计划添加线程组点击测试计划，右键选择添加菜单项，选择子菜单Threads(Users)，点击线程组，如下图： 配置线程组参数名称：测试接口名称 线程属性 线程数：模拟的用户数量 Ramp-up Period（in seconds）：达到指定线程数所需要的时间。举例：线程数设置为50，此处设置为5，那么每秒启动的线程数 = 线程数50/5 = 10 循环次数：选中“永远”，则一直循环下去。 添加HTTP信息头管理器点击线程组（产品列表），右键添加》配置元件 》 “HTTP信息头管理器”。如下图：在面板中“信息头存储在信息头管理器中”添加一组http头部信息名称：Content-Type值：application/json 添加HTTP请求点击线程组（产品列表），右键添加》Sampler 》 “HTTP请求”。如下图：在Basic面板中配置参数服务器名称或IP：应用ip地址端口号：应用端口号Http请求方法：选择相应的请求方式，如POST请求。路径：请求地址参数：在Parameters或者Body Data中添加请求参数。 结果分析Summary Report点击HTTP请求，右键添加》监听器》Summary Report。如下图：做性能测试时，Summary Report可用于分析请求吞吐量、平均响应时间、最长响应时间等信息。例如只有一个（产品列表）接口的请求，那么在Summary Report中，会显示一行数据，共有10个字段，含义分别如下。 Label：每个 JMeter 的 element（例如 HTTP Request）都有一个 Name 属性，这里显示的就是 Name 属性的值 #Samples：表示你这次测试中一共发出了多少个请求，如果模拟10个用户，每个用户迭代10次，那么这里显示100 Average：平均响应时间——默认情况下是单个 Request 的平均响应时间，当使用了 Transaction Controller 时，也可以以Transaction 为单位显示平均响应时间 Median：中位数，也就是 50％ 用户的响应时间 90% Line：90％ 用户的响应时间 Min：最小响应时间 Max：最大响应时间 Error%：本次测试中出现错误的请求的数量/请求的总数 Throughput：吞吐量——默认情况下表示每秒完成的请求数（Request per Second），当使用了 Transaction Controller 时，也可以表示类似 LoadRunner 的 Transaction per Second 数 KB/Sec：每秒从服务器端接收到的数据量，相当于LoadRunner中的Throughput/Sec Avg.Bytes：服务端返回给Request数据的平均值，可以理解为：服务端返回所有数据/请求数 察看结果树点击HTTP请求，右键添加》监听器》察看结果树。如下图： 用察看结果树，可以观察每个请求的请求、响应返回信息。 取样器结果：显示的是取样器相关参数（客户端参数与响应参数） 请求：发送请求的具体值 响应数据：服务端返回的相应参数图形结果点击HTTP请求，右键添加》监听器》察看结果树。如下图：统计结果： 样本数目：发出去的请求总数 最新样本：最近一个Request的响应时间 平均：所有Request响应时间的平均值 偏离：所有Request响应时间的标准差 吞吐量：单位时间内（一般是1分钟）处理Request的个数 中值：所有Request响应时间的中间值 使用CSV Data Set Config参数化方法点击产品列表，右键添加》配置元件》CSV Data Set Config。如下图： 面板说明 Filename：填写文件路径和文件名称。可以指保存信息的文件目录，可以相对或者绝对路径。如果文件放在jmeter的bin目录下，直接写文件名称就可以。 File Encoding:文件编码，默认为ANSI。 Variable names：参数名称(有几个参数，在这里面就写几个参数名称，每个名称中间用分隔符分割，分隔符使用下面的“memberId,pagerno”中定义的。 Delimitet：定义分隔符，用于分隔文件中的参数，及上述Variable Names中定义的参数名称。 Allow Quoated data: True –设置文件中的参数值都必须用引用引起来,False则不需要。 Recycle on EOF：到了文件尾处，是否循环读取参数。注：程序从CSV Data Set Config文件中，每次读取一行，每次读取的参数仅供一个线程使用（类似Loadrunner里面的参数唯一值功能），如果线程数超过文本的记录行数，那么可以选择 True (从头再次读取)。 Stop thread on EOF:到了文件尾处，是否停止线程。当Recycle on EOF 选择true时，Stop threadon EOF选择true和false无任何意义，通俗的讲，在前面控制了不停的循环读取，后面再来让stop或run没有任何意义当Recycle on EOF 选择false时，Stop threadon EOF选择true，线程4个，参数3个，那么只会请求3次当Recycle on EOF 选择false时，Stop thread on EOF选择false，线程4个，参数3个，那么会请求4次，但第4次没有参数可取，不让循环，所以第4次请求错误 Sharing Mode: 设置是否线程共享。新建csv文件 1、新建一个orderlist.csv文件，按需要将参数填写在一列中。（不需要写变量名称，直接写变量值）内容如下： 2、在Configure the CSV Data Source中配置Filename属性，即参数文件路径。参数化 格式：${argue_name} 的方式引用Variable name 回到HTTP请求面板，在Body Data配置请求参数(也可在路径中配置参数：&amp;memberId=${memberId})。修改参数配置如下：非常参数化：1&#123;&quot;memberId&quot;:&quot;3395&quot;,&quot;pagerno&quot;:1,&quot;pagerrows&quot;:15,&quot;channel&quot;:&quot;&quot;,&quot;ltitle&quot;:&quot;&quot;,&quot;ptype&quot;:&quot;&quot;,&quot;topic&quot;:&quot;&quot;,&quot;province&quot;:&quot;&quot;,&quot;city&quot;:&quot;&quot;&#125; 引用CSV Data Set Config，参数化参数：1&#123;&quot;memberId&quot;:&quot;$&#123;memberId&#125;&quot;,&quot;pagerno&quot;:$&#123;pagerno&#125;,&quot;pagerrows&quot;:15,&quot;channel&quot;:&quot;&quot;,&quot;ltitle&quot;:&quot;&quot;,&quot;ptype&quot;:&quot;&quot;,&quot;topic&quot;:&quot;&quot;,&quot;province&quot;:&quot;&quot;,&quot;city&quot;:&quot;&quot;&#125; 验证请求参数 1、选择产品列表，右键点击Start,启动测试脚本，如下图： 2、回到察看结果树面板，查询请求参数是否替换成csv脚本中参数。 基础知识 1、吞吐量：是指在没有帧丢失的情况下，设备能够接受的最大速率。 2、存储的最小单位是字节Byte，对于存储单位，有以下几个单位，GB、MB和KB，那么这三者之间的换算关系是：1GB＝1024MB，1MB＝1024KB，1KB＝1024Bytes。Bit ：“位”，称为bit，也就是比特，有的时候也称为位。一个字节为8位二进制表示。Byte：“字节”，一个字节就是8比特。 3、Mbps (million bits per second 兆位/秒) 代表每秒传输1，000，000比特。该缩写用来描述数据传输速度。例如：4Mbps=每秒钟传输4M比特。数据传输速率的单位，字母b（bit）是比特和字母 B （Byte）是字节。 4、吞吐量与带宽的区分：吞吐量和带宽是很容易搞混的一个词，两者的单位都是Mbps.先让我们来看两者对应的英语，吞吐量:throughput ; 带宽: Max net bitrate 。当我们讨论通信链路的带宽时，一般是指链路上每秒所能传送的比特数。我们可以说以太网的带宽是10Mbps。但是，我们需要区分链路上的可用带宽（带宽）与实际链路中每秒所能传送的比特数（吞吐量）。我们倾向于用“吞吐量”一次来表示一个系统的测试性能。这样，因为实现受各种低效率因素的影响，所以由一段带宽为10Mbps的链路连接的一对节点可能只达到2Mbps的吞吐量。这样就意味着，一个主机上的应用能够以2Mbps的速度向另外的一个主机发送数据。 5、方差和标准差都是用来描述一组数据的波动性的（集中还是分散），标准差的平方就是方差。方差越大，数据的波动越大。 参考使用 JMeter 完成常用的压力测试 JMeter 聚合报告之 90% Line 参数说明 Jmeter中的几个重要测试指标释义 Jmeter基础]]></content>
     </entry>
 
@@ -465,16 +626,16 @@
 
     
     <entry>
-      <title><![CDATA[联盟]]></title>
-      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E8%81%94%E7%9B%9F%2F</url>
-      <content type="text"><![CDATA[通过联盟重建信任与忠诚 如果我们不能回到终身雇佣的年代，就要学会重建雇主与员工的关系。这种新的忠诚观允许公司和员工对彼此做出承诺，把过去的商业交易转变为互惠关系的框架。雇佣关系可以转换为一个联盟：一份由双方独立达成的，有明确条款的互惠协议。 员工拥有创始人思维任期制将员工在你的公司度过的职业生涯重新规划为一系列连续的任期，可以更好地吸引和留住开创型员工。 培养开创性员工的利器诚实地谈论任期公司里的三类任期 轮转期 转变期 基础期 协调员工的目标和公司的目标如何执行转变期计划 开始对话，确定目标 定期检查以交流反馈 任期临近结束前，制定下一个任期计划 如何处理任务中的意外投资在员工的人脉上打造终身联盟：前同事联络网建立同事联络网的策略与技巧 决定同事联络网的成员。删除掉存在纠纷和法律道德风险的前员工。 明确定义与前员工关系的期望和收益。常见的方法有：员工推荐奖金、产品折扣和测试白名单、举办活动、为前员工颁发荣誉、向前员工通报最新消息等。 建立周详的离职机制。在离职面谈中与员工巩固终身关系，收集信息进入数据库。 建立现员工和前员工的联系。 首席执行官布拉德·史密斯（Brad Smith）告诉我们的：“领导者的任务不是培养能人，而是认识到人们已有的才华，并创造出让其产生和成长的环境。”]]></content>
+      <title><![CDATA[刻意练习]]></title>
+      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0%2F</url>
+      <content type="text"><![CDATA[真正的”一万小时天才理论”是，普通人也可以通过刻意练习成为某个领域的专家。 用『三个F』创建有效的心理表征 专注focus，集中注意力 反馈feedback，及时反馈 纠正fix it，不断修正自己 练习的时间与质量反而在决定人们的技能变得多么熟练时，发挥着更大的作用。 从长远来看，占上风的是那些练习更勤奋的人，而不是那些一开始在智商或者其他才华方面稍有优势的人。]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[刻意练习]]></title>
-      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0%2F</url>
-      <content type="text"><![CDATA[真正的”一万小时天才理论”是，普通人也可以通过刻意练习成为某个领域的专家。 用『三个F』创建有效的心理表征 专注focus，集中注意力 反馈feedback，及时反馈 纠正fix it，不断修正自己 练习的时间与质量反而在决定人们的技能变得多么熟练时，发挥着更大的作用。 从长远来看，占上风的是那些练习更勤奋的人，而不是那些一开始在智商或者其他才华方面稍有优势的人。]]></content>
+      <title><![CDATA[联盟]]></title>
+      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E8%81%94%E7%9B%9F%2F</url>
+      <content type="text"><![CDATA[通过联盟重建信任与忠诚 如果我们不能回到终身雇佣的年代，就要学会重建雇主与员工的关系。这种新的忠诚观允许公司和员工对彼此做出承诺，把过去的商业交易转变为互惠关系的框架。雇佣关系可以转换为一个联盟：一份由双方独立达成的，有明确条款的互惠协议。 员工拥有创始人思维任期制将员工在你的公司度过的职业生涯重新规划为一系列连续的任期，可以更好地吸引和留住开创型员工。 培养开创性员工的利器诚实地谈论任期公司里的三类任期 轮转期 转变期 基础期 协调员工的目标和公司的目标如何执行转变期计划 开始对话，确定目标 定期检查以交流反馈 任期临近结束前，制定下一个任期计划 如何处理任务中的意外投资在员工的人脉上打造终身联盟：前同事联络网建立同事联络网的策略与技巧 决定同事联络网的成员。删除掉存在纠纷和法律道德风险的前员工。 明确定义与前员工关系的期望和收益。常见的方法有：员工推荐奖金、产品折扣和测试白名单、举办活动、为前员工颁发荣誉、向前员工通报最新消息等。 建立周详的离职机制。在离职面谈中与员工巩固终身关系，收集信息进入数据库。 建立现员工和前员工的联系。 首席执行官布拉德·史密斯（Brad Smith）告诉我们的：“领导者的任务不是培养能人，而是认识到人们已有的才华，并创造出让其产生和成长的环境。”]]></content>
     </entry>
 
     
@@ -507,13 +668,6 @@
 
     
     <entry>
-      <title><![CDATA[输赢心理学]]></title>
-      <url>%2F2017%2F04%2F12%2F2017%2Flisten%2F%E8%BE%93%E8%B5%A2%E5%BF%83%E7%90%86%E5%AD%A6%2F</url>
-      <content type="text"><![CDATA[对一些钢琴家的研究表明，是否能够在比赛中胜出，并不取决于平时排练得多好，而是取决于他们能否在比赛中，保持平时排练时的水平。很少有钢琴家能在比赛中表现得和平时排练一样好或更好。当人们越关注成功的几率，去尝试做某事的可能性就小；但当越关注成功的果实，尝试的可能性就大。 乐队的演出效果越好，其幕后的争斗、竞争、不和谐就会越发严重。他们只有在台上才会表现出初期的和谐效果。要让人们在合作中更努力，只需要告诉他们与实验室伙伴同一天生日即可，他们的工作会更加积极主动、持之以恒。]]></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[思考的技术]]></title>
       <url>%2F2017%2F04%2F12%2F2017%2Flisten%2F%E6%80%9D%E8%80%83%E7%9A%84%E6%8A%80%E6%9C%AF%2F</url>
       <content type="text"><![CDATA[1.很多人在思考问题的时候，以为自己抓住了本质，其实是被外界的干预、固有的经验或者别人的劝说所误导。 2.遗憾的是，大多数面临严重问题的企业，在找出解决之策以后，却没有坚决实行的执行力。 3.所谓科学的思考方法，就是为了印证假设而不辞劳作的行动力，也可以说是为了获得绝对正确的答案，彻底动脑的深层思考力。 4.证实假设到导出结论的过程中，最重要的就是弄清楚“发生问题的原因是什么”。但是大多数经营者和企业经理人只看到问题的现象，却看不到产生问题的原因。]]></content>
@@ -521,9 +675,23 @@
 
     
     <entry>
+      <title><![CDATA[输赢心理学]]></title>
+      <url>%2F2017%2F04%2F12%2F2017%2Flisten%2F%E8%BE%93%E8%B5%A2%E5%BF%83%E7%90%86%E5%AD%A6%2F</url>
+      <content type="text"><![CDATA[对一些钢琴家的研究表明，是否能够在比赛中胜出，并不取决于平时排练得多好，而是取决于他们能否在比赛中，保持平时排练时的水平。很少有钢琴家能在比赛中表现得和平时排练一样好或更好。当人们越关注成功的几率，去尝试做某事的可能性就小；但当越关注成功的果实，尝试的可能性就大。 乐队的演出效果越好，其幕后的争斗、竞争、不和谐就会越发严重。他们只有在台上才会表现出初期的和谐效果。要让人们在合作中更努力，只需要告诉他们与实验室伙伴同一天生日即可，他们的工作会更加积极主动、持之以恒。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[刻意练习]]></title>
       <url>%2F2017%2F04%2F11%2F2017%2Flisten%2F%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0%2F</url>
       <content type="text"><![CDATA[1、只有在刻意练习下的一万小时才有用。 2、你可以掌握自己的潜力。 3、如果你没有进步，并不是因为你缺少天赋，而是因为你没有用正确的方法练习。 4、传统的方法一直是先找出关于正确方法的信息，然后让学生运用那些知识。刻意练习则只聚焦于绩效和表现，以及怎样提高绩效和表现。 5、在专业的或商业的背景中设计提高绩效和表现时，正确的问题是“我们怎样改进相关的技能”，而不是“我们怎样传授相关的知识” 6、杰出人物的进展只有局外人看来才是重大进展，因为那些人并没有见证过所有那些微小的进展，才积累成重大的飞跃。 7、我们只有努力去复制杰出人物的成就，失败了就停下来思考为什么会失败，才能创建有效的心理表征。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Mysql 优化]]></title>
+      <url>%2F2017%2F04%2F11%2F2018%2Fprogram%2Fmysqloptimization%2F</url>
+      <content type="text"><![CDATA[Mysql性能优化MySQL索引原理及慢查询优化]]></content>
     </entry>
 
     
@@ -543,8 +711,22 @@
     
     <entry>
       <title><![CDATA[jvisualvm]]></title>
+      <url>%2F2017%2F04%2F11%2F2018%2Fprogram%2Fjvisualvm%2F</url>
+      <content type="text"><![CDATA[使用 VisualVM 进行性能分析及调优]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jvisualvm]]></title>
       <url>%2F2017%2F04%2F11%2F2017%2Fprogram%2Fjvisualvm%2F</url>
       <content type="text"><![CDATA[使用 VisualVM 进行性能分析及调优]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jprofiler]]></title>
+      <url>%2F2017%2F04%2F11%2F2018%2Fprogram%2Fjprofiler%2F</url>
+      <content type="text"><![CDATA[start_jetty_jprofiler.sh123JAVA_OPTS=&quot;-agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849 $JAVA_OPTS&quot;export JAVA_OPTSjava $JAVA_OPTS -jar start.jar 业务启动123JAVA_OPTS=&quot;-agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849 $JAVA_OPTS&quot;export JAVA_OPTSjava $JAVA_OPTS -jar /usr/local/jetty9/start.jar jetty.base=/home/user/product &amp;]]></content>
     </entry>
 
     
@@ -571,8 +753,29 @@
     
     <entry>
       <title><![CDATA[Jconsole on Jetty]]></title>
+      <url>%2F2017%2F04%2F10%2F2018%2Fprogram%2Fjconsolejetty%2F</url>
+      <content type="text"><![CDATA[使用jconsole来连接jetty查看其运行状态。 修改jetty的配置start.ini文件123456--exec OPTIONS=Server,jsp,jmx,resources,websocket,ext,plus,annotations #jmx必须有 -Dcom.sun.management.jmxremote.port=8900 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false 参数说明12345678-Dcom.sun.management.jmxremote.port=8900 表示启动的端口为8900-Dcom.sun.management.jmxremote 启动jmx远程管理，默认为true-Dcom.sun.management.jmxremote.ssl=false 禁用ssl登录-Dcom.sun.management.jmxremote.authenticate=false禁用认证，无需输入用户名密码即可登录--exec 此参数必须有，若漏掉此参数，即使配置了以上参数，远程管理端口也不会启动。只有加上此选项，才会使其他参数生效。 设置完成后，需要重启jetty才能生效。 jconsole连接jconsole通过ip:port的方式就可连接，如果有防火墙的话请放开相关端口。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Jconsole on Jetty]]></title>
       <url>%2F2017%2F04%2F10%2F2017%2Fprogram%2Fjconsolejetty%2F</url>
       <content type="text"><![CDATA[使用jconsole来连接jetty查看其运行状态。 修改jetty的配置start.ini文件123456--exec OPTIONS=Server,jsp,jmx,resources,websocket,ext,plus,annotations #jmx必须有 -Dcom.sun.management.jmxremote.port=8900 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false 参数说明12345678-Dcom.sun.management.jmxremote.port=8900 表示启动的端口为8900-Dcom.sun.management.jmxremote 启动jmx远程管理，默认为true-Dcom.sun.management.jmxremote.ssl=false 禁用ssl登录-Dcom.sun.management.jmxremote.authenticate=false禁用认证，无需输入用户名密码即可登录--exec 此参数必须有，若漏掉此参数，即使配置了以上参数，远程管理端口也不会启动。只有加上此选项，才会使其他参数生效。 设置完成后，需要重启jetty才能生效。 jconsole连接jconsole通过ip:port的方式就可连接，如果有防火墙的话请放开相关端口。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Jetty jvm]]></title>
+      <url>%2F2017%2F04%2F10%2F2018%2Fprogram%2Fjettyjvm%2F</url>
+      <content type="text"><![CDATA[修改start.ini文件中–exec -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Dcom.sun.management.jmxremote-Dorg.eclipse.jetty.util.log.IGNORED=true-Dorg.eclipse.jetty.util.log.stderr.DEBUG=true-Dorg.eclipse.jetty.util.log.stderr.SOURCE=true -Xmx2000m -Xmn512m -XX:PermSize=512m -XX:MaxPermSize=1024m -verbose:gc-XX:+PrintGCDateStamps-XX:+PrintGCTimeStamps-XX:+PrintGCDetails-XX:+PrintTenuringDistribution-XX:+PrintCommandLineFlags-XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:ParallelCMSThreads=2 -XX:+CMSClassUnloadingEnabled -XX:+UseCMSCompactAtFullCollection-XX:CMSInitiatingOccupancyFraction=80#———————————————————– 说明 -Dsun.rmi.dgc.client.gcInterval=3600000， -Dsun.rmi.dgc.server.gcInterval=3600000是设置客户端和服务端GC启动的时间。 -Xmx2000m最大缓存空间、 -Xmn512m新生代大小、 -XX:PermSize=512m内存永久区初始大小、 -XX:MaxPermSize=1024m最大永久区大小， -XX:MaxPermSize=1024m允许CMS清楚老年代， -XX:+CMSClassUnloadingEnabled， -XX:+CMSClassUnloadingEnabled 允许CMS清楚持久代。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[JMeter 压力测试CSV参数化]]></title>
+      <url>%2F2017%2F04%2F10%2F2018%2Fprogram%2Fjmeter%2F</url>
+      <content type="text"><![CDATA[Jmeter之使用CSV Data Set Config实现参数化登录JMeter带json数据的post请求测试JMeter 压力测试使用函数和 CSV 文件参数化 json 数据]]></content>
     </entry>
 
     
@@ -619,8 +822,22 @@
 
     
     <entry>
+      <title><![CDATA[Nginx conf]]></title>
+      <url>%2F2017%2F04%2F09%2F2018%2Fprogram%2Fnginx.conf%2F</url>
+      <content type="text"><![CDATA[反向代理配置修改部署目录下conf子目录的nginx.conf文件（如nginx-1.5.13\conf\nginx.conf）内容，可调整相关配置。反向代理配置示例：12345678910111213141516location / &#123; #设置主机头和客户端真实地址，以便服务器获取客户端真实IP proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; #禁用缓存 proxy_buffering off; #设置反向代理的地址 proxy_pass http://192.168.1.1; &#125; 代理地址根据实际情况修改。 负载均衡配置nginx 的 upstream默认是以轮询的方式实现负载均衡，这种方式中，每个请求按时间顺序逐一分配到不同的后端服务器，如果后端服务器down掉，能自动剔除。 另外一种方式是ip_hash：每个请求按访问ip的hash结果分配，这样每个访客固定访问一个后端服务器，可以解决session的问题。 负载均衡配置示例：12345678910111213141516171819202122232425262728293031upstream backend &#123; #ip_hash; server 192.168.1.251; server 192.168.1.252; server 192.168.1.247; &#125;server &#123; listen 80; server_name trffweb; location / &#123; #反向代理的地址 proxy_pass http://backend; &#125;&#125; Upstream命名和服务器地址根据实际情况修改。 完整配置示例123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657nginx.conf：worker_processes 1;events &#123; worker_connections 1024;&#125; http &#123; include mime.types; default_type application/octet-stream; sendfile on; keepalive_timeout 65; upstream backend &#123; #ip_hash; server 192.168.1.251; server 192.168.1.252; server 192.168.1.247; &#125; server &#123; listen 80; server_name 2; location / &#123; #设置主机头和客户端真实地址，以便服务器获取客户端真实IP proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; #禁用缓存 proxy_buffering off; #反向代理的地址 proxy_pass http://backend; &#125; &#125;&#125;]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[php 命令]]></title>
       <url>%2F2017%2F04%2F09%2F2017%2Fprogram%2Fphp%2F</url>
+      <content type="text"><![CDATA[php 调式命令 echo json_encode($data);die; var_dump($info);die;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[php 命令]]></title>
+      <url>%2F2017%2F04%2F09%2F2018%2Fprogram%2Fphp%2F</url>
       <content type="text"><![CDATA[php 调式命令 echo json_encode($data);die; var_dump($info);die;]]></content>
     </entry>
 
@@ -689,6 +906,13 @@
 
     
     <entry>
+      <title><![CDATA[Mysql unsigned]]></title>
+      <url>%2F2017%2F03%2F30%2F2018%2Fprogram%2Fmysqlunsigned%2F</url>
+      <content type="text"><![CDATA[mysql中的unsigned unsigned 既为非负数，用此类型可以增加数据长度! unsigned 属性只针对整型，而binary属性只用于char 和varchar。 类型 类型 说明 tinyint 非常小的整数 smallint 较小整数 mediumint 中等大小整数 int 标准整数 bigint 较大整数 float 单精度浮点数 double 双精度浮点数 decimal 一个串的浮点数 每种数值类型的名称和取值范围 类型说明 取值范围 tinyint[(m)] 有符号值：-128 到127（- 27 到27 - 1）无符号值：0到255（0 到28 - 1） 1个字节 smallint[(m)] 有符号值：-32768 到32767（- 215 到215 - 1）无符号值：0到65535（0 到21 6 - 1） 2个字节 mediumint[(m)] 有符号值：-8388608 到8388607（- 22 3 到22 3 - 1 ）无符号值：0到16777215（0 到22 4 - 1） 3个字节 int[(m)] 有符号值：-2147683648 到2147683647（- 231 到231- 1）无符号值：0到4294967295（0 到232 - 1） 4个字节 bigint[(m)] 有符号值：-9223372036854775808 到9223373036854775807（- 263到263-1）无符号值：0到18446744073709551615（0到264 – 1） 8个字节 float[(m, d)] 最小非零值：±1.175494351e - 38 double[(m,d)] 最小非零值：±2.2250738585072014e - 308 decimal (m, d) 可变；其值的范围依赖于m 和d]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[颠覆式创新]]></title>
       <url>%2F2017%2F03%2F29%2F2017%2Flisten%2F%E9%A2%A0%E8%A6%86%E5%BC%8F%E5%88%9B%E6%96%B0%2F</url>
       <content type="text"><![CDATA[1.渐进式的创新仍然必不可少，因为它们带来持续的新收入来源。但那还不够，它们不能保证企业长期的成功。只有颠覆式创新才能让企业经受住时间的考验。 2.过去，颠覆只关注战略。企业和品牌愿景都是为今后若干年设计的，而今天，颠覆必须更加灵活，必须变得“快餐化”，具有流动性。 3.每当人们不按照逐步的、渐进式的、线性的方式思考问题时，每当他们实施跨越式战略时，就可以称之为颠覆。你可以颠覆产品、商业模式、营销计划以及宣传策略……]]></content>
@@ -703,6 +927,13 @@
 
     
     <entry>
+      <title><![CDATA[hibernate outside valid range for the datatype smallint]]></title>
+      <url>%2F2017%2F03%2F29%2F2018%2Fprogram%2Fhibernateoutsidevalidrange%2F</url>
+      <content type="text"><![CDATA[hibernate 使用sql查询时，smallint类型字段出现长度超过。因为smallint使用的是无符号类型unsigned，导致长度超过。 错误 hibernate ‘65535.0’ in column ‘12’ is outside valid range for the datatype SMALLINT. 解决使用函数将字段类型数据进行转化，如下： CAST(column AS signed)]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[MySQL CAST And CONVERT 函数]]></title>
       <url>%2F2017%2F03%2F29%2F2017%2Fprogram%2Fmysqlcastandconvert%2F</url>
       <content type="text"><![CDATA[MySQL 的CAST()和CONVERT()函数可用来获取一个类型的值，并产生另一个类型的值。两者具体的语法如下： 12CAST(value as type);CONVERT(value, type); 转换的类型是有限制的。 二进制，同带binary前缀的效果 : BINARY 字符型，可带参数 : CHAR() 日期 : DATE 时间: TIME 日期时间型 : DATETIME 浮点数 : DECIMAL 整数 : SIGNED 无符号整数 : UNSIGNED]]></content>
@@ -710,9 +941,30 @@
 
     
     <entry>
+      <title><![CDATA[MySQL CAST And CONVERT 函数]]></title>
+      <url>%2F2017%2F03%2F29%2F2018%2Fprogram%2Fmysqlcastandconvert%2F</url>
+      <content type="text"><![CDATA[MySQL 的CAST()和CONVERT()函数可用来获取一个类型的值，并产生另一个类型的值。两者具体的语法如下： 12CAST(value as type);CONVERT(value, type); 转换的类型是有限制的。 二进制，同带binary前缀的效果 : BINARY 字符型，可带参数 : CHAR() 日期 : DATE 时间: TIME 日期时间型 : DATETIME 浮点数 : DECIMAL 整数 : SIGNED 无符号整数 : UNSIGNED]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Git Stash]]></title>
+      <url>%2F2017%2F03%2F29%2F2018%2Fprogram%2Fgitstash%2F</url>
+      <content type="text"><![CDATA[Git Stash git stash: 备份当前的工作区的内容，从最近的一次提交中读取相关内容，让工作区保证和上次提交的内容一致。同时，将当前的工作区内容保存到Git栈中。 git stash pop: 从Git栈中读取最近一次保存的内容，恢复工作区的相关内容。由于可能存在多个Stash的内容，所以用栈来管理，pop会从最近的一个stash中读取内容并恢复。 git stash list: 显示Git栈内的所有备份，可以利用这个列表来决定从那个地方恢复。 git stash clear: 清空Git栈。此时使用gitg等图形化工具会发现，原来stash的哪些节点都消失了。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Git Stash]]></title>
       <url>%2F2017%2F03%2F29%2F2017%2Fprogram%2Fgitstash%2F</url>
       <content type="text"><![CDATA[Git Stash git stash: 备份当前的工作区的内容，从最近的一次提交中读取相关内容，让工作区保证和上次提交的内容一致。同时，将当前的工作区内容保存到Git栈中。 git stash pop: 从Git栈中读取最近一次保存的内容，恢复工作区的相关内容。由于可能存在多个Stash的内容，所以用栈来管理，pop会从最近的一个stash中读取内容并恢复。 git stash list: 显示Git栈内的所有备份，可以利用这个列表来决定从那个地方恢复。 git stash clear: 清空Git栈。此时使用gitg等图形化工具会发现，原来stash的哪些节点都消失了。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Centos6桥接网络配置]]></title>
+      <url>%2F2017%2F03%2F29%2F2018%2Fprogram%2Fcentos6-bridging-network%2F</url>
+      <content type="text"><![CDATA[Centos6 桥接网络配置编辑配置文件1vi /etc/sysconfig/network-scripts/ifcfg-eth0 添加修改以下内容DEVICE=eth0HWADDR=08:00:27:BC:56:DBTYPE=EthernetUUID=8247fb0d-ca65-4c4b-ab61-c21e1c8f5406ONBOOT=yes #开启自动启用网络连接NM_CONTROLLED=yesBOOTPROTO=static #启用静态IP地址IPADDR0=192.168.3.236 #设置IP地址NETMASK=255.255.255.0GATEWAY0=192.168.3.1 #设置网关PREFIXO0=24 #设置子网掩码DNS1=218.85.157.99 #设置主DNSDNS2=218.85.157.99 #设置备DNSPEERDNS=yesUSERCTL=noIPV6INIT=noPREFIX=24DEFROUTE=yes 保存退出1:wq! 重启网络1service network restart]]></content>
     </entry>
 
     
@@ -731,8 +983,22 @@
 
     
     <entry>
+      <title><![CDATA[Linux ps 命令参数详解]]></title>
+      <url>%2F2017%2F03%2F29%2F2018%2Fprogram%2Flinuxps%2F</url>
+      <content type="text"><![CDATA[ps [-aAcdefHjlmNVwy][acefghLnrsSTuvxX][-C &lt;指令名称&gt;][-g &lt;群组名称&gt;][-G &lt;群组识别码&gt;][-p &lt;进程识别码&gt;][p &lt;进程识别码&gt;][-s &lt;阶段作业&gt;][-t &lt;终端机编号&gt;][t &lt;终端机编号&gt;][-u &lt;用户识别码&gt;][-U &lt;用户识别码&gt;][U &lt;用户名称&gt;][-&lt;进程识别码&gt;][–cols &lt;每列字符数&gt;][–columns &lt;每列字符数&gt;][–cumulative][–deselect][–forest][–headers][–help][– info][–lines &lt;显示列数&gt;][–no-headers][–group &lt;群组名称&gt;][-Group &lt;群组识别码&gt;][–pid &lt;进程识别码&gt;][–rows &lt;显示列数&gt;][–sid &lt;阶段作业&gt;][–tty &lt;终端机编号&gt;][–user &lt;用户名称&gt;][–User &lt;用户识别码&gt;][–version][–width &lt;每列字符数&gt;] 参数说明： -a 显示所有终端机下执行的进程，除了阶段作业领导者之外。 a 显示现行终端机下的所有进程，包括其他用户的进程。 -A 显示所有进程。 -c 显示CLS和PRI栏位。 c 列出进程时，显示每个进程真正的指令名称，而不包含路径，参数或常驻服务的标示。 -C&lt;指令名称&gt; 指定执行指令的名称，并列出该指令的进程的状况。 -d 显示所有进程，但不包括阶段作业领导者的进程。 -e 此参数的效果和指定”A”参数相同。 e 列出进程时，显示每个进程所使用的环境变量。 -f 显示UID,PPIP,C与STIME栏位。 f 用ASCII字符显示树状结构，表达进程间的相互关系。 -g&lt;群组名称&gt; 此参数的效果和指定”-G”参数相同，当亦能使用阶段作业领导者的名称来指定。 g 显示现行终端机下的所有进程，包括群组领导者的进程。 -G&lt;群组识别码&gt; 列出属于该群组的进程的状况，也可使用群组名称来指定。 h 不显示标题列。 -H 显示树状结构，表示进程间的相互关系。 -j或j 采用工作控制的格式显示进程状况。 -l或l 采用详细的格式来显示进程状况。 L 列出栏位的相关信息。 -m或m 显示所有的执行绪。 n 以数字来表示USER和WCHAN栏位。 -N 显示所有的进程，除了执行ps指令终端机下的进程之外。 -p&lt;进程识别码&gt; 指定进程识别码，并列出该进程的状况。 p&lt;进程识别码&gt; 此参数的效果和指定”-p”参数相同，只在列表格式方面稍有差异。 r 只列出现行终端机正在执行中的进程。 -s&lt;阶段作业&gt; 指定阶段作业的进程识别码，并列出隶属该阶段作业的进程的状况。 s 采用进程信号的格式显示进程状况。 S 列出进程时，包括已中断的子进程资料。 -t&lt;终端机编号&gt; 指定终端机编号，并列出属于该终端机的进程的状况。 t&lt;终端机编号&gt; 此参数的效果和指定”-t”参数相同，只在列表格式方面稍有差异。 -T 显示现行终端机下的所有进程。 -u&lt;用户识别码&gt; 此参数的效果和指定”-U”参数相同。 u 以用户为主的格式来显示进程状况。 -U&lt;用户识别码&gt; 列出属于该用户的进程的状况，也可使用用户名称来指定。 U&lt;用户名称&gt; 列出属于该用户的进程的状况。 v 采用虚拟内存的格式显示进程状况。 -V或V 显示版本信息。 -w或w 采用宽阔的格式来显示进程状况。 x 显示所有进程，不以终端机来区分。 X 采用旧式的Linux i386登陆格式显示进程状况。 -y 配合参数”-l”使用时，不显示F(flag)栏位，并以RSS栏位取代ADDR栏位 -&lt;进程识别码&gt; 此参数的效果和指定”p”参数相同。 –cols&lt;每列字符数&gt; 设置每列的最大字符数。 –columns&lt;每列字符数&gt; 此参数的效果和指定”–cols”参数相同。 –cumulative 此参数的效果和指定”S”参数相同。 –deselect 此参数的效果和指定”-N”参数相同。 –forest 此参数的效果和指定”f”参数相同。 –headers 重复显示标题列。 –help 在线帮助。 –info 显示排错信息。 –lines&lt;显示列数&gt; 设置显示画面的列数。 –no-headers 此参数的效果和指定”h”参数相同，只在列表格式方面稍有差异。 –group&lt;群组名称&gt; 此参数的效果和指定”-G”参数相同。 –Group&lt;群组识别码&gt; 此参数的效果和指定”-G”参数相同。 –pid&lt;进程识别码&gt; 此参数的效果和指定”-p”参数相同。 –rows&lt;显示列数&gt; 此参数的效果和指定”–lines”参数相同。 –sid&lt;阶段作业&gt; 此参数的效果和指定”-s”参数相同。 –tty&lt;终端机编号&gt; 此参数的效果和指定”-t”参数相同。 –user&lt;用户名称&gt; 此参数的效果和指定”-U”参数相同。 –User&lt;用户识别码&gt; 此参数的效果和指定”-U”参数相同。 –version 此参数的效果和指定”-V”参数相同。 –widty&lt;每列字符数&gt; 此参数的效果和指定”-cols”参数相同。 常用命令： ps -efps aux ps aux输出格式 USER PID %CPU %MEM VSZ RSS TTY STAT START TIME COMMAND USER: 进程拥有者PID:pid%CPU:占用的cpu使用率VSZ:占用的内存使用率RSS:占用的虚拟内存大小TTY:是否为登入者执行的程序，若为tty1-tty6，为本机登入者，若为pts/??,则为远程登入者。STAT:程序的状态，R:正在执行中，S：睡眠，T：正在检测或者停止，Z：死亡程序START:程序开始时间TIME:程序运行的时间COMMAND：所执行的指令。 例子 ps aux|grep java ps -ef|grep java ps aux 是用BSD的格式来显示 java这个进程显示的项目有：USER , PID , %CPU , %MEM , VSZ , RSS , TTY , STAT , START ,TIME , COMMANDps -ef 是用标准的格式显示java这个进程显示的项目有：UID , PID , PPID , C , STIME , TTY , TIME , CMD]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Linux tail]]></title>
       <url>%2F2017%2F03%2F28%2F2017%2Fprogram%2Flinuxtail%2F</url>
+      <content type="text"><![CDATA[tail 命令tail 命令从指定点开始将文件写到标准输出.使用tail命令的-f选项可以方便的查阅正在改变的日志文件,tail -f filename会把filename里最尾部的内容显示在屏幕上,并且不但刷新,使你看到最新的文件内容. 1．命令格式;tail[必要参数][选择参数][文件] 2．命令功能：用于显示指定文件末尾内容，不指定文件时，作为输入信息进行处理。常用查看日志文件。 3．命令参数：-f 循环读取-q 不显示处理信息-v 显示详细的处理信息-c&lt;数目&gt; 显示的字节数-n&lt;行数&gt; 显示行数–pid=PID 与-f合用,表示在进程ID,PID死掉之后结束.-q, –quiet, –silent 从不输出给出文件名的首部-s, –sleep-interval=S 与-f合用,表示在每次反复的间隔休眠S秒]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Linux tail]]></title>
+      <url>%2F2017%2F03%2F28%2F2018%2Fprogram%2Flinuxtail%2F</url>
       <content type="text"><![CDATA[tail 命令tail 命令从指定点开始将文件写到标准输出.使用tail命令的-f选项可以方便的查阅正在改变的日志文件,tail -f filename会把filename里最尾部的内容显示在屏幕上,并且不但刷新,使你看到最新的文件内容. 1．命令格式;tail[必要参数][选择参数][文件] 2．命令功能：用于显示指定文件末尾内容，不指定文件时，作为输入信息进行处理。常用查看日志文件。 3．命令参数：-f 循环读取-q 不显示处理信息-v 显示详细的处理信息-c&lt;数目&gt; 显示的字节数-n&lt;行数&gt; 显示行数–pid=PID 与-f合用,表示在进程ID,PID死掉之后结束.-q, –quiet, –silent 从不输出给出文件名的首部-s, –sleep-interval=S 与-f合用,表示在每次反复的间隔休眠S秒]]></content>
     </entry>
 
@@ -802,6 +1068,13 @@
     
     <entry>
       <title><![CDATA[Maven 常用命令]]></title>
+      <url>%2F2017%2F03%2F23%2F2018%2Fprogram%2Fmaven%2F</url>
+      <content type="text"><![CDATA[Maven 常用命令 mvn 编译 mvn install -Dmaven.test.skip=true 换成 eclipse 项目，执行下面的命令 mvn eclipse:eclipse]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Maven 常用命令]]></title>
       <url>%2F2017%2F03%2F23%2F2017%2Fprogram%2Fmaven%2F</url>
       <content type="text"><![CDATA[Maven 常用命令 mvn 编译 mvn install -Dmaven.test.skip=true 换成 eclipse 项目，执行下面的命令 mvn eclipse:eclipse]]></content>
     </entry>
@@ -815,8 +1088,22 @@
 
     
     <entry>
+      <title><![CDATA[Maven打包时跳过测试类]]></title>
+      <url>%2F2017%2F03%2F23%2F2018%2Fprogram%2Fmavensurefireplugin%2F</url>
+      <content type="text"><![CDATA[Maven打包时跳过测试类 方法pom.xml中添加如下配置。 1&lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt; &lt;version&gt;2.19.1&lt;/version&gt; &lt;configuration&gt; &lt;skip&gt;true&lt;/skip&gt; &lt;/configuration&gt; &lt;/plugin&gt;]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Maven 多个war依赖]]></title>
       <url>%2F2017%2F03%2F23%2F2017%2Fprogram%2Fmavenwarplugin%2F</url>
+      <content type="text"><![CDATA[Maven 多个war依赖,发布打包项目。 方法子项目的pom.xml中添加如下配置。123456&lt;plugin&gt; &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt; &lt;configuration&gt; &lt;attachClasses&gt;true&lt;/attachClasses&gt; &lt;/configuration&gt; &lt;/plugin&gt; 父项目的pom.xml中添加如下配置。 123456789101112131415&lt;dependency&gt; &lt;groupId&gt;com.cloudcode&lt;/groupId&gt; &lt;artifactId&gt;cloudcode-server&lt;/artifactId&gt; &lt;version&gt;1.0.0&lt;/version&gt; &lt;type&gt;war&lt;/type&gt;&lt;/dependency&gt;&lt;dependency&gt; &lt;groupId&gt;com.cloudcode&lt;/groupId&gt; &lt;artifactId&gt;cloudcode-server&lt;/artifactId&gt; &lt;version&gt;1.0.0&lt;/version&gt; &lt;type&gt;jar&lt;/type&gt; &lt;classifier&gt;classes&lt;/classifier&gt; &lt;scope&gt;provided&lt;/scope&gt;&lt;/dependency&gt; Thx]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Maven 多个war依赖]]></title>
+      <url>%2F2017%2F03%2F23%2F2018%2Fprogram%2Fmavenwarplugin%2F</url>
       <content type="text"><![CDATA[Maven 多个war依赖,发布打包项目。 方法子项目的pom.xml中添加如下配置。123456&lt;plugin&gt; &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt; &lt;configuration&gt; &lt;attachClasses&gt;true&lt;/attachClasses&gt; &lt;/configuration&gt; &lt;/plugin&gt; 父项目的pom.xml中添加如下配置。 123456789101112131415&lt;dependency&gt; &lt;groupId&gt;com.cloudcode&lt;/groupId&gt; &lt;artifactId&gt;cloudcode-server&lt;/artifactId&gt; &lt;version&gt;1.0.0&lt;/version&gt; &lt;type&gt;war&lt;/type&gt;&lt;/dependency&gt;&lt;dependency&gt; &lt;groupId&gt;com.cloudcode&lt;/groupId&gt; &lt;artifactId&gt;cloudcode-server&lt;/artifactId&gt; &lt;version&gt;1.0.0&lt;/version&gt; &lt;type&gt;jar&lt;/type&gt; &lt;classifier&gt;classes&lt;/classifier&gt; &lt;scope&gt;provided&lt;/scope&gt;&lt;/dependency&gt; Thx]]></content>
     </entry>
 
@@ -852,6 +1139,13 @@
     <entry>
       <title><![CDATA[使用Jenkins打包多个Maven项目]]></title>
       <url>%2F2017%2F03%2F20%2F2017%2Fprogram%2Fjenkinsmavendeploy%2F</url>
+      <content type="text"><![CDATA[一个Maven中包含多个项目，使用Jenkins打包时，不能直接使用Jenkins集成的打包方式。可以使用shell命令分别打包，在shell中分别使用以下命令。 Maven 目录结构1234cloudcode-parent cloudcode-common cloudcode-core cloudcode-framework 打包这几个项目123456789cd /var/lib/jenkins/workspace/cloudcode-parent/cloudcode-common/var/java/apache-maven-3.3.9/bin/mvn clean source:jar deploycd /var/lib/jenkins/workspace/cloudcode-parent/cloudcode-core/var/java/apache-maven-3.3.9/bin/mvn clean source:jar deploycd /var/lib/jenkins/workspace/cloudcode-parent/cloudcode-framework/var/java/apache-maven-3.3.9/bin/mvn clean source:jar deploy 打包命令1mvn clean source:jar deploy /var/lib/jenkins/workspace/ 是jenkins的工作目录/var/java/apache-maven-3.3.9/bin 是maven的安装路径]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[使用Jenkins打包多个Maven项目]]></title>
+      <url>%2F2017%2F03%2F20%2F2018%2Fprogram%2Fjenkinsmavendeploy%2F</url>
       <content type="text"><![CDATA[一个Maven中包含多个项目，使用Jenkins打包时，不能直接使用Jenkins集成的打包方式。可以使用shell命令分别打包，在shell中分别使用以下命令。 Maven 目录结构1234cloudcode-parent cloudcode-common cloudcode-core cloudcode-framework 打包这几个项目123456789cd /var/lib/jenkins/workspace/cloudcode-parent/cloudcode-common/var/java/apache-maven-3.3.9/bin/mvn clean source:jar deploycd /var/lib/jenkins/workspace/cloudcode-parent/cloudcode-core/var/java/apache-maven-3.3.9/bin/mvn clean source:jar deploycd /var/lib/jenkins/workspace/cloudcode-parent/cloudcode-framework/var/java/apache-maven-3.3.9/bin/mvn clean source:jar deploy 打包命令1mvn clean source:jar deploy /var/lib/jenkins/workspace/ 是jenkins的工作目录/var/java/apache-maven-3.3.9/bin 是maven的安装路径]]></content>
     </entry>
 
@@ -1018,15 +1312,15 @@
 
     
     <entry>
-      <title><![CDATA[梅花]]></title>
-      <url>%2F2017%2F02%2F05%2F2017%2Fplumblossoms%2F</url>
+      <title><![CDATA[油菜花]]></title>
+      <url>%2F2017%2F02%2F05%2F2017%2Frapeflower%2F</url>
       <content type="text"><![CDATA[]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[油菜花]]></title>
-      <url>%2F2017%2F02%2F05%2F2017%2Frapeflower%2F</url>
+      <title><![CDATA[梅花]]></title>
+      <url>%2F2017%2F02%2F05%2F2017%2Fplumblossoms%2F</url>
       <content type="text"><![CDATA[]]></content>
     </entry>
 
@@ -1046,9 +1340,9 @@
 
     
     <entry>
-      <title><![CDATA[骑行]]></title>
-      <url>%2F2017%2F01%2F08%2F2017%2Fqx20170107%2F</url>
-      <content type="text"><![CDATA[午后，从公司出发，经洪山桥骑行闽江公园，终于东街口。]]></content>
+      <title></title>
+      <url>%2F2017%2F01%2F08%2F2017%2Flisten%2F%E7%90%86%E6%80%A7%E6%83%85%E7%BB%AA%2F</url>
+      <content type="text"><![CDATA[1.人的一切精神上的痛苦和严重情绪紊乱，都是不必要的。 2.不管你的处境有多恶劣、遭遇有多严重，你实际上总是可以拥有控制和改变自己情绪的能力，减少并最终战胜你的不良情绪。 3.“心想事成”固然是个美好的愿望，但是在现实中，“心想”就能“事成”，这个概率其实是很低的，我们如果过分执着于这个愿望，总是用“应该”、“必须”、“一定要”来想问题，就会陷入到非理性的信念里，给自己的情绪带来麻烦。 4.建立一个有效的理性信念，我们需要做到三点：1.无条件地自我接纳；2.无条件地接纳他人；3.无条件地接纳我们的现实生活。 5.最终你需要明白的是，无论是你自身的缺陷，还是外界的不尽如人意，这都是人与世界的天性，是我们无法改变的客观存在。而我们可以做的是：我的情绪我做主。]]></content>
     </entry>
 
     
@@ -1060,9 +1354,9 @@
 
     
     <entry>
-      <title></title>
-      <url>%2F2017%2F01%2F08%2F2017%2Flisten%2F%E7%90%86%E6%80%A7%E6%83%85%E7%BB%AA%2F</url>
-      <content type="text"><![CDATA[1.人的一切精神上的痛苦和严重情绪紊乱，都是不必要的。 2.不管你的处境有多恶劣、遭遇有多严重，你实际上总是可以拥有控制和改变自己情绪的能力，减少并最终战胜你的不良情绪。 3.“心想事成”固然是个美好的愿望，但是在现实中，“心想”就能“事成”，这个概率其实是很低的，我们如果过分执着于这个愿望，总是用“应该”、“必须”、“一定要”来想问题，就会陷入到非理性的信念里，给自己的情绪带来麻烦。 4.建立一个有效的理性信念，我们需要做到三点：1.无条件地自我接纳；2.无条件地接纳他人；3.无条件地接纳我们的现实生活。 5.最终你需要明白的是，无论是你自身的缺陷，还是外界的不尽如人意，这都是人与世界的天性，是我们无法改变的客观存在。而我们可以做的是：我的情绪我做主。]]></content>
+      <title><![CDATA[骑行]]></title>
+      <url>%2F2017%2F01%2F08%2F2017%2Fqx20170107%2F</url>
+      <content type="text"><![CDATA[午后，从公司出发，经洪山桥骑行闽江公园，终于东街口。]]></content>
     </entry>
 
     
@@ -1109,16 +1403,16 @@
 
     
     <entry>
-      <title><![CDATA[Centos桥接网络配置]]></title>
-      <url>%2F2016%2F12%2F01%2F2016%2Fcentos-bridging-network%2F</url>
-      <content type="text"><![CDATA[Centos7 桥接网络配置编辑配置文件1vi /etc/sysconfig/network-scripts/ifcfg-eth0 添加修改以下内容HWADDR=08:00:27:d4:5e:11TYPE=EthernetBOOTPROTO=static #启用静态IP地址DEFROUTE=yesPEERDNS=yesPEERROUTES=yesIPV4_FAILURE_FATAL=noIPV6INIT=yesIPV6_AUTOCONF=yesIPV6_DEFROUTE=yesIPV6_PEERDNS=yesIPV6_PEERROUTES=yesIPV6_FAILURE_FATAL=noNAME=enp0s3UUID=3c092d5f-fda6-403b-1122-d9bbd7280da5ONBOOT=yes #开启自动启用网络连接IPADDR0=192.168.3.236 #设置IP地址PREFIXO0=24 #设置子网掩码GATEWAY0=192.168.3.1 #设置网关DNS1=218.85.157.99 #设置主DNSDNS2=218.85.157.99 #设置备DNS 保存退出1:wq! 重启网络1systemctl restart network.service]]></content>
+      <title><![CDATA[Jconsole监视dubbo服务]]></title>
+      <url>%2F2016%2F12%2F01%2F2016%2FJconsole%E7%9B%91%E8%A7%86dubbo%2F</url>
+      <content type="text"><![CDATA[使用Jconsole监视dubbo服务 在需要监控的/bin/start.sh文件中添加下面语句：JAVA_OPTS=”$JAVA_OPTS -Djava.rmi.server.hostname=192.168..-Dcom.sun.management.jmxremote.port=8088-Dcom.sun.management.jmxremote.ssl=false-Dcom.sun.management.jmxremote.authenticate=false”-Djava.rmi.server.hostname该参数指定jconsole远程连接的IP地址-Dcom.sun.management.jmxremote.port该参数指定jconsole远程连接的端口号-Dcom.sun.management.jmxremote.authenticate设置参数值为false时，就不需要输入用户名和密码 也可用/bin/remotestart.sh启动监控，该命令已配置该信息。启动本地Jconsole在jdk安装目录下,如C:\Program Files\Java\jdk1.8.0_111\bin,选择jconsole.exe并双击。选择远程进程，输入地址及端口信息：192.168..：8088即可监控dubbo服务性能消耗。]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[Jconsole监视dubbo服务]]></title>
-      <url>%2F2016%2F12%2F01%2F2016%2FJconsole%E7%9B%91%E8%A7%86dubbo%2F</url>
-      <content type="text"><![CDATA[使用Jconsole监视dubbo服务 在需要监控的/bin/start.sh文件中添加下面语句：JAVA_OPTS=”$JAVA_OPTS -Djava.rmi.server.hostname=192.168..-Dcom.sun.management.jmxremote.port=8088-Dcom.sun.management.jmxremote.ssl=false-Dcom.sun.management.jmxremote.authenticate=false”-Djava.rmi.server.hostname该参数指定jconsole远程连接的IP地址-Dcom.sun.management.jmxremote.port该参数指定jconsole远程连接的端口号-Dcom.sun.management.jmxremote.authenticate设置参数值为false时，就不需要输入用户名和密码 也可用/bin/remotestart.sh启动监控，该命令已配置该信息。启动本地Jconsole在jdk安装目录下,如C:\Program Files\Java\jdk1.8.0_111\bin,选择jconsole.exe并双击。选择远程进程，输入地址及端口信息：192.168..：8088即可监控dubbo服务性能消耗。]]></content>
+      <title><![CDATA[Centos桥接网络配置]]></title>
+      <url>%2F2016%2F12%2F01%2F2016%2Fcentos-bridging-network%2F</url>
+      <content type="text"><![CDATA[Centos7 桥接网络配置编辑配置文件1vi /etc/sysconfig/network-scripts/ifcfg-eth0 添加修改以下内容HWADDR=08:00:27:d4:5e:11TYPE=EthernetBOOTPROTO=static #启用静态IP地址DEFROUTE=yesPEERDNS=yesPEERROUTES=yesIPV4_FAILURE_FATAL=noIPV6INIT=yesIPV6_AUTOCONF=yesIPV6_DEFROUTE=yesIPV6_PEERDNS=yesIPV6_PEERROUTES=yesIPV6_FAILURE_FATAL=noNAME=enp0s3UUID=3c092d5f-fda6-403b-1122-d9bbd7280da5ONBOOT=yes #开启自动启用网络连接IPADDR0=192.168.3.236 #设置IP地址PREFIXO0=24 #设置子网掩码GATEWAY0=192.168.3.1 #设置网关DNS1=218.85.157.99 #设置主DNSDNS2=218.85.157.99 #设置备DNS 保存退出1:wq! 重启网络1systemctl restart network.service]]></content>
     </entry>
 
     

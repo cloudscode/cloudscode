@@ -2,7 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://viabugs.com/2018/09/23/2018/centos/centos-shadowsocks-privoxy/</loc>
+    
+    <lastmod>2018-09-23T12:30:48.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/10/04/2018/program/pinpoint/JettyWithPinpointAgent/</loc>
+    
+    <lastmod>2018-09-23T02:14:25.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/12/08/2018/program/log4j/</loc>
+    
+    <lastmod>2018-09-23T02:14:25.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/12/08/2017/program/maven-shade-plugin/</loc>
+    
+    <lastmod>2018-09-23T02:14:25.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://viabugs.com/2017/12/08/2017/program/log4j/</loc>
+    
+    <lastmod>2018-09-23T02:14:25.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/05/25/2017/program/jettystartandstopbash/</loc>
+    
+    <lastmod>2018-09-23T02:14:25.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/12/08/2018/program/maven-shade-plugin/</loc>
+    
+    <lastmod>2018-09-23T02:14:25.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/05/25/2018/program/jettystartandstopbash/</loc>
+    
+    <lastmod>2018-09-23T02:14:25.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/10/04/2018/program/pinpoint/pinpoint/</loc>
+    
+    <lastmod>2018-09-23T02:14:25.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/01/15/2017/jenkins/jenkinsdeploy/</loc>
     
     <lastmod>2018-09-23T02:14:25.000Z</lastmod>
     
@@ -23,23 +86,9 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/05/25/2017/program/jettystartandstopbash/</loc>
+    <loc>http://viabugs.com/2017/09/18/2018/program/Spring%20NamedParameterJdbcTemplate%20Tutorial/</loc>
     
-    <lastmod>2018-09-23T02:14:25.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://viabugs.com/2017/01/15/2017/jenkins/jenkinsdeploy/</loc>
-    
-    <lastmod>2018-09-23T02:14:25.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://viabugs.com/2017/12/08/2017/program/maven-shade-plugin/</loc>
-    
-    <lastmod>2018-09-23T02:14:25.000Z</lastmod>
+    <lastmod>2017-09-18T14:47:05.000Z</lastmod>
     
   </url>
   
@@ -52,6 +101,13 @@
   
   <url>
     <loc>http://viabugs.com/2017/09/18/2017/program/HibernateStackOverflowError/</loc>
+    
+    <lastmod>2017-09-18T14:15:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/09/18/2018/program/HibernateStackOverflowError/</loc>
     
     <lastmod>2017-09-18T14:15:20.000Z</lastmod>
     
@@ -79,6 +135,13 @@
   </url>
   
   <url>
+    <loc>http://viabugs.com/2017/05/24/2018/program/ehcacheshutdownlistener/</loc>
+    
+    <lastmod>2017-05-24T13:15:45.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://viabugs.com/2017/05/24/2017/program/ehcacheshutdownlistener/</loc>
     
     <lastmod>2017-05-24T13:15:45.000Z</lastmod>
@@ -86,7 +149,14 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/05/20/2017/listen/05/%E8%8B%8F%E6%A0%BC%E6%8B%89%E5%BA%95%E7%9A%84%E7%94%B3%E8%BE%A9/</loc>
+    <loc>http://viabugs.com/2017/05/13/2017/program/centos7firewall/</loc>
+    
+    <lastmod>2017-05-22T14:18:25.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/05/13/2018/program/centos7firewall/</loc>
     
     <lastmod>2017-05-22T14:18:25.000Z</lastmod>
     
@@ -100,7 +170,7 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/05/13/2017/program/centos7firewall/</loc>
+    <loc>http://viabugs.com/2017/05/20/2017/listen/05/%E8%8B%8F%E6%A0%BC%E6%8B%89%E5%BA%95%E7%9A%84%E7%94%B3%E8%BE%A9/</loc>
     
     <lastmod>2017-05-22T14:18:25.000Z</lastmod>
     
@@ -198,9 +268,30 @@
   </url>
   
   <url>
+    <loc>http://viabugs.com/2017/05/08/2018/program/mysql-connector-java-sql-mode/</loc>
+    
+    <lastmod>2017-05-08T13:48:50.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://viabugs.com/2017/05/08/2017/listen/%E6%B4%9E%E8%A7%81%E8%BF%9C%E8%83%9C%E5%88%9B%E6%84%8F/</loc>
     
     <lastmod>2017-05-08T13:48:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/05/06/2017/program/hibernatevalidation/</loc>
+    
+    <lastmod>2017-05-07T13:20:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/05/06/2018/program/jsonobjecttobean/</loc>
+    
+    <lastmod>2017-05-07T13:20:19.000Z</lastmod>
     
   </url>
   
@@ -212,14 +303,21 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/05/06/2017/program/beanutilsconversionexception/</loc>
+    <loc>http://viabugs.com/2017/05/06/2018/program/beanutilsconversionexception/</loc>
     
     <lastmod>2017-05-07T13:20:19.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/05/06/2017/program/hibernatevalidation/</loc>
+    <loc>http://viabugs.com/2017/05/06/2018/program/hibernatevalidation/</loc>
+    
+    <lastmod>2017-05-07T13:20:19.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/05/06/2017/program/beanutilsconversionexception/</loc>
     
     <lastmod>2017-05-07T13:20:19.000Z</lastmod>
     
@@ -282,13 +380,6 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/04/29/2017/program/ssh/</loc>
-    
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://viabugs.com/2017/04/29/2017/program/ansible/</loc>
     
     <lastmod>2017-05-01T11:01:02.000Z</lastmod>
@@ -303,14 +394,28 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/04/29/2017/program/Installansible/</loc>
+    <loc>http://viabugs.com/2017/05/01/2017/program/ansibledeployjetty/</loc>
     
     <lastmod>2017-05-01T11:01:02.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/05/02/2017/program/startjettybyshell/</loc>
+    <loc>http://viabugs.com/2017/04/29/2018/program/ansiblessherror/</loc>
+    
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/05/01/2018/program/ansibledeployjetty/</loc>
+    
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/04/29/2017/program/ssh/</loc>
     
     <lastmod>2017-05-01T11:01:02.000Z</lastmod>
     
@@ -324,7 +429,49 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/05/01/2017/program/ansibledeployjetty/</loc>
+    <loc>http://viabugs.com/2017/04/29/2018/program/ansible/</loc>
+    
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/04/29/2018/program/Installansible/</loc>
+    
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/04/29/2018/program/ssh/</loc>
+    
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/04/29/2018/program/ssh%E7%9A%84%E5%89%AF%E6%9C%AC/</loc>
+    
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/05/02/2017/program/startjettybyshell/</loc>
+    
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/05/02/2018/program/startjettybyshell/</loc>
+    
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/04/29/2017/program/Installansible/</loc>
     
     <lastmod>2017-05-01T11:01:02.000Z</lastmod>
     
@@ -380,6 +527,13 @@
   </url>
   
   <url>
+    <loc>http://viabugs.com/2017/04/23/2018/program/distributedtransaction/</loc>
+    
+    <lastmod>2017-04-23T14:16:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://viabugs.com/2017/04/23/2017/program/distributedtransaction/</loc>
     
     <lastmod>2017-04-23T14:16:34.000Z</lastmod>
@@ -390,6 +544,13 @@
     <loc>http://viabugs.com/2017/04/23/2017/listen/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6/</loc>
     
     <lastmod>2017-04-23T13:48:20.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/04/23/2018/program/jmeterscript/</loc>
+    
+    <lastmod>2017-04-23T13:36:44.000Z</lastmod>
     
   </url>
   
@@ -548,6 +709,13 @@
   </url>
   
   <url>
+    <loc>http://viabugs.com/2017/04/11/2018/program/mysqloptimization/</loc>
+    
+    <lastmod>2017-04-11T14:46:13.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://viabugs.com/2017/04/11/2017/program/mysqloptimization/</loc>
     
     <lastmod>2017-04-11T14:46:13.000Z</lastmod>
@@ -562,9 +730,23 @@
   </url>
   
   <url>
+    <loc>http://viabugs.com/2017/04/11/2018/program/jprofiler/</loc>
+    
+    <lastmod>2017-04-11T12:27:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://viabugs.com/2017/04/11/2017/program/jprofiler/</loc>
     
     <lastmod>2017-04-11T12:27:56.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/04/11/2018/program/jvisualvm/</loc>
+    
+    <lastmod>2017-04-11T12:27:55.000Z</lastmod>
     
   </url>
   
@@ -597,6 +779,20 @@
   </url>
   
   <url>
+    <loc>http://viabugs.com/2017/04/10/2018/program/jconsolejetty/</loc>
+    
+    <lastmod>2017-04-10T13:42:51.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/04/10/2018/program/jettyjvm/</loc>
+    
+    <lastmod>2017-04-10T11:58:53.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://viabugs.com/2017/04/10/2017/program/jettyjvm/</loc>
     
     <lastmod>2017-04-10T11:58:53.000Z</lastmod>
@@ -605,6 +801,13 @@
   
   <url>
     <loc>http://viabugs.com/2017/04/10/2017/program/jmeter/</loc>
+    
+    <lastmod>2017-04-10T11:58:50.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/04/10/2018/program/jmeter/</loc>
     
     <lastmod>2017-04-10T11:58:50.000Z</lastmod>
     
@@ -632,6 +835,13 @@
   </url>
   
   <url>
+    <loc>http://viabugs.com/2017/04/09/2018/program/php/</loc>
+    
+    <lastmod>2017-04-09T10:57:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://viabugs.com/2017/04/09/2017/listen/%E6%B0%B8%E8%BF%9C%E5%B9%B8%E7%A6%8F%E7%9A%84%E7%A7%91%E5%AD%A6/</loc>
     
     <lastmod>2017-04-09T10:53:51.000Z</lastmod>
@@ -640,6 +850,13 @@
   
   <url>
     <loc>http://viabugs.com/2017/04/09/2017/program/nginx.conf/</loc>
+    
+    <lastmod>2017-04-09T10:53:50.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/04/09/2018/program/nginx.conf/</loc>
     
     <lastmod>2017-04-09T10:53:50.000Z</lastmod>
     
@@ -709,9 +926,23 @@
   </url>
   
   <url>
+    <loc>http://viabugs.com/2017/03/29/2018/program/hibernateoutsidevalidrange/</loc>
+    
+    <lastmod>2017-03-29T14:03:33.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://viabugs.com/2017/03/29/2017/program/hibernateoutsidevalidrange/</loc>
     
     <lastmod>2017-03-29T14:03:33.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/03/29/2018/program/mysqlcastandconvert/</loc>
+    
+    <lastmod>2017-03-29T13:56:22.000Z</lastmod>
     
   </url>
   
@@ -723,9 +954,23 @@
   </url>
   
   <url>
+    <loc>http://viabugs.com/2017/03/30/2018/program/mysqlunsigned/</loc>
+    
+    <lastmod>2017-03-29T13:52:09.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://viabugs.com/2017/03/30/2017/program/mysqlunsigned/</loc>
     
     <lastmod>2017-03-29T13:52:09.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/03/29/2018/program/gitstash/</loc>
+    
+    <lastmod>2017-03-29T13:37:00.000Z</lastmod>
     
   </url>
   
@@ -744,9 +989,30 @@
   </url>
   
   <url>
+    <loc>http://viabugs.com/2017/03/29/2018/program/centos6-bridging-network/</loc>
+    
+    <lastmod>2017-03-29T13:26:11.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://viabugs.com/2017/03/29/2017/program/linuxps/</loc>
     
     <lastmod>2017-03-29T13:21:11.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/03/29/2018/program/linuxps/</loc>
+    
+    <lastmod>2017-03-29T13:21:11.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/03/28/2018/program/linuxtail/</loc>
+    
+    <lastmod>2017-03-28T13:19:55.000Z</lastmod>
     
   </url>
   
@@ -828,6 +1094,13 @@
   </url>
   
   <url>
+    <loc>http://viabugs.com/2017/03/23/2018/program/mavensurefireplugin/</loc>
+    
+    <lastmod>2017-03-23T14:03:21.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://viabugs.com/2017/03/23/2017/program/mavensurefireplugin/</loc>
     
     <lastmod>2017-03-23T14:03:21.000Z</lastmod>
@@ -835,9 +1108,23 @@
   </url>
   
   <url>
+    <loc>http://viabugs.com/2017/03/23/2018/program/maven/</loc>
+    
+    <lastmod>2017-03-23T14:00:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://viabugs.com/2017/03/23/2017/program/maven/</loc>
     
     <lastmod>2017-03-23T14:00:23.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/03/23/2018/program/mavenwarplugin/</loc>
+    
+    <lastmod>2017-03-23T12:46:54.000Z</lastmod>
     
   </url>
   
@@ -866,6 +1153,13 @@
     <loc>http://viabugs.com/2017/03/21/2017/docker/docker/</loc>
     
     <lastmod>2017-03-21T14:32:57.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://viabugs.com/2017/03/20/2018/program/jenkinsmavendeploy/</loc>
+    
+    <lastmod>2017-03-21T13:48:24.000Z</lastmod>
     
   </url>
   
@@ -954,14 +1248,14 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/03/16/2017/listen/money/</loc>
+    <loc>http://viabugs.com/2017/03/16/2017/economics/dontjustshareatmoney/</loc>
     
     <lastmod>2017-03-16T13:50:07.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://viabugs.com/2017/03/16/2017/economics/dontjustshareatmoney/</loc>
+    <loc>http://viabugs.com/2017/03/16/2017/listen/money/</loc>
     
     <lastmod>2017-03-16T13:50:07.000Z</lastmod>
     
@@ -1122,14 +1416,14 @@
   </url>
   
   <url>
-    <loc>http://viabugs.com/docker/index.html</loc>
+    <loc>http://viabugs.com/categories/index.html</loc>
     
     <lastmod>2017-01-07T15:00:21.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://viabugs.com/categories/index.html</loc>
+    <loc>http://viabugs.com/docker/index.html</loc>
     
     <lastmod>2017-01-07T15:00:21.000Z</lastmod>
     
