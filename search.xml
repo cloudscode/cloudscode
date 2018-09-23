@@ -3,6 +3,34 @@
   
     
     <entry>
+      <title><![CDATA[log4j additivity 属性]]></title>
+      <url>%2F2017%2F12%2F08%2F2017%2Fprogram%2Flog4j%2F</url>
+      <content type="text"><![CDATA[log4j additivity属性 它是子Logger 是否继承父Logger的输出源（appender）的标志位具体说，默认情况下子Logger会继承父Logger的appender，也就是说子Logger会在父Logger的appender里输出。若是additivity设为false，则子Logger只会在自己的appender里输出，而不会在父Logger的appender里输出。 12345678910111213141516171819202122232425262728293031323334353637383940414243&lt;Properties&gt; &lt;Property name=&quot;logDir&quot;&gt;$&#123;log4j:configParentLocation&#125;/../logs/&lt;/Property&gt; &lt;Property name=&quot;debugFileName&quot;&gt;debug&lt;/Property&gt; &lt;Property name=&quot;infoFileName&quot;&gt;info&lt;/Property&gt; &lt;Property name=&quot;warnFileName&quot;&gt;warn&lt;/Property&gt; &lt;Property name=&quot;errorFileName&quot;&gt;error&lt;/Property&gt; &lt;Property name=&quot;businessFileName&quot;&gt;business&lt;/Property&gt;&lt;/Properties&gt;&lt;Appenders&gt; &lt;RollingFile name=&quot;info-out&quot; fileName=&quot;$&#123;log4j:configParentLocation&#125;/../logs/info.log&quot; filePattern=&quot;$&#123;log4j:configParentLocation&#125;/../logs/info-%d&#123;yyyy-MM-dd&#125;-%i.log&quot;&gt; &lt;PatternLayout pattern=&quot;%d&#123;yyyy.MM.dd HH:mm:ss&#125; %c %L - %m%n&quot; /&gt; &lt;SizeBasedTriggeringPolicy size=&quot;10240KB&quot; /&gt; &lt;DefaultRolloverStrategy max=&quot;99&quot; /&gt; &lt;Filters&gt; &lt;ThresholdFilter level=&quot;ERROR&quot; onMatch=&quot;DENY&quot; onMismatch=&quot;NEUTRAL&quot; /&gt; &lt;ThresholdFilter level=&quot;WARN&quot; onMatch=&quot;DENY&quot; onMismatch=&quot;NEUTRAL&quot; /&gt; &lt;ThresholdFilter level=&quot;INFO&quot; onMatch=&quot;ACCEPT&quot; onMismatch=&quot;DENY&quot; /&gt; &lt;/Filters&gt; &lt;/RollingFile&gt; &lt;RollingFile name=&quot;business-out&quot; fileName=&quot;$&#123;logDir&#125;/$&#123;businessFileName&#125;.log&quot; filePattern=&quot;$&#123;logDir&#125;/backups/business/$$&#123;date:yyyy-MM&#125;/$&#123;businessFileName&#125;-%d&#123;yyyy-MM-dd&#125;-%i.log&quot;&gt; &lt;PatternLayout pattern=&quot;%d&#123;yyyy.MM.dd HH:mm:ss&#125; %c %L - %m%n&quot; /&gt; &lt;SizeBasedTriggeringPolicy size=&quot;10240KB&quot; /&gt; &lt;DefaultRolloverStrategy max=&quot;200&quot; /&gt; &lt;Filters&gt; &lt;ThresholdFilter level=&quot;INFO&quot; onMatch=&quot;ACCEPT&quot; onMismatch=&quot;DENY&quot; /&gt; &lt;/Filters&gt; &lt;/RollingFile&gt; &lt;/Appenders&gt;&lt;Loggers&gt; &lt;Root level=&quot;INFO&quot;&gt; &lt;AppenderRef ref=&quot;info-out&quot; /&gt; &lt;/Root&gt; &lt;Logger name=&quot;business-info&quot; additivity=&quot;false&quot; level=&quot;INFO&quot;&gt; &lt;AppenderRef ref=&quot;business-out&quot; level=&quot;INFO&quot; /&gt; &lt;/Logger &lt;/Loggers&gt; 将business-info的Logger中additivity=”false”配置成false,再输出日志时，business-info日志就不会在info-out中重复输出。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Maven 将两个项目打包合并成一个jar]]></title>
+      <url>%2F2017%2F12%2F08%2F2017%2Fprogram%2Fmaven-shade-plugin%2F</url>
+      <content type="text"><![CDATA[Maven将两个项目打包合并成一个jar 增加插件在pom.xml中增加maven-shade-plugin插件 1234567891011121314151617&lt;build&gt; &lt;plugins&gt; &lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-shade-plugin&lt;/artifactId&gt; &lt;version&gt;3.1.0&lt;/version&gt; &lt;executions&gt; &lt;execution&gt; &lt;phase&gt;package&lt;/phase&gt; &lt;goals&gt; &lt;goal&gt;shade&lt;/goal&gt; &lt;/goals&gt; &lt;/execution&gt; &lt;/executions&gt; &lt;/plugin&gt; &lt;/plugins&gt; &lt;/build&gt; 打包jdk版本问题两个项目打包成一个jar后，程序调用时，出现jdk版本不一致问题。增加maven-compiler-plugin插件，指定编译时jdk版本信息。 1234567891011121314&lt;build&gt; &lt;plugins&gt; &lt;plugin&gt; &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt; &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt; &lt;version&gt;3.1&lt;/version&gt; &lt;configuration&gt; &lt;source&gt;1.7&lt;/source&gt; &lt;target&gt;1.7&lt;/target&gt; &lt;encoding&gt;UTF-8&lt;/encoding&gt; &lt;/configuration&gt; &lt;/plugin&gt; &lt;/plugins&gt; &lt;/build&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[jetty web with pinpoint agent]]></title>
+      <url>%2F2017%2F10%2F04%2F2017%2Fprogram%2Fpinpoint%2FJettyWithPinpointAgent%2F</url>
+      <content type="text"><![CDATA[jetty容器中使用pinpoint监控应用程序。 配置在jetty的start.init配置文件加入以下配置信息。 1234--exec-javaagent:/home/pinpoint-agent-1.6.2/pinpoint-bootstrap-1.6.2.jar-Dpinpoint.agentId=pft-rest-Dpinpoint.applicationName=pft-rest Pinpoint AgentPinpoint Agent 需要两个命令行参数来在分布式系统中标记自身: Dpinpoint.agentId - 唯一标记agent运行所在的应用 Dpinpoint.applicationName - 将许多的同样的应用实例分组为单一服务 注意： pinpoint.agentId须全局唯一来标识应用实例 pinpoint.applicationName应用被当成单个服务的多个实例]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[pinpoint java.net.PortUnreachableException ICMP Port Unreachable]]></title>
+      <url>%2F2017%2F10%2F04%2F2017%2Fprogram%2Fpinpoint%2Fpinpoint%2F</url>
+      <content type="text"><![CDATA[pinpoint java.net.PortUnreachableException: ICMP Port Unreachable错误使用pinpoint代理监控应用程序时，出现错误 java.net.PortUnreachableException: ICMP Port Unreachable 123456789102017-10-04 16:06:37 [INFO ](c.n.p.p.s.UdpDataSender ) packet send error. size:339, TSpan(agentId:pft-rest, applicationName:pft-rest, agentStartTime:1507104270410, transactionId:00 01 CA D0 A8 B3 EE 2B 10, spanId:7542318718835916861, startTime:1507104397297, elapsed:95, rpc:/rest/v1/pft.ticket/update, serviceType:1030, endPoint:192.168.20.144:80, remoteAddr:192.168.20.144, flag:0, spanEventList:[TSpanEvent(sequence:3, startElapsed:10, endElapsed:83, serviceType:9110, endPoint:192.168.20.144:18902, annotations:[TAnnotation(key:90, value:&lt;TAnnotationValue stringValue:[Ljava.lang.Object;@19fffe8c&gt;), TAnnotation(key:91, value:&lt;TAnnotationValue stringValue:RpcResult [result=true, exception=null]&gt;)], depth:4, nextSpanId:-4375591379758469409, destinationId:192.168.20.144:18902, apiId:-41), TSpanEvent(sequence:2, startElapsed:9, endElapsed:84, serviceType:5071, depth:3, apiId:31), TSpanEvent(sequence:1, startElapsed:1, endElapsed:94, serviceType:5051, depth:2, apiId:2), TSpanEvent(sequence:0, startElapsed:0, endElapsed:95, serviceType:1031, depth:1, apiId:-1)], apiId:1, applicationServiceType:1030)java.net.PortUnreachableException: ICMP Port Unreachable at java.net.PlainDatagramSocketImpl.send(Native Method) at java.net.DatagramSocket.send(DatagramSocket.java:693) at com.navercorp.pinpoint.profiler.sender.UdpDataSender.sendPacket(UdpDataSender.java:134) at com.navercorp.pinpoint.profiler.sender.AbstractDataSender$1.execute(AbstractDataSender.java:68) at com.navercorp.pinpoint.profiler.sender.AsyncQueueingExecutor.doExecute(AsyncQueueingExecutor.java:172) at com.navercorp.pinpoint.profiler.sender.AsyncQueueingExecutor.doExecute(AsyncQueueingExecutor.java:96) at com.navercorp.pinpoint.profiler.sender.AsyncQueueingExecutor.run(AsyncQueueingExecutor.java:79) at java.lang.Thread.run(Thread.java:745) 解决pinpoint收集程序跑在docker容器中，在暴露pinpoint收集器端口时，没有区分通信协议，导致数据不能被收集器收集。pinpoint收集器端口，其中profiler.collector.span.port=29996和profiler.collector.stat.port=29995需要走upd协议；profiler.collector.tcp.port=29994走tcp协议。 12345678profiler.collector.span.ip=$&#123;profiler.collector.ip&#125;profiler.collector.span.port=29996profiler.collector.stat.ip=$&#123;profiler.collector.ip&#125;profiler.collector.stat.port=29995profiler.collector.tcp.ip=$&#123;profiler.collector.ip&#125;profiler.collector.tcp.port=29994 修改前 1docker run -i -t -p 9380:28080/tcp -p 29994:29994/tcp -p 29995:29995/udp -p 29996:29996/udp pft/pinpoint:latest bash 修改后 1docker run -i -t -p 9380:28080/tcp -p 29994:29994/tcp -p 29995:29995/udp -p 29996:29996/udp pft/pinpoint:latest bash]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Spring NamedParameterJdbcTemplate]]></title>
       <url>%2F2017%2F09%2F18%2F2017%2Fprogram%2FSpring%20NamedParameterJdbcTemplate%20Tutorial%2F</url>
       <content type="text"><![CDATA[使用NamedParameterJdbcTemplate查询sql语句，并按实体返回数据。 配置NamedParameterJdbcTemplate 在xml配置文件中，配置模板数据源信息。 12&lt;bean id=&quot;namedParameterJdbcTemplate&quot; class=&quot;org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate&quot;&gt; &lt;constructor-arg ref=&quot;dataSource&quot; /&gt; &lt;/bean&gt; 注入NamedParameterJdbcTemplate1@Autowired private NamedParameterJdbcTemplate namedParameterJdbcTemplate; 例子 sql语句中使用分号加参数名标识参数，如：:ids 通过MapSqlParameterSource设置查询参数。 12345678public List&lt;TicketDO&gt; loadTicketProductIdByIds(Collection&lt;Integer&gt; ids) &#123; String sql=&quot;SELECT id,pid as product_id from ticket where id in(:ids)&quot;; //参数 MapSqlParameterSource parameters = new MapSqlParameterSource(); parameters.addValue(&quot;ids&quot;, ids); List&lt;TicketDO&gt; result=namedParameterJdbcTemplate.query(sql, parameters,new BeanPropertyRowMapper&lt;TicketDO&gt;(TicketDO.class)); return result; &#125;]]></content>
@@ -27,6 +55,13 @@
       <title><![CDATA[荷花]]></title>
       <url>%2F2017%2F06%2F04%2F2017%2Flife%2F20170604%2F</url>
       <content type="text"><![CDATA[李健 2017年6月4日于福州]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Jetty start and stop]]></title>
+      <url>%2F2017%2F05%2F25%2F2017%2Fprogram%2Fjettystartandstopbash%2F</url>
+      <content type="text"><![CDATA[start jetty1java -jar start.jar STOP.PORT=18081 STOP.KEY=secret stop jetty1java -jar start.jar STOP.PORT=18081 STOP.KEY=secret --stop noteSTOP.PORT != jetty.http.port]]></content>
     </entry>
 
     
@@ -269,9 +304,9 @@
 
     
     <entry>
-      <title><![CDATA[Install ansible]]></title>
-      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2FInstallansible%2F</url>
-      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible]]></content>
+      <title><![CDATA[ssh 命令]]></title>
+      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2Fssh%2F</url>
+      <content type="text"><![CDATA[ssh-keygen的命令手册，通过”man ssh-keygen“命令查看 生成密钥1ssh-keygen -t rsa 生成之后会在用户的根目录生成一个 “.ssh”的文件夹 authorized_keys:存放远程免密登录的公钥,主要通过这个文件记录多台机器的公钥 id_rsa : 生成的私钥文件 id_rsa.pub ： 生成的公钥文件 know_hosts : 已知的主机公钥清单如果希望ssh公钥生效需满足至少下面两个条件： 1) .ssh目录的权限必须是7002) .ssh/authorized_keys文件权限必须是600 远程免密登录 通过ssh-copy-id的方式 1命令： ssh-copy-id -i ~/.ssh/id_rsa.put &lt;romte_ip&gt; 通过scp方式 1命令：scp -p ~/.ssh/id_rsa.pub root@&lt;remote_ip&gt;:/root/.ssh/authorized_keys 将内容追加到authorized_keys文件中， 不过要登录远程服务器来执行这条命令1cat ~/pub_key &gt;&gt;~/.ssh/authorized_keys]]></content>
     </entry>
 
     
@@ -283,9 +318,9 @@
 
     
     <entry>
-      <title><![CDATA[ssh 命令]]></title>
-      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2Fssh%2F</url>
-      <content type="text"><![CDATA[ssh-keygen的命令手册，通过”man ssh-keygen“命令查看 生成密钥1ssh-keygen -t rsa 生成之后会在用户的根目录生成一个 “.ssh”的文件夹 authorized_keys:存放远程免密登录的公钥,主要通过这个文件记录多台机器的公钥 id_rsa : 生成的私钥文件 id_rsa.pub ： 生成的公钥文件 know_hosts : 已知的主机公钥清单如果希望ssh公钥生效需满足至少下面两个条件： 1) .ssh目录的权限必须是7002) .ssh/authorized_keys文件权限必须是600 远程免密登录 通过ssh-copy-id的方式 1命令： ssh-copy-id -i ~/.ssh/id_rsa.put &lt;romte_ip&gt; 通过scp方式 1命令：scp -p ~/.ssh/id_rsa.pub root@&lt;remote_ip&gt;:/root/.ssh/authorized_keys 将内容追加到authorized_keys文件中， 不过要登录远程服务器来执行这条命令1cat ~/pub_key &gt;&gt;~/.ssh/authorized_keys]]></content>
+      <title><![CDATA[Install ansible]]></title>
+      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2FInstallansible%2F</url>
+      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible]]></content>
     </entry>
 
     
@@ -430,16 +465,16 @@
 
     
     <entry>
-      <title><![CDATA[刻意练习]]></title>
-      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0%2F</url>
-      <content type="text"><![CDATA[真正的”一万小时天才理论”是，普通人也可以通过刻意练习成为某个领域的专家。 用『三个F』创建有效的心理表征 专注focus，集中注意力 反馈feedback，及时反馈 纠正fix it，不断修正自己 练习的时间与质量反而在决定人们的技能变得多么熟练时，发挥着更大的作用。 从长远来看，占上风的是那些练习更勤奋的人，而不是那些一开始在智商或者其他才华方面稍有优势的人。]]></content>
+      <title><![CDATA[联盟]]></title>
+      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E8%81%94%E7%9B%9F%2F</url>
+      <content type="text"><![CDATA[通过联盟重建信任与忠诚 如果我们不能回到终身雇佣的年代，就要学会重建雇主与员工的关系。这种新的忠诚观允许公司和员工对彼此做出承诺，把过去的商业交易转变为互惠关系的框架。雇佣关系可以转换为一个联盟：一份由双方独立达成的，有明确条款的互惠协议。 员工拥有创始人思维任期制将员工在你的公司度过的职业生涯重新规划为一系列连续的任期，可以更好地吸引和留住开创型员工。 培养开创性员工的利器诚实地谈论任期公司里的三类任期 轮转期 转变期 基础期 协调员工的目标和公司的目标如何执行转变期计划 开始对话，确定目标 定期检查以交流反馈 任期临近结束前，制定下一个任期计划 如何处理任务中的意外投资在员工的人脉上打造终身联盟：前同事联络网建立同事联络网的策略与技巧 决定同事联络网的成员。删除掉存在纠纷和法律道德风险的前员工。 明确定义与前员工关系的期望和收益。常见的方法有：员工推荐奖金、产品折扣和测试白名单、举办活动、为前员工颁发荣誉、向前员工通报最新消息等。 建立周详的离职机制。在离职面谈中与员工巩固终身关系，收集信息进入数据库。 建立现员工和前员工的联系。 首席执行官布拉德·史密斯（Brad Smith）告诉我们的：“领导者的任务不是培养能人，而是认识到人们已有的才华，并创造出让其产生和成长的环境。”]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[联盟]]></title>
-      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E8%81%94%E7%9B%9F%2F</url>
-      <content type="text"><![CDATA[通过联盟重建信任与忠诚 如果我们不能回到终身雇佣的年代，就要学会重建雇主与员工的关系。这种新的忠诚观允许公司和员工对彼此做出承诺，把过去的商业交易转变为互惠关系的框架。雇佣关系可以转换为一个联盟：一份由双方独立达成的，有明确条款的互惠协议。 员工拥有创始人思维任期制将员工在你的公司度过的职业生涯重新规划为一系列连续的任期，可以更好地吸引和留住开创型员工。 培养开创性员工的利器诚实地谈论任期公司里的三类任期 轮转期 转变期 基础期 协调员工的目标和公司的目标如何执行转变期计划 开始对话，确定目标 定期检查以交流反馈 任期临近结束前，制定下一个任期计划 如何处理任务中的意外投资在员工的人脉上打造终身联盟：前同事联络网建立同事联络网的策略与技巧 决定同事联络网的成员。删除掉存在纠纷和法律道德风险的前员工。 明确定义与前员工关系的期望和收益。常见的方法有：员工推荐奖金、产品折扣和测试白名单、举办活动、为前员工颁发荣誉、向前员工通报最新消息等。 建立周详的离职机制。在离职面谈中与员工巩固终身关系，收集信息进入数据库。 建立现员工和前员工的联系。 首席执行官布拉德·史密斯（Brad Smith）告诉我们的：“领导者的任务不是培养能人，而是认识到人们已有的才华，并创造出让其产生和成长的环境。”]]></content>
+      <title><![CDATA[刻意练习]]></title>
+      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0%2F</url>
+      <content type="text"><![CDATA[真正的”一万小时天才理论”是，普通人也可以通过刻意练习成为某个领域的专家。 用『三个F』创建有效的心理表征 专注focus，集中注意力 反馈feedback，及时反馈 纠正fix it，不断修正自己 练习的时间与质量反而在决定人们的技能变得多么熟练时，发挥着更大的作用。 从长远来看，占上风的是那些练习更勤奋的人，而不是那些一开始在智商或者其他才华方面稍有优势的人。]]></content>
     </entry>
 
     
@@ -542,16 +577,16 @@
 
     
     <entry>
-      <title><![CDATA[JMeter 压力测试CSV参数化]]></title>
-      <url>%2F2017%2F04%2F10%2F2017%2Fprogram%2Fjmeter%2F</url>
-      <content type="text"><![CDATA[Jmeter之使用CSV Data Set Config实现参数化登录JMeter带json数据的post请求测试JMeter 压力测试使用函数和 CSV 文件参数化 json 数据]]></content>
+      <title><![CDATA[Jetty jvm]]></title>
+      <url>%2F2017%2F04%2F10%2F2017%2Fprogram%2Fjettyjvm%2F</url>
+      <content type="text"><![CDATA[修改start.ini文件中–exec -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Dcom.sun.management.jmxremote-Dorg.eclipse.jetty.util.log.IGNORED=true-Dorg.eclipse.jetty.util.log.stderr.DEBUG=true-Dorg.eclipse.jetty.util.log.stderr.SOURCE=true -Xmx2000m -Xmn512m -XX:PermSize=512m -XX:MaxPermSize=1024m -verbose:gc-XX:+PrintGCDateStamps-XX:+PrintGCTimeStamps-XX:+PrintGCDetails-XX:+PrintTenuringDistribution-XX:+PrintCommandLineFlags-XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:ParallelCMSThreads=2 -XX:+CMSClassUnloadingEnabled -XX:+UseCMSCompactAtFullCollection-XX:CMSInitiatingOccupancyFraction=80#———————————————————– 说明 -Dsun.rmi.dgc.client.gcInterval=3600000， -Dsun.rmi.dgc.server.gcInterval=3600000是设置客户端和服务端GC启动的时间。 -Xmx2000m最大缓存空间、 -Xmn512m新生代大小、 -XX:PermSize=512m内存永久区初始大小、 -XX:MaxPermSize=1024m最大永久区大小， -XX:MaxPermSize=1024m允许CMS清楚老年代， -XX:+CMSClassUnloadingEnabled， -XX:+CMSClassUnloadingEnabled 允许CMS清楚持久代。]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[Jetty jvm]]></title>
-      <url>%2F2017%2F04%2F10%2F2017%2Fprogram%2Fjettyjvm%2F</url>
-      <content type="text"><![CDATA[修改start.ini文件中–exec -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Dcom.sun.management.jmxremote-Dorg.eclipse.jetty.util.log.IGNORED=true-Dorg.eclipse.jetty.util.log.stderr.DEBUG=true-Dorg.eclipse.jetty.util.log.stderr.SOURCE=true -Xmx2000m -Xmn512m -XX:PermSize=512m -XX:MaxPermSize=1024m -verbose:gc-XX:+PrintGCDateStamps-XX:+PrintGCTimeStamps-XX:+PrintGCDetails-XX:+PrintTenuringDistribution-XX:+PrintCommandLineFlags-XX:+DisableExplicitGC -XX:+UseConcMarkSweepGC -XX:ParallelCMSThreads=2 -XX:+CMSClassUnloadingEnabled -XX:+UseCMSCompactAtFullCollection-XX:CMSInitiatingOccupancyFraction=80#———————————————————– 说明 -Dsun.rmi.dgc.client.gcInterval=3600000， -Dsun.rmi.dgc.server.gcInterval=3600000是设置客户端和服务端GC启动的时间。 -Xmx2000m最大缓存空间、 -Xmn512m新生代大小、 -XX:PermSize=512m内存永久区初始大小、 -XX:MaxPermSize=1024m最大永久区大小， -XX:MaxPermSize=1024m允许CMS清楚老年代， -XX:+CMSClassUnloadingEnabled， -XX:+CMSClassUnloadingEnabled 允许CMS清楚持久代。]]></content>
+      <title><![CDATA[JMeter 压力测试CSV参数化]]></title>
+      <url>%2F2017%2F04%2F10%2F2017%2Fprogram%2Fjmeter%2F</url>
+      <content type="text"><![CDATA[Jmeter之使用CSV Data Set Config实现参数化登录JMeter带json数据的post请求测试JMeter 压力测试使用函数和 CSV 文件参数化 json 数据]]></content>
     </entry>
 
     
@@ -900,14 +935,14 @@
     
     <entry>
       <title><![CDATA[金钱观]]></title>
-      <url>%2F2017%2F03%2F16%2F2017%2Flisten%2Fmoney%2F</url>
+      <url>%2F2017%2F03%2F16%2F2017%2Feconomics%2Fdontjustshareatmoney%2F</url>
       <content type="text"><![CDATA[钱只有花出去才是的你！ 钱是靠挣出来的，不是靠省出来的，而挣钱的效率取决于一个人的气度。 工作效率高，自然挣钱的效率也高。 如果我们想清楚了钱是对资源的量化度量，越是稀缺的资源自然越值钱，那么你有别人不会的技能，你就是稀缺资源。 –吴军~硅谷来信]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[金钱观]]></title>
-      <url>%2F2017%2F03%2F16%2F2017%2Feconomics%2Fdontjustshareatmoney%2F</url>
+      <url>%2F2017%2F03%2F16%2F2017%2Flisten%2Fmoney%2F</url>
       <content type="text"><![CDATA[钱只有花出去才是的你！ 钱是靠挣出来的，不是靠省出来的，而挣钱的效率取决于一个人的气度。 工作效率高，自然挣钱的效率也高。 如果我们想清楚了钱是对资源的量化度量，越是稀缺的资源自然越值钱，那么你有别人不会的技能，你就是稀缺资源。 –吴军~硅谷来信]]></content>
     </entry>
 
@@ -976,13 +1011,6 @@
 
     
     <entry>
-      <title><![CDATA[油菜花]]></title>
-      <url>%2F2017%2F02%2F05%2F2017%2Frapeflower%2F</url>
-      <content type="text"><![CDATA[]]></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[樱花]]></title>
       <url>%2F2017%2F02%2F05%2F2017%2Fcherryblossoms%2F</url>
       <content type="text"><![CDATA[1&quot;樱花下落的速度，是每秒5厘米； 我要用怎样的速度，才能与你相遇。&quot;]]></content>
@@ -997,6 +1025,20 @@
 
     
     <entry>
+      <title><![CDATA[油菜花]]></title>
+      <url>%2F2017%2F02%2F05%2F2017%2Frapeflower%2F</url>
+      <content type="text"><![CDATA[]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Jenkins ssh into slave no java]]></title>
+      <url>%2F2017%2F01%2F15%2F2017%2Fjenkins%2Fjenkinsdeploy%2F</url>
+      <content type="text"><![CDATA[#使用jenkins远程执行脚本时，找不到java环境变量 错误123[SSH] executing...which: no java in (/bin:/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/git/bin:/usr/local/git/bin:/var/java/hadoop/sbin:/var/java/hadoop/bin)Cannot find a Java JDK. Please set either set JAVA or put java (&gt;=1.5) in your PATH. 增加环境变量1vim ~/.bashrc 12345JAVA_HOME=/var/java/jdk1.8.0_111JRE_HOME=/var/java/jdk1.8.0_111/jreCLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/libPATH=$JAVA_HOME/bin:$PATHexport PATH JAVA_HOME CLASSPATH]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Docker为什么刚运行就退出了]]></title>
       <url>%2F2017%2F01%2F12%2F2017%2Fdocker-just-run-away%2F</url>
       <content type="text"><![CDATA[原因Docker容器后台运行,就必须有一个前台进程.容器运行的命令如果不是那些一直挂起的命令（比如运行top，tail），就是会自动退出。 解决简单的解决方案可能是添加一个循环： 1while true; do sleep 1000; done 例子，在start.sh脚本增加以下： 1234567if [[ $1 == "-d" ]]; then while true; do sleep 1000; donefiif [[ $1 == "-bash" ]]; then /bin/bashfi Dockerfile文件中使用： 1CMD ["/etc/start.sh", "-d"] Why docker container exits immediately]]></content>
@@ -1004,16 +1046,16 @@
 
     
     <entry>
-      <title></title>
-      <url>%2F2017%2F01%2F08%2F2017%2Flisten%2F%E6%9D%83%E5%8A%9B%2F</url>
-      <content type="text"><![CDATA[title:权力date:2017-04-26 21:42:29category:”life” tags:[听书,金句] 1.等级结构在人类社会中无处不在，当我们进入一个组织之后，我们的性别、年龄、教育背景等，拿出来和别人一比较，就会决定我们的地位。同时，一个人的地位还会从一个背景带到另一个背景中，始终跟着你，躲都躲不开。 2.人们认为世界是公平的，源于“公正世界假设”的心理。这种假设会让人产生麻痹思想，忽视自己对权力的需求，而且误认为权力是可以等来的。但实际上，权力只能是争来的。 3.在争取权力的道路上，第一个关键就是要明白，业绩并不决定权力地位。我们必须关心和老板的关系，至少，这个关心程度要不亚于对业绩的关心。 4.我们要明白一个逻辑关系，当你招人喜欢的时候，并不一定会争取到权力，而当你有权力的时候，你一定会招人“喜欢”——虽然这个喜欢要打上个引号。 5.虽然让人们既害怕你又喜欢你，是一种很理想的状况，但当你必须二选一时，如果想获得和保持权力，就应该让人们害怕你。]]></content>
+      <title><![CDATA[骑行]]></title>
+      <url>%2F2017%2F01%2F08%2F2017%2Fqx20170107%2F</url>
+      <content type="text"><![CDATA[午后，从公司出发，经洪山桥骑行闽江公园，终于东街口。]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[骑行]]></title>
-      <url>%2F2017%2F01%2F08%2F2017%2Fqx20170107%2F</url>
-      <content type="text"><![CDATA[午后，从公司出发，经洪山桥骑行闽江公园，终于东街口。]]></content>
+      <title></title>
+      <url>%2F2017%2F01%2F08%2F2017%2Flisten%2F%E6%9D%83%E5%8A%9B%2F</url>
+      <content type="text"><![CDATA[title:权力date:2017-04-26 21:42:29category:”life” tags:[听书,金句] 1.等级结构在人类社会中无处不在，当我们进入一个组织之后，我们的性别、年龄、教育背景等，拿出来和别人一比较，就会决定我们的地位。同时，一个人的地位还会从一个背景带到另一个背景中，始终跟着你，躲都躲不开。 2.人们认为世界是公平的，源于“公正世界假设”的心理。这种假设会让人产生麻痹思想，忽视自己对权力的需求，而且误认为权力是可以等来的。但实际上，权力只能是争来的。 3.在争取权力的道路上，第一个关键就是要明白，业绩并不决定权力地位。我们必须关心和老板的关系，至少，这个关心程度要不亚于对业绩的关心。 4.我们要明白一个逻辑关系，当你招人喜欢的时候，并不一定会争取到权力，而当你有权力的时候，你一定会招人“喜欢”——虽然这个喜欢要打上个引号。 5.虽然让人们既害怕你又喜欢你，是一种很理想的状况，但当你必须二选一时，如果想获得和保持权力，就应该让人们害怕你。]]></content>
     </entry>
 
     
@@ -1067,16 +1109,16 @@
 
     
     <entry>
-      <title><![CDATA[Jconsole监视dubbo服务]]></title>
-      <url>%2F2016%2F12%2F01%2F2016%2FJconsole%E7%9B%91%E8%A7%86dubbo%2F</url>
-      <content type="text"><![CDATA[使用Jconsole监视dubbo服务 在需要监控的/bin/start.sh文件中添加下面语句：JAVA_OPTS=”$JAVA_OPTS -Djava.rmi.server.hostname=192.168..-Dcom.sun.management.jmxremote.port=8088-Dcom.sun.management.jmxremote.ssl=false-Dcom.sun.management.jmxremote.authenticate=false”-Djava.rmi.server.hostname该参数指定jconsole远程连接的IP地址-Dcom.sun.management.jmxremote.port该参数指定jconsole远程连接的端口号-Dcom.sun.management.jmxremote.authenticate设置参数值为false时，就不需要输入用户名和密码 也可用/bin/remotestart.sh启动监控，该命令已配置该信息。启动本地Jconsole在jdk安装目录下,如C:\Program Files\Java\jdk1.8.0_111\bin,选择jconsole.exe并双击。选择远程进程，输入地址及端口信息：192.168..：8088即可监控dubbo服务性能消耗。]]></content>
+      <title><![CDATA[Centos桥接网络配置]]></title>
+      <url>%2F2016%2F12%2F01%2F2016%2Fcentos-bridging-network%2F</url>
+      <content type="text"><![CDATA[Centos7 桥接网络配置编辑配置文件1vi /etc/sysconfig/network-scripts/ifcfg-eth0 添加修改以下内容HWADDR=08:00:27:d4:5e:11TYPE=EthernetBOOTPROTO=static #启用静态IP地址DEFROUTE=yesPEERDNS=yesPEERROUTES=yesIPV4_FAILURE_FATAL=noIPV6INIT=yesIPV6_AUTOCONF=yesIPV6_DEFROUTE=yesIPV6_PEERDNS=yesIPV6_PEERROUTES=yesIPV6_FAILURE_FATAL=noNAME=enp0s3UUID=3c092d5f-fda6-403b-1122-d9bbd7280da5ONBOOT=yes #开启自动启用网络连接IPADDR0=192.168.3.236 #设置IP地址PREFIXO0=24 #设置子网掩码GATEWAY0=192.168.3.1 #设置网关DNS1=218.85.157.99 #设置主DNSDNS2=218.85.157.99 #设置备DNS 保存退出1:wq! 重启网络1systemctl restart network.service]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[Centos桥接网络配置]]></title>
-      <url>%2F2016%2F12%2F01%2F2016%2Fcentos-bridging-network%2F</url>
-      <content type="text"><![CDATA[Centos7 桥接网络配置编辑配置文件1vi /etc/sysconfig/network-scripts/ifcfg-eth0 添加修改以下内容HWADDR=08:00:27:d4:5e:11TYPE=EthernetBOOTPROTO=static #启用静态IP地址DEFROUTE=yesPEERDNS=yesPEERROUTES=yesIPV4_FAILURE_FATAL=noIPV6INIT=yesIPV6_AUTOCONF=yesIPV6_DEFROUTE=yesIPV6_PEERDNS=yesIPV6_PEERROUTES=yesIPV6_FAILURE_FATAL=noNAME=enp0s3UUID=3c092d5f-fda6-403b-1122-d9bbd7280da5ONBOOT=yes #开启自动启用网络连接IPADDR0=192.168.3.236 #设置IP地址PREFIXO0=24 #设置子网掩码GATEWAY0=192.168.3.1 #设置网关DNS1=218.85.157.99 #设置主DNSDNS2=218.85.157.99 #设置备DNS 保存退出1:wq! 重启网络1systemctl restart network.service]]></content>
+      <title><![CDATA[Jconsole监视dubbo服务]]></title>
+      <url>%2F2016%2F12%2F01%2F2016%2FJconsole%E7%9B%91%E8%A7%86dubbo%2F</url>
+      <content type="text"><![CDATA[使用Jconsole监视dubbo服务 在需要监控的/bin/start.sh文件中添加下面语句：JAVA_OPTS=”$JAVA_OPTS -Djava.rmi.server.hostname=192.168..-Dcom.sun.management.jmxremote.port=8088-Dcom.sun.management.jmxremote.ssl=false-Dcom.sun.management.jmxremote.authenticate=false”-Djava.rmi.server.hostname该参数指定jconsole远程连接的IP地址-Dcom.sun.management.jmxremote.port该参数指定jconsole远程连接的端口号-Dcom.sun.management.jmxremote.authenticate设置参数值为false时，就不需要输入用户名和密码 也可用/bin/remotestart.sh启动监控，该命令已配置该信息。启动本地Jconsole在jdk安装目录下,如C:\Program Files\Java\jdk1.8.0_111\bin,选择jconsole.exe并双击。选择远程进程，输入地址及端口信息：192.168..：8088即可监控dubbo服务性能消耗。]]></content>
     </entry>
 
     

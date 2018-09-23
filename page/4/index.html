@@ -276,7 +276,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/05/20/2017/listen/05/苏格拉底的申辩/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/05/24/2017/program/ehcacheshutdownlistener/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -301,8 +301,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/05/20/2017/listen/05/苏格拉底的申辩/" itemprop="url">
-                  苏格拉底的申辩
+                <a class="post-title-link" href="/2017/05/24/2017/program/ehcacheshutdownlistener/" itemprop="url">
+                  ehcache 持久化
                 </a>
               
             
@@ -316,8 +316,144 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-20T21:15:10+08:00">
-                2017-05-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-24T21:02:23+08:00">
+                2017-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/program/" itemprop="url" rel="index">
+                    <span itemprop="name">program</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="持久化"><a href="#持久化" class="headerlink" title="持久化"></a>持久化</h1><p>将diskPersistent属性设置成true,可将缓存内容缓存到磁盘中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">&lt;ehcache&gt;</div><div class="line">&lt;diskStore path=&quot;java.io.tmpdir/ehcache&quot;/&gt;</div><div class="line">&lt;cache name=&quot;clusterCache&quot;</div><div class="line">  maxElementsInMemory=&quot;1&quot;</div><div class="line">  maxElementsOnDisk=&quot;50&quot;</div><div class="line">  eternal=&quot;true&quot;</div><div class="line">  overflowToDisk=&quot;true&quot;</div><div class="line">  diskPersistent=&quot;true&quot; </div><div class="line">  memoryStoreEvictionPolicy=&quot;LFU&quot;/&gt;</div><div class="line">&lt;/ehcache&gt;</div></pre></td></tr></table></figure></p>
+<h1 id="系统配置"><a href="#系统配置" class="headerlink" title="系统配置"></a>系统配置</h1><p>在jvm重新启动时，需要重新加载磁盘中的缓存，可以在web.xml中配置如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;listener&gt;</div><div class="line">      &lt;listener-class&gt;net.sf.ehcache.constructs.web.ShutdownListener&lt;/listener-class&gt;</div><div class="line">&lt;/listener&gt;</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/05/23/2017/listen/05/个人理财/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="ljzhuanjiao@gmail.com">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="OwlFocus">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="OwlFocus" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/23/2017/listen/05/个人理财/" itemprop="url">
+                  个人理财
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-23T21:48:10+08:00">
+                2017-05-23
               </time>
             
 
@@ -374,11 +510,19 @@
           
             <blockquote>
 <ol>
-<li><p>所谓的怕死，不过就是并不智慧而自以为智慧，自以为知道自己并不知道的死亡这件事。</p>
+<li><p>有时候，不冒风险要比敢于冒风险的决策更有风险。</p>
 </li>
-<li><p>这城邦就如同一匹高头大马，因为大就很懒，需要一只马虻来警醒，神就派我到这个城邦来当这样一个马虻，警醒、劝说、责备你们每一个人。</p>
+<li><p>理财知识是最好的保障，这其实也是保护你自己的唯一途径。</p>
 </li>
-<li><p>如果我说，对我来讲不可能保持沉默，因为那就意味着违背神，你们不会相信，还会认为我是在装蒜；如果我说，每天谈论德性，谈论别的你们听我讨论的事情，听我检审自己和别人，这对人来讲是最大的好——因为对人来讲，未经检审的人生是不值得过的——你们更不会相信。</p>
+<li><p>复利周期越短，你赚钱的速度就会越快。</p>
+</li>
+<li><p>储蓄不是自发事件：你必须提前计划。遗憾的是，计划也不是自发的。</p>
+</li>
+<li><p>债务本身并不是一件坏事，甚至在很多时候某些债务明显具有积极的作用。但是随随便便超过个人的消费能力去过度负债，却是件很危险的事。注意，最危险的债务可能就在你的口袋里：信用卡。</p>
+</li>
+<li><p>赚多赚少没关系，成功理财的关键在于控制风险。</p>
+</li>
+<li><p>如果你的投资期限足够长，那么只要你选择了风险较高但收益也高的资产，最终必然能够获得令人满意的投资回报。</p>
 </li>
 </ol>
 </blockquote>
@@ -420,7 +564,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/05/17/2017/listen/05/洛克菲勒/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/05/22/2017/economics/authority/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -445,8 +589,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/05/17/2017/listen/05/洛克菲勒/" itemprop="url">
-                  洛克菲勒
+                <a class="post-title-link" href="/2017/05/22/2017/economics/authority/" itemprop="url">
+                  权力
                 </a>
               
             
@@ -460,8 +604,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-17T22:35:00+08:00">
-                2017-05-17
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-22T22:12:13+08:00">
+                2017-05-22
               </time>
             
 
@@ -517,164 +661,8 @@
         
           
             <blockquote>
-<ol>
-<li><p>洛克菲勒具备和所有富人一样的品质，就是自律和克制。和大多数富人不一样的地方是，他比大多数富翁更加自律和克制。</p>
-</li>
-<li><p>从客观的角度看，垄断并不是资本家贪婪的产物，它是很多产业内在的动力，资本家自己也控制不了垄断的趋势。</p>
-</li>
-<li><p>洛克菲勒的贡献远远不止金钱，他最大的贡献其实是把财富给一代一代传了下去，让后世一直都持续性地对世界做着贡献。</p>
-</li>
-<li><p>做好小事是做成大事的基石，如果你从一开始就高高在上，就无法体贴部属的心情，也就不能真正地活用别人。</p>
-</li>
-<li><p>“让我等等再说”，是洛克菲勒在经商中始终奉行的格言。他做事有一个习惯，在做决定之前，总会冷静地思考、判断，当一旦做出决定，就义无反顾地执行到底。</p>
-</li>
-<li><p>高贵快乐的生活，不是来自高贵的血统，也不是来自高贵的生活方式，而是来自高贵的品格——自立精神。</p>
-</li>
-</ol>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/05/16/2017/listen/05/自下而上/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="ljzhuanjiao@gmail.com">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="OwlFocus">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="OwlFocus" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/16/2017/listen/05/自下而上/" itemprop="url">
-                  自下而上
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-16T22:25:00+08:00">
-                2017-05-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/life/" itemprop="url" rel="index">
-                    <span itemprop="name">life</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<ol>
-<li><p>生物的进化不是一场必须一次通关的游戏，而是一场可以无数次存盘的游戏。</p>
-</li>
-<li><p>一夫一妻的婚姻制不是一次神圣的道德盛宴，而是一次理性的选择。</p>
-</li>
-<li><p>只明白一个真理是不够的，我们还要找到使用真理的方式。</p>
-</li>
-</ol>
+<p>权力包括：定义、兴起、保护、治理。</p>
+<p>权利和能力之间的区别。能力取决于自己能够占有多少，而权利取决于别人、社会的其他人愿意给你多少。</p>
 </blockquote>
 
           
@@ -709,7 +697,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/52/">52</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/54/">54</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -750,7 +738,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">154</span>
+              <span class="site-state-item-count">160</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -767,7 +755,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-count">51</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -807,7 +795,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

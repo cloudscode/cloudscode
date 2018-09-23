@@ -276,7 +276,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/05/13/2017/program/centos7firewall/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/05/17/2017/listen/05/洛克菲勒/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -301,8 +301,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/05/13/2017/program/centos7firewall/" itemprop="url">
-                  Centos 7 firewall
+                <a class="post-title-link" href="/2017/05/17/2017/listen/05/洛克菲勒/" itemprop="url">
+                  洛克菲勒
                 </a>
               
             
@@ -316,156 +316,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-13T20:22:23+08:00">
-                2017-05-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/program/" itemprop="url" rel="index">
-                    <span itemprop="name">program</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>centos 7 开启端口重启防火墙</p>
-<h1 id="开启端口"><a href="#开启端口" class="headerlink" title="开启端口"></a>开启端口</h1><p>　　firewall-cmd –zone=public –add-port=80/tcp –permanent</p>
-<h1 id="命令含义："><a href="#命令含义：" class="headerlink" title="命令含义："></a>命令含义：</h1><p>　　–zone #作用域</p>
-<p>　　–add-port=80/tcp  #添加端口，格式为：端口/通讯协议<br>　　<br>　　–permanent   #永久生效，没有此参数重启后失效</p>
-<h1 id="重启防火墙"><a href="#重启防火墙" class="headerlink" title="重启防火墙"></a>重启防火墙</h1><p>　　firewall-cmd –reload</p>
-<h2 id="firewalld的基本使用"><a href="#firewalld的基本使用" class="headerlink" title="firewalld的基本使用"></a>firewalld的基本使用</h2><p>启动： systemctl start firewalld<br>查看状态： systemctl status firewalld<br>停止： systemctl disable firewalld<br>禁用： systemctl stop firewalld</p>
-<h2 id="systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。"><a href="#systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。" class="headerlink" title="systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。"></a>systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。</h2><p>启动一个服务：systemctl start firewalld.service<br>关闭一个服务：systemctl stop firewalld.service<br>重启一个服务：systemctl restart firewalld.service<br>显示一个服务的状态：systemctl status firewalld.service<br>在开机时启用一个服务：systemctl enable firewalld.service<br>在开机时禁用一个服务：systemctl disable firewalld.service<br>查看服务是否开机启动：systemctl is-enabled firewalld.service<br>查看已启动的服务列表：systemctl list-unit-files|grep enabled<br>查看启动失败的服务列表：systemctl –failed</p>
-<h2 id="配置firewalld-cmd"><a href="#配置firewalld-cmd" class="headerlink" title="配置firewalld-cmd"></a>配置firewalld-cmd</h2><p>查看版本： firewall-cmd –version<br>查看帮助： firewall-cmd –help<br>显示状态： firewall-cmd –state<br>查看所有打开的端口： firewall-cmd –zone=public –list-ports<br>更新防火墙规则： firewall-cmd –reload<br>查看区域信息:  firewall-cmd –get-active-zones<br>查看指定接口所属区域： firewall-cmd –get-zone-of-interface=eth0<br>拒绝所有包：firewall-cmd –panic-on<br>取消拒绝状态： firewall-cmd –panic-off<br>查看是否拒绝： firewall-cmd –query-panic</p>
-<h2 id="开启一个端口"><a href="#开启一个端口" class="headerlink" title="开启一个端口"></a>开启一个端口</h2><ul>
-<li>添加<br>firewall-cmd –zone=public –add-port=80/tcp –permanent    （–permanent永久生效，没有此参数重启后失效）</li>
-<li>重新载入<br>firewall-cmd –reload</li>
-<li>查看<br>firewall-cmd –zone= public –query-port=80/tcp</li>
-<li>删除<br>firewall-cmd –zone= public –remove-port=80/tcp –permanent</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/05/12/2017/listen/05/大卫·奥格威自传/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="ljzhuanjiao@gmail.com">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="OwlFocus">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="OwlFocus" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/12/2017/listen/05/大卫·奥格威自传/" itemprop="url">
-                  大卫·奥格威自传
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-12T21:45:00+08:00">
-                2017-05-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-17T22:35:00+08:00">
+                2017-05-17
               </time>
             
 
@@ -522,11 +374,17 @@
           
             <blockquote>
 <ol>
-<li><p>广告的目的是为了推销，而不是为了“炫技”去使用一些读者看不明白的修辞，而且一定要有吸引力，让人愿意接受你的广告信息。</p>
+<li><p>洛克菲勒具备和所有富人一样的品质，就是自律和克制。和大多数富人不一样的地方是，他比大多数富翁更加自律和克制。</p>
 </li>
-<li><p>想要拥有更多客户，首先你要先让自己成为行业内的意见领袖，树立起自己的品牌，掌握话语权，去吸引客户的注意；其次，你还要有智慧去判断什么客户是目前我可以伺候得好的，什么客户目前是不能碰的；最后，你要让你的客户知道：我正在使用你的产品，而且是我用过觉得好之后，才会真心去推荐这些产品并为它做广告，而不只是为了拿订单。</p>
+<li><p>从客观的角度看，垄断并不是资本家贪婪的产物，它是很多产业内在的动力，资本家自己也控制不了垄断的趋势。</p>
 </li>
-<li><p>把每一步都走好，让自己像滚雪球一样不断强大，那么即使在39岁——看似人生已经走到了一多半的时候——依然是可能迎来人生巅峰的，关键在于你是否有耐心和底气等到那一刻。</p>
+<li><p>洛克菲勒的贡献远远不止金钱，他最大的贡献其实是把财富给一代一代传了下去，让后世一直都持续性地对世界做着贡献。</p>
+</li>
+<li><p>做好小事是做成大事的基石，如果你从一开始就高高在上，就无法体贴部属的心情，也就不能真正地活用别人。</p>
+</li>
+<li><p>“让我等等再说”，是洛克菲勒在经商中始终奉行的格言。他做事有一个习惯，在做决定之前，总会冷静地思考、判断，当一旦做出决定，就义无反顾地执行到底。</p>
+</li>
+<li><p>高贵快乐的生活，不是来自高贵的血统，也不是来自高贵的生活方式，而是来自高贵的品格——自立精神。</p>
 </li>
 </ol>
 </blockquote>
@@ -568,7 +426,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/05/11/2017/listen/05/走近2050/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/05/16/2017/listen/05/自下而上/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -593,8 +451,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/05/11/2017/listen/05/走近2050/" itemprop="url">
-                  走近205
+                <a class="post-title-link" href="/2017/05/16/2017/listen/05/自下而上/" itemprop="url">
+                  自下而上
                 </a>
               
             
@@ -608,8 +466,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-11T21:44:00+08:00">
-                2017-05-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-16T22:25:00+08:00">
+                2017-05-16
               </time>
             
 
@@ -666,15 +524,159 @@
           
             <blockquote>
 <ol>
-<li><p>人类的注意力，是人工智能的第一推动力。</p>
+<li><p>生物的进化不是一场必须一次通关的游戏，而是一场可以无数次存盘的游戏。</p>
 </li>
-<li><p>李世石与AlphaGo的这场人机大战，本质上讲根本就不是人和机器之间的战斗，而是李世石一个人与一群高智商的Google工程师之间的战斗。</p>
+<li><p>一夫一妻的婚姻制不是一次神圣的道德盛宴，而是一次理性的选择。</p>
 </li>
-<li><p>有多少人工，机器就有多少智能。</p>
+<li><p>只明白一个真理是不够的，我们还要找到使用真理的方式。</p>
 </li>
-<li><p>如果注意力是人工智能发展的动力，那么，游戏可以说是这个动力的引擎。</p>
+</ol>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/05/15/2017/listen/05/一个广告人的自白/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="ljzhuanjiao@gmail.com">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="OwlFocus">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="OwlFocus" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/15/2017/listen/05/一个广告人的自白/" itemprop="url">
+                  一个广告人的自白
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-15T22:21:00+08:00">
+                2017-05-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/life/" itemprop="url" rel="index">
+                    <span itemprop="name">life</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<ol>
+<li><p>要做第一流的企业，就要拥有第一流的客户。</p>
 </li>
-<li><p>在未来的20到30年，人类的休闲娱乐时间将有可能会全面超越工作时间。从那以后，人们真的只需要玩就可以了。</p>
+<li><p>不仅是客户在选择广告公司，广告公司也要筛选客户。</p>
+</li>
+<li><p>最好的销售策略就是找一流的客户，然后想办法把他们服务好、做出彩，这样你就会声名在外，新客户就会来找你，而不需要你去找客户。</p>
+</li>
+<li><p>一个广告公司发展的真正原动力还是创作潜力，所以一定要招那些理解销售价值、并且有能力把它创造出来的一流人才。</p>
+</li>
+<li><p>在一流的企业里，一定要信守承诺，不管要加多少班、熬多少夜，一定要履行对客户的承诺。</p>
 </li>
 </ol>
 </blockquote>
@@ -711,7 +713,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/52/">52</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/54/">54</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -752,7 +754,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">154</span>
+              <span class="site-state-item-count">160</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -769,7 +771,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-count">51</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -809,7 +811,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

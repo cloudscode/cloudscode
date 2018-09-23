@@ -276,7 +276,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/23/2017/program/mavenwarplugin/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/25/2017/listen/文明之光/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -301,8 +301,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/23/2017/program/mavenwarplugin/" itemprop="url">
-                  Maven 多个war依赖
+                <a class="post-title-link" href="/2017/03/25/2017/listen/文明之光/" itemprop="url">
+                  文明之光
                 </a>
               
             
@@ -316,147 +316,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-23T20:42:43+08:00">
-                2017-03-23
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/program/" itemprop="url" rel="index">
-                    <span itemprop="name">program</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Maven 多个war依赖,发布打包项目。</p>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>子项目的pom.xml中添加如下配置。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-war-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;<span class="name">configuration</span>&gt;</span>  </div><div class="line">        <span class="tag">&lt;<span class="name">attachClasses</span>&gt;</span>true<span class="tag">&lt;/<span class="name">attachClasses</span>&gt;</span>  </div><div class="line">    <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span>  </div><div class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>父项目的pom.xml中添加如下配置。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.cloudcode<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>cloudcode-server<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">type</span>&gt;</span>war<span class="tag">&lt;/<span class="name">type</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.cloudcode<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>cloudcode-server<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">type</span>&gt;</span>jar<span class="tag">&lt;/<span class="name">type</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">classifier</span>&gt;</span>classes<span class="tag">&lt;/<span class="name">classifier</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><a href="http://azhp.blog.163.com/blog/static/4773671820140109442093/" target="_blank" rel="external">Thx</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/22/2017/economics/rent/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="ljzhuanjiao@gmail.com">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="OwlFocus">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="OwlFocus" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/22/2017/economics/rent/" itemprop="url">
-                  租
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-22T21:52:43+08:00">
-                2017-03-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-25T20:25:25+08:00">
+                2017-03-25
               </time>
             
 
@@ -512,7 +373,11 @@
         
           
             <blockquote>
-<p>有一种资产，不以收费的变化而变化，这种资产带来的收入就是租。</p>
+<p>瓷器，不仅仅是一种盛器、一种商品，它曾经在世界文化交流中起着重要地作用，现在依然如此。西方世界通过它了解到东方的文明，并与东方展开了大规模贸易。瓷器贸易带来的巨大利润，又刺激了西方化学和材料学的发展，因为过去瓷器利润丰厚，瓷器制造业也成为历史上第一个采用蒸汽机进行大规模生产的行业，这宣告了人类工业革命的开始。从促进文明发展的各个角度来讲，世界上很难找到第二种商品能和瓷器相比。</p>
+<p>完成一项重要的发明，其实并不那么简单。从0到1固然重要，但从1到N更重要。这一点，是真正参与过重大发明全过程的人的共识。因为重大的发明不是靠有灵感、有技术就办得到的，而只要参与过一次这样的全过程，就能够体会到其中的艰辛漫长。</p>
+<p>今天，在提倡创新的时代，中国最需要的恰恰是耐下心来，踏踏实实走完一项项重大发明创造无法跨越的相当漫长的全过程。既不能半途而废，也不可能从外界找到可供简单参考和抄袭的。把一项重大发明比作万里长征，那么从0到1的过程，不过是完成了长征的第一步而已，后面还有很多工作要做。</p>
+<p>回顾美苏太空竞争，如果仅仅概括成科罗廖夫和冯·布劳恩两个人的竞争，多少有点以偏概全。但是这两个人在这次竞争中起到了关键性的作用。一方面他们是造势时的英雄；另一方面，是两个超级大国成就了他们的英名。</p>
+<p>面对一个新生事物，大家常常会先看到它好的一面，而忽视它潜在的问题，人类对抗生素的认识便是如此。在科学上，不能证明有害和尚未证明有害，与已经证明无害完全是两回事，但是很多人却将两者混为一谈。</p>
 </blockquote>
 
           
@@ -552,7 +417,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/22/2017/listen/listen20170322/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/23/2017/economics/rentseeking/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -577,8 +442,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/22/2017/listen/listen20170322/" itemprop="url">
-                  鞋狗
+                <a class="post-title-link" href="/2017/03/23/2017/economics/rentseeking/" itemprop="url">
+                  寻租
                 </a>
               
             
@@ -592,8 +457,146 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-22T21:35:39+08:00">
-                2017-03-22
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-23T22:07:04+08:00">
+                2017-03-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/life/" itemprop="url" rel="index">
+                    <span itemprop="name">life</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="寻租"><a href="#寻租" class="headerlink" title="寻租"></a>寻租</h1><blockquote>
+<p>政府运用行政权力对企业和个人的经济活动进行干预和管制，妨碍了市场竞争的作用，从而创造了少数有特权者取得超额收入的机会。根据美国经济学家J.布坎南和A.克鲁格(Anne.Krueger)的论述，这种超额收入被称为“租金”（rent），谋求这种权力以获得租金的活动，被称作“寻租活动”，俗称“寻租”。</p>
+<p>在经济学界，寻租一词特指这种向政府争取特殊优惠或权利的行为。</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/23/2017/listen/listen20170323/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="ljzhuanjiao@gmail.com">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="OwlFocus">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="OwlFocus" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/23/2017/listen/listen20170323/" itemprop="url">
+                  控制愤怒
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-23T21:35:39+08:00">
+                2017-03-23
               </time>
             
 
@@ -649,10 +652,10 @@
         
           
             <blockquote>
-<p>1.懦夫永不启程，弱者死于途中，只剩我们前行，永远都不要停。</p>
-<p>2.我希望我自己的一生更有意义，自己能有目标、有创造力、有举足轻重的地位。最重要的是，我要与众不同——人生不一定会赢，而我就是不想输。</p>
-<p>3.敢于冒险，别让你的才能掩埋在平庸的土地上。</p>
-<p>4.别管别人怎么说你的想法很疯狂，前进，不停就好。不要停下来，甚至在你达到目标前都不要想是否停下来。不要过多的关注“目标”在哪里，无论面临什么，都不要停下来。</p>
+<p>当你对别人的行为感到愤怒时，往往将他们的行为和他们的人等同起来，然后全面否定他们，这是一种过度概括，起到误导作用，以非黑即白的思维来评价人肯定不正确。</p>
+<p>焦虑，源自你对自己的非理性信念，而愤怒，源自你对他人的非理性信念。通常而言，产生愤怒的非理性信念，会责备他人，产生焦虑的非理性信念，会责备自己，而产生抑郁的非理性信念，有时会责备客观条件。</p>
+<p>当你开始发怒时，重复你自己想出来的应付困难的理性话语，你可以将这些话语写下来、录下来，碰到糟糕情况时，你会用得上。</p>
+<p>你要接受一个“有着愤怒情绪的自己”，尽管你要承认愤怒这种情绪本身是错误的，但不因此而认为自己不好，你没有必要因此自责，人都会犯错，你有犯错的权利，有让自己生气的权利。</p>
 </blockquote>
 
           
@@ -687,7 +690,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/37/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/37/">37</a><span class="page-number current">38</span><a class="page-number" href="/page/39/">39</a><span class="space">&hellip;</span><a class="page-number" href="/page/52/">52</a><a class="extend next" rel="next" href="/page/39/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/37/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/37/">37</a><span class="page-number current">38</span><a class="page-number" href="/page/39/">39</a><span class="space">&hellip;</span><a class="page-number" href="/page/54/">54</a><a class="extend next" rel="next" href="/page/39/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -728,7 +731,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">154</span>
+              <span class="site-state-item-count">160</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -745,7 +748,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">48</span>
+                <span class="site-state-item-count">51</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -785,7 +788,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
