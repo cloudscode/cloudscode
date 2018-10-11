@@ -276,7 +276,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/30/2018/program/mysqlunsigned/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/19/2017/tomcatwithsupervisor/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -301,8 +301,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/30/2018/program/mysqlunsigned/" itemprop="url">
-                  Mysql unsigned
+                <a class="post-title-link" href="/2017/03/19/2017/tomcatwithsupervisor/" itemprop="url">
+                  Controlling tomcat with supervisor
                 </a>
               
             
@@ -316,8 +316,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-30T17:46:43+08:00">
-                2017-03-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-19T20:33:33+08:00">
+                2017-03-19
               </time>
             
 
@@ -372,93 +372,8 @@
       
         
           
-            <h1 id="mysql中的unsigned"><a href="#mysql中的unsigned" class="headerlink" title="mysql中的unsigned"></a>mysql中的unsigned</h1><blockquote>
-<p>unsigned   既为非负数，用此类型可以增加数据长度! unsigned 属性只针对整型，而binary属性只用于char 和varchar。</p>
-</blockquote>
-<h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><table>
-<thead>
-<tr>
-<th>类型</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>tinyint</td>
-<td>非常小的整数</td>
-</tr>
-<tr>
-<td>smallint</td>
-<td>较小整数</td>
-</tr>
-<tr>
-<td>mediumint</td>
-<td>中等大小整数</td>
-</tr>
-<tr>
-<td>int</td>
-<td>标准整数</td>
-</tr>
-<tr>
-<td>bigint</td>
-<td>较大整数</td>
-</tr>
-<tr>
-<td>float</td>
-<td>单精度浮点数</td>
-</tr>
-<tr>
-<td>double</td>
-<td>双精度浮点数</td>
-</tr>
-<tr>
-<td>decimal</td>
-<td>一个串的浮点数</td>
-</tr>
-</tbody>
-</table>
-<h2 id="每种数值类型的名称和取值范围"><a href="#每种数值类型的名称和取值范围" class="headerlink" title="每种数值类型的名称和取值范围"></a>每种数值类型的名称和取值范围</h2><table>
-<thead>
-<tr>
-<th>类型说明</th>
-<th>取值范围</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>tinyint[(m)]</td>
-<td>有符号值：-128 到127（- 27 到27 - 1）<br>无符号值：0到255（0 到28 - 1） 1个字节</td>
-</tr>
-<tr>
-<td>smallint[(m)]</td>
-<td>有符号值：-32768 到32767（- 215 到215 - 1）<br>无符号值：0到65535（0 到21 6 - 1） 2个字节</td>
-</tr>
-<tr>
-<td>mediumint[(m)]</td>
-<td>有符号值：-8388608 到8388607（- 22 3 到22 3 - 1 ）<br>无符号值：0到16777215（0 到22 4 - 1） 3个字节</td>
-</tr>
-<tr>
-<td>int[(m)]</td>
-<td>有符号值：-2147683648 到2147683647（- 231 到231- 1）<br>无符号值：0到4294967295（0 到232 - 1） 4个字节</td>
-</tr>
-<tr>
-<td>bigint[(m)]</td>
-<td>有符号值：-9223372036854775808 到9223373036854775807（- 263到263-1）<br>无符号值：0到18446744073709551615（0到264 – 1） 8个字节</td>
-</tr>
-<tr>
-<td>float[(m, d)]</td>
-<td>最小非零值：±1.175494351e - 38</td>
-</tr>
-<tr>
-<td>double[(m,d)]</td>
-<td>最小非零值：±2.2250738585072014e - 308</td>
-</tr>
-<tr>
-<td>decimal (m, d)</td>
-<td>可变；其值的范围依赖于m 和d</td>
-</tr>
-</tbody>
-</table>
+            <h1 id="supervisor"><a href="#supervisor" class="headerlink" title="supervisor"></a>supervisor</h1><h2 id="Controlling-tomcat-with-supervisor"><a href="#Controlling-tomcat-with-supervisor" class="headerlink" title="Controlling tomcat with supervisor"></a>Controlling tomcat with supervisor</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">[program:tomcat]</div><div class="line">command=/path/to/tomcat/bin/catalina.sh run</div><div class="line">process_name=%(program_name)s</div><div class="line">startsecs=5</div><div class="line">stopsignal=INT</div><div class="line">user=tomcat</div><div class="line">redirect_stderr=true</div><div class="line">stdout_logfile=/var/log/tomcat.log</div></pre></td></tr></table></figure>
+<p>Thx<br><a href="http://serverfault.com/questions/425132/controlling-tomcat-with-supervisor" target="_blank" rel="external">Controlling tomcat with supervisor</a></p>
 
           
         
@@ -497,7 +412,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/29/2017/listen/颠覆式创新/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/19/2017/maveninstallskiptest/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -522,8 +437,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/03/29/2017/listen/颠覆式创新/" itemprop="url">
-                  颠覆式创新
+                <a class="post-title-link" href="/2017/03/19/2017/maveninstallskiptest/" itemprop="url">
+                  maven打包jar包时跳过测试信息
                 </a>
               
             
@@ -537,8 +452,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-29T22:11:23+08:00">
-                2017-03-29
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-19T20:26:28+08:00">
+                2017-03-19
               </time>
             
 
@@ -556,8 +471,144 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/life/" itemprop="url" rel="index">
-                    <span itemprop="name">life</span>
+                  <a href="/categories/program/" itemprop="url" rel="index">
+                    <span itemprop="name">program</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="variable">$mvn</span> install -Dmaven.test.skip = <span class="literal">true</span></div></pre></td></tr></table></figure>
+<h2 id="配置文件-pom-xml"><a href="#配置文件-pom-xml" class="headerlink" title="配置文件 pom.xml"></a>配置文件 pom.xml</h2><p>在pom.xml中增加以下配置信息。<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">project</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">build</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-surefire-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">skip</span>&gt;</span>true<span class="tag">&lt;/<span class="name">skip</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">build</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/17/2017/poems/baidi/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="ljzhuanjiao@gmail.com">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="OwlFocus">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="OwlFocus" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/17/2017/poems/baidi/" itemprop="url">
+                  别只盯着钱
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-17T22:57:10+08:00">
+                2017-03-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/economics/" itemprop="url" rel="index">
+                    <span itemprop="name">economics</span>
                   </a>
                 </span>
 
@@ -594,151 +645,8 @@
         
           
             <blockquote>
-<p>1.渐进式的创新仍然必不可少，因为它们带来持续的新收入来源。但那还不够，它们不能保证企业长期的成功。只有颠覆式创新才能让企业经受住时间的考验。</p>
-<p>2.过去，颠覆只关注战略。企业和品牌愿景都是为今后若干年设计的，而今天，颠覆必须更加灵活，必须变得“快餐化”，具有流动性。</p>
-<p>3.每当人们不按照逐步的、渐进式的、线性的方式思考问题时，每当他们实施跨越式战略时，就可以称之为颠覆。你可以颠覆产品、商业模式、营销计划以及宣传策略……</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/29/2017/program/hibernateoutsidevalidrange/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="ljzhuanjiao@gmail.com">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="OwlFocus">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="OwlFocus" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/29/2017/program/hibernateoutsidevalidrange/" itemprop="url">
-                  hibernate outside valid range for the datatype smallint
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-29T21:57:55+08:00">
-                2017-03-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/program/" itemprop="url" rel="index">
-                    <span itemprop="name">program</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>hibernate 使用sql查询时，smallint类型字段出现长度超过。因为smallint使用的是无符号类型unsigned，导致长度超过。</p>
-<h1 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h1><blockquote>
-<p>hibernate ‘65535.0’ in column ‘12’ is outside valid range for the datatype SMALLINT.</p>
-</blockquote>
-<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>使用函数将字段类型数据进行转化，如下：</p>
-<blockquote>
-<p>CAST(column AS signed)</p>
+<p>每当我们做决定的时候，不应只看到钱，而也要看到钱以外的所有成本。</p>
+<p>做决策时，要权衡全部成本，不仅仅是货币成本。</p>
 </blockquote>
 
           
@@ -773,7 +681,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/43/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/43/">43</a><span class="page-number current">44</span><a class="page-number" href="/page/45/">45</a><span class="space">&hellip;</span><a class="page-number" href="/page/68/">68</a><a class="extend next" rel="next" href="/page/45/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/43/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/43/">43</a><span class="page-number current">44</span><a class="page-number" href="/page/45/">45</a><span class="space">&hellip;</span><a class="page-number" href="/page/54/">54</a><a class="extend next" rel="next" href="/page/45/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -814,7 +722,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">202</span>
+              <span class="site-state-item-count">162</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -831,7 +739,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

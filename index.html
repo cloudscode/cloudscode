@@ -276,6 +276,149 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2018/10/11/2018/program/windows-tomcat9-http2/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="ljzhuanjiao@gmail.com">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="OwlFocus">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="OwlFocus" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/10/11/2018/program/windows-tomcat9-http2/" itemprop="url">
+                  Windows Tomcat9 HTTP2
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-11T20:33:33+08:00">
+                2018-10-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/program/" itemprop="url" rel="index">
+                    <span itemprop="name">program</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Windows-Tomcat9-HTTP2"><a href="#Windows-Tomcat9-HTTP2" class="headerlink" title="Windows Tomcat9 HTTP2"></a>Windows Tomcat9 HTTP2</h1><h2 id="下载Tomcat"><a href="#下载Tomcat" class="headerlink" title="下载Tomcat"></a>下载Tomcat</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://tomcat.apache.org/download-90.cgi</div></pre></td></tr></table></figure>
+<h2 id="下载Tomcat-Native"><a href="#下载Tomcat-Native" class="headerlink" title="下载Tomcat Native"></a>下载Tomcat Native</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">http://tomcat.apache.org/download-native.cgi 下载 Native 1.2.8 Windows Binaries zip</div></pre></td></tr></table></figure>
+<h2 id="生成证书"><a href="#生成证书" class="headerlink" title="生成证书"></a>生成证书</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">openssl genrsa -out server.key 2048</div><div class="line">openssl rsa -in server.key -out server.key  </div><div class="line">openssl req -new -x509 -key server.key -out ca.crt -days 3650</div></pre></td></tr></table></figure>
+<h2 id="配置Tomcat"><a href="#配置Tomcat" class="headerlink" title="配置Tomcat"></a>配置Tomcat</h2><p>解压下载Tomcat文件，然后修改conf/server.xml文件，配置如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;Connector SSLEnabled=&quot;true&quot; maxThreads=&quot;150&quot; port=&quot;8443&quot; protocol=&quot;org.apache.coyote.http11.Http11AprProtocol&quot;&gt;</div><div class="line">       &lt;UpgradeProtocol className=&quot;org.apache.coyote.http2.Http2Protocol&quot;/&gt;</div><div class="line">       &lt;SSLHostConfig&gt;</div><div class="line">           &lt;Certificate certificateFile=&quot;certs/ca.crt&quot; certificateKeyFile=&quot;certs/server.key&quot; type=&quot;RSA&quot;/&gt;</div><div class="line">       &lt;/SSLHostConfig&gt;</div><div class="line">   &lt;/Connector&gt;</div></pre></td></tr></table></figure>
+<h2 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h2><p>在命令行下启动。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">startup.bat</div></pre></td></tr></table></figure>
+<h2 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">https://localhost:8443/</div></pre></td></tr></table></figure>
+<p>也可查看Tomcat logs日志目录，请求是否是http2。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
   <link itemprop="mainEntityOfPage" href="http://viabugs.com/2018/09/23/2018/centos/centos-shadowsocks-privoxy/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -393,143 +536,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">export http_proxy=http://127.0.0.1:8118</div><div class="line">export https_proxy=http://127.0.0.1:8118</div><div class="line">export ftp_proxy=http://127.0.0.1:8118</div></pre></td></tr></table></figure>
 <h1 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h1><p>执行curl命令验证是否成功 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">curl www.google.com</div><div class="line">wget www.google.com</div></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/12/08/2018/program/log4j/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="ljzhuanjiao@gmail.com">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="OwlFocus">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="OwlFocus" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/12/08/2018/program/log4j/" itemprop="url">
-                  log4j additivity 属性
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-08T22:42:23+08:00">
-                2017-12-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/program/" itemprop="url" rel="index">
-                    <span itemprop="name">program</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="log4j-additivity属性"><a href="#log4j-additivity属性" class="headerlink" title="log4j additivity属性"></a>log4j additivity属性</h1><p>  它是子Logger 是否继承父Logger的输出源（appender）的标志位具体说，默认情况下子Logger会继承父Logger的appender，也就是说子Logger会在父Logger的appender里输出。若是additivity设为false，则子Logger只会在自己的appender里输出，而不会在父Logger的appender里输出。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">&lt;Properties&gt;</div><div class="line">    &lt;Property name=&quot;logDir&quot;&gt;$&#123;log4j:configParentLocation&#125;/../logs/&lt;/Property&gt;</div><div class="line">    &lt;Property name=&quot;debugFileName&quot;&gt;debug&lt;/Property&gt;</div><div class="line">    &lt;Property name=&quot;infoFileName&quot;&gt;info&lt;/Property&gt;</div><div class="line">    &lt;Property name=&quot;warnFileName&quot;&gt;warn&lt;/Property&gt;</div><div class="line">    &lt;Property name=&quot;errorFileName&quot;&gt;error&lt;/Property&gt;</div><div class="line">    &lt;Property name=&quot;businessFileName&quot;&gt;business&lt;/Property&gt;</div><div class="line">&lt;/Properties&gt;</div><div class="line"></div><div class="line">&lt;Appenders&gt;</div><div class="line"></div><div class="line">    &lt;RollingFile name=&quot;info-out&quot; fileName=&quot;$&#123;log4j:configParentLocation&#125;/../logs/info.log&quot;</div><div class="line">        filePattern=&quot;$&#123;log4j:configParentLocation&#125;/../logs/info-%d&#123;yyyy-MM-dd&#125;-%i.log&quot;&gt;</div><div class="line">        &lt;PatternLayout pattern=&quot;%d&#123;yyyy.MM.dd HH:mm:ss&#125; %c %L - %m%n&quot; /&gt;</div><div class="line">        &lt;SizeBasedTriggeringPolicy size=&quot;10240KB&quot; /&gt;</div><div class="line">        &lt;DefaultRolloverStrategy max=&quot;99&quot; /&gt;</div><div class="line">        &lt;Filters&gt;</div><div class="line">            &lt;ThresholdFilter level=&quot;ERROR&quot; onMatch=&quot;DENY&quot; onMismatch=&quot;NEUTRAL&quot; /&gt;</div><div class="line">            &lt;ThresholdFilter level=&quot;WARN&quot; onMatch=&quot;DENY&quot; onMismatch=&quot;NEUTRAL&quot; /&gt;</div><div class="line">            &lt;ThresholdFilter level=&quot;INFO&quot; onMatch=&quot;ACCEPT&quot; onMismatch=&quot;DENY&quot; /&gt;</div><div class="line">        &lt;/Filters&gt;</div><div class="line">    &lt;/RollingFile&gt;</div><div class="line"></div><div class="line">    &lt;RollingFile name=&quot;business-out&quot; fileName=&quot;$&#123;logDir&#125;/$&#123;businessFileName&#125;.log&quot;</div><div class="line">                        filePattern=&quot;$&#123;logDir&#125;/backups/business/$$&#123;date:yyyy-MM&#125;/$&#123;businessFileName&#125;-%d&#123;yyyy-MM-dd&#125;-%i.log&quot;&gt;</div><div class="line">                        &lt;PatternLayout pattern=&quot;%d&#123;yyyy.MM.dd HH:mm:ss&#125; %c %L - %m%n&quot; /&gt;</div><div class="line">                        &lt;SizeBasedTriggeringPolicy size=&quot;10240KB&quot; /&gt;</div><div class="line">                        &lt;DefaultRolloverStrategy max=&quot;200&quot; /&gt;</div><div class="line">                        &lt;Filters&gt;</div><div class="line">                                &lt;ThresholdFilter level=&quot;INFO&quot; onMatch=&quot;ACCEPT&quot; onMismatch=&quot;DENY&quot; /&gt;</div><div class="line">                        &lt;/Filters&gt;</div><div class="line">                &lt;/RollingFile&gt;</div><div class="line"></div><div class="line">    &lt;/Appenders&gt;</div><div class="line">&lt;Loggers&gt;</div><div class="line">    &lt;Root level=&quot;INFO&quot;&gt;        </div><div class="line">        &lt;AppenderRef ref=&quot;info-out&quot; /&gt;</div><div class="line">    &lt;/Root&gt;</div><div class="line"></div><div class="line">    &lt;Logger name=&quot;business-info&quot; additivity=&quot;false&quot; level=&quot;INFO&quot;&gt;</div><div class="line">            &lt;AppenderRef ref=&quot;business-out&quot; level=&quot;INFO&quot; /&gt;</div><div class="line">    &lt;/Logger</div><div class="line"> &lt;/Loggers&gt;</div></pre></td></tr></table></figure>
-<p>将business-info的Logger中additivity=”false”配置成false,再输出日志时，business-info日志就不会在info-out中重复输出。</p>
-
           
         
       
@@ -699,7 +705,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/68/">68</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/54/">54</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -740,7 +746,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">202</span>
+              <span class="site-state-item-count">162</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -757,7 +763,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

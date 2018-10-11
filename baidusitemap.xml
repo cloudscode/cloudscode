@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://viabugs.com/2018/10/11/2018/program/windows-tomcat9-http2/</loc>
+    <lastmod>2018-10-11T13:21:49.000Z</lastmod>
+    <data>
+        <display>
+        <title>Windows Tomcat9 HTTP2</title>
+        <pubTime>2018-10-11T12:33:33.000Z</pubTime>
+        
+        <tag>tomcat</tag>
+         
+        <tag>http2</tag>
+         
+         
+           
+             
+              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://viabugs.com/2018/09/23/2018/centos/centos-shadowsocks-privoxy/</loc>
     <lastmod>2018-09-23T12:30:48.000Z</lastmod>
     <data>
@@ -12,68 +34,6 @@
         <pubTime>2018-09-23T12:22:23.000Z</pubTime>
         
         <tag>centos</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/10/04/2018/program/pinpoint/JettyWithPinpointAgent/</loc>
-    <lastmod>2018-09-23T02:14:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>jetty web with pinpoint agent</title>
-        <pubTime>2017-10-04T13:32:23.000Z</pubTime>
-        
-        <tag>pinpoint</tag>
-         
-        <tag>agent</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/12/08/2018/program/log4j/</loc>
-    <lastmod>2018-09-23T02:14:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>log4j additivity 属性</title>
-        <pubTime>2017-12-08T14:42:23.000Z</pubTime>
-        
-        <tag>log4j</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/12/08/2017/program/maven-shade-plugin/</loc>
-    <lastmod>2018-09-23T02:14:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>Maven 将两个项目打包合并成一个jar</title>
-        <pubTime>2017-12-08T14:22:23.000Z</pubTime>
-        
-        <tag>maven</tag>
          
          
            
@@ -126,14 +86,16 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/12/08/2018/program/maven-shade-plugin/</loc>
+    <loc>http://viabugs.com/2017/10/04/2017/program/pinpoint/JettyWithPinpointAgent/</loc>
     <lastmod>2018-09-23T02:14:25.000Z</lastmod>
     <data>
         <display>
-        <title>Maven 将两个项目打包合并成一个jar</title>
-        <pubTime>2017-12-08T14:22:23.000Z</pubTime>
+        <title>jetty web with pinpoint agent</title>
+        <pubTime>2017-10-04T13:32:23.000Z</pubTime>
         
-        <tag>maven</tag>
+        <tag>pinpoint</tag>
+         
+        <tag>agent</tag>
          
          
            
@@ -146,27 +108,7 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/05/25/2018/program/jettystartandstopbash/</loc>
-    <lastmod>2018-09-23T02:14:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>Jetty start and stop</title>
-        <pubTime>2017-05-25T12:45:43.000Z</pubTime>
-        
-        <tag>jetty</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/10/04/2018/program/pinpoint/pinpoint/</loc>
+    <loc>http://viabugs.com/2017/10/04/2017/program/pinpoint/pinpoint/</loc>
     <lastmod>2018-09-23T02:14:25.000Z</lastmod>
     <data>
         <display>
@@ -208,58 +150,14 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/10/04/2017/program/pinpoint/pinpoint/</loc>
+    <loc>http://viabugs.com/2017/12/08/2017/program/maven-shade-plugin/</loc>
     <lastmod>2018-09-23T02:14:25.000Z</lastmod>
     <data>
         <display>
-        <title>pinpoint java.net.PortUnreachableException ICMP Port Unreachable</title>
-        <pubTime>2017-10-04T13:22:23.000Z</pubTime>
+        <title>Maven 将两个项目打包合并成一个jar</title>
+        <pubTime>2017-12-08T14:22:23.000Z</pubTime>
         
-        <tag>pinpoint</tag>
-         
-        <tag>agent</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/10/04/2017/program/pinpoint/JettyWithPinpointAgent/</loc>
-    <lastmod>2018-09-23T02:14:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>jetty web with pinpoint agent</title>
-        <pubTime>2017-10-04T13:32:23.000Z</pubTime>
-        
-        <tag>pinpoint</tag>
-         
-        <tag>agent</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/09/18/2018/program/Spring%20NamedParameterJdbcTemplate%20Tutorial/</loc>
-    <lastmod>2017-09-18T14:47:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>Spring NamedParameterJdbcTemplate</title>
-        <pubTime>2017-09-18T14:24:55.000Z</pubTime>
-        
-        <tag>Spring</tag>
+        <tag>maven</tag>
          
          
            
@@ -293,26 +191,6 @@
     
   <url>
     <loc>http://viabugs.com/2017/09/18/2017/program/HibernateStackOverflowError/</loc>
-    <lastmod>2017-09-18T14:15:20.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hibernate StackOverflowError</title>
-        <pubTime>2017-09-18T14:14:55.000Z</pubTime>
-        
-        <tag>hibernate</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/09/18/2018/program/HibernateStackOverflowError/</loc>
     <lastmod>2017-09-18T14:15:20.000Z</lastmod>
     <data>
         <display>
@@ -392,7 +270,7 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/05/24/2018/program/ehcacheshutdownlistener/</loc>
+    <loc>http://viabugs.com/2017/05/24/2017/program/ehcacheshutdownlistener/</loc>
     <lastmod>2017-05-24T13:15:45.000Z</lastmod>
     <data>
         <display>
@@ -412,19 +290,19 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/05/24/2017/program/ehcacheshutdownlistener/</loc>
-    <lastmod>2017-05-24T13:15:45.000Z</lastmod>
+    <loc>http://viabugs.com/2017/05/20/2017/listen/05/%E8%8B%8F%E6%A0%BC%E6%8B%89%E5%BA%95%E7%9A%84%E7%94%B3%E8%BE%A9/</loc>
+    <lastmod>2017-05-22T14:18:25.000Z</lastmod>
     <data>
         <display>
-        <title>ehcache 持久化</title>
-        <pubTime>2017-05-24T13:02:23.000Z</pubTime>
+        <title>苏格拉底的申辩</title>
+        <pubTime>2017-05-20T13:15:10.000Z</pubTime>
         
-        <tag>ehcache</tag>
+        <tag>金句</tag>
          
          
            
              
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
+              <breadCrumb title="life" url="http://viabugs.com/categories/life/"/>
           
         </display>
     </data>
@@ -454,54 +332,12 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/05/13/2018/program/centos7firewall/</loc>
-    <lastmod>2017-05-22T14:18:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>Centos 7 firewall</title>
-        <pubTime>2017-05-13T12:22:23.000Z</pubTime>
-        
-        <tag>centos</tag>
-         
-        <tag>firewall</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://viabugs.com/2017/05/21/2017/listen/05/%E8%BF%99%E4%B8%8D%E6%98%AF%E4%BD%A0%E7%9A%84%E9%94%99/</loc>
     <lastmod>2017-05-22T14:18:25.000Z</lastmod>
     <data>
         <display>
         <title>这不是你的错</title>
         <pubTime>2017-05-21T14:35:00.000Z</pubTime>
-        
-        <tag>金句</tag>
-         
-         
-           
-             
-              <breadCrumb title="life" url="http://viabugs.com/categories/life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/05/20/2017/listen/05/%E8%8B%8F%E6%A0%BC%E6%8B%89%E5%BA%95%E7%9A%84%E7%94%B3%E8%BE%A9/</loc>
-    <lastmod>2017-05-22T14:18:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>苏格拉底的申辩</title>
-        <pubTime>2017-05-20T13:15:10.000Z</pubTime>
         
         <tag>金句</tag>
          
@@ -788,28 +624,6 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/05/08/2018/program/mysql-connector-java-sql-mode/</loc>
-    <lastmod>2017-05-08T13:48:50.000Z</lastmod>
-    <data>
-        <display>
-        <title>Mysql sql-mode problem</title>
-        <pubTime>2017-05-08T12:46:43.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>mysql</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://viabugs.com/2017/05/08/2017/listen/%E6%B4%9E%E8%A7%81%E8%BF%9C%E8%83%9C%E5%88%9B%E6%84%8F/</loc>
     <lastmod>2017-05-08T13:48:20.000Z</lastmod>
     <data>
@@ -823,6 +637,30 @@
            
              
               <breadCrumb title="life" url="http://viabugs.com/categories/life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://viabugs.com/2017/05/06/2017/program/beanutilsconversionexception/</loc>
+    <lastmod>2017-05-07T13:20:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>beanutils 日期格式化问题</title>
+        <pubTime>2017-05-06T12:00:43.000Z</pubTime>
+        
+        <tag>java</tag>
+         
+        <tag>beanutils</tag>
+         
+        <tag>date</tag>
+         
+         
+           
+             
+              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
           
         </display>
     </data>
@@ -852,30 +690,6 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/05/06/2018/program/jsonobjecttobean/</loc>
-    <lastmod>2017-05-07T13:20:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>Convert JSON Object to Java bean</title>
-        <pubTime>2017-05-06T13:15:23.000Z</pubTime>
-        
-        <tag>hibernate</tag>
-         
-        <tag>java</tag>
-         
-        <tag>jsonobject</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://viabugs.com/2017/05/06/2017/program/jsonobjecttobean/</loc>
     <lastmod>2017-05-07T13:20:19.000Z</lastmod>
     <data>
@@ -888,76 +702,6 @@
         <tag>java</tag>
          
         <tag>jsonobject</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/05/06/2018/program/beanutilsconversionexception/</loc>
-    <lastmod>2017-05-07T13:20:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>beanutils 日期格式化问题</title>
-        <pubTime>2017-05-06T12:00:43.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>beanutils</tag>
-         
-        <tag>date</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/05/06/2018/program/hibernatevalidation/</loc>
-    <lastmod>2017-05-07T13:20:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hibernate验证实体字段信息</title>
-        <pubTime>2017-05-06T12:15:13.000Z</pubTime>
-        
-        <tag>hibernate</tag>
-         
-        <tag>java</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/05/06/2017/program/beanutilsconversionexception/</loc>
-    <lastmod>2017-05-07T13:20:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>beanutils 日期格式化问题</title>
-        <pubTime>2017-05-06T12:00:43.000Z</pubTime>
-        
-        <tag>java</tag>
-         
-        <tag>beanutils</tag>
-         
-        <tag>date</tag>
          
          
            
@@ -1138,6 +882,48 @@
 
     
   <url>
+    <loc>http://viabugs.com/2017/04/29/2017/poems/%E6%9C%A8%E5%85%B0%E8%8A%B1%C2%B7%E6%98%A5%E6%99%AF/</loc>
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>木兰花·春景</title>
+        <pubTime>2017-04-29T13:03:11.000Z</pubTime>
+        
+        <tag>诗</tag>
+         
+         
+           
+             
+              <breadCrumb title="life" url="http://viabugs.com/categories/life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://viabugs.com/2017/05/01/2017/program/ansibledeployjetty/</loc>
+    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
+    <data>
+        <display>
+        <title>使用Ansible发布Jetty服务</title>
+        <pubTime>2017-05-01T06:05:03.000Z</pubTime>
+        
+        <tag>ansible</tag>
+         
+        <tag>jetty</tag>
+         
+         
+           
+             
+              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://viabugs.com/2017/04/29/2017/program/ansible/</loc>
     <lastmod>2017-05-01T11:01:02.000Z</lastmod>
     <data>
@@ -1178,111 +964,7 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/05/01/2017/program/ansibledeployjetty/</loc>
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>使用Ansible发布Jetty服务</title>
-        <pubTime>2017-05-01T06:05:03.000Z</pubTime>
-        
-        <tag>ansible</tag>
-         
-        <tag>jetty</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/04/29/2018/program/ansiblessherror/</loc>
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>ansible ssh  error</title>
-        <pubTime>2017-04-29T13:12:23.000Z</pubTime>
-        
-        <tag>ansible</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/05/01/2018/program/ansibledeployjetty/</loc>
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>使用Ansible发布Jetty服务</title>
-        <pubTime>2017-05-01T06:05:03.000Z</pubTime>
-        
-        <tag>ansible</tag>
-         
-        <tag>jetty</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/04/29/2017/program/ssh/</loc>
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>ssh 命令</title>
-        <pubTime>2017-04-29T12:22:23.000Z</pubTime>
-        
-        <tag>ssh</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/04/29/2017/poems/%E6%9C%A8%E5%85%B0%E8%8A%B1%C2%B7%E6%98%A5%E6%99%AF/</loc>
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>木兰花·春景</title>
-        <pubTime>2017-04-29T13:03:11.000Z</pubTime>
-        
-        <tag>诗</tag>
-         
-         
-           
-             
-              <breadCrumb title="life" url="http://viabugs.com/categories/life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/04/29/2018/program/ansible/</loc>
+    <loc>http://viabugs.com/2017/04/29/2017/program/Installansible/</loc>
     <lastmod>2017-05-01T11:01:02.000Z</lastmod>
     <data>
         <display>
@@ -1290,66 +972,6 @@
         <pubTime>2017-04-29T12:22:23.000Z</pubTime>
         
         <tag>ansible</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/04/29/2018/program/Installansible/</loc>
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>Install ansible</title>
-        <pubTime>2017-04-29T12:22:23.000Z</pubTime>
-        
-        <tag>ansible</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/04/29/2018/program/ssh/</loc>
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>ssh 命令</title>
-        <pubTime>2017-04-29T12:22:23.000Z</pubTime>
-        
-        <tag>ssh</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/04/29/2018/program/ssh%E7%9A%84%E5%89%AF%E6%9C%AC/</loc>
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>ssh 命令</title>
-        <pubTime>2017-04-29T12:22:23.000Z</pubTime>
-        
-        <tag>ssh</tag>
          
          
            
@@ -1384,36 +1006,14 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/05/02/2018/program/startjettybyshell/</loc>
+    <loc>http://viabugs.com/2017/04/29/2017/program/ssh/</loc>
     <lastmod>2017-05-01T11:01:02.000Z</lastmod>
     <data>
         <display>
-        <title>使用bash启动Jetty服务</title>
-        <pubTime>2017-05-02T12:45:43.000Z</pubTime>
-        
-        <tag>jetty</tag>
-         
-        <tag>bash</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/04/29/2017/program/Installansible/</loc>
-    <lastmod>2017-05-01T11:01:02.000Z</lastmod>
-    <data>
-        <display>
-        <title>Install ansible</title>
+        <title>ssh 命令</title>
         <pubTime>2017-04-29T12:22:23.000Z</pubTime>
         
-        <tag>ansible</tag>
+        <tag>ssh</tag>
          
          
            
@@ -1569,26 +1169,6 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/04/23/2018/program/distributedtransaction/</loc>
-    <lastmod>2017-04-23T14:16:34.000Z</lastmod>
-    <data>
-        <display>
-        <title>分布式事务</title>
-        <pubTime>2017-04-23T13:52:33.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://viabugs.com/2017/04/23/2017/program/distributedtransaction/</loc>
     <lastmod>2017-04-23T14:16:34.000Z</lastmod>
     <data>
@@ -1622,26 +1202,6 @@
            
              
               <breadCrumb title="life" url="http://viabugs.com/categories/life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/04/23/2018/program/jmeterscript/</loc>
-    <lastmod>2017-04-23T13:36:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>JMeter 压力测试CSV参数化</title>
-        <pubTime>2017-04-23T12:45:43.000Z</pubTime>
-        
-        <tag>jmeter</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
           
         </display>
     </data>
@@ -2128,26 +1688,6 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/04/11/2018/program/mysqloptimization/</loc>
-    <lastmod>2017-04-11T14:46:13.000Z</lastmod>
-    <data>
-        <display>
-        <title>Mysql 优化</title>
-        <pubTime>2017-04-11T14:46:44.000Z</pubTime>
-        
-        <tag>mysql</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://viabugs.com/2017/04/11/2017/program/mysqloptimization/</loc>
     <lastmod>2017-04-11T14:46:13.000Z</lastmod>
     <data>
@@ -2190,26 +1730,6 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/04/11/2018/program/jprofiler/</loc>
-    <lastmod>2017-04-11T12:27:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>jprofiler</title>
-        <pubTime>2017-04-11T12:45:43.000Z</pubTime>
-        
-        <tag>jprofiler</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://viabugs.com/2017/04/11/2017/program/jprofiler/</loc>
     <lastmod>2017-04-11T12:27:56.000Z</lastmod>
     <data>
@@ -2218,26 +1738,6 @@
         <pubTime>2017-04-11T12:45:43.000Z</pubTime>
         
         <tag>jprofiler</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/04/11/2018/program/jvisualvm/</loc>
-    <lastmod>2017-04-11T12:27:55.000Z</lastmod>
-    <data>
-        <display>
-        <title>jvisualvm</title>
-        <pubTime>2017-04-11T12:45:43.000Z</pubTime>
-        
-        <tag>jetty</tag>
          
          
            
@@ -2336,46 +1836,6 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/04/10/2018/program/jconsolejetty/</loc>
-    <lastmod>2017-04-10T13:42:51.000Z</lastmod>
-    <data>
-        <display>
-        <title>Jconsole on Jetty</title>
-        <pubTime>2017-04-10T13:39:43.000Z</pubTime>
-        
-        <tag>jetty</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/04/10/2018/program/jettyjvm/</loc>
-    <lastmod>2017-04-10T11:58:53.000Z</lastmod>
-    <data>
-        <display>
-        <title>Jetty jvm</title>
-        <pubTime>2017-04-10T12:45:43.000Z</pubTime>
-        
-        <tag>jetty</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://viabugs.com/2017/04/10/2017/program/jettyjvm/</loc>
     <lastmod>2017-04-10T11:58:53.000Z</lastmod>
     <data>
@@ -2397,26 +1857,6 @@
     
   <url>
     <loc>http://viabugs.com/2017/04/10/2017/program/jmeter/</loc>
-    <lastmod>2017-04-10T11:58:50.000Z</lastmod>
-    <data>
-        <display>
-        <title>JMeter 压力测试CSV参数化</title>
-        <pubTime>2017-04-10T12:45:43.000Z</pubTime>
-        
-        <tag>jetty</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/04/10/2018/program/jmeter/</loc>
     <lastmod>2017-04-10T11:58:50.000Z</lastmod>
     <data>
         <display>
@@ -2500,26 +1940,6 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/04/09/2018/program/php/</loc>
-    <lastmod>2017-04-09T10:57:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>php 命令</title>
-        <pubTime>2017-04-09T12:22:23.000Z</pubTime>
-        
-        <tag>php</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://viabugs.com/2017/04/09/2017/listen/%E6%B0%B8%E8%BF%9C%E5%B9%B8%E7%A6%8F%E7%9A%84%E7%A7%91%E5%AD%A6/</loc>
     <lastmod>2017-04-09T10:53:51.000Z</lastmod>
     <data>
@@ -2543,26 +1963,6 @@
     
   <url>
     <loc>http://viabugs.com/2017/04/09/2017/program/nginx.conf/</loc>
-    <lastmod>2017-04-09T10:53:50.000Z</lastmod>
-    <data>
-        <display>
-        <title>Nginx conf</title>
-        <pubTime>2017-04-09T12:45:43.000Z</pubTime>
-        
-        <tag>nginx</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/04/09/2018/program/nginx.conf/</loc>
     <lastmod>2017-04-09T10:53:50.000Z</lastmod>
     <data>
         <display>
@@ -2780,26 +2180,6 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/03/29/2018/program/hibernateoutsidevalidrange/</loc>
-    <lastmod>2017-03-29T14:03:33.000Z</lastmod>
-    <data>
-        <display>
-        <title>hibernate outside valid range for the datatype smallint</title>
-        <pubTime>2017-03-29T13:57:55.000Z</pubTime>
-        
-        <tag>hibernate</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://viabugs.com/2017/03/29/2017/program/hibernateoutsidevalidrange/</loc>
     <lastmod>2017-03-29T14:03:33.000Z</lastmod>
     <data>
@@ -2808,26 +2188,6 @@
         <pubTime>2017-03-29T13:57:55.000Z</pubTime>
         
         <tag>hibernate</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/03/29/2018/program/mysqlcastandconvert/</loc>
-    <lastmod>2017-03-29T13:56:22.000Z</lastmod>
-    <data>
-        <display>
-        <title>MySQL CAST And CONVERT 函数</title>
-        <pubTime>2017-03-29T13:56:35.000Z</pubTime>
-        
-        <tag>mysql</tag>
          
          
            
@@ -2860,26 +2220,6 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/03/30/2018/program/mysqlunsigned/</loc>
-    <lastmod>2017-03-29T13:52:09.000Z</lastmod>
-    <data>
-        <display>
-        <title>Mysql unsigned</title>
-        <pubTime>2017-03-30T09:46:43.000Z</pubTime>
-        
-        <tag>mysql</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://viabugs.com/2017/03/30/2017/program/mysqlunsigned/</loc>
     <lastmod>2017-03-29T13:52:09.000Z</lastmod>
     <data>
@@ -2888,26 +2228,6 @@
         <pubTime>2017-03-30T09:46:43.000Z</pubTime>
         
         <tag>mysql</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/03/29/2018/program/gitstash/</loc>
-    <lastmod>2017-03-29T13:37:00.000Z</lastmod>
-    <data>
-        <display>
-        <title>Git Stash</title>
-        <pubTime>2017-03-29T13:36:33.000Z</pubTime>
-        
-        <tag>git</tag>
          
          
            
@@ -2960,26 +2280,6 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/03/29/2018/program/centos6-bridging-network/</loc>
-    <lastmod>2017-03-29T13:26:11.000Z</lastmod>
-    <data>
-        <display>
-        <title>Centos6桥接网络配置</title>
-        <pubTime>2017-03-29T13:23:53.000Z</pubTime>
-        
-        <tag>centos</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux" url="http://viabugs.com/categories/linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://viabugs.com/2017/03/29/2017/program/linuxps/</loc>
     <lastmod>2017-03-29T13:21:11.000Z</lastmod>
     <data>
@@ -2990,48 +2290,6 @@
         <tag>linux</tag>
          
         <tag>ps</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/03/29/2018/program/linuxps/</loc>
-    <lastmod>2017-03-29T13:21:11.000Z</lastmod>
-    <data>
-        <display>
-        <title>Linux ps 命令参数详解</title>
-        <pubTime>2017-03-29T13:21:23.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-        <tag>ps</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/03/28/2018/program/linuxtail/</loc>
-    <lastmod>2017-03-28T13:19:55.000Z</lastmod>
-    <data>
-        <display>
-        <title>Linux tail</title>
-        <pubTime>2017-03-28T13:22:13.000Z</pubTime>
-        
-        <tag>linux</tag>
          
          
            
@@ -3288,26 +2546,6 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/03/23/2018/program/mavensurefireplugin/</loc>
-    <lastmod>2017-03-23T14:03:21.000Z</lastmod>
-    <data>
-        <display>
-        <title>Maven打包时跳过测试类</title>
-        <pubTime>2017-03-23T13:18:13.000Z</pubTime>
-        
-        <tag>maven</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://viabugs.com/2017/03/23/2017/program/mavensurefireplugin/</loc>
     <lastmod>2017-03-23T14:03:21.000Z</lastmod>
     <data>
@@ -3328,52 +2566,12 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/03/23/2018/program/maven/</loc>
-    <lastmod>2017-03-23T14:00:23.000Z</lastmod>
-    <data>
-        <display>
-        <title>Maven 常用命令</title>
-        <pubTime>2017-03-23T13:22:23.000Z</pubTime>
-        
-        <tag>maven</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://viabugs.com/2017/03/23/2017/program/maven/</loc>
     <lastmod>2017-03-23T14:00:23.000Z</lastmod>
     <data>
         <display>
         <title>Maven 常用命令</title>
         <pubTime>2017-03-23T13:22:23.000Z</pubTime>
-        
-        <tag>maven</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/03/23/2018/program/mavenwarplugin/</loc>
-    <lastmod>2017-03-23T12:46:54.000Z</lastmod>
-    <data>
-        <display>
-        <title>Maven 多个war依赖</title>
-        <pubTime>2017-03-23T12:42:43.000Z</pubTime>
         
         <tag>maven</tag>
          
@@ -3460,26 +2658,6 @@
         <pubTime>2017-03-21T13:47:07.000Z</pubTime>
         
         <tag>docker</tag>
-         
-         
-           
-             
-              <breadCrumb title="program" url="http://viabugs.com/categories/program/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://viabugs.com/2017/03/20/2018/program/jenkinsmavendeploy/</loc>
-    <lastmod>2017-03-21T13:48:24.000Z</lastmod>
-    <data>
-        <display>
-        <title>使用Jenkins打包多个Maven项目</title>
-        <pubTime>2017-03-20T14:00:03.000Z</pubTime>
-        
-        <tag>jenkins</tag>
          
          
            
@@ -3744,7 +2922,7 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/03/16/2017/economics/dontjustshareatmoney/</loc>
+    <loc>http://viabugs.com/2017/03/16/2017/listen/money/</loc>
     <lastmod>2017-03-16T13:50:07.000Z</lastmod>
     <data>
         <display>
@@ -3766,7 +2944,7 @@
 
     
   <url>
-    <loc>http://viabugs.com/2017/03/16/2017/listen/money/</loc>
+    <loc>http://viabugs.com/2017/03/16/2017/economics/dontjustshareatmoney/</loc>
     <lastmod>2017-03-16T13:50:07.000Z</lastmod>
     <data>
         <display>

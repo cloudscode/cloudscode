@@ -276,7 +276,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/04/10/2017/program/jettyjvm/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/27/2017/listen/listen20170327/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -301,8 +301,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/10/2017/program/jettyjvm/" itemprop="url">
-                  Jetty jvm
+                <a class="post-title-link" href="/2017/03/27/2017/listen/listen20170327/" itemprop="url">
+                  横向领导力
                 </a>
               
             
@@ -316,8 +316,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-10T20:45:43+08:00">
-                2017-04-10
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-27T20:13:39+08:00">
+                2017-03-27
               </time>
             
 
@@ -335,8 +335,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/program/" itemprop="url" rel="index">
-                    <span itemprop="name">program</span>
+                  <a href="/categories/life/" itemprop="url" rel="index">
+                    <span itemprop="name">life</span>
                   </a>
                 </span>
 
@@ -372,12 +372,14 @@
       
         
           
-            <h2 id="修改start-ini文件中"><a href="#修改start-ini文件中" class="headerlink" title="修改start.ini文件中"></a>修改start.ini文件中</h2><p>–exec<br> -Dsun.rmi.dgc.client.gcInterval=3600000<br> -Dsun.rmi.dgc.server.gcInterval=3600000</p>
-<h1 id="Dcom-sun-management-jmxremote"><a href="#Dcom-sun-management-jmxremote" class="headerlink" title="-Dcom.sun.management.jmxremote"></a>-Dcom.sun.management.jmxremote</h1><h1 id="Dorg-eclipse-jetty-util-log-IGNORED-true"><a href="#Dorg-eclipse-jetty-util-log-IGNORED-true" class="headerlink" title="-Dorg.eclipse.jetty.util.log.IGNORED=true"></a>-Dorg.eclipse.jetty.util.log.IGNORED=true</h1><h1 id="Dorg-eclipse-jetty-util-log-stderr-DEBUG-true"><a href="#Dorg-eclipse-jetty-util-log-stderr-DEBUG-true" class="headerlink" title="-Dorg.eclipse.jetty.util.log.stderr.DEBUG=true"></a>-Dorg.eclipse.jetty.util.log.stderr.DEBUG=true</h1><h1 id="Dorg-eclipse-jetty-util-log-stderr-SOURCE-true"><a href="#Dorg-eclipse-jetty-util-log-stderr-SOURCE-true" class="headerlink" title="-Dorg.eclipse.jetty.util.log.stderr.SOURCE=true"></a>-Dorg.eclipse.jetty.util.log.stderr.SOURCE=true</h1><p> -Xmx2000m<br> -Xmn512m<br> -XX:PermSize=512m<br> -XX:MaxPermSize=1024m</p>
-<h1 id="verbose-gc"><a href="#verbose-gc" class="headerlink" title="-verbose:gc"></a>-verbose:gc</h1><h1 id="XX-PrintGCDateStamps"><a href="#XX-PrintGCDateStamps" class="headerlink" title="-XX:+PrintGCDateStamps"></a>-XX:+PrintGCDateStamps</h1><h1 id="XX-PrintGCTimeStamps"><a href="#XX-PrintGCTimeStamps" class="headerlink" title="-XX:+PrintGCTimeStamps"></a>-XX:+PrintGCTimeStamps</h1><h1 id="XX-PrintGCDetails"><a href="#XX-PrintGCDetails" class="headerlink" title="-XX:+PrintGCDetails"></a>-XX:+PrintGCDetails</h1><h1 id="XX-PrintTenuringDistribution"><a href="#XX-PrintTenuringDistribution" class="headerlink" title="-XX:+PrintTenuringDistribution"></a>-XX:+PrintTenuringDistribution</h1><h1 id="XX-PrintCommandLineFlags"><a href="#XX-PrintCommandLineFlags" class="headerlink" title="-XX:+PrintCommandLineFlags"></a>-XX:+PrintCommandLineFlags</h1><h1 id="XX-DisableExplicitGC"><a href="#XX-DisableExplicitGC" class="headerlink" title="-XX:+DisableExplicitGC"></a>-XX:+DisableExplicitGC</h1><p> -XX:+UseConcMarkSweepGC</p>
-<h1 id="XX-ParallelCMSThreads-2"><a href="#XX-ParallelCMSThreads-2" class="headerlink" title="-XX:ParallelCMSThreads=2"></a>-XX:ParallelCMSThreads=2</h1><p> -XX:+CMSClassUnloadingEnabled  </p>
-<h1 id="XX-UseCMSCompactAtFullCollection"><a href="#XX-UseCMSCompactAtFullCollection" class="headerlink" title="-XX:+UseCMSCompactAtFullCollection"></a>-XX:+UseCMSCompactAtFullCollection</h1><h1 id="XX-CMSInitiatingOccupancyFraction-80"><a href="#XX-CMSInitiatingOccupancyFraction-80" class="headerlink" title="-XX:CMSInitiatingOccupancyFraction=80"></a>-XX:CMSInitiatingOccupancyFraction=80</h1><p>#———————————————————–</p>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p> -Dsun.rmi.dgc.client.gcInterval=3600000，<br> -Dsun.rmi.dgc.server.gcInterval=3600000是设置客户端和服务端GC启动的时间。<br> -Xmx2000m最大缓存空间、<br> -Xmn512m新生代大小、<br> -XX:PermSize=512m内存永久区初始大小、<br> -XX:MaxPermSize=1024m最大永久区大小，<br> -XX:MaxPermSize=1024m允许CMS清楚老年代，<br> -XX:+CMSClassUnloadingEnabled，<br> -XX:+CMSClassUnloadingEnabled 允许CMS清楚持久代。</p>
+            <p>核心内容<br>横向领导力：不依靠行政权威，仅凭自身才能就能够与他人合作完成艰巨任务的能力。<br>要培养自己的横向领导力需要做到三点：<br>第一、培养技能；第二、明确目标；第三、影响别人。</p>
+<blockquote>
+<p>有权威的领导可以做许多事情，但默契无间的合作绝不是命令出来的。</p>
+<p>横向领导方法是请求同事与你共同解决问题的方法。你并不需要研究如何解决问题，关键在于改善解决问题的过程。</p>
+<p>不管你做什么，只要你做出示范，就能向人们发出一个很强烈的信号，表明我们正在共同努力。</p>
+<p>不管你想完成何种任务，都需要先把问题弄清楚。你的行动需要以事实为基础。</p>
+<p>我们之所以不愿意提供反馈，是因为我们缺乏有效反馈的技能。</p>
+</blockquote>
 
           
         
@@ -416,7 +418,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/04/10/2017/program/jmeter/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/26/2017/listen/listen20170326/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -441,8 +443,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/10/2017/program/jmeter/" itemprop="url">
-                  JMeter 压力测试CSV参数化
+                <a class="post-title-link" href="/2017/03/26/2017/listen/listen20170326/" itemprop="url">
+                  直觉
                 </a>
               
             
@@ -456,8 +458,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-10T20:45:43+08:00">
-                2017-04-10
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-26T20:16:36+08:00">
+                2017-03-26
               </time>
             
 
@@ -475,8 +477,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/program/" itemprop="url" rel="index">
-                    <span itemprop="name">program</span>
+                  <a href="/categories/life/" itemprop="url" rel="index">
+                    <span itemprop="name">life</span>
                   </a>
                 </span>
 
@@ -512,7 +514,12 @@
       
         
           
-            <h2 id="Jmeter之使用CSV-Data-Set-Config实现参数化登录"><a href="#Jmeter之使用CSV-Data-Set-Config实现参数化登录" class="headerlink" title="Jmeter之使用CSV Data Set Config实现参数化登录"></a><a href="http://lijingshou.iteye.com/blog/2047613" title="Jmeter之使用CSV Data Set Config实现参数化登录" target="_blank" rel="external">Jmeter之使用CSV Data Set Config实现参数化登录</a></h2><h2 id="JMeter带json数据的post请求测试"><a href="#JMeter带json数据的post请求测试" class="headerlink" title="JMeter带json数据的post请求测试"></a><a href="http://blog.csdn.net/chuntian_feng/article/details/51871481" title="JMeter带json数据的post请求测试" target="_blank" rel="external">JMeter带json数据的post请求测试</a></h2><h2 id="JMeter-压力测试使用函数和-CSV-文件参数化-json-数据"><a href="#JMeter-压力测试使用函数和-CSV-文件参数化-json-数据" class="headerlink" title="JMeter 压力测试使用函数和 CSV 文件参数化 json 数据"></a><a href="http://blog.csdn.net/defonds/article/details/40824011" title="JMeter 压力测试使用函数和 CSV 文件参数化 json 数据" target="_blank" rel="external">JMeter 压力测试使用函数和 CSV 文件参数化 json 数据</a></h2>
+            <p>核心内容<br>不论是择偶还是其他的决策、选择中，理性计算的结果会跟人的直觉相悖，如果遵循理性，结果往往会让人后悔。因为人面对复杂情况做出判断的时候，很多他们自以为掌握的常识、知识，其实并不完备。特别是这些知识没有经过有意识地梳理的情况下，这些信息反而会混淆自己的判断。反过来，在这种情况下积极运用已有的经验进行探索，却能显著增加选择正确的几率。</p>
+<blockquote>
+<p>当别人笑的时候，即使你不知道他为什么笑，也要跟着一起笑，越快越好。</p>
+<p>启蒙的阳光照射之下，逻辑和概率就是那一束束光线。然而，我们要探索的领地，却笼罩在不确定性的迷雾中。</p>
+</blockquote>
+
           
         
       
@@ -550,7 +557,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/04/09/2017/listen/永远幸福的科学/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/25/2017/listen/文明之光/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -575,8 +582,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/09/2017/listen/永远幸福的科学/" itemprop="url">
-                  永远幸福的科学
+                <a class="post-title-link" href="/2017/03/25/2017/listen/文明之光/" itemprop="url">
+                  文明之光
                 </a>
               
             
@@ -590,8 +597,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-09T22:45:29+08:00">
-                2017-04-09
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-25T20:25:25+08:00">
+                2017-03-25
               </time>
             
 
@@ -647,9 +654,11 @@
         
           
             <blockquote>
-<p>核心内容<br>每个人有不同的特质，而这个特质是很难改变的。心理学家把人的依赖模式分为三种：安全型、回避型和焦虑型。对你的伴侣多考察一段时间，等对方的特质彻底表现出来之后，再去判断对方才会更加准确和可靠。一旦发现伴侣身上表现出的危险信号，应该立即做出科学应对；永远不要自欺欺人，让自己在错误的选择上越走越远</p>
-<p>在一段感情上投入了大量时间和精力的人比较容易抓住对方不放。</p>
-<p>激烈的情感只是昙花一现，如果把激情作为长久恋情的首要目标，那么我们大多只能得到一些美好的片段和悲情的结局。</p>
+<p>瓷器，不仅仅是一种盛器、一种商品，它曾经在世界文化交流中起着重要地作用，现在依然如此。西方世界通过它了解到东方的文明，并与东方展开了大规模贸易。瓷器贸易带来的巨大利润，又刺激了西方化学和材料学的发展，因为过去瓷器利润丰厚，瓷器制造业也成为历史上第一个采用蒸汽机进行大规模生产的行业，这宣告了人类工业革命的开始。从促进文明发展的各个角度来讲，世界上很难找到第二种商品能和瓷器相比。</p>
+<p>完成一项重要的发明，其实并不那么简单。从0到1固然重要，但从1到N更重要。这一点，是真正参与过重大发明全过程的人的共识。因为重大的发明不是靠有灵感、有技术就办得到的，而只要参与过一次这样的全过程，就能够体会到其中的艰辛漫长。</p>
+<p>今天，在提倡创新的时代，中国最需要的恰恰是耐下心来，踏踏实实走完一项项重大发明创造无法跨越的相当漫长的全过程。既不能半途而废，也不可能从外界找到可供简单参考和抄袭的。把一项重大发明比作万里长征，那么从0到1的过程，不过是完成了长征的第一步而已，后面还有很多工作要做。</p>
+<p>回顾美苏太空竞争，如果仅仅概括成科罗廖夫和冯·布劳恩两个人的竞争，多少有点以偏概全。但是这两个人在这次竞争中起到了关键性的作用。一方面他们是造势时的英雄；另一方面，是两个超级大国成就了他们的英名。</p>
+<p>面对一个新生事物，大家常常会先看到它好的一面，而忽视它潜在的问题，人类对抗生素的认识便是如此。在科学上，不能证明有害和尚未证明有害，与已经证明无害完全是两回事，但是很多人却将两者混为一谈。</p>
 </blockquote>
 
           
@@ -684,7 +693,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/37/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/37/">37</a><span class="page-number current">38</span><a class="page-number" href="/page/39/">39</a><span class="space">&hellip;</span><a class="page-number" href="/page/68/">68</a><a class="extend next" rel="next" href="/page/39/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/37/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/37/">37</a><span class="page-number current">38</span><a class="page-number" href="/page/39/">39</a><span class="space">&hellip;</span><a class="page-number" href="/page/54/">54</a><a class="extend next" rel="next" href="/page/39/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -725,7 +734,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">202</span>
+              <span class="site-state-item-count">162</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -742,7 +751,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

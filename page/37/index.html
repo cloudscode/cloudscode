@@ -276,7 +276,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/04/10/2017/program/jconsolejetty/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/28/2017/listen/管理十诫/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -301,8 +301,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/10/2017/program/jconsolejetty/" itemprop="url">
-                  Jconsole on Jetty
+                <a class="post-title-link" href="/2017/03/28/2017/listen/管理十诫/" itemprop="url">
+                  管理十诫
                 </a>
               
             
@@ -316,8 +316,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-10T21:39:43+08:00">
-                2017-04-10
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-28T20:48:25+08:00">
+                2017-03-28
               </time>
             
 
@@ -335,8 +335,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/program/" itemprop="url" rel="index">
-                    <span itemprop="name">program</span>
+                  <a href="/categories/life/" itemprop="url" rel="index">
+                    <span itemprop="name">life</span>
                   </a>
                 </span>
 
@@ -372,11 +372,14 @@
       
         
           
-            <p>使用jconsole来连接jetty查看其运行状态。</p>
-<h2 id="修改jetty的配置start-ini文件"><a href="#修改jetty的配置start-ini文件" class="headerlink" title="修改jetty的配置start.ini文件"></a>修改jetty的配置start.ini文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">--exec  </div><div class="line">OPTIONS=Server,jsp,jmx,resources,websocket,ext,plus,annotations         #jmx必须有  </div><div class="line">-Dcom.sun.management.jmxremote.port=8900  </div><div class="line">-Dcom.sun.management.jmxremote  </div><div class="line">-Dcom.sun.management.jmxremote.ssl=false  </div><div class="line">-Dcom.sun.management.jmxremote.authenticate=false</div></pre></td></tr></table></figure>
-<h2 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">-Dcom.sun.management.jmxremote.port=8900 表示启动的端口为8900</div><div class="line">-Dcom.sun.management.jmxremote 启动jmx远程管理，默认为true</div><div class="line">-Dcom.sun.management.jmxremote.ssl=false  禁用ssl登录</div><div class="line"></div><div class="line">-Dcom.sun.management.jmxremote.authenticate=false</div><div class="line">禁用认证，无需输入用户名密码即可登录</div><div class="line"></div><div class="line">--exec 此参数必须有，若漏掉此参数，即使配置了以上参数，远程管理端口也不会启动。只有加上此选项，才会使其他参数生效。</div></pre></td></tr></table></figure>
-<p>设置完成后，需要重启jetty才能生效。</p>
-<h2 id="jconsole连接"><a href="#jconsole连接" class="headerlink" title="jconsole连接"></a>jconsole连接</h2><p>jconsole通过ip:port的方式就可连接，如果有防火墙的话请放开相关端口。</p>
+            <blockquote>
+<p>真正固执的人不是在规避风险，他们不仅不愿意冒险做出改变或创新，还对自己的方法坚持己见，坚信自己掌握了成功的密钥，觉得再也不用去探索其他的成功之道了。</p>
+<p>灵活变通和适应能力是领导力的重要组成部分，是超越简单的管理能力、运作能力和技术能力之外的一种才能。</p>
+<p>一个组织的进步来自通过努力解决问题，因此你首先要知道问题是什么，才能真正洞悉解决问题的办法。</p>
+<p>所有公司最后的生命线都是信任问题：顾客要相信企业生产的产品正如它所许诺的那样好，投资者要相信公司的管理层是有能力的，员工要相信公司的管理者能够兑现承诺。</p>
+<p>个性、个人的创造力、个人感触、个人的情感投入、个人的想象力，这些都是开展每项工作不可或缺的品质，在整个组织中我们必须提供这些品质成长所需的沃土。</p>
+<p>用外包的策略来创造一个更加扁平化、结构更加简单的组织是运营公司更加有效、更加有创新性的方式。</p>
+</blockquote>
 
           
         
@@ -415,7 +418,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/04/10/2018/program/jettyjvm/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/27/2017/economics/TheProblemofSocialCost/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -440,8 +443,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/10/2018/program/jettyjvm/" itemprop="url">
-                  Jetty jvm
+                <a class="post-title-link" href="/2017/03/27/2017/economics/TheProblemofSocialCost/" itemprop="url">
+                  社会成本问题
                 </a>
               
             
@@ -455,8 +458,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-10T20:45:43+08:00">
-                2017-04-10
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-27T20:45:43+08:00">
+                2017-03-27
               </time>
             
 
@@ -474,8 +477,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/program/" itemprop="url" rel="index">
-                    <span itemprop="name">program</span>
+                  <a href="/categories/life/" itemprop="url" rel="index">
+                    <span itemprop="name">life</span>
                   </a>
                 </span>
 
@@ -511,12 +514,8 @@
       
         
           
-            <h2 id="修改start-ini文件中"><a href="#修改start-ini文件中" class="headerlink" title="修改start.ini文件中"></a>修改start.ini文件中</h2><p>–exec<br> -Dsun.rmi.dgc.client.gcInterval=3600000<br> -Dsun.rmi.dgc.server.gcInterval=3600000</p>
-<h1 id="Dcom-sun-management-jmxremote"><a href="#Dcom-sun-management-jmxremote" class="headerlink" title="-Dcom.sun.management.jmxremote"></a>-Dcom.sun.management.jmxremote</h1><h1 id="Dorg-eclipse-jetty-util-log-IGNORED-true"><a href="#Dorg-eclipse-jetty-util-log-IGNORED-true" class="headerlink" title="-Dorg.eclipse.jetty.util.log.IGNORED=true"></a>-Dorg.eclipse.jetty.util.log.IGNORED=true</h1><h1 id="Dorg-eclipse-jetty-util-log-stderr-DEBUG-true"><a href="#Dorg-eclipse-jetty-util-log-stderr-DEBUG-true" class="headerlink" title="-Dorg.eclipse.jetty.util.log.stderr.DEBUG=true"></a>-Dorg.eclipse.jetty.util.log.stderr.DEBUG=true</h1><h1 id="Dorg-eclipse-jetty-util-log-stderr-SOURCE-true"><a href="#Dorg-eclipse-jetty-util-log-stderr-SOURCE-true" class="headerlink" title="-Dorg.eclipse.jetty.util.log.stderr.SOURCE=true"></a>-Dorg.eclipse.jetty.util.log.stderr.SOURCE=true</h1><p> -Xmx2000m<br> -Xmn512m<br> -XX:PermSize=512m<br> -XX:MaxPermSize=1024m</p>
-<h1 id="verbose-gc"><a href="#verbose-gc" class="headerlink" title="-verbose:gc"></a>-verbose:gc</h1><h1 id="XX-PrintGCDateStamps"><a href="#XX-PrintGCDateStamps" class="headerlink" title="-XX:+PrintGCDateStamps"></a>-XX:+PrintGCDateStamps</h1><h1 id="XX-PrintGCTimeStamps"><a href="#XX-PrintGCTimeStamps" class="headerlink" title="-XX:+PrintGCTimeStamps"></a>-XX:+PrintGCTimeStamps</h1><h1 id="XX-PrintGCDetails"><a href="#XX-PrintGCDetails" class="headerlink" title="-XX:+PrintGCDetails"></a>-XX:+PrintGCDetails</h1><h1 id="XX-PrintTenuringDistribution"><a href="#XX-PrintTenuringDistribution" class="headerlink" title="-XX:+PrintTenuringDistribution"></a>-XX:+PrintTenuringDistribution</h1><h1 id="XX-PrintCommandLineFlags"><a href="#XX-PrintCommandLineFlags" class="headerlink" title="-XX:+PrintCommandLineFlags"></a>-XX:+PrintCommandLineFlags</h1><h1 id="XX-DisableExplicitGC"><a href="#XX-DisableExplicitGC" class="headerlink" title="-XX:+DisableExplicitGC"></a>-XX:+DisableExplicitGC</h1><p> -XX:+UseConcMarkSweepGC</p>
-<h1 id="XX-ParallelCMSThreads-2"><a href="#XX-ParallelCMSThreads-2" class="headerlink" title="-XX:ParallelCMSThreads=2"></a>-XX:ParallelCMSThreads=2</h1><p> -XX:+CMSClassUnloadingEnabled  </p>
-<h1 id="XX-UseCMSCompactAtFullCollection"><a href="#XX-UseCMSCompactAtFullCollection" class="headerlink" title="-XX:+UseCMSCompactAtFullCollection"></a>-XX:+UseCMSCompactAtFullCollection</h1><h1 id="XX-CMSInitiatingOccupancyFraction-80"><a href="#XX-CMSInitiatingOccupancyFraction-80" class="headerlink" title="-XX:CMSInitiatingOccupancyFraction=80"></a>-XX:CMSInitiatingOccupancyFraction=80</h1><p>#———————————————————–</p>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p> -Dsun.rmi.dgc.client.gcInterval=3600000，<br> -Dsun.rmi.dgc.server.gcInterval=3600000是设置客户端和服务端GC启动的时间。<br> -Xmx2000m最大缓存空间、<br> -Xmn512m新生代大小、<br> -XX:PermSize=512m内存永久区初始大小、<br> -XX:MaxPermSize=1024m最大永久区大小，<br> -XX:MaxPermSize=1024m允许CMS清楚老年代，<br> -XX:+CMSClassUnloadingEnabled，<br> -XX:+CMSClassUnloadingEnabled 允许CMS清楚持久代。</p>
+            <p>《社会成本问题》这篇文章是科斯在1960年发表的，开创了经济学的新流派——新制度经济学。新制度经济学派批判继承了新古典主义，强调对真实世界的解释，试图建立具有解释和预测双重能力的理论。科斯就是对老制度经济学特别是新古典经济学——远离真实世界的不满，提出了交易费用的命题，同时他对主流经济学研究方法提出深刻的批评。科斯一再强调要解释真实世界，真实世界离不开制度和交易费用，他认为经济学家应做的一件主要工作就是研究经济制度。我们每个人都生活在一种经济制度中，人类的福利依赖于整个社会所能提供的产品和劳务，后者的发展水平又取决于经济制度的运行效率。</p>
+<p>在《社会成本问题》中，首先，科斯引入了现实中英国、美国的许多生活案件、法律案件进行分析：例如，走失的牛损坏邻居的谷物生长案；酿酒空气流通案；旧建筑物拆毁对邻近旅店影响案等，指出“在处理有害后果的行为时所面临的问题，并不是简单地限制哪些有责任者。”必须决定的是，“防止妨害的收益是否大于作为停止产生该损害行为的结果而在其他方面遭受的损失。”科斯的这一观点对传统经济学解决外部性的方法提出挑战，提出通过界定当事人之间的产权关系降低交易成本来解决外部性问题，同时指出产权制度对资源配置的效率将产生重大影响。</p>
 
           
         
@@ -555,7 +554,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/04/10/2018/program/jmeter/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/27/2017/listen/海都物语/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -580,8 +579,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/10/2018/program/jmeter/" itemprop="url">
-                  JMeter 压力测试CSV参数化
+                <a class="post-title-link" href="/2017/03/27/2017/listen/海都物语/" itemprop="url">
+                  海都物语
                 </a>
               
             
@@ -595,8 +594,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-10T20:45:43+08:00">
-                2017-04-10
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-27T20:21:29+08:00">
+                2017-03-27
               </time>
             
 
@@ -614,8 +613,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/program/" itemprop="url" rel="index">
-                    <span itemprop="name">program</span>
+                  <a href="/categories/life/" itemprop="url" rel="index">
+                    <span itemprop="name">life</span>
                   </a>
                 </span>
 
@@ -651,7 +650,11 @@
       
         
           
-            <h2 id="Jmeter之使用CSV-Data-Set-Config实现参数化登录"><a href="#Jmeter之使用CSV-Data-Set-Config实现参数化登录" class="headerlink" title="Jmeter之使用CSV Data Set Config实现参数化登录"></a><a href="http://lijingshou.iteye.com/blog/2047613" title="Jmeter之使用CSV Data Set Config实现参数化登录" target="_blank" rel="external">Jmeter之使用CSV Data Set Config实现参数化登录</a></h2><h2 id="JMeter带json数据的post请求测试"><a href="#JMeter带json数据的post请求测试" class="headerlink" title="JMeter带json数据的post请求测试"></a><a href="http://blog.csdn.net/chuntian_feng/article/details/51871481" title="JMeter带json数据的post请求测试" target="_blank" rel="external">JMeter带json数据的post请求测试</a></h2><h2 id="JMeter-压力测试使用函数和-CSV-文件参数化-json-数据"><a href="#JMeter-压力测试使用函数和-CSV-文件参数化-json-数据" class="headerlink" title="JMeter 压力测试使用函数和 CSV 文件参数化 json 数据"></a><a href="http://blog.csdn.net/defonds/article/details/40824011" title="JMeter 压力测试使用函数和 CSV 文件参数化 json 数据" target="_blank" rel="external">JMeter 压力测试使用函数和 CSV 文件参数化 json 数据</a></h2>
+            <blockquote>
+<p>流血之后，威尼斯人立即用智慧、想办法将昔日的敌人变成朋友。</p>
+<p>单方面提出和平宣言，和平是不会到来的，这是一个永恒的难题。</p>
+</blockquote>
+
           
         
       
@@ -684,7 +687,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/36/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/">36</a><span class="page-number current">37</span><a class="page-number" href="/page/38/">38</a><span class="space">&hellip;</span><a class="page-number" href="/page/68/">68</a><a class="extend next" rel="next" href="/page/38/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/36/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/">36</a><span class="page-number current">37</span><a class="page-number" href="/page/38/">38</a><span class="space">&hellip;</span><a class="page-number" href="/page/54/">54</a><a class="extend next" rel="next" href="/page/38/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -725,7 +728,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">202</span>
+              <span class="site-state-item-count">162</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -742,7 +745,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

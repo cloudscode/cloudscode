@@ -276,7 +276,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/04/18/2017/listen/思考致富/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/04/10/2017/program/jettyjvm/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -301,8 +301,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/18/2017/listen/思考致富/" itemprop="url">
-                  思考致富
+                <a class="post-title-link" href="/2017/04/10/2017/program/jettyjvm/" itemprop="url">
+                  Jetty jvm
                 </a>
               
             
@@ -316,8 +316,282 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-18T21:07:23+08:00">
-                2017-04-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-10T20:45:43+08:00">
+                2017-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/program/" itemprop="url" rel="index">
+                    <span itemprop="name">program</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="修改start-ini文件中"><a href="#修改start-ini文件中" class="headerlink" title="修改start.ini文件中"></a>修改start.ini文件中</h2><p>–exec<br> -Dsun.rmi.dgc.client.gcInterval=3600000<br> -Dsun.rmi.dgc.server.gcInterval=3600000</p>
+<h1 id="Dcom-sun-management-jmxremote"><a href="#Dcom-sun-management-jmxremote" class="headerlink" title="-Dcom.sun.management.jmxremote"></a>-Dcom.sun.management.jmxremote</h1><h1 id="Dorg-eclipse-jetty-util-log-IGNORED-true"><a href="#Dorg-eclipse-jetty-util-log-IGNORED-true" class="headerlink" title="-Dorg.eclipse.jetty.util.log.IGNORED=true"></a>-Dorg.eclipse.jetty.util.log.IGNORED=true</h1><h1 id="Dorg-eclipse-jetty-util-log-stderr-DEBUG-true"><a href="#Dorg-eclipse-jetty-util-log-stderr-DEBUG-true" class="headerlink" title="-Dorg.eclipse.jetty.util.log.stderr.DEBUG=true"></a>-Dorg.eclipse.jetty.util.log.stderr.DEBUG=true</h1><h1 id="Dorg-eclipse-jetty-util-log-stderr-SOURCE-true"><a href="#Dorg-eclipse-jetty-util-log-stderr-SOURCE-true" class="headerlink" title="-Dorg.eclipse.jetty.util.log.stderr.SOURCE=true"></a>-Dorg.eclipse.jetty.util.log.stderr.SOURCE=true</h1><p> -Xmx2000m<br> -Xmn512m<br> -XX:PermSize=512m<br> -XX:MaxPermSize=1024m</p>
+<h1 id="verbose-gc"><a href="#verbose-gc" class="headerlink" title="-verbose:gc"></a>-verbose:gc</h1><h1 id="XX-PrintGCDateStamps"><a href="#XX-PrintGCDateStamps" class="headerlink" title="-XX:+PrintGCDateStamps"></a>-XX:+PrintGCDateStamps</h1><h1 id="XX-PrintGCTimeStamps"><a href="#XX-PrintGCTimeStamps" class="headerlink" title="-XX:+PrintGCTimeStamps"></a>-XX:+PrintGCTimeStamps</h1><h1 id="XX-PrintGCDetails"><a href="#XX-PrintGCDetails" class="headerlink" title="-XX:+PrintGCDetails"></a>-XX:+PrintGCDetails</h1><h1 id="XX-PrintTenuringDistribution"><a href="#XX-PrintTenuringDistribution" class="headerlink" title="-XX:+PrintTenuringDistribution"></a>-XX:+PrintTenuringDistribution</h1><h1 id="XX-PrintCommandLineFlags"><a href="#XX-PrintCommandLineFlags" class="headerlink" title="-XX:+PrintCommandLineFlags"></a>-XX:+PrintCommandLineFlags</h1><h1 id="XX-DisableExplicitGC"><a href="#XX-DisableExplicitGC" class="headerlink" title="-XX:+DisableExplicitGC"></a>-XX:+DisableExplicitGC</h1><p> -XX:+UseConcMarkSweepGC</p>
+<h1 id="XX-ParallelCMSThreads-2"><a href="#XX-ParallelCMSThreads-2" class="headerlink" title="-XX:ParallelCMSThreads=2"></a>-XX:ParallelCMSThreads=2</h1><p> -XX:+CMSClassUnloadingEnabled  </p>
+<h1 id="XX-UseCMSCompactAtFullCollection"><a href="#XX-UseCMSCompactAtFullCollection" class="headerlink" title="-XX:+UseCMSCompactAtFullCollection"></a>-XX:+UseCMSCompactAtFullCollection</h1><h1 id="XX-CMSInitiatingOccupancyFraction-80"><a href="#XX-CMSInitiatingOccupancyFraction-80" class="headerlink" title="-XX:CMSInitiatingOccupancyFraction=80"></a>-XX:CMSInitiatingOccupancyFraction=80</h1><p>#———————————————————–</p>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p> -Dsun.rmi.dgc.client.gcInterval=3600000，<br> -Dsun.rmi.dgc.server.gcInterval=3600000是设置客户端和服务端GC启动的时间。<br> -Xmx2000m最大缓存空间、<br> -Xmn512m新生代大小、<br> -XX:PermSize=512m内存永久区初始大小、<br> -XX:MaxPermSize=1024m最大永久区大小，<br> -XX:MaxPermSize=1024m允许CMS清楚老年代，<br> -XX:+CMSClassUnloadingEnabled，<br> -XX:+CMSClassUnloadingEnabled 允许CMS清楚持久代。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/04/10/2017/program/jmeter/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="ljzhuanjiao@gmail.com">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="OwlFocus">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="OwlFocus" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/10/2017/program/jmeter/" itemprop="url">
+                  JMeter 压力测试CSV参数化
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-10T20:45:43+08:00">
+                2017-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/program/" itemprop="url" rel="index">
+                    <span itemprop="name">program</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Jmeter之使用CSV-Data-Set-Config实现参数化登录"><a href="#Jmeter之使用CSV-Data-Set-Config实现参数化登录" class="headerlink" title="Jmeter之使用CSV Data Set Config实现参数化登录"></a><a href="http://lijingshou.iteye.com/blog/2047613" title="Jmeter之使用CSV Data Set Config实现参数化登录" target="_blank" rel="external">Jmeter之使用CSV Data Set Config实现参数化登录</a></h2><h2 id="JMeter带json数据的post请求测试"><a href="#JMeter带json数据的post请求测试" class="headerlink" title="JMeter带json数据的post请求测试"></a><a href="http://blog.csdn.net/chuntian_feng/article/details/51871481" title="JMeter带json数据的post请求测试" target="_blank" rel="external">JMeter带json数据的post请求测试</a></h2><h2 id="JMeter-压力测试使用函数和-CSV-文件参数化-json-数据"><a href="#JMeter-压力测试使用函数和-CSV-文件参数化-json-数据" class="headerlink" title="JMeter 压力测试使用函数和 CSV 文件参数化 json 数据"></a><a href="http://blog.csdn.net/defonds/article/details/40824011" title="JMeter 压力测试使用函数和 CSV 文件参数化 json 数据" target="_blank" rel="external">JMeter 压力测试使用函数和 CSV 文件参数化 json 数据</a></h2>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/04/09/2017/listen/永远幸福的科学/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="ljzhuanjiao@gmail.com">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.gif">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="OwlFocus">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="OwlFocus" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/09/2017/listen/永远幸福的科学/" itemprop="url">
+                  永远幸福的科学
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-09T22:45:29+08:00">
+                2017-04-09
               </time>
             
 
@@ -373,297 +647,9 @@
         
           
             <blockquote>
-<p>1.无形的意念会带来财富，凡是你心里所想，并且相信的，最终必然能够实现。所有的成就，所有的辛苦，所得来的财富，其实都是意念的源泉。思考才能致富，这里的财富，不是狭隘的物质财富，而是我们精神的富足。</p>
-<p>2.当受到性驱动的时候，这个驱动力是很厉害的，人们会因为性表达的欲望不惜牺牲生命和荣誉。性表达的欲望是天然天生的，我们不能想掩盖就掩盖，想隐藏就隐藏，我们必须要有途径来宣泄。这个途径可以是文学创作、艺术表现或者是其他能够聚集财富的方面。</p>
-<p>3.积极的心态是希尔成功哲学的核心内容。这种心态能在潜意识中形成积极的影响，它会引导我们用积极开放的眼光分辨、吸收外界的有利信息，阻挡住消极思维、心态的不利影响，从而使自己向越来越好的方向发展。</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/04/17/2017/economics/lawofdemand2/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="ljzhuanjiao@gmail.com">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="OwlFocus">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="OwlFocus" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/17/2017/economics/lawofdemand2/" itemprop="url">
-                  需求第二律
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-17T22:05:13+08:00">
-                2017-04-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/life/" itemprop="url" rel="index">
-                    <span itemprop="name">life</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="弹性概念"><a href="#弹性概念" class="headerlink" title="弹性概念"></a>弹性概念</h1><blockquote>
-<p>需求对价格的弹性，各价格变化之后流逝的时间长度成正比。<br>随意时间的推移，需求对价格的弹性会增加。</p>
-</blockquote>
-<h1 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h1><ul>
-<li>需求的价格弹性=需求量的变化比例/价格的变化比例=</li>
-<li>需求曲线的斜率=价格的<br>变化量/需求量的变化量</li>
-</ul>
-<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><blockquote>
-<p>弹性跟斜率不一样，在一条需求曲线上面，斜率是处处相等的，但是在同样一条需求曲线上面，弹性却处处不等。在价格比较高的部分，弹性大于1，也就是说一种商品具有弹性，代表这种商品是一种奢侈品；在价格比较低的部分，弹性小于1，它代表的是，这种商品是一种必需品。同样一种商品，到底它是奢侈品还是必需品，取决于价格的不同。</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/04/17/2017/listen/第五项修炼/">
-
-  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="ljzhuanjiao@gmail.com">
-    <meta itemprop="description" content="">
-    <meta itemprop="image" content="/images/avatar.gif">
-  </span>
-
-  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="OwlFocus">
-    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="OwlFocus" src="">
-    </span>
-  </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/17/2017/listen/第五项修炼/" itemprop="url">
-                  第五项修炼
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-17T21:15:29+08:00">
-                2017-04-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/life/" itemprop="url" rel="index">
-                    <span itemprop="name">life</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>核心内容</p>
-</blockquote>
-<p>核心管理理念：一个组织能够拥有长期竞争力的关键在于，他们有比竞争对手更快更好的学习力。</p>
-<p>学习型组织：组织中的每个人都充满了学习的热情和能力，并能在合作的过程中不断地互相启发，同时这个组织在创新和试错中又能够不断地自我成长和进化。</p>
-<blockquote>
-<p>1.自我超越、心智模式、共同愿景、团队学习这四项能力都是建立在系统思考能力的基础上。</p>
-<p>2.明确学习愿景、激发学习热情，对个人而言是自我超越的修炼，对团队而言是共同愿景的修炼。</p>
-<p>3.不懂系统思考的人，往往会把组织当做一个机器来管理；而懂系统思考的人，则会把组织看作一个生命体来管理。</p>
+<p>核心内容<br>每个人有不同的特质，而这个特质是很难改变的。心理学家把人的依赖模式分为三种：安全型、回避型和焦虑型。对你的伴侣多考察一段时间，等对方的特质彻底表现出来之后，再去判断对方才会更加准确和可靠。一旦发现伴侣身上表现出的危险信号，应该立即做出科学应对；永远不要自欺欺人，让自己在错误的选择上越走越远</p>
+<p>在一段感情上投入了大量时间和精力的人比较容易抓住对方不放。</p>
+<p>激烈的情感只是昙花一现，如果把激情作为长久恋情的首要目标，那么我们大多只能得到一些美好的片段和悲情的结局。</p>
 </blockquote>
 
           
@@ -698,7 +684,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/28/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><span class="page-number current">29</span><a class="page-number" href="/page/30/">30</a><span class="space">&hellip;</span><a class="page-number" href="/page/68/">68</a><a class="extend next" rel="next" href="/page/30/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/28/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><span class="page-number current">29</span><a class="page-number" href="/page/30/">30</a><span class="space">&hellip;</span><a class="page-number" href="/page/54/">54</a><a class="extend next" rel="next" href="/page/30/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -739,7 +725,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">202</span>
+              <span class="site-state-item-count">162</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -756,7 +742,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

@@ -276,7 +276,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/04/11/2017/program/mysqloptimization/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/30/2017/program/mysqlunsigned/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -301,8 +301,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/11/2017/program/mysqloptimization/" itemprop="url">
-                  Mysql 优化
+                <a class="post-title-link" href="/2017/03/30/2017/program/mysqlunsigned/" itemprop="url">
+                  Mysql unsigned
                 </a>
               
             
@@ -316,8 +316,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-11T22:46:44+08:00">
-                2017-04-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-30T17:46:43+08:00">
+                2017-03-30
               </time>
             
 
@@ -372,7 +372,93 @@
       
         
           
-            <h1 id="Mysql性能优化"><a href="#Mysql性能优化" class="headerlink" title="Mysql性能优化"></a>Mysql性能优化</h1><p><a href="http://tech.meituan.com/mysql-index.html" target="_blank" rel="external">MySQL索引原理及慢查询优化</a></p>
+            <h1 id="mysql中的unsigned"><a href="#mysql中的unsigned" class="headerlink" title="mysql中的unsigned"></a>mysql中的unsigned</h1><blockquote>
+<p>unsigned   既为非负数，用此类型可以增加数据长度! unsigned 属性只针对整型，而binary属性只用于char 和varchar。</p>
+</blockquote>
+<h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tinyint</td>
+<td>非常小的整数</td>
+</tr>
+<tr>
+<td>smallint</td>
+<td>较小整数</td>
+</tr>
+<tr>
+<td>mediumint</td>
+<td>中等大小整数</td>
+</tr>
+<tr>
+<td>int</td>
+<td>标准整数</td>
+</tr>
+<tr>
+<td>bigint</td>
+<td>较大整数</td>
+</tr>
+<tr>
+<td>float</td>
+<td>单精度浮点数</td>
+</tr>
+<tr>
+<td>double</td>
+<td>双精度浮点数</td>
+</tr>
+<tr>
+<td>decimal</td>
+<td>一个串的浮点数</td>
+</tr>
+</tbody>
+</table>
+<h2 id="每种数值类型的名称和取值范围"><a href="#每种数值类型的名称和取值范围" class="headerlink" title="每种数值类型的名称和取值范围"></a>每种数值类型的名称和取值范围</h2><table>
+<thead>
+<tr>
+<th>类型说明</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tinyint[(m)]</td>
+<td>有符号值：-128 到127（- 27 到27 - 1）<br>无符号值：0到255（0 到28 - 1） 1个字节</td>
+</tr>
+<tr>
+<td>smallint[(m)]</td>
+<td>有符号值：-32768 到32767（- 215 到215 - 1）<br>无符号值：0到65535（0 到21 6 - 1） 2个字节</td>
+</tr>
+<tr>
+<td>mediumint[(m)]</td>
+<td>有符号值：-8388608 到8388607（- 22 3 到22 3 - 1 ）<br>无符号值：0到16777215（0 到22 4 - 1） 3个字节</td>
+</tr>
+<tr>
+<td>int[(m)]</td>
+<td>有符号值：-2147683648 到2147683647（- 231 到231- 1）<br>无符号值：0到4294967295（0 到232 - 1） 4个字节</td>
+</tr>
+<tr>
+<td>bigint[(m)]</td>
+<td>有符号值：-9223372036854775808 到9223373036854775807（- 263到263-1）<br>无符号值：0到18446744073709551615（0到264 – 1） 8个字节</td>
+</tr>
+<tr>
+<td>float[(m, d)]</td>
+<td>最小非零值：±1.175494351e - 38</td>
+</tr>
+<tr>
+<td>double[(m,d)]</td>
+<td>最小非零值：±2.2250738585072014e - 308</td>
+</tr>
+<tr>
+<td>decimal (m, d)</td>
+<td>可变；其值的范围依赖于m 和d</td>
+</tr>
+</tbody>
+</table>
 
           
         
@@ -411,7 +497,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/04/11/2017/program/jprofiler/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/29/2017/listen/颠覆式创新/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -436,8 +522,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/11/2017/program/jprofiler/" itemprop="url">
-                  jprofiler
+                <a class="post-title-link" href="/2017/03/29/2017/listen/颠覆式创新/" itemprop="url">
+                  颠覆式创新
                 </a>
               
             
@@ -451,8 +537,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-11T20:45:43+08:00">
-                2017-04-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-29T22:11:23+08:00">
+                2017-03-29
               </time>
             
 
@@ -470,8 +556,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/program/" itemprop="url" rel="index">
-                    <span itemprop="name">program</span>
+                  <a href="/categories/life/" itemprop="url" rel="index">
+                    <span itemprop="name">life</span>
                   </a>
                 </span>
 
@@ -507,8 +593,11 @@
       
         
           
-            <h2 id="start-jetty-jprofiler-sh"><a href="#start-jetty-jprofiler-sh" class="headerlink" title="start_jetty_jprofiler.sh"></a>start_jetty_jprofiler.sh</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS=&quot;-agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849 $JAVA_OPTS&quot;</div><div class="line">export JAVA_OPTS</div><div class="line">java $JAVA_OPTS -jar start.jar</div></pre></td></tr></table></figure>
-<p>业务启动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">JAVA_OPTS=&quot;-agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849 $JAVA_OPTS&quot;</div><div class="line">export JAVA_OPTS</div><div class="line">java $JAVA_OPTS -jar /usr/local/jetty9/start.jar jetty.base=/home/user/product &amp;</div></pre></td></tr></table></figure></p>
+            <blockquote>
+<p>1.渐进式的创新仍然必不可少，因为它们带来持续的新收入来源。但那还不够，它们不能保证企业长期的成功。只有颠覆式创新才能让企业经受住时间的考验。</p>
+<p>2.过去，颠覆只关注战略。企业和品牌愿景都是为今后若干年设计的，而今天，颠覆必须更加灵活，必须变得“快餐化”，具有流动性。</p>
+<p>3.每当人们不按照逐步的、渐进式的、线性的方式思考问题时，每当他们实施跨越式战略时，就可以称之为颠覆。你可以颠覆产品、商业模式、营销计划以及宣传策略……</p>
+</blockquote>
 
           
         
@@ -547,7 +636,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/04/11/2018/program/jvisualvm/">
+  <link itemprop="mainEntityOfPage" href="http://viabugs.com/2017/03/29/2017/program/hibernateoutsidevalidrange/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="ljzhuanjiao@gmail.com">
@@ -572,8 +661,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/11/2018/program/jvisualvm/" itemprop="url">
-                  jvisualvm
+                <a class="post-title-link" href="/2017/03/29/2017/program/hibernateoutsidevalidrange/" itemprop="url">
+                  hibernate outside valid range for the datatype smallint
                 </a>
               
             
@@ -587,8 +676,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-11T20:45:43+08:00">
-                2017-04-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-29T21:57:55+08:00">
+                2017-03-29
               </time>
             
 
@@ -643,7 +732,14 @@
       
         
           
-            <p><a href="https://www.ibm.com/developerworks/cn/java/j-lo-visualvm/" title="使用 VisualVM 进行性能分析及调优" target="_blank" rel="external">使用 VisualVM 进行性能分析及调优</a></p>
+            <p>hibernate 使用sql查询时，smallint类型字段出现长度超过。因为smallint使用的是无符号类型unsigned，导致长度超过。</p>
+<h1 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h1><blockquote>
+<p>hibernate ‘65535.0’ in column ‘12’ is outside valid range for the datatype SMALLINT.</p>
+</blockquote>
+<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p>使用函数将字段类型数据进行转化，如下：</p>
+<blockquote>
+<p>CAST(column AS signed)</p>
+</blockquote>
 
           
         
@@ -677,7 +773,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/33/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/">33</a><span class="page-number current">34</span><a class="page-number" href="/page/35/">35</a><span class="space">&hellip;</span><a class="page-number" href="/page/68/">68</a><a class="extend next" rel="next" href="/page/35/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/33/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/33/">33</a><span class="page-number current">34</span><a class="page-number" href="/page/35/">35</a><span class="space">&hellip;</span><a class="page-number" href="/page/54/">54</a><a class="extend next" rel="next" href="/page/35/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -718,7 +814,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">202</span>
+              <span class="site-state-item-count">162</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -735,7 +831,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">51</span>
+                <span class="site-state-item-count">52</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
