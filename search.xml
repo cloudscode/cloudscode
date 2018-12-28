@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[年度总结]]></title>
+      <url>%2F2018%2F12%2F28%2F2018%2F2018%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93%2F</url>
+      <content type="text"><![CDATA[规划人脸识别 人脸采集 人脸识别 离线sdk 人脸授权平台 人脸应用 VIP/年月卡 老人免票 二次入园 团队入园 刷脸乘车 多景点套票 电子票快速入园 景区员工、居民、商户 接待管理 家庭套票 人脸支付 支付宝人脸支付 微信人脸支付 终端管理 授权管理 手持机配置 自助机配置 终端架构 App开发架构往mvp架构发展，第三方成熟框架引入,提升开发效率。如网络请求工具okhttp,EventBus事件发布/订阅轻量级框架 App性能优化 组件化常用模块，组件化开发。 IOT终端设备物联 Mqtt 终端设备在线管理 消息推送 数据埋点总结自助机 携程自助机 安卓自助机 云票务 手持机 终端管理 终端配置]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Windows Tomcat9 HTTP2]]></title>
       <url>%2F2018%2F10%2F11%2F2018%2Fprogram%2Fwindows-tomcat9-http2%2F</url>
       <content type="text"><![CDATA[Windows Tomcat9 HTTP2下载Tomcat1https://tomcat.apache.org/download-90.cgi 下载Tomcat Native1http://tomcat.apache.org/download-native.cgi 下载 Native 1.2.8 Windows Binaries zip 生成证书123openssl genrsa -out server.key 2048openssl rsa -in server.key -out server.key openssl req -new -x509 -key server.key -out ca.crt -days 3650 配置Tomcat解压下载Tomcat文件，然后修改conf/server.xml文件，配置如下： 123456&lt;Connector SSLEnabled=&quot;true&quot; maxThreads=&quot;150&quot; port=&quot;8443&quot; protocol=&quot;org.apache.coyote.http11.Http11AprProtocol&quot;&gt; &lt;UpgradeProtocol className=&quot;org.apache.coyote.http2.Http2Protocol&quot;/&gt; &lt;SSLHostConfig&gt; &lt;Certificate certificateFile=&quot;certs/ca.crt&quot; certificateKeyFile=&quot;certs/server.key&quot; type=&quot;RSA&quot;/&gt; &lt;/SSLHostConfig&gt; &lt;/Connector&gt; 启动Tomcat在命令行下启动。 1startup.bat 访问1https://localhost:8443/ 也可查看Tomcat logs日志目录，请求是否是http2。]]></content>
@@ -318,16 +325,16 @@
 
     
     <entry>
-      <title><![CDATA[Install ansible]]></title>
-      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2FInstallansible%2F</url>
-      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible]]></content>
+      <title><![CDATA[ssh 命令]]></title>
+      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2Fssh%2F</url>
+      <content type="text"><![CDATA[ssh-keygen的命令手册，通过”man ssh-keygen“命令查看 生成密钥1ssh-keygen -t rsa 生成之后会在用户的根目录生成一个 “.ssh”的文件夹 authorized_keys:存放远程免密登录的公钥,主要通过这个文件记录多台机器的公钥 id_rsa : 生成的私钥文件 id_rsa.pub ： 生成的公钥文件 know_hosts : 已知的主机公钥清单如果希望ssh公钥生效需满足至少下面两个条件： 1) .ssh目录的权限必须是7002) .ssh/authorized_keys文件权限必须是600 远程免密登录 通过ssh-copy-id的方式 1命令： ssh-copy-id -i ~/.ssh/id_rsa.put &lt;romte_ip&gt; 通过scp方式 1命令：scp -p ~/.ssh/id_rsa.pub root@&lt;remote_ip&gt;:/root/.ssh/authorized_keys 将内容追加到authorized_keys文件中， 不过要登录远程服务器来执行这条命令1cat ~/pub_key &gt;&gt;~/.ssh/authorized_keys]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[ssh 命令]]></title>
-      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2Fssh%2F</url>
-      <content type="text"><![CDATA[ssh-keygen的命令手册，通过”man ssh-keygen“命令查看 生成密钥1ssh-keygen -t rsa 生成之后会在用户的根目录生成一个 “.ssh”的文件夹 authorized_keys:存放远程免密登录的公钥,主要通过这个文件记录多台机器的公钥 id_rsa : 生成的私钥文件 id_rsa.pub ： 生成的公钥文件 know_hosts : 已知的主机公钥清单如果希望ssh公钥生效需满足至少下面两个条件： 1) .ssh目录的权限必须是7002) .ssh/authorized_keys文件权限必须是600 远程免密登录 通过ssh-copy-id的方式 1命令： ssh-copy-id -i ~/.ssh/id_rsa.put &lt;romte_ip&gt; 通过scp方式 1命令：scp -p ~/.ssh/id_rsa.pub root@&lt;remote_ip&gt;:/root/.ssh/authorized_keys 将内容追加到authorized_keys文件中， 不过要登录远程服务器来执行这条命令1cat ~/pub_key &gt;&gt;~/.ssh/authorized_keys]]></content>
+      <title><![CDATA[Install ansible]]></title>
+      <url>%2F2017%2F04%2F29%2F2017%2Fprogram%2FInstallansible%2F</url>
+      <content type="text"><![CDATA[安装依赖包1yum -y install epel-release Install ansible1yum -y install ansible]]></content>
     </entry>
 
     
@@ -430,16 +437,16 @@
 
     
     <entry>
-      <title><![CDATA[需求第三律]]></title>
-      <url>%2F2017%2F04%2F18%2F2017%2Feconomics%2Flawofdemand3%2F</url>
-      <content type="text"><![CDATA[每当消费者必须支付一笔附加费的时候，高品质的产品就相对低品质的产品变得便宜了，这笔附加费越高，高品质产品就变得越便宜。有时候我们把这个定律叫做”好东西运到远方去定律”。]]></content>
+      <title><![CDATA[需求第二律]]></title>
+      <url>%2F2017%2F04%2F18%2F2017%2Feconomics%2Flawofdemand22%2F</url>
+      <content type="text"><![CDATA[随着时间的推移，需求弹性会变得越来越高，人们寻找替代品的空间会越来越大，对策越来越多。 税负的分摊 税负通常是由供需双方共同承担的，至于谁承担的多，谁承担的少，取决于他们之间的相对弹性，而与法律或者风俗的规定没有关系。]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[需求第二律]]></title>
-      <url>%2F2017%2F04%2F18%2F2017%2Feconomics%2Flawofdemand22%2F</url>
-      <content type="text"><![CDATA[随着时间的推移，需求弹性会变得越来越高，人们寻找替代品的空间会越来越大，对策越来越多。 税负的分摊 税负通常是由供需双方共同承担的，至于谁承担的多，谁承担的少，取决于他们之间的相对弹性，而与法律或者风俗的规定没有关系。]]></content>
+      <title><![CDATA[需求第三律]]></title>
+      <url>%2F2017%2F04%2F18%2F2017%2Feconomics%2Flawofdemand3%2F</url>
+      <content type="text"><![CDATA[每当消费者必须支付一笔附加费的时候，高品质的产品就相对低品质的产品变得便宜了，这笔附加费越高，高品质产品就变得越便宜。有时候我们把这个定律叫做”好东西运到远方去定律”。]]></content>
     </entry>
 
     
@@ -479,16 +486,16 @@
 
     
     <entry>
-      <title><![CDATA[联盟]]></title>
-      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E8%81%94%E7%9B%9F%2F</url>
-      <content type="text"><![CDATA[通过联盟重建信任与忠诚 如果我们不能回到终身雇佣的年代，就要学会重建雇主与员工的关系。这种新的忠诚观允许公司和员工对彼此做出承诺，把过去的商业交易转变为互惠关系的框架。雇佣关系可以转换为一个联盟：一份由双方独立达成的，有明确条款的互惠协议。 员工拥有创始人思维任期制将员工在你的公司度过的职业生涯重新规划为一系列连续的任期，可以更好地吸引和留住开创型员工。 培养开创性员工的利器诚实地谈论任期公司里的三类任期 轮转期 转变期 基础期 协调员工的目标和公司的目标如何执行转变期计划 开始对话，确定目标 定期检查以交流反馈 任期临近结束前，制定下一个任期计划 如何处理任务中的意外投资在员工的人脉上打造终身联盟：前同事联络网建立同事联络网的策略与技巧 决定同事联络网的成员。删除掉存在纠纷和法律道德风险的前员工。 明确定义与前员工关系的期望和收益。常见的方法有：员工推荐奖金、产品折扣和测试白名单、举办活动、为前员工颁发荣誉、向前员工通报最新消息等。 建立周详的离职机制。在离职面谈中与员工巩固终身关系，收集信息进入数据库。 建立现员工和前员工的联系。 首席执行官布拉德·史密斯（Brad Smith）告诉我们的：“领导者的任务不是培养能人，而是认识到人们已有的才华，并创造出让其产生和成长的环境。”]]></content>
+      <title><![CDATA[刻意练习]]></title>
+      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0%2F</url>
+      <content type="text"><![CDATA[真正的”一万小时天才理论”是，普通人也可以通过刻意练习成为某个领域的专家。 用『三个F』创建有效的心理表征 专注focus，集中注意力 反馈feedback，及时反馈 纠正fix it，不断修正自己 练习的时间与质量反而在决定人们的技能变得多么熟练时，发挥着更大的作用。 从长远来看，占上风的是那些练习更勤奋的人，而不是那些一开始在智商或者其他才华方面稍有优势的人。]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[刻意练习]]></title>
-      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E5%88%BB%E6%84%8F%E7%BB%83%E4%B9%A0%2F</url>
-      <content type="text"><![CDATA[真正的”一万小时天才理论”是，普通人也可以通过刻意练习成为某个领域的专家。 用『三个F』创建有效的心理表征 专注focus，集中注意力 反馈feedback，及时反馈 纠正fix it，不断修正自己 练习的时间与质量反而在决定人们的技能变得多么熟练时，发挥着更大的作用。 从长远来看，占上风的是那些练习更勤奋的人，而不是那些一开始在智商或者其他才华方面稍有优势的人。]]></content>
+      <title><![CDATA[联盟]]></title>
+      <url>%2F2017%2F04%2F16%2F2017%2Fbook%2F%E8%81%94%E7%9B%9F%2F</url>
+      <content type="text"><![CDATA[通过联盟重建信任与忠诚 如果我们不能回到终身雇佣的年代，就要学会重建雇主与员工的关系。这种新的忠诚观允许公司和员工对彼此做出承诺，把过去的商业交易转变为互惠关系的框架。雇佣关系可以转换为一个联盟：一份由双方独立达成的，有明确条款的互惠协议。 员工拥有创始人思维任期制将员工在你的公司度过的职业生涯重新规划为一系列连续的任期，可以更好地吸引和留住开创型员工。 培养开创性员工的利器诚实地谈论任期公司里的三类任期 轮转期 转变期 基础期 协调员工的目标和公司的目标如何执行转变期计划 开始对话，确定目标 定期检查以交流反馈 任期临近结束前，制定下一个任期计划 如何处理任务中的意外投资在员工的人脉上打造终身联盟：前同事联络网建立同事联络网的策略与技巧 决定同事联络网的成员。删除掉存在纠纷和法律道德风险的前员工。 明确定义与前员工关系的期望和收益。常见的方法有：员工推荐奖金、产品折扣和测试白名单、举办活动、为前员工颁发荣誉、向前员工通报最新消息等。 建立周详的离职机制。在离职面谈中与员工巩固终身关系，收集信息进入数据库。 建立现员工和前员工的联系。 首席执行官布拉德·史密斯（Brad Smith）告诉我们的：“领导者的任务不是培养能人，而是认识到人们已有的才华，并创造出让其产生和成长的环境。”]]></content>
     </entry>
 
     
@@ -549,16 +556,16 @@
 
     
     <entry>
-      <title><![CDATA[jvisualvm]]></title>
-      <url>%2F2017%2F04%2F11%2F2017%2Fprogram%2Fjvisualvm%2F</url>
-      <content type="text"><![CDATA[使用 VisualVM 进行性能分析及调优]]></content>
+      <title><![CDATA[jprofiler]]></title>
+      <url>%2F2017%2F04%2F11%2F2017%2Fprogram%2Fjprofiler%2F</url>
+      <content type="text"><![CDATA[start_jetty_jprofiler.sh123JAVA_OPTS=&quot;-agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849 $JAVA_OPTS&quot;export JAVA_OPTSjava $JAVA_OPTS -jar start.jar 业务启动123JAVA_OPTS=&quot;-agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849 $JAVA_OPTS&quot;export JAVA_OPTSjava $JAVA_OPTS -jar /usr/local/jetty9/start.jar jetty.base=/home/user/product &amp;]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[jprofiler]]></title>
-      <url>%2F2017%2F04%2F11%2F2017%2Fprogram%2Fjprofiler%2F</url>
-      <content type="text"><![CDATA[start_jetty_jprofiler.sh123JAVA_OPTS=&quot;-agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849 $JAVA_OPTS&quot;export JAVA_OPTSjava $JAVA_OPTS -jar start.jar 业务启动123JAVA_OPTS=&quot;-agentpath:/opt/jprofiler10/bin/linux-x64/libjprofilerti.so=port=8849 $JAVA_OPTS&quot;export JAVA_OPTSjava $JAVA_OPTS -jar /usr/local/jetty9/start.jar jetty.base=/home/user/product &amp;]]></content>
+      <title><![CDATA[jvisualvm]]></title>
+      <url>%2F2017%2F04%2F11%2F2017%2Fprogram%2Fjvisualvm%2F</url>
+      <content type="text"><![CDATA[使用 VisualVM 进行性能分析及调优]]></content>
     </entry>
 
     
@@ -1025,6 +1032,13 @@
 
     
     <entry>
+      <title><![CDATA[梅花]]></title>
+      <url>%2F2017%2F02%2F05%2F2017%2Fplumblossoms%2F</url>
+      <content type="text"><![CDATA[]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[油菜花]]></title>
       <url>%2F2017%2F02%2F05%2F2017%2Frapeflower%2F</url>
       <content type="text"><![CDATA[]]></content>
@@ -1035,13 +1049,6 @@
       <title><![CDATA[樱花]]></title>
       <url>%2F2017%2F02%2F05%2F2017%2Fcherryblossoms%2F</url>
       <content type="text"><![CDATA[1&quot;樱花下落的速度，是每秒5厘米； 我要用怎样的速度，才能与你相遇。&quot;]]></content>
-    </entry>
-
-    
-    <entry>
-      <title><![CDATA[梅花]]></title>
-      <url>%2F2017%2F02%2F05%2F2017%2Fplumblossoms%2F</url>
-      <content type="text"><![CDATA[]]></content>
     </entry>
 
     
@@ -1061,8 +1068,8 @@
     
     <entry>
       <title></title>
-      <url>%2F2017%2F01%2F08%2F2017%2Flisten%2F%E7%90%86%E6%80%A7%E6%83%85%E7%BB%AA%2F</url>
-      <content type="text"><![CDATA[1.人的一切精神上的痛苦和严重情绪紊乱，都是不必要的。 2.不管你的处境有多恶劣、遭遇有多严重，你实际上总是可以拥有控制和改变自己情绪的能力，减少并最终战胜你的不良情绪。 3.“心想事成”固然是个美好的愿望，但是在现实中，“心想”就能“事成”，这个概率其实是很低的，我们如果过分执着于这个愿望，总是用“应该”、“必须”、“一定要”来想问题，就会陷入到非理性的信念里，给自己的情绪带来麻烦。 4.建立一个有效的理性信念，我们需要做到三点：1.无条件地自我接纳；2.无条件地接纳他人；3.无条件地接纳我们的现实生活。 5.最终你需要明白的是，无论是你自身的缺陷，还是外界的不尽如人意，这都是人与世界的天性，是我们无法改变的客观存在。而我们可以做的是：我的情绪我做主。]]></content>
+      <url>%2F2017%2F01%2F08%2F2017%2Flisten%2F%E6%9D%83%E5%8A%9B%2F</url>
+      <content type="text"><![CDATA[title:权力date:2017-04-26 21:42:29category:”life” tags:[听书,金句] 1.等级结构在人类社会中无处不在，当我们进入一个组织之后，我们的性别、年龄、教育背景等，拿出来和别人一比较，就会决定我们的地位。同时，一个人的地位还会从一个背景带到另一个背景中，始终跟着你，躲都躲不开。 2.人们认为世界是公平的，源于“公正世界假设”的心理。这种假设会让人产生麻痹思想，忽视自己对权力的需求，而且误认为权力是可以等来的。但实际上，权力只能是争来的。 3.在争取权力的道路上，第一个关键就是要明白，业绩并不决定权力地位。我们必须关心和老板的关系，至少，这个关心程度要不亚于对业绩的关心。 4.我们要明白一个逻辑关系，当你招人喜欢的时候，并不一定会争取到权力，而当你有权力的时候，你一定会招人“喜欢”——虽然这个喜欢要打上个引号。 5.虽然让人们既害怕你又喜欢你，是一种很理想的状况，但当你必须二选一时，如果想获得和保持权力，就应该让人们害怕你。]]></content>
     </entry>
 
     
@@ -1075,8 +1082,8 @@
     
     <entry>
       <title></title>
-      <url>%2F2017%2F01%2F08%2F2017%2Flisten%2F%E6%9D%83%E5%8A%9B%2F</url>
-      <content type="text"><![CDATA[title:权力date:2017-04-26 21:42:29category:”life” tags:[听书,金句] 1.等级结构在人类社会中无处不在，当我们进入一个组织之后，我们的性别、年龄、教育背景等，拿出来和别人一比较，就会决定我们的地位。同时，一个人的地位还会从一个背景带到另一个背景中，始终跟着你，躲都躲不开。 2.人们认为世界是公平的，源于“公正世界假设”的心理。这种假设会让人产生麻痹思想，忽视自己对权力的需求，而且误认为权力是可以等来的。但实际上，权力只能是争来的。 3.在争取权力的道路上，第一个关键就是要明白，业绩并不决定权力地位。我们必须关心和老板的关系，至少，这个关心程度要不亚于对业绩的关心。 4.我们要明白一个逻辑关系，当你招人喜欢的时候，并不一定会争取到权力，而当你有权力的时候，你一定会招人“喜欢”——虽然这个喜欢要打上个引号。 5.虽然让人们既害怕你又喜欢你，是一种很理想的状况，但当你必须二选一时，如果想获得和保持权力，就应该让人们害怕你。]]></content>
+      <url>%2F2017%2F01%2F08%2F2017%2Flisten%2F%E7%90%86%E6%80%A7%E6%83%85%E7%BB%AA%2F</url>
+      <content type="text"><![CDATA[1.人的一切精神上的痛苦和严重情绪紊乱，都是不必要的。 2.不管你的处境有多恶劣、遭遇有多严重，你实际上总是可以拥有控制和改变自己情绪的能力，减少并最终战胜你的不良情绪。 3.“心想事成”固然是个美好的愿望，但是在现实中，“心想”就能“事成”，这个概率其实是很低的，我们如果过分执着于这个愿望，总是用“应该”、“必须”、“一定要”来想问题，就会陷入到非理性的信念里，给自己的情绪带来麻烦。 4.建立一个有效的理性信念，我们需要做到三点：1.无条件地自我接纳；2.无条件地接纳他人；3.无条件地接纳我们的现实生活。 5.最终你需要明白的是，无论是你自身的缺陷，还是外界的不尽如人意，这都是人与世界的天性，是我们无法改变的客观存在。而我们可以做的是：我的情绪我做主。]]></content>
     </entry>
 
     
