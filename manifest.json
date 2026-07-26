@@ -23,8 +23,8 @@
       "history_path": "valuation/history/notification-static-189-2026-07-25/",
       "latest_date": "notification-static-189-2026-07-25",
       "latest_path": "valuation/latest/",
-      "published_at": "2026-07-26T14:13:44.053349+00:00",
-      "release_id": "4656b6236c9e46f99b684f8d2b73873a"
+      "published_at": "2026-07-26T14:32:38.580497+00:00",
+      "release_id": "e0291d1b29de4bf3858b3c42335857e0"
     },
     "volatility": {
       "file_count": 53,
@@ -35,6 +35,6 @@
       "release_id": "24dcb47c32b04e939870302e5adca50e"
     }
   },
-  "updated_at": "2026-07-26T14:14:05.114071+00:00",
+  "updated_at": "2026-07-26T14:32:38.580497+00:00",
   "version": 1
 }
