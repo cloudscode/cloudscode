@@ -20,11 +20,11 @@
     },
     "valuation": {
       "file_count": 10,
-      "history_path": "valuation/history/notification-static-186-2026-07-24/",
-      "latest_date": "notification-static-186-2026-07-24",
+      "history_path": "valuation/history/notification-static-189-2026-07-25/",
+      "latest_date": "notification-static-189-2026-07-25",
       "latest_path": "valuation/latest/",
-      "published_at": "2026-07-25T03:39:13.399730+00:00",
-      "release_id": "f8faf162dc0f4b63a0ce3bafc5d602ba"
+      "published_at": "2026-07-26T14:13:44.053349+00:00",
+      "release_id": "4656b6236c9e46f99b684f8d2b73873a"
     },
     "volatility": {
       "file_count": 53,
@@ -35,6 +35,6 @@
       "release_id": "24dcb47c32b04e939870302e5adca50e"
     }
   },
-  "updated_at": "2026-07-26T14:13:24.583935+00:00",
+  "updated_at": "2026-07-26T14:13:44.053349+00:00",
   "version": 1
 }
