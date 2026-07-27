@@ -11,12 +11,12 @@
   },
   "projects": {
     "research": {
-      "file_count": 576,
-      "history_path": "research/history/2026-07-26/",
-      "latest_date": "2026-07-26",
+      "file_count": 223,
+      "history_path": "research/history/2026-07-25/",
+      "latest_date": "2026-07-25",
       "latest_path": "research/latest/",
-      "published_at": "2026-07-26T17:40:45.389433+00:00",
-      "release_id": "01ac8215758c4987bca35797de1aa992"
+      "published_at": "2026-07-27T01:18:50.228400+00:00",
+      "release_id": "c34f7577b8a043df8cbca175531dd403"
     },
     "valuation": {
       "file_count": 10,
@@ -35,6 +35,6 @@
       "release_id": "77e25873bb224c178c072d1d10488a6e"
     }
   },
-  "updated_at": "2026-07-27T01:18:29.905153+00:00",
+  "updated_at": "2026-07-27T01:18:50.228400+00:00",
   "version": 1
 }
