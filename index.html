@@ -6,11 +6,11 @@
   <meta name="theme-color" content="#090b12">
   <title>SVIT / Static Intelligence</title>
   <style>
-    :root { color-scheme: dark; --ink:#f4f1eb; --muted:#8f95a3; --line:rgba(255,255,255,.13); --panel:rgba(255,255,255,.065); }
+    :root { color-scheme:light; --portal-bg:#f5f8fb; --ink:#213547; --muted:#718096; --line:#dbe5ee; --panel:rgba(255,255,255,.84); }
     * { box-sizing:border-box; }
-    body { margin:0; min-height:100vh; color:var(--ink); background:#090b12; font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Microsoft YaHei",sans-serif; overflow-x:hidden; }
-    body:before, body:after { content:""; position:fixed; width:42vw; height:42vw; border-radius:50%; filter:blur(90px); opacity:.2; pointer-events:none; }
-    body:before { top:-18vw; left:-12vw; background:#335c81; } body:after { right:-16vw; bottom:-18vw; background:#8c5b42; }
+    body { margin:0; min-height:100vh; color:var(--ink); background:var(--portal-bg); font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Microsoft YaHei",sans-serif; overflow-x:hidden; }
+    body:before, body:after { content:""; position:fixed; width:42vw; height:42vw; border-radius:50%; filter:blur(90px); opacity:.16; pointer-events:none; }
+    body:before { top:-18vw; left:-12vw; background:#b7d7e8; } body:after { right:-16vw; bottom:-18vw; background:#ead7c3; }
     .shell { position:relative; z-index:1; width:min(1240px,calc(100% - 64px)); margin:0 auto; padding:44px 0 34px; }
     .topline { display:flex; align-items:center; justify-content:space-between; color:var(--muted); font-size:11px; letter-spacing:.18em; text-transform:uppercase; }
     .mark { color:var(--ink); font-weight:700; letter-spacing:.28em; }
@@ -19,9 +19,9 @@
     h1 { margin:10px 0 10px; max-width:620px; font-size:clamp(34px,4.5vw,58px); line-height:.98; letter-spacing:-.075em; font-weight:600; }
     .intro { max-width:440px; margin:0; color:var(--muted); font-size:13px; line-height:1.45; }
     .project-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-    .project-card { position:relative; display:flex; min-height:188px; flex-direction:column; justify-content:flex-end; overflow:hidden; padding:22px; border:1px solid var(--line); border-radius:22px; color:var(--ink); text-decoration:none; background:linear-gradient(145deg,rgba(255,255,255,.11),var(--panel)); box-shadow:0 24px 80px rgba(0,0,0,.24); transition:transform .35s ease,border-color .35s ease,background .35s ease; }
+    .project-card { position:relative; display:flex; min-height:188px; flex-direction:column; justify-content:flex-end; overflow:hidden; padding:22px; border:1px solid var(--line); border-radius:22px; color:var(--ink); text-decoration:none; background:linear-gradient(145deg,rgba(255,255,255,.96),var(--panel)); box-shadow:0 18px 48px rgba(53,83,105,.10); transition:transform .35s ease,border-color .35s ease,background .35s ease; }
     .project-card:before { content:""; position:absolute; width:190px; height:190px; top:-64px; right:-48px; border-radius:50%; background:var(--glow); filter:blur(4px); opacity:.42; transition:transform .5s ease; }
-    .project-card:hover { transform:translateY(-8px); border-color:rgba(255,255,255,.34); background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(255,255,255,.075)); }
+    .project-card:hover { transform:translateY(-6px); border-color:#9bb8c9; background:#fff; }
     .project-card:hover:before { transform:scale(1.3); }
     .project-card[data-project="volatility"] { --glow:#548bb2; } .project-card[data-project="valuation"] { --glow:#b48b61; } .project-card[data-project="research"] { --glow:#8872ad; }
     .card-index,.card-eyebrow,.card-meta,.card-arrow { position:relative; z-index:1; }
@@ -31,7 +31,7 @@
     .card-meta { margin-top:12px; color:var(--muted); font-size:11px; }
     .card-arrow { position:absolute; right:20px; bottom:18px; color:#d7bd97; font-size:24px; font-weight:300; transition:transform .3s ease; }
     .project-card:hover .card-arrow { transform:translate(4px,-4px); }
-    footer { display:flex; justify-content:space-between; gap:16px; margin-top:34px; color:#626875; font-size:11px; letter-spacing:.08em; }
+    footer { display:flex; justify-content:space-between; gap:16px; margin-top:34px; color:#718096; font-size:11px; letter-spacing:.08em; }
     @media (max-width:800px) { .shell { width:min(100% - 36px,560px); padding-top:22px; } header { padding:28px 0 24px; } h1 { font-size:clamp(32px,10vw,48px); } .project-grid { grid-template-columns:1fr; } .project-card { min-height:164px; } footer { flex-direction:column; margin-top:24px; } }
   </style>
 </head>
@@ -40,7 +40,7 @@
     <div class="topline"><span class="mark">SVIT</span><span>STATIC INTELLIGENCE / 01</span></div>
     <header><div class="kicker">Research portal</div><h1>一生一世 · 做多中国 · 人生自由</h1><p class="intro">Good Business｜Good People｜Good Price｜Long-Term Holding</p></header>
     <main class="project-grid"><a class="project-card" data-project="volatility" href="volatility/latest/"><span class="card-index">01</span><span class="card-eyebrow">VOLATILITY</span><h2>波动率</h2><span class="card-meta">2026-07-24</span><span class="card-arrow" aria-hidden="true">↗</span></a><a class="project-card" data-project="valuation" href="valuation/latest/"><span class="card-index">02</span><span class="card-eyebrow">VALUATION</span><h2>价值投资</h2><span class="card-meta">notification-static-189-2026-07-25</span><span class="card-arrow" aria-hidden="true">↗</span></a><a class="project-card" data-project="research" href="research/latest/"><span class="card-index">03</span><span class="card-eyebrow">RESEARCH</span><h2>日报</h2><span class="card-meta">2026-07-26</span><span class="card-arrow" aria-hidden="true">↗</span></a><a class="project-card" data-project="stocksv-daily-ratio" href="valuation/stocksv/"><span class="card-index">04</span><span class="card-eyebrow">DAILY RATIO</span><h2>股票池每日股值比</h2><span class="card-meta">stocksv-daily-ratio-189-2026-07-25</span><span class="card-arrow" aria-hidden="true">↗</span></a></main>
-    <footer><span></span><span>UPDATED 2026-07-26T17:40:45.389433+00:00</span></footer>
+    <footer><span></span><span>UPDATED 2026-07-27T01:18:13.147435+00:00</span></footer>
   </div>
 </body>
 </html>
