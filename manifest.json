@@ -4,8 +4,8 @@
       "file_count": 132,
       "latest_date": "stocksv-daily-ratio-190-2026-07-27",
       "path": "valuation/stocksv/",
-      "published_at": "2026-07-27T11:56:45.399832+00:00",
-      "release_id": "deb1eb49944b41688951e2a62567c2ac",
+      "published_at": "2026-07-27T12:16:11.423161+00:00",
+      "release_id": "dee22551ae224784be854a7ce830e7c4",
       "resource_id": "stocksv-daily-ratio-190-2026-07-27"
     }
   },
@@ -35,6 +35,6 @@
       "release_id": "67c6f159e23a403b8d50a971fb968981"
     }
   },
-  "updated_at": "2026-07-27T11:56:45.399832+00:00",
+  "updated_at": "2026-07-27T12:16:11.423161+00:00",
   "version": 1
 }
