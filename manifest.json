@@ -2,11 +2,11 @@
   "entries": {
     "stocksv_daily_ratio": {
       "file_count": 132,
-      "latest_date": "stocksv-daily-ratio-190-2026-07-27",
+      "latest_date": "stocksv-daily-ratio-195-2026-07-28",
       "path": "valuation/stocksv/",
-      "published_at": "2026-07-27T12:16:11.423161+00:00",
-      "release_id": "dee22551ae224784be854a7ce830e7c4",
-      "resource_id": "stocksv-daily-ratio-190-2026-07-27"
+      "published_at": "2026-07-28T11:44:30.445396+00:00",
+      "release_id": "b0e7778a3076405a891c70954fe19382",
+      "resource_id": "stocksv-daily-ratio-195-2026-07-28"
     }
   },
   "projects": {
@@ -35,6 +35,6 @@
       "release_id": "9d824e32de0f47a1a202f738cf601964"
     }
   },
-  "updated_at": "2026-07-28T11:31:12.727197+00:00",
+  "updated_at": "2026-07-28T11:44:30.445396+00:00",
   "version": 1
 }
