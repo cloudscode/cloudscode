@@ -2,11 +2,11 @@
   "entries": {
     "stocksv_daily_ratio": {
       "file_count": 132,
-      "latest_date": "stocksv-daily-ratio-197-2026-07-29",
+      "latest_date": "stocksv-daily-ratio-202-2026-07-30",
       "path": "valuation/stocksv/",
-      "published_at": "2026-07-30T00:39:31.857723+00:00",
-      "release_id": "88f9514a9c2049a085d20b0ea7050dae",
-      "resource_id": "stocksv-daily-ratio-197-2026-07-29"
+      "published_at": "2026-07-30T11:01:11.943238+00:00",
+      "release_id": "54c6a1a732554cf49fe695ddba580575",
+      "resource_id": "stocksv-daily-ratio-202-2026-07-30"
     }
   },
   "projects": {
@@ -19,12 +19,12 @@
       "release_id": "d32de4f961d14f92958047dc63c07d57"
     },
     "valuation": {
-      "file_count": 11,
-      "history_path": "valuation/history/notification-static-197-2026-07-30/",
-      "latest_date": "notification-static-197-2026-07-30",
+      "file_count": 14,
+      "history_path": "valuation/history/notification-static-202-2026-07-30/",
+      "latest_date": "notification-static-202-2026-07-30",
       "latest_path": "valuation/latest/",
-      "published_at": "2026-07-30T00:38:22.391261+00:00",
-      "release_id": "d6a895fe6fa04fa7b629eb0c5d54c082"
+      "published_at": "2026-07-30T11:01:11.943238+00:00",
+      "release_id": "54c6a1a732554cf49fe695ddba580575"
     },
     "volatility": {
       "file_count": 53,
@@ -35,6 +35,6 @@
       "release_id": "80030a927384491a9321b7657b0a824d"
     }
   },
-  "updated_at": "2026-07-30T07:08:40.765838+00:00",
+  "updated_at": "2026-07-30T11:01:11.943238+00:00",
   "version": 1
 }
