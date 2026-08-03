@@ -15,8 +15,8 @@
       "history_path": "margin-macd/history/2026-07-31/",
       "latest_date": "2026-07-31",
       "latest_path": "margin-macd/latest/",
-      "published_at": "2026-08-03T03:57:25.178704+00:00",
-      "release_id": "e09d04aa01ab428aa4c26b2b16c5bc06"
+      "published_at": "2026-08-03T04:00:03.698538+00:00",
+      "release_id": "77fcc44ea78941e5a8f99ae8376d4e13"
     },
     "research": {
       "file_count": 233,
@@ -43,6 +43,6 @@
       "release_id": "789d6c221ec84e2cbdf248411865b4c3"
     }
   },
-  "updated_at": "2026-08-03T03:57:25.178704+00:00",
+  "updated_at": "2026-08-03T04:00:03.698538+00:00",
   "version": 1
 }
