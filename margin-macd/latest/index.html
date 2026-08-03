@@ -83,9 +83,41 @@
     iframe {
       width: 100%;
       min-height: 860px;
+      height: min(82vh, 860px);
       border: none;
       border-radius: 18px;
       background: #fff;
+    }
+    .chart-link {
+      display: none;
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    @media (max-width: 768px) {
+      body {
+        padding: 12px;
+      }
+      .hero {
+        border-radius: 18px;
+        padding: 18px;
+      }
+      .hero h1 {
+        font-size: 24px;
+      }
+      .card {
+        padding: 14px;
+        border-radius: 14px;
+      }
+      iframe {
+        min-height: 360px;
+        height: 72vh;
+        border-radius: 12px;
+      }
+      .chart-link {
+        display: inline-flex;
+        margin-top: 12px;
+      }
     }
   </style>
 
@@ -110,7 +142,7 @@ body.portal-themed .portal-page-shell { width:min(1180px,calc(100% - 40px)); mar
       <div class="meta">
         <span class="chip">区间: 2024-01-02 ~ 2026-07-31</span>
         <span class="chip">最新日期: 2026-07-31</span>
-        <span class="chip">生成时间: 2026-08-03 11:56:05</span>
+        <span class="chip">生成时间: 2026-08-03 14:12:05</span>
       </div>
     </section>
     <section class="stats">
@@ -128,7 +160,8 @@ body.portal-themed .portal-page-shell { width:min(1180px,calc(100% - 40px)); mar
       </div>
     </section>
     <section class="card">
-      <iframe src="margin_macd_chart_20260803_115605.html" loading="lazy"></iframe>
+      <iframe src="margin_macd_chart_20260803_141205.html" loading="lazy"></iframe>
+      <a class="chart-link" href="margin_macd_chart_20260803_141205.html" target="_blank" rel="noopener noreferrer">手机端打开独立图表页</a>
     </section>
   </div>
 </body>
