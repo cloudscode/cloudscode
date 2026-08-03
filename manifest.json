@@ -27,14 +27,14 @@
       "release_id": "68d1eeeaf09043db8f13b03d5c575739"
     },
     "volatility": {
-      "file_count": 53,
+      "file_count": 54,
       "history_path": "volatility/history/2026-07-31/",
       "latest_date": "2026-07-31",
       "latest_path": "volatility/latest/",
-      "published_at": "2026-07-31T07:16:23.347301+00:00",
-      "release_id": "fcdd6662f33e46b494fd9d08ed31eec0"
+      "published_at": "2026-08-03T03:30:52.366551+00:00",
+      "release_id": "38eee0b4bb6c4718aaff7e9364a0727c"
     }
   },
-  "updated_at": "2026-08-02T22:58:50.998274+00:00",
+  "updated_at": "2026-08-03T03:30:52.366551+00:00",
   "version": 1
 }

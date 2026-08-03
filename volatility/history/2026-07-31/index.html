@@ -1,80 +1,93 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8" />
-    <title>波动率数据汇总报告</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', 'PingFang SC', sans-serif;
-            background: #f5f7fa;
-            margin: 0;
-            padding: 24px;
-            color: #303133;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        h1 {
-            margin-bottom: 8px;
-        }
-        .meta {
-            color: #909399;
-            margin-bottom: 24px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        }
-        .plotly-frame {
-            width: 100%;
-            min-height: 480px;
-            border: none;
-            border-radius: 8px;
-            background: #fff;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        }
-        .chart-card {
-            margin-bottom: 24px;
-        }
-        th, td {
-            padding: 12px 16px;
-            text-align: right;
-            border-bottom: 1px solid #ebeef5;
-        }
-        th:first-child, td:first-child,
-        th:nth-child(2), td:nth-child(2) {
-            text-align: left;
-        }
-        th {
-            background: #f0f2f5;
-        }
-        .stock-link {
-            color: #409eff;
-            font-weight: 600;
-            text-decoration: none;
-        }
-        .stock-link:hover {
-            text-decoration: underline;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            color: #409eff;
-            border: 1px solid #409eff;
-            margin-top: 16px;
-        }
-        .btn.primary {
-            background: #409eff;
-            color: #fff;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>融资融券 MACD 交互式图表</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #667085;
+      --primary: #1d4ed8;
+      --line: rgba(15, 23, 42, 0.08);
+    }
+    body {
+      margin: 0;
+      padding: 24px;
+      background:
+        radial-gradient(circle at top right, rgba(29, 78, 216, 0.10), transparent 32%),
+        linear-gradient(180deg, #fbfdff 0%, var(--bg) 100%);
+      font-family: 'Segoe UI', 'PingFang SC', sans-serif;
+      color: var(--text);
+    }
+    .page {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
+      color: #fff;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18);
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: 30px;
+    }
+    .hero p {
+      margin: 0;
+      opacity: 0.88;
+      line-height: 1.6;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+      font-size: 14px;
+    }
+    .chip {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      padding: 8px 12px;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.05);
+      padding: 20px;
+    }
+    .stat-label {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    .stat-value {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    iframe {
+      width: 100%;
+      min-height: 860px;
+      border: none;
+      border-radius: 18px;
+      background: #fff;
+    }
+  </style>
 
 <style id="portal-theme">
 :root { --portal-bg:#f5f8fb; --portal-panel:rgba(255,255,255,.88); --portal-ink:#1e2d3d; --portal-muted:#718096; --portal-line:#dbe5ee; --portal-accent:#477e9d; --portal-shadow:0 18px 48px rgba(53,83,105,.10); }
@@ -90,42 +103,33 @@ body.portal-themed .portal-page-shell { width:min(1180px,calc(100% - 40px)); mar
 </style>
 </head>
 <body class="portal-themed"><nav class="portal-navigation" data-project="volatility" aria-label="页面导航"><a class="portal-brand" href="../../">SVIT</a><span class="portal-current">波动率</span><button class="portal-back" type="button" onclick="if(history.length > 1){history.back()}else{location.href='../../'}">返回上级</button></nav>
-    <div class="container">
-        <h1>波动率数据汇总报告</h1>
-        <div class="meta">
-            生成时间：2026-07-31 15:09:57 ｜ 股票数量：12
-        </div>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>股票代码</th><th>股票名称</th><th>最新收盘价</th><th>当前波动率(%)</th><th>平均波动率(%)</th><th>最高波动率(%)</th><th>最低波动率(%)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>300308.SZ</td><td><a href='中际旭创_波动率分析报告_20260731_150845.html' class='stock-link' target='_blank' rel='noopener noreferrer'>中际旭创</a></td><td>902.01</td><td>111.02</td><td>61.72</td><td>131.14</td><td>16.77</td></tr>
-<tr><td>688256.SH</td><td><a href='寒武纪_波动率分析报告_20260731_150852.html' class='stock-link' target='_blank' rel='noopener noreferrer'>寒武纪</a></td><td>1106.0</td><td>90.72</td><td>69.55</td><td>170.69</td><td>21.02</td></tr>
-<tr><td>300548.SZ</td><td><a href='长芯博创_波动率分析报告_20260731_150859.html' class='stock-link' target='_blank' rel='noopener noreferrer'>长芯博创</a></td><td>140.5</td><td>118.26</td><td>71.13</td><td>142.1</td><td>20.59</td></tr>
-<tr><td>002281.SZ</td><td><a href='光迅科技_波动率分析报告_20260731_150905.html' class='stock-link' target='_blank' rel='noopener noreferrer'>光迅科技</a></td><td>161.65</td><td>107.37</td><td>53.6</td><td>108.41</td><td>14.75</td></tr>
-<tr><td>688313.SH</td><td><a href='仕佳光子_波动率分析报告_20260731_150912.html' class='stock-link' target='_blank' rel='noopener noreferrer'>仕佳光子</a></td><td>90.04</td><td>114.12</td><td>64.66</td><td>142.0</td><td>23.9</td></tr>
-<tr><td>300394.SZ</td><td><a href='天孚通信_波动率分析报告_20260731_150918.html' class='stock-link' target='_blank' rel='noopener noreferrer'>天孚通信</a></td><td>171.01</td><td>108.17</td><td>76.26</td><td>149.78</td><td>23.62</td></tr>
-<tr><td>002428.SZ</td><td><a href='云南锗业_波动率分析报告_20260731_150924.html' class='stock-link' target='_blank' rel='noopener noreferrer'>云南锗业</a></td><td>66.95</td><td>105.02</td><td>51.8</td><td>107.38</td><td>17.56</td></tr>
-<tr><td>002409.SZ</td><td><a href='雅克科技_波动率分析报告_20260731_150931.html' class='stock-link' target='_blank' rel='noopener noreferrer'>雅克科技</a></td><td>133.8</td><td>108.06</td><td>46.89</td><td>120.77</td><td>14.61</td></tr>
-<tr><td>688498.SH</td><td><a href='源杰科技_波动率分析报告_20260731_150937.html' class='stock-link' target='_blank' rel='noopener noreferrer'>源杰科技</a></td><td>1092.1</td><td>136.26</td><td>83.05</td><td>157.69</td><td>31.41</td></tr>
-<tr><td>688515.SH</td><td><a href='裕太微_波动率分析报告_20260731_150943.html' class='stock-link' target='_blank' rel='noopener noreferrer'>裕太微</a></td><td>136.26</td><td>107.3</td><td>62.2</td><td>143.62</td><td>21.88</td></tr>
-<tr><td>000988.SZ</td><td><a href='华工科技_波动率分析报告_20260731_150949.html' class='stock-link' target='_blank' rel='noopener noreferrer'>华工科技</a></td><td>95.37</td><td>94.61</td><td>48.49</td><td>104.05</td><td>13.62</td></tr>
-<tr><td>688048.SH</td><td><a href='长光华芯_波动率分析报告_20260731_150954.html' class='stock-link' target='_blank' rel='noopener noreferrer'>长光华芯</a></td><td>227.38</td><td>150.62</td><td>73.68</td><td>159.57</td><td>26.32</td></tr>
-            </tbody>
-        </table>
-
-        
-        <div class="chart-card">
-            <h2>交互式图表</h2>
-            <iframe class="plotly-frame" src="批量波动率交互图_20260731_150957.html" loading="lazy"></iframe>
-        </div>
-        
-
-        <a class='btn primary' href='mootdx_波动率数据汇总_20260731.xlsx' download>下载 Excel 汇总</a>
-    </div>
+  <div class="page">
+    <section class="hero">
+      <h1>融资融券 MACD 交互式图表</h1>
+      <p>按天输出静态网页，保留本地结果目录，并可复用现有静态门户发布链路进行站点同步。</p>
+      <div class="meta">
+        <span class="chip">区间: 2024-01-02 ~ 2026-07-31</span>
+        <span class="chip">最新日期: 2026-07-31</span>
+        <span class="chip">生成时间: 2026-08-03 10:55:10</span>
+      </div>
+    </section>
+    <section class="stats">
+      <div class="card">
+        <div class="stat-label">两融余额(亿元)</div>
+        <div class="stat-value">26113.2688191</div>
+      </div>
+      <div class="card">
+        <div class="stat-label">融资余额(亿元)</div>
+        <div class="stat-value">25891.17087496</div>
+      </div>
+      <div class="card">
+        <div class="stat-label">融券余额(亿元)</div>
+        <div class="stat-value">222.09794414</div>
+      </div>
+    </section>
+    <section class="card">
+      <iframe src="margin_macd_chart_20260803_105510.html" loading="lazy"></iframe>
+    </section>
+  </div>
 </body>
 </html>
