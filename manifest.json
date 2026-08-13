@@ -2,11 +2,11 @@
   "entries": {
     "stocksv_daily_ratio": {
       "file_count": 132,
-      "latest_date": "stocksv-daily-ratio-214-2026-08-11",
+      "latest_date": "stocksv-daily-ratio-216-2026-08-13",
       "path": "valuation/stocksv/",
-      "published_at": "2026-08-11T10:49:44.265361+00:00",
-      "release_id": "523e086e81874f00aeaf93594d8ff210",
-      "resource_id": "stocksv-daily-ratio-214-2026-08-11"
+      "published_at": "2026-08-13T14:08:39.709319+00:00",
+      "release_id": "c4d1f749ccea432cbef65d92401eabfe",
+      "resource_id": "stocksv-daily-ratio-216-2026-08-13"
     }
   },
   "projects": {
@@ -28,11 +28,11 @@
     },
     "valuation": {
       "file_count": 12,
-      "history_path": "valuation/history/notification-static-214-2026-08-11/",
-      "latest_date": "notification-static-214-2026-08-11",
+      "history_path": "valuation/history/notification-static-216-2026-08-13/",
+      "latest_date": "notification-static-216-2026-08-13",
       "latest_path": "valuation/latest/",
-      "published_at": "2026-08-11T10:49:44.265361+00:00",
-      "release_id": "523e086e81874f00aeaf93594d8ff210"
+      "published_at": "2026-08-13T14:08:39.709319+00:00",
+      "release_id": "c4d1f749ccea432cbef65d92401eabfe"
     },
     "volatility": {
       "file_count": 53,
@@ -43,6 +43,6 @@
       "release_id": "4f6ee6d125c243639970f85a28242dab"
     }
   },
-  "updated_at": "2026-08-13T07:26:05.127254+00:00",
+  "updated_at": "2026-08-13T14:08:39.709319+00:00",
   "version": 1
 }
