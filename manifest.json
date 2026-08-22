@@ -4,16 +4,16 @@
       "file_count": 6,
       "latest_date": "sector-static-230-2026-08-21",
       "path": "valuation/sectors/",
-      "published_at": "2026-08-22T00:05:17.075068+00:00",
-      "release_id": "8f5d9504497143a9ad796a874f021eb5",
+      "published_at": "2026-08-22T03:08:28.439724+00:00",
+      "release_id": "b69807c800274ba28069a5e6082c4f3a",
       "resource_id": "sector-static-230-2026-08-21"
     },
     "stocksv_daily_ratio": {
       "file_count": 132,
       "latest_date": "stocksv-daily-ratio-230-2026-08-21",
       "path": "valuation/stocksv/",
-      "published_at": "2026-08-22T00:05:17.075068+00:00",
-      "release_id": "8f5d9504497143a9ad796a874f021eb5",
+      "published_at": "2026-08-22T03:08:28.439724+00:00",
+      "release_id": "b69807c800274ba28069a5e6082c4f3a",
       "resource_id": "stocksv-daily-ratio-230-2026-08-21"
     }
   },
@@ -39,8 +39,8 @@
       "history_path": "valuation/history/notification-static-230-2026-08-21/",
       "latest_date": "notification-static-230-2026-08-21",
       "latest_path": "valuation/latest/",
-      "published_at": "2026-08-22T00:05:17.075068+00:00",
-      "release_id": "8f5d9504497143a9ad796a874f021eb5"
+      "published_at": "2026-08-22T03:08:28.439724+00:00",
+      "release_id": "b69807c800274ba28069a5e6082c4f3a"
     },
     "volatility": {
       "file_count": 65,
@@ -51,6 +51,6 @@
       "release_id": "784661d23f0b4642af676c57d500ce98"
     }
   },
-  "updated_at": "2026-08-22T00:05:17.075068+00:00",
+  "updated_at": "2026-08-22T03:08:28.439724+00:00",
   "version": 1
 }
