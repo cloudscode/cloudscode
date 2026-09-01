@@ -1,9 +1,9 @@
 {
   "kind": "stocksv_daily_ratio",
-  "job_id": 328,
+  "job_id": 329,
   "date": "2026-09-01",
-  "generated_at": "2026-09-01T11:55:52",
-  "release_marker": "20260901115552699047",
+  "generated_at": "2026-09-01T12:30:40",
+  "release_marker": "20260901123040573511",
   "stocks": [
     {
       "code": "688825.SH",
