@@ -2,19 +2,19 @@
   "entries": {
     "sector_valuation": {
       "file_count": 6,
-      "latest_date": "sector-static-331-2026-09-02",
+      "latest_date": "sector-static-332-2026-09-02",
       "path": "valuation/sectors/",
-      "published_at": "2026-09-02T01:48:36.102529+00:00",
-      "release_id": "751fe6966a254cb28256dfe31bfd3fc0",
-      "resource_id": "sector-static-331-2026-09-02"
+      "published_at": "2026-09-02T02:41:25.212597+00:00",
+      "release_id": "69dc7548fa2944408dd26babeb2d8f8d",
+      "resource_id": "sector-static-332-2026-09-02"
     },
     "stocksv_daily_ratio": {
       "file_count": 132,
-      "latest_date": "stocksv-daily-ratio-331-2026-09-02",
+      "latest_date": "stocksv-daily-ratio-332-2026-09-02",
       "path": "valuation/stocksv/",
-      "published_at": "2026-09-02T01:48:36.102529+00:00",
-      "release_id": "751fe6966a254cb28256dfe31bfd3fc0",
-      "resource_id": "stocksv-daily-ratio-331-2026-09-02"
+      "published_at": "2026-09-02T02:41:25.212597+00:00",
+      "release_id": "69dc7548fa2944408dd26babeb2d8f8d",
+      "resource_id": "stocksv-daily-ratio-332-2026-09-02"
     }
   },
   "projects": {
@@ -36,11 +36,11 @@
     },
     "valuation": {
       "file_count": 2,
-      "history_path": "valuation/history/notification-static-331-2026-09-02/",
-      "latest_date": "notification-static-331-2026-09-02",
+      "history_path": "valuation/history/notification-static-332-2026-09-02/",
+      "latest_date": "notification-static-332-2026-09-02",
       "latest_path": "valuation/latest/",
-      "published_at": "2026-09-02T01:48:36.102529+00:00",
-      "release_id": "751fe6966a254cb28256dfe31bfd3fc0"
+      "published_at": "2026-09-02T02:41:25.212597+00:00",
+      "release_id": "69dc7548fa2944408dd26babeb2d8f8d"
     },
     "volatility": {
       "file_count": 65,
@@ -51,6 +51,6 @@
       "release_id": "6a5f7fe0fa0246fcbce3305c51a9dee9"
     }
   },
-  "updated_at": "2026-09-02T01:48:36.102529+00:00",
+  "updated_at": "2026-09-02T02:41:25.212597+00:00",
   "version": 1
 }
