@@ -1,27 +1,27 @@
 {
-  "jobId": 334,
-  "jobDate": "2026-09-02",
-  "generatedAt": "2026-09-02T19:23:09",
+  "jobId": 335,
+  "jobDate": "2026-09-03",
+  "generatedAt": "2026-09-03T19:13:01",
   "sectors": [
     {
       "key": "gpu",
       "name": "GPU指数",
       "validCount": 15,
       "totalCount": 15,
-      "medianPriceRatio": 3.37,
-      "minPriceRatio": -1.57,
+      "medianPriceRatio": 3.28,
+      "minPriceRatio": -1.55,
       "stocks": [
         {
           "secucode": "688521.SH",
           "securityName": "芯原股份",
-          "priceRatio": -1.57,
+          "priceRatio": -1.55,
           "status": "success",
           "detailPath": "/valuation/latest/details/688521.SH.html"
         },
         {
           "secucode": "688795.SH",
           "securityName": "摩尔线程",
-          "priceRatio": -1.12,
+          "priceRatio": -0.96,
           "status": "success",
           "detailPath": "/valuation/latest/details/688795.SH.html"
         },
@@ -42,56 +42,56 @@
         {
           "secucode": "688802.SH",
           "securityName": "沐曦股份",
-          "priceRatio": -0.38,
+          "priceRatio": -0.37,
           "status": "success",
           "detailPath": "/valuation/latest/details/688802.SH.html"
         },
         {
           "secucode": "688256.SH",
           "securityName": "寒武纪",
-          "priceRatio": 0.87,
+          "priceRatio": 0.86,
           "status": "success",
           "detailPath": "/valuation/latest/details/688256.SH.html"
         },
         {
-          "secucode": "002290.SZ",
-          "securityName": "禾盛新材",
-          "priceRatio": 3.3,
-          "status": "success",
-          "detailPath": "/valuation/latest/details/002290.SZ.html"
-        },
-        {
           "secucode": "002156.SZ",
           "securityName": "通富微电",
-          "priceRatio": 3.37,
+          "priceRatio": 3.16,
           "status": "success",
           "detailPath": "/valuation/latest/details/002156.SZ.html"
         },
         {
+          "secucode": "002290.SZ",
+          "securityName": "禾盛新材",
+          "priceRatio": 3.28,
+          "status": "success",
+          "detailPath": "/valuation/latest/details/002290.SZ.html"
+        },
+        {
           "secucode": "688820.SH",
           "securityName": "盛合晶微",
-          "priceRatio": 3.74,
+          "priceRatio": 3.76,
           "status": "success",
           "detailPath": "/valuation/latest/details/688820.SH.html"
         },
         {
           "secucode": "002185.SZ",
           "securityName": "华天科技",
-          "priceRatio": 4.72,
+          "priceRatio": 4.71,
           "status": "success",
           "detailPath": "/valuation/latest/details/002185.SZ.html"
         },
         {
           "secucode": "002371.SZ",
           "securityName": "北方华创",
-          "priceRatio": 5.57,
+          "priceRatio": 5.45,
           "status": "success",
           "detailPath": "/valuation/latest/details/002371.SZ.html"
         },
         {
           "secucode": "300223.SZ",
           "securityName": "君正股份",
-          "priceRatio": 6.26,
+          "priceRatio": 6.25,
           "status": "success",
           "detailPath": "/valuation/latest/details/300223.SZ.html"
         },
@@ -105,14 +105,14 @@
         {
           "secucode": "688041.SH",
           "securityName": "海光信息",
-          "priceRatio": 7.19,
+          "priceRatio": 7.17,
           "status": "success",
           "detailPath": "/valuation/latest/details/688041.SH.html"
         },
         {
           "secucode": "688981.SH",
           "securityName": "中芯国际",
-          "priceRatio": 11.17,
+          "priceRatio": 10.96,
           "status": "success",
           "detailPath": "/valuation/latest/details/688981.SH.html"
         }
@@ -132,71 +132,64 @@
       "name": "存储器指数",
       "validCount": 39,
       "totalCount": 40,
-      "medianPriceRatio": 2.01,
-      "minPriceRatio": -693.33,
+      "medianPriceRatio": 1.95,
+      "minPriceRatio": -680.0,
       "stocks": [
         {
           "secucode": "603137.SH",
           "securityName": "恒尚节能",
-          "priceRatio": -693.33,
+          "priceRatio": -680.0,
           "status": "success",
           "detailPath": "/valuation/latest/details/603137.SH.html"
         },
         {
-          "secucode": "002213.SZ",
-          "securityName": "大为股份",
-          "priceRatio": -8.84,
-          "status": "success",
-          "detailPath": "/valuation/latest/details/002213.SZ.html"
-        },
-        {
           "secucode": "688110.SH",
           "securityName": "东芯股份",
-          "priceRatio": -8.67,
+          "priceRatio": -8.72,
           "status": "success",
           "detailPath": "/valuation/latest/details/688110.SH.html"
         },
         {
+          "secucode": "002213.SZ",
+          "securityName": "大为股份",
+          "priceRatio": -8.72,
+          "status": "success",
+          "detailPath": "/valuation/latest/details/002213.SZ.html"
+        },
+        {
           "secucode": "605178.SH",
           "securityName": "时空科技",
-          "priceRatio": -3.34,
+          "priceRatio": -3.37,
           "status": "success",
           "detailPath": "/valuation/latest/details/605178.SH.html"
         },
         {
           "secucode": "605303.SH",
           "securityName": "园林股份",
-          "priceRatio": -2.49,
+          "priceRatio": -2.55,
           "status": "success",
           "detailPath": "/valuation/latest/details/605303.SH.html"
         },
         {
           "secucode": "300302.SZ",
           "securityName": "同有科技",
-          "priceRatio": -1.77,
+          "priceRatio": -1.74,
           "status": "success",
           "detailPath": "/valuation/latest/details/300302.SZ.html"
         },
         {
           "secucode": "688416.SH",
           "securityName": "恒烁股份",
-          "priceRatio": -1.45,
+          "priceRatio": -1.47,
           "status": "success",
           "detailPath": "/valuation/latest/details/688416.SH.html"
         },
         {
           "secucode": "603316.SH",
           "securityName": "诚邦股份",
-          "priceRatio": -1.25,
+          "priceRatio": -1.23,
           "status": "success",
           "detailPath": "/valuation/latest/details/603316.SH.html"
-        },
-        {
-          "secucode": "002298.SZ",
-          "securityName": "中电鑫龙",
-          "priceRatio": -0.27,
-          "status": "success",
-          "detailPath": "/valuation/latest/details/002298.SZ.html"
         },
         {
           "secucode": "300455.SZ",
@@ -204,6 +197,13 @@
           "priceRatio": -0.27,
           "status": "success",
           "detailPath": "/valuation/latest/details/300455.SZ.html"
+        },
+        {
+          "secucode": "002298.SZ",
+          "securityName": "中电鑫龙",
+          "priceRatio": -0.26,
+          "status": "success",
+          "detailPath": "/valuation/latest/details/002298.SZ.html"
         },
         {
           "secucode": "300975.SZ",
@@ -220,191 +220,191 @@
           "detailPath": "/valuation/latest/details/688525.SH.html"
         },
         {
-          "secucode": "688825.SH",
-          "securityName": "长鑫科技",
-          "priceRatio": 0.74,
-          "status": "success",
-          "detailPath": "/valuation/latest/details/688825.SH.html"
-        },
-        {
           "secucode": "001309.SZ",
           "securityName": "德明利",
-          "priceRatio": 0.77,
+          "priceRatio": 0.75,
           "status": "success",
           "detailPath": "/valuation/latest/details/001309.SZ.html"
         },
         {
+          "secucode": "688825.SH",
+          "securityName": "长鑫科技",
+          "priceRatio": 0.75,
+          "status": "success",
+          "detailPath": "/valuation/latest/details/688825.SH.html"
+        },
+        {
           "secucode": "301308.SZ",
           "securityName": "江波龙",
-          "priceRatio": 0.79,
+          "priceRatio": 0.78,
           "status": "success",
           "detailPath": "/valuation/latest/details/301308.SZ.html"
         },
         {
           "secucode": "001287.SZ",
           "securityName": "中电港",
-          "priceRatio": 0.98,
+          "priceRatio": 1.0,
           "status": "success",
           "detailPath": "/valuation/latest/details/001287.SZ.html"
         },
         {
           "secucode": "300857.SZ",
           "securityName": "协创数据",
-          "priceRatio": 1.54,
+          "priceRatio": 1.56,
           "status": "success",
           "detailPath": "/valuation/latest/details/300857.SZ.html"
         },
         {
           "secucode": "300042.SZ",
           "securityName": "朗科科技",
-          "priceRatio": 1.74,
+          "priceRatio": 1.72,
           "status": "success",
           "detailPath": "/valuation/latest/details/300042.SZ.html"
         },
         {
           "secucode": "002579.SZ",
           "securityName": "中京电子",
-          "priceRatio": 1.76,
+          "priceRatio": 1.75,
           "status": "success",
           "detailPath": "/valuation/latest/details/002579.SZ.html"
         },
         {
           "secucode": "000620.SZ",
           "securityName": "盈新发展",
-          "priceRatio": 2.01,
+          "priceRatio": 1.95,
           "status": "success",
           "detailPath": "/valuation/latest/details/000620.SZ.html"
         },
         {
           "secucode": "603986.SH",
           "securityName": "兆易创新",
-          "priceRatio": 2.14,
+          "priceRatio": 2.11,
           "status": "success",
           "detailPath": "/valuation/latest/details/603986.SH.html"
         },
         {
           "secucode": "688123.SH",
           "securityName": "聚辰股份",
-          "priceRatio": 2.32,
+          "priceRatio": 2.35,
           "status": "success",
           "detailPath": "/valuation/latest/details/688123.SH.html"
         },
         {
           "secucode": "002049.SZ",
           "securityName": "紫光国微",
-          "priceRatio": 2.54,
+          "priceRatio": 2.55,
           "status": "success",
           "detailPath": "/valuation/latest/details/002049.SZ.html"
         },
         {
-          "secucode": "002436.SZ",
-          "securityName": "兴森科技",
-          "priceRatio": 2.86,
-          "status": "success",
-          "detailPath": "/valuation/latest/details/002436.SZ.html"
-        },
-        {
           "secucode": "000021.SZ",
           "securityName": "180治理",
-          "priceRatio": 2.89,
+          "priceRatio": 2.87,
           "status": "success",
           "detailPath": "/valuation/latest/details/000021.SZ.html"
         },
         {
+          "secucode": "002436.SZ",
+          "securityName": "兴森科技",
+          "priceRatio": 2.96,
+          "status": "success",
+          "detailPath": "/valuation/latest/details/002436.SZ.html"
+        },
+        {
           "secucode": "300458.SZ",
           "securityName": "全志科技",
-          "priceRatio": 3.19,
+          "priceRatio": 3.13,
           "status": "success",
           "detailPath": "/valuation/latest/details/300458.SZ.html"
         },
         {
-          "secucode": "300236.SZ",
-          "securityName": "上海新阳",
-          "priceRatio": 3.2,
-          "status": "success",
-          "detailPath": "/valuation/latest/details/300236.SZ.html"
-        },
-        {
           "secucode": "002156.SZ",
           "securityName": "通富微电",
-          "priceRatio": 3.37,
+          "priceRatio": 3.16,
           "status": "success",
           "detailPath": "/valuation/latest/details/002156.SZ.html"
         },
         {
+          "secucode": "300236.SZ",
+          "securityName": "上海新阳",
+          "priceRatio": 3.17,
+          "status": "success",
+          "detailPath": "/valuation/latest/details/300236.SZ.html"
+        },
+        {
           "secucode": "688008.SH",
           "securityName": "澜起科技",
-          "priceRatio": 4.04,
+          "priceRatio": 3.95,
           "status": "success",
           "detailPath": "/valuation/latest/details/688008.SH.html"
         },
         {
-          "secucode": "002990.SZ",
-          "securityName": "盛视科技",
-          "priceRatio": 4.68,
-          "status": "success",
-          "detailPath": "/valuation/latest/details/002990.SZ.html"
-        },
-        {
           "secucode": "002185.SZ",
           "securityName": "华天科技",
-          "priceRatio": 4.72,
+          "priceRatio": 4.71,
           "status": "success",
           "detailPath": "/valuation/latest/details/002185.SZ.html"
         },
         {
           "secucode": "301666.SZ",
           "securityName": "大普微",
-          "priceRatio": 4.72,
+          "priceRatio": 4.73,
           "status": "success",
           "detailPath": "/valuation/latest/details/301666.SZ.html"
         },
         {
+          "secucode": "002990.SZ",
+          "securityName": "盛视科技",
+          "priceRatio": 4.74,
+          "status": "success",
+          "detailPath": "/valuation/latest/details/002990.SZ.html"
+        },
+        {
           "secucode": "300223.SZ",
           "securityName": "君正股份",
-          "priceRatio": 6.26,
+          "priceRatio": 6.25,
           "status": "success",
           "detailPath": "/valuation/latest/details/300223.SZ.html"
         },
         {
           "secucode": "688385.SH",
           "securityName": "复旦微电",
-          "priceRatio": 10.24,
+          "priceRatio": 10.4,
           "status": "success",
           "detailPath": "/valuation/latest/details/688385.SH.html"
         },
         {
           "secucode": "688449.SH",
           "securityName": "联芸科技",
-          "priceRatio": 11.89,
+          "priceRatio": 12.35,
           "status": "success",
           "detailPath": "/valuation/latest/details/688449.SH.html"
         },
         {
           "secucode": "600667.SH",
           "securityName": "太极实业",
-          "priceRatio": 65.11,
+          "priceRatio": 64.21,
           "status": "success",
           "detailPath": "/valuation/latest/details/600667.SH.html"
         },
         {
           "secucode": "600171.SH",
           "securityName": "上海贝岭",
-          "priceRatio": 84.96,
+          "priceRatio": 84.56,
           "status": "success",
           "detailPath": "/valuation/latest/details/600171.SH.html"
         },
         {
           "secucode": "688766.SH",
           "securityName": "普冉股份",
-          "priceRatio": 176.59,
+          "priceRatio": 175.41,
           "status": "success",
           "detailPath": "/valuation/latest/details/688766.SH.html"
         },
         {
           "secucode": "002654.SZ",
           "securityName": "万润科技",
-          "priceRatio": 682.0,
+          "priceRatio": 674.5,
           "status": "success",
           "detailPath": "/valuation/latest/details/002654.SZ.html"
         },
@@ -422,7 +422,7 @@
       "name": "黄金指数",
       "validCount": 11,
       "totalCount": 11,
-      "medianPriceRatio": 0.97,
+      "medianPriceRatio": 0.99,
       "minPriceRatio": 0.14,
       "stocks": [
         {
@@ -442,49 +442,49 @@
         {
           "secucode": "601899.SH",
           "securityName": "紫金矿业",
-          "priceRatio": 0.76,
+          "priceRatio": 0.77,
           "status": "success",
           "detailPath": "/valuation/latest/details/601899.SH.html"
         },
         {
           "secucode": "002237.SZ",
           "securityName": "恒邦股份",
-          "priceRatio": 0.87,
+          "priceRatio": 0.88,
           "status": "success",
           "detailPath": "/valuation/latest/details/002237.SZ.html"
         },
         {
           "secucode": "601069.SH",
           "securityName": "西部黄金",
-          "priceRatio": 0.93,
+          "priceRatio": 0.96,
           "status": "success",
           "detailPath": "/valuation/latest/details/601069.SH.html"
         },
         {
           "secucode": "000975.SZ",
           "securityName": "山金国际",
-          "priceRatio": 0.97,
+          "priceRatio": 0.99,
           "status": "success",
           "detailPath": "/valuation/latest/details/000975.SZ.html"
         },
         {
           "secucode": "600489.SH",
           "securityName": "中金黄金",
-          "priceRatio": 0.99,
+          "priceRatio": 1.03,
           "status": "success",
           "detailPath": "/valuation/latest/details/600489.SH.html"
         },
         {
           "secucode": "600988.SH",
           "securityName": "赤峰黄金",
-          "priceRatio": 1.06,
+          "priceRatio": 1.07,
           "status": "success",
           "detailPath": "/valuation/latest/details/600988.SH.html"
         },
         {
           "secucode": "002155.SZ",
           "securityName": "湖南黄金",
-          "priceRatio": 1.21,
+          "priceRatio": 1.27,
           "status": "success",
           "detailPath": "/valuation/latest/details/002155.SZ.html"
         },
@@ -498,7 +498,7 @@
         {
           "secucode": "001337.SZ",
           "securityName": "四川黄金",
-          "priceRatio": 1.86,
+          "priceRatio": 1.93,
           "status": "success",
           "detailPath": "/valuation/latest/details/001337.SZ.html"
         }
