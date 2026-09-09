@@ -2,19 +2,19 @@
   "entries": {
     "sector_valuation": {
       "file_count": 6,
-      "latest_date": "sector-static-344-2026-09-08",
+      "latest_date": "sector-static-347-2026-09-09",
       "path": "valuation/sectors/",
-      "published_at": "2026-09-08T10:39:44.733513+00:00",
-      "release_id": "0cdbd6f0242343fd84276258df2afcc3",
-      "resource_id": "sector-static-344-2026-09-08"
+      "published_at": "2026-09-09T10:50:46.526334+00:00",
+      "release_id": "c12aa6dd14304417b015ea4af35460f2",
+      "resource_id": "sector-static-347-2026-09-09"
     },
     "stocksv_daily_ratio": {
       "file_count": 132,
-      "latest_date": "stocksv-daily-ratio-344-2026-09-08",
+      "latest_date": "stocksv-daily-ratio-347-2026-09-09",
       "path": "valuation/stocksv/",
-      "published_at": "2026-09-08T10:38:41.240954+00:00",
-      "release_id": "b0fef310ac6e48318f054207bbd5eee0",
-      "resource_id": "stocksv-daily-ratio-344-2026-09-08"
+      "published_at": "2026-09-09T10:50:46.526334+00:00",
+      "release_id": "c12aa6dd14304417b015ea4af35460f2",
+      "resource_id": "stocksv-daily-ratio-347-2026-09-09"
     }
   },
   "projects": {
@@ -36,11 +36,11 @@
     },
     "valuation": {
       "file_count": 27,
-      "history_path": "valuation/history/notification-static-344-2026-09-08/",
-      "latest_date": "notification-static-344-2026-09-08",
+      "history_path": "valuation/history/notification-static-347-2026-09-09/",
+      "latest_date": "notification-static-347-2026-09-09",
       "latest_path": "valuation/latest/",
-      "published_at": "2026-09-08T10:38:41.240954+00:00",
-      "release_id": "b0fef310ac6e48318f054207bbd5eee0"
+      "published_at": "2026-09-09T10:50:46.526334+00:00",
+      "release_id": "c12aa6dd14304417b015ea4af35460f2"
     },
     "volatility": {
       "file_count": 65,
@@ -51,6 +51,6 @@
       "release_id": "618ce29d257d4131a2e634b3fc8b0b6c"
     }
   },
-  "updated_at": "2026-09-09T07:18:01.087791+00:00",
+  "updated_at": "2026-09-09T10:50:46.526334+00:00",
   "version": 1
 }
