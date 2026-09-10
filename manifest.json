@@ -12,8 +12,8 @@
       "file_count": 8,
       "latest_date": "sector-static-351-2026-09-10",
       "path": "valuation/sectors/hk/",
-      "published_at": "2026-09-10T14:28:57.566537+00:00",
-      "release_id": "37b4b1f8738d4754be96db791d05bd5e",
+      "published_at": "2026-09-10T15:18:22.726283+00:00",
+      "release_id": "040499db2b1440e1ac6c8922e9354d4a",
       "resource_id": "sector-static-351-2026-09-10"
     },
     "stocksv_daily_ratio": {
@@ -59,6 +59,6 @@
       "release_id": "e3f32b24351e41d8a6fd69af6897842c"
     }
   },
-  "updated_at": "2026-09-10T14:28:57.566537+00:00",
+  "updated_at": "2026-09-10T15:18:22.726283+00:00",
   "version": 1
 }
