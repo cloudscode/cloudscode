@@ -4,8 +4,8 @@
       "file_count": 6,
       "latest_date": "sector-static-350-2026-09-10",
       "path": "valuation/sectors/",
-      "published_at": "2026-09-10T10:55:26.569435+00:00",
-      "release_id": "feb1352ca9a04d21ba5d8a7c894dfcca",
+      "published_at": "2026-09-10T10:56:24.160439+00:00",
+      "release_id": "4e00bd169cc04ed19b05f3be007ac12f",
       "resource_id": "sector-static-350-2026-09-10"
     },
     "stocksv_daily_ratio": {
@@ -51,6 +51,6 @@
       "release_id": "e3f32b24351e41d8a6fd69af6897842c"
     }
   },
-  "updated_at": "2026-09-10T10:55:26.569435+00:00",
+  "updated_at": "2026-09-10T10:56:24.160439+00:00",
   "version": 1
 }
