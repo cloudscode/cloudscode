@@ -1,12 +1,12 @@
 {
   "entries": {
     "sector_valuation": {
-      "file_count": 6,
-      "latest_date": "sector-static-350-2026-09-10",
+      "file_count": 22,
+      "latest_date": "sector-static-352-2026-09-11",
       "path": "valuation/sectors/",
-      "published_at": "2026-09-10T10:56:24.160439+00:00",
-      "release_id": "4e00bd169cc04ed19b05f3be007ac12f",
-      "resource_id": "sector-static-350-2026-09-10"
+      "published_at": "2026-09-11T10:49:32.023029+00:00",
+      "release_id": "47a29b05002842b9aef125cf66017f41",
+      "resource_id": "sector-static-352-2026-09-11"
     },
     "sector_valuation_hk": {
       "file_count": 8,
@@ -18,11 +18,11 @@
     },
     "stocksv_daily_ratio": {
       "file_count": 132,
-      "latest_date": "stocksv-daily-ratio-350-2026-09-10",
+      "latest_date": "stocksv-daily-ratio-352-2026-09-11",
       "path": "valuation/stocksv/",
-      "published_at": "2026-09-10T10:55:26.569435+00:00",
-      "release_id": "feb1352ca9a04d21ba5d8a7c894dfcca",
-      "resource_id": "stocksv-daily-ratio-350-2026-09-10"
+      "published_at": "2026-09-11T10:49:32.023029+00:00",
+      "release_id": "47a29b05002842b9aef125cf66017f41",
+      "resource_id": "stocksv-daily-ratio-352-2026-09-11"
     }
   },
   "projects": {
@@ -44,11 +44,11 @@
     },
     "valuation": {
       "file_count": 27,
-      "history_path": "valuation/history/notification-static-350-2026-09-10/",
-      "latest_date": "notification-static-350-2026-09-10",
+      "history_path": "valuation/history/notification-static-352-2026-09-11/",
+      "latest_date": "notification-static-352-2026-09-11",
       "latest_path": "valuation/latest/",
-      "published_at": "2026-09-10T10:55:26.569435+00:00",
-      "release_id": "feb1352ca9a04d21ba5d8a7c894dfcca"
+      "published_at": "2026-09-11T10:49:32.023029+00:00",
+      "release_id": "47a29b05002842b9aef125cf66017f41"
     },
     "volatility": {
       "file_count": 65,
@@ -59,6 +59,6 @@
       "release_id": "5e89291e1f304298bce2cb21acc48e1c"
     }
   },
-  "updated_at": "2026-09-11T07:24:33.061434+00:00",
+  "updated_at": "2026-09-11T10:49:32.023029+00:00",
   "version": 1
 }
