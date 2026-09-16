@@ -2,11 +2,11 @@
   "entries": {
     "sector_valuation": {
       "file_count": 22,
-      "latest_date": "sector-static-356-2026-09-15",
+      "latest_date": "sector-static-357-2026-09-16",
       "path": "valuation/sectors/",
-      "published_at": "2026-09-15T11:11:24.201976+00:00",
-      "release_id": "89d013a043e84c5da75646f06ea73888",
-      "resource_id": "sector-static-356-2026-09-15"
+      "published_at": "2026-09-16T11:23:55.194198+00:00",
+      "release_id": "e03c314e11344086936c2c196acae07d",
+      "resource_id": "sector-static-357-2026-09-16"
     },
     "sector_valuation_hk": {
       "file_count": 14,
@@ -26,11 +26,11 @@
     },
     "stocksv_daily_ratio": {
       "file_count": 132,
-      "latest_date": "stocksv-daily-ratio-356-2026-09-15",
+      "latest_date": "stocksv-daily-ratio-357-2026-09-16",
       "path": "valuation/stocksv/",
-      "published_at": "2026-09-15T11:09:05.161139+00:00",
-      "release_id": "87f3854d5f8b4d17ac326e60af8e551d",
-      "resource_id": "stocksv-daily-ratio-356-2026-09-15"
+      "published_at": "2026-09-16T11:23:55.194198+00:00",
+      "release_id": "e03c314e11344086936c2c196acae07d",
+      "resource_id": "stocksv-daily-ratio-357-2026-09-16"
     }
   },
   "projects": {
@@ -52,11 +52,11 @@
     },
     "valuation": {
       "file_count": 28,
-      "history_path": "valuation/history/notification-static-356-2026-09-15/",
-      "latest_date": "notification-static-356-2026-09-15",
+      "history_path": "valuation/history/notification-static-357-2026-09-16/",
+      "latest_date": "notification-static-357-2026-09-16",
       "latest_path": "valuation/latest/",
-      "published_at": "2026-09-15T11:09:05.161139+00:00",
-      "release_id": "87f3854d5f8b4d17ac326e60af8e551d"
+      "published_at": "2026-09-16T11:23:55.194198+00:00",
+      "release_id": "e03c314e11344086936c2c196acae07d"
     },
     "volatility": {
       "file_count": 65,
@@ -67,6 +67,6 @@
       "release_id": "00d50929791d40cca2f3a1162de0fec7"
     }
   },
-  "updated_at": "2026-09-16T07:12:22.247327+00:00",
+  "updated_at": "2026-09-16T11:23:55.194198+00:00",
   "version": 1
 }
