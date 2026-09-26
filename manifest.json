@@ -43,12 +43,12 @@
       "release_id": "b0a83b7d71c9455e8266dd03a0cbf349"
     },
     "research": {
-      "file_count": 240,
-      "history_path": "research/history/2026-09-25/",
-      "latest_date": "2026-09-25",
+      "file_count": 175,
+      "history_path": "research/history/2026-09-26/",
+      "latest_date": "2026-09-26",
       "latest_path": "research/latest/",
-      "published_at": "2026-09-25T17:36:51.528071+00:00",
-      "release_id": "f9b246b6a6974b678b49a7a7bf734665"
+      "published_at": "2026-09-26T17:37:09.813872+00:00",
+      "release_id": "18095e5190fe41f18b7894c1814a0cf5"
     },
     "valuation": {
       "file_count": 28,
@@ -67,6 +67,6 @@
       "release_id": "d6b60487ffc542f8b0e6a04432157d50"
     }
   },
-  "updated_at": "2026-09-25T17:36:51.528071+00:00",
+  "updated_at": "2026-09-26T17:37:09.813872+00:00",
   "version": 1
 }
