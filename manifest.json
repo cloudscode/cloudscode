@@ -2,11 +2,11 @@
   "entries": {
     "sector_valuation": {
       "file_count": 22,
-      "latest_date": "sector-static-366-2026-09-24",
+      "latest_date": "sector-static-368-2026-09-28",
       "path": "valuation/sectors/",
-      "published_at": "2026-09-24T11:38:29.371587+00:00",
-      "release_id": "34808382d6764c0bbb0821cd555d48ed",
-      "resource_id": "sector-static-366-2026-09-24"
+      "published_at": "2026-09-28T11:13:05.167960+00:00",
+      "release_id": "fb393843febd4285a4edf284c0607c03",
+      "resource_id": "sector-static-368-2026-09-28"
     },
     "sector_valuation_hk": {
       "file_count": 14,
@@ -26,11 +26,11 @@
     },
     "stocksv_daily_ratio": {
       "file_count": 132,
-      "latest_date": "stocksv-daily-ratio-366-2026-09-24",
+      "latest_date": "stocksv-daily-ratio-368-2026-09-28",
       "path": "valuation/stocksv/",
-      "published_at": "2026-09-24T11:36:37.419625+00:00",
-      "release_id": "5adfa4d6cc6847c1a3f63988064105b4",
-      "resource_id": "stocksv-daily-ratio-366-2026-09-24"
+      "published_at": "2026-09-28T11:13:05.167960+00:00",
+      "release_id": "fb393843febd4285a4edf284c0607c03",
+      "resource_id": "stocksv-daily-ratio-368-2026-09-28"
     }
   },
   "projects": {
@@ -51,12 +51,12 @@
       "release_id": "cc5c63e7bd7247e1958b84d9f87c2d5d"
     },
     "valuation": {
-      "file_count": 28,
-      "history_path": "valuation/history/notification-static-366-2026-09-24/",
-      "latest_date": "notification-static-366-2026-09-24",
+      "file_count": 29,
+      "history_path": "valuation/history/notification-static-368-2026-09-28/",
+      "latest_date": "notification-static-368-2026-09-28",
       "latest_path": "valuation/latest/",
-      "published_at": "2026-09-24T11:36:37.419625+00:00",
-      "release_id": "5adfa4d6cc6847c1a3f63988064105b4"
+      "published_at": "2026-09-28T11:13:05.167960+00:00",
+      "release_id": "fb393843febd4285a4edf284c0607c03"
     },
     "volatility": {
       "file_count": 73,
@@ -67,6 +67,6 @@
       "release_id": "074b929899e1461b8fc517ab737a7cac"
     }
   },
-  "updated_at": "2026-09-28T07:34:29.681640+00:00",
+  "updated_at": "2026-09-28T11:13:05.167960+00:00",
   "version": 1
 }
