@@ -59,14 +59,14 @@
       "release_id": "5adfa4d6cc6847c1a3f63988064105b4"
     },
     "volatility": {
-      "file_count": 65,
+      "file_count": 73,
       "history_path": "volatility/history/2026-09-28/",
       "latest_date": "2026-09-28",
       "latest_path": "volatility/latest/",
-      "published_at": "2026-09-28T07:14:54.148819+00:00",
-      "release_id": "6f06cc50db1540ebb7e8fe6968b2eb31"
+      "published_at": "2026-09-28T07:34:29.681640+00:00",
+      "release_id": "074b929899e1461b8fc517ab737a7cac"
     }
   },
-  "updated_at": "2026-09-28T07:14:54.148819+00:00",
+  "updated_at": "2026-09-28T07:34:29.681640+00:00",
   "version": 1
 }
