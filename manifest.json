@@ -1,12 +1,12 @@
 {
   "entries": {
     "sector_valuation": {
-      "file_count": 22,
-      "latest_date": "sector-static-390-2026-10-07",
+      "file_count": 24,
+      "latest_date": "sector-static-392-2026-10-08",
       "path": "valuation/sectors/",
-      "published_at": "2026-10-07T11:01:35.989898+00:00",
-      "release_id": "4d599d26d8cb4b209a4e02f03c86bbcb",
-      "resource_id": "sector-static-390-2026-10-07"
+      "published_at": "2026-10-08T11:11:16.539965+00:00",
+      "release_id": "ac028f8299df4a00b5b8a1fcdf9be56e",
+      "resource_id": "sector-static-392-2026-10-08"
     },
     "sector_valuation_hk": {
       "file_count": 14,
@@ -26,11 +26,11 @@
     },
     "stocksv_daily_ratio": {
       "file_count": 133,
-      "latest_date": "stocksv-daily-ratio-390-2026-10-07",
+      "latest_date": "stocksv-daily-ratio-392-2026-10-08",
       "path": "valuation/stocksv/",
-      "published_at": "2026-10-07T10:53:55.908437+00:00",
-      "release_id": "2da4149bc24c493c8ae146b97b071b33",
-      "resource_id": "stocksv-daily-ratio-390-2026-10-07"
+      "published_at": "2026-10-08T11:11:16.539965+00:00",
+      "release_id": "ac028f8299df4a00b5b8a1fcdf9be56e",
+      "resource_id": "stocksv-daily-ratio-392-2026-10-08"
     }
   },
   "projects": {
@@ -51,12 +51,12 @@
       "release_id": "b1deae97d3304937913285e8cb19edbb"
     },
     "valuation": {
-      "file_count": 29,
-      "history_path": "valuation/history/notification-static-390-2026-10-07/",
-      "latest_date": "notification-static-390-2026-10-07",
+      "file_count": 30,
+      "history_path": "valuation/history/notification-static-392-2026-10-08/",
+      "latest_date": "notification-static-392-2026-10-08",
       "latest_path": "valuation/latest/",
-      "published_at": "2026-10-07T10:53:55.908437+00:00",
-      "release_id": "2da4149bc24c493c8ae146b97b071b33"
+      "published_at": "2026-10-08T11:11:16.539965+00:00",
+      "release_id": "ac028f8299df4a00b5b8a1fcdf9be56e"
     },
     "volatility": {
       "file_count": 73,
@@ -67,6 +67,6 @@
       "release_id": "daa9ea53586e40e6b7cf4de9f0f48a37"
     }
   },
-  "updated_at": "2026-10-08T07:12:27.675006+00:00",
+  "updated_at": "2026-10-08T11:11:16.539965+00:00",
   "version": 1
 }
