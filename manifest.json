@@ -60,13 +60,13 @@
     },
     "volatility": {
       "file_count": 73,
-      "history_path": "volatility/history/2026-10-21/",
-      "latest_date": "2026-10-21",
+      "history_path": "volatility/history/2026-10-22/",
+      "latest_date": "2026-10-22",
       "latest_path": "volatility/latest/",
-      "published_at": "2026-10-21T07:12:02.027450+00:00",
-      "release_id": "b267172239514f9e8791f809f41cde75"
+      "published_at": "2026-10-22T07:20:40.655021+00:00",
+      "release_id": "4025ba2236e943049c90c913116190bd"
     }
   },
-  "updated_at": "2026-10-21T17:43:14.425781+00:00",
+  "updated_at": "2026-10-22T07:20:40.655021+00:00",
   "version": 1
 }
