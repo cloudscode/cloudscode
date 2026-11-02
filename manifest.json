@@ -4,8 +4,8 @@
       "file_count": 24,
       "latest_date": "sector-static-482-2026-11-02",
       "path": "valuation/sectors/",
-      "published_at": "2026-11-02T10:35:33.797651+00:00",
-      "release_id": "d16d3d45c49e4be59810bcb5ce30399d",
+      "published_at": "2026-11-02T10:42:12.423895+00:00",
+      "release_id": "ef88b72d16ad47b899b6c914f802a2e8",
       "resource_id": "sector-static-482-2026-11-02"
     },
     "sector_valuation_hk": {
@@ -67,6 +67,6 @@
       "release_id": "b30e7c31807f4717904f21a33a18b98f"
     }
   },
-  "updated_at": "2026-11-02T10:35:33.797651+00:00",
+  "updated_at": "2026-11-02T10:42:12.423895+00:00",
   "version": 1
 }
