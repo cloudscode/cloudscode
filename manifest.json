@@ -63,10 +63,10 @@
       "history_path": "volatility/history/2026-11-27/",
       "latest_date": "2026-11-27",
       "latest_path": "volatility/latest/",
-      "published_at": "2026-11-27T09:16:43.219199+00:00",
-      "release_id": "307e90bd52a24c48bee3443f8a8fbf7c"
+      "published_at": "2026-11-27T09:19:09.382901+00:00",
+      "release_id": "585cea41517943a2abef38ff0fe97394"
     }
   },
-  "updated_at": "2026-11-27T09:16:43.219199+00:00",
+  "updated_at": "2026-11-27T09:19:09.382901+00:00",
   "version": 1
 }
